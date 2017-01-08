@@ -28,7 +28,7 @@ var searchData=
   ['lfpwindow',['LFPWindow',['../class_l_f_p_analysis.html#adbf4e0b27bcaff01dcb53f9b112e53a3',1,'LFPAnalysis::LFPWindow()'],['../class_l_f_p_analysis.html#aa47a11d155fabb759a3e712d1b8c48f9',1,'LFPAnalysis::LFPWindow(in me, in in)']]],
   ['library',['library',['../classlab_jack.html#a620fc53ff14da92d68b066c88ed3b211',1,'labJack']]],
   ['linuxfontname',['linuxFontName',['../classscreen_manager.html#a9d407118896dbe9d2ba808917933c85a',1,'screenManager']]],
-  ['list',['List',['../classlab_jack.html#a4f02305f456572c2b4c932f6ceeed974',1,'labJack::List()'],['../class_l_f_p_meta.html#af47625916668e184f52a20eaf30331a3',1,'LFPMeta::list()']]],
+  ['list',['list',['../class_l_f_p_meta.html#af47625916668e184f52a20eaf30331a3',1,'LFPMeta::list()'],['../classlab_jack.html#a4f02305f456572c2b4c932f6ceeed974',1,'labJack::List()']]],
   ['listenmaster',['listenMaster',['../classopx_online.html#aaa605ed409d8631545df0ba135846b81',1,'opxOnline']]],
   ['listenslave',['listenSlave',['../classopx_online.html#a847059501a7f2d89e7a32039b30330f7',1,'opxOnline']]],
   ['lj',['lJ',['../classmagstim_manager.html#a890e937c894af893b8c1213ee794c67d',1,'magstimManager']]],

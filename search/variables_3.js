@@ -6,7 +6,7 @@ var searchData=
   ['datalength',['dataLength',['../classdata_connection.html#ad2538a3a16e02dab81e34c13a58b575e',1,'dataConnection']]],
   ['dataout',['dataOut',['../classdata_connection.html#a4576f50c44d95b70c65b5b87a72b1ccf',1,'dataConnection']]],
   ['datatype',['dataType',['../classdata_connection.html#a32b5f39b5c996f788701680c2a7abdd3',1,'dataConnection']]],
-  ['datestamp',['dateStamp',['../classlab_jack.html#a94cf41c944d6fad5664473c5d7a082a4',1,'labJack::dateStamp()'],['../classopx_online.html#acf4540feac86d4c706fe5bb6fac0602e',1,'opxOnline::dateStamp()'],['../classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7',1,'optickaCore::dateStamp()']]],
+  ['datestamp',['dateStamp',['../classcalibrate_luminance.html#a26893ea54a79d6392bc82077289d9535',1,'calibrateLuminance::dateStamp()'],['../classlab_jack.html#a94cf41c944d6fad5664473c5d7a082a4',1,'labJack::dateStamp()'],['../classopx_online.html#acf4540feac86d4c706fe5bb6fac0602e',1,'opxOnline::dateStamp()'],['../classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7',1,'optickaCore::dateStamp()']]],
   ['debug',['debug',['../classrun_experiment.html#ad88c91e63cf8fb1acda515afec4adb44',1,'runExperiment::debug()'],['../classscreen_manager.html#aedd0b8414bdabefad8c8bec3a5246889',1,'screenManager::debug()']]],
   ['defaultname',['defaultName',['../classsend_serial.html#a903781800b2850c4999386750e291c6c',1,'sendSerial']]],
   ['defaults',['defaults',['../classeyelink_manager.html#af205add0ba656757de15bf3db2c262a7',1,'eyelinkManager']]],

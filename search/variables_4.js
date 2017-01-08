@@ -4,11 +4,15 @@ var searchData=
   ['edffile',['edffile',['../classplx_reader.html#a4c92ffb28e522022308d09e243c8cde3',1,'plxReader']]],
   ['enablecallbacks',['enableCallbacks',['../classeyelink_manager.html#a05d9fd187ae2f70b56874d8885206490',1,'eyelinkManager']]],
   ['error',['error',['../classdata_connection.html#a8075f7e24e245f66b925bac53b5711b9',1,'dataConnection::error()'],['../classeyelink_manager.html#a71deca9842257beaf45230a006b1357b',1,'eyelinkManager::error()'],['../classopx_online.html#a2676ce303d3623b2902ed152666d5ae7',1,'opxOnline::error()'],['../classparse_opx_spikes.html#ad37cb14a9cebaed350342c1bd9f899c6',1,'parseOpxSpikes::error()']]],
+  ['event_5ftypes',['EVENT_TYPES',['../classeyelink_analysis.html#a09d18678e5d95ac70369b707d4f37a7d',1,'eyelinkAnalysis']]],
   ['eventend',['eventEnd',['../classopx_online.html#a298ec3669737ee91551dc4033c43f48a',1,'opxOnline']]],
   ['eventlist',['eventList',['../classplx_reader.html#a6d41b55f501576cf6c00d78716a8a9e4',1,'plxReader']]],
   ['eventsearchwindow',['eventSearchWindow',['../classplx_reader.html#ab44af9dc580742197189aadcbd0f1c47',1,'plxReader']]],
   ['eventstart',['eventStart',['../classopx_online.html#af3232162f243b54170b9f3dbd8a48427',1,'opxOnline']]],
   ['eventwindow',['eventWindow',['../classplx_reader.html#a16267714afb07e1f6c94a7931818b04b',1,'plxReader']]],
+  ['excludeincorrect',['excludeIncorrect',['../classeyelink_analysis.html#a8ad1bfd1008fc2bae1c5467c2ade440a',1,'eyelinkAnalysis']]],
+  ['externalinput',['externalInput',['../classcalibrate_luminance.html#a6646779fa29f9930680551c5b7cb7ce8',1,'calibrateLuminance']]],
   ['eyelink',['eyeLink',['../classrun_experiment.html#a21cb2f840501011cc93786201e5e418d',1,'runExperiment']]],
+  ['eyes',['EYES',['../classeyelink_analysis.html#a08d8c467825fb05041345f0ce94685e1',1,'eyelinkAnalysis']]],
   ['eyeused',['eyeUsed',['../classeyelink_manager.html#aa12482e379801efaeb99602f0fe94fa0',1,'eyelinkManager']]]
 ];

@@ -31,6 +31,7 @@ var searchData=
   ['parseruns',['parseRuns',['../classparse_opx_spikes.html#a65d74abd16eb1f0ceba58f27b2348df9',1,'parseOpxSpikes']]],
   ['parsesaccades',['parseSaccades',['../classeyelink_analysis.html#aa41ee8f2058a71da7a3669f10f3af344',1,'eyelinkAnalysis']]],
   ['parsesecondaryeyepos',['parseSecondaryEyePos',['../classeyelink_analysis.html#aca127517c973b439ee9995b12ab93a9b',1,'eyelinkAnalysis']]],
+  ['parsesimple',['parseSimple',['../classeyelink_analysis.html#a6f68cbdbfc31ae05d773e148ebac6187',1,'eyelinkAnalysis']]],
   ['parsespikes',['parseSpikes',['../class_l_f_p_analysis.html#ad5087edafcedc5006e4d8573b70091fe',1,'LFPAnalysis::parseSpikes()'],['../classplx_reader.html#a0fe6526d47d086bbbce359d3147100d8',1,'plxReader::parseSpikes()']]],
   ['parsetoi',['parseTOI',['../classeyelink_analysis.html#a7519ce161413ffcecd7c043c0735f255',1,'eyelinkAnalysis']]],
   ['paths',['paths',['../classopticka_core.html#ad9489ce2da58865a8df65de63db239cf',1,'optickaCore']]],
@@ -86,7 +87,7 @@ var searchData=
   ['porthandle',['portHandle',['../classsend_serial.html#a0ea4c87ee6a417c3dd8c3ae6803a664e',1,'sendSerial']]],
   ['position',['position',['../classpanel.html#afa86ae192b6dc50e577f0708fe4b768d',1,'panel']]],
   ['ppd',['ppd',['../classeyelink_analysis.html#acbd2ae3e481ebce57db2114bab0f57b7',1,'eyelinkAnalysis::ppd()'],['../classscreen_manager.html#a4121fa2e9f8f8b89862cf8bdc6c113b8',1,'screenManager::ppd()'],['../classbase_stimulus.html#a3a3bbf55c2559d8b227edb7884f532c0',1,'baseStimulus::ppd()'],['../classeyelink_analysis.html#ada3f80b80d81ad3c20fdb97674d10c46',1,'eyelinkAnalysis::ppd()'],['../classscreen_manager.html#a122e9c98992e08b94942d18870e8c8b7',1,'screenManager::ppd()']]],
-  ['ppd_5f',['ppd_',['../classeyelink_analysis.html#a87bf9863f10548af0a8dfc7f71978770',1,'eyelinkAnalysis']]],
+  ['ppd_5f',['ppd_',['../classeyelink_manager.html#a835eae9d7298dfb1619e48a094946e5f',1,'eyelinkManager::ppd_()'],['../classeyelink_analysis.html#a87bf9863f10548af0a8dfc7f71978770',1,'eyelinkAnalysis::ppd_()'],['../classscreen_manager.html#adcc09f82e94b75354f6bf8482c4c7182',1,'screenManager::ppd_()']]],
   ['preferi1pro',['preferI1Pro',['../classcalibrate_luminance.html#a9d859de9a4f62ad5c0fd4e4e92b7753e',1,'calibrateLuminance']]],
   ['preparemovie',['prepareMovie',['../classscreen_manager.html#a8d24484709f24da431779c84d783e315',1,'screenManager']]],
   ['preparescreen',['prepareScreen',['../classscreen_manager.html#a9111d2ac5cc190c7d88583fcc77107d8',1,'screenManager']]],
@@ -102,9 +103,10 @@ var searchData=
   ['process',['process',['../class_l_f_p_meta.html#acf34c80e50233386c8e9a9ea41072997',1,'LFPMeta']]],
   ['prop',['prop',['../classpanel.html#a0ca7f970a18d701826d5d9c2bce89823',1,'panel']]],
   ['protocol',['protocol',['../classdata_connection.html#ad56319e90389c7e2d5592169ba23db75',1,'dataConnection::protocol()'],['../classopx_online.html#a13d0ec5813c030901ca2d6258fff5a5a',1,'opxOnline::protocol()']]],
+  ['prunenonrttrials',['pruneNonRTTrials',['../classeyelink_analysis.html#ac459eaaf380861b98e267d88ab7953f3',1,'eyelinkAnalysis']]],
   ['prunetrials',['pruneTrials',['../classeyelink_analysis.html#ac12d8c5ebdb1fd7b230c67fff5f704c7',1,'eyelinkAnalysis']]],
   ['psth',['PSTH',['../classspike_analysis.html#a3d0b4aead47a4d70368db1bda5261104',1,'spikeAnalysis']]],
   ['ptb',['ptb',['../classrun_experiment.html#a372e4e78a8061d1207d46c6876be9f32',1,'runExperiment']]],
-  ['pupil',['pupil',['../classeyelink_manager.html#a0d5d42689a1ceb4f463ce9b85bb376bf',1,'eyelinkManager']]],
+  ['pupil',['pupil',['../classeyelink_manager.html#a0d5d42689a1ceb4f463ce9b85bb376bf',1,'eyelinkManager::pupil()'],['../classeyelink_analysis.html#ab434d6865967e802463ab6fea11cd13f',1,'eyelinkAnalysis::PUPIL()']]],
   ['putvar',['putVar',['../classdata_connection.html#a7d134f1d4f1a2fc9ece4de7b213b3cd6',1,'dataConnection']]]
 ];

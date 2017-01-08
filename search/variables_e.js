@@ -33,7 +33,7 @@ var searchData=
   ['porthandle',['portHandle',['../classsend_serial.html#a0ea4c87ee6a417c3dd8c3ae6803a664e',1,'sendSerial']]],
   ['position',['position',['../classpanel.html#afa86ae192b6dc50e577f0708fe4b768d',1,'panel']]],
   ['ppd',['ppd',['../classeyelink_analysis.html#acbd2ae3e481ebce57db2114bab0f57b7',1,'eyelinkAnalysis::ppd()'],['../classscreen_manager.html#a4121fa2e9f8f8b89862cf8bdc6c113b8',1,'screenManager::ppd()'],['../classbase_stimulus.html#a3a3bbf55c2559d8b227edb7884f532c0',1,'baseStimulus::ppd()']]],
-  ['ppd_5f',['ppd_',['../classeyelink_analysis.html#a87bf9863f10548af0a8dfc7f71978770',1,'eyelinkAnalysis']]],
+  ['ppd_5f',['ppd_',['../classeyelink_manager.html#a835eae9d7298dfb1619e48a094946e5f',1,'eyelinkManager::ppd_()'],['../classeyelink_analysis.html#a87bf9863f10548af0a8dfc7f71978770',1,'eyelinkAnalysis::ppd_()'],['../classscreen_manager.html#adcc09f82e94b75354f6bf8482c4c7182',1,'screenManager::ppd_()']]],
   ['preferi1pro',['preferI1Pro',['../classcalibrate_luminance.html#a9d859de9a4f62ad5c0fd4e4e92b7753e',1,'calibrateLuminance']]],
   ['previousinfo',['previousInfo',['../classrun_experiment.html#ad01aaa303e8b3550498a8ced576d0e04',1,'runExperiment']]],
   ['previousmessage',['previousMessage',['../classeyelink_manager.html#ac93c8fb420c86a37c3cebe4fa47735bc',1,'eyelinkManager']]],
@@ -42,5 +42,5 @@ var searchData=
   ['prop',['prop',['../classpanel.html#a0ca7f970a18d701826d5d9c2bce89823',1,'panel']]],
   ['protocol',['protocol',['../classdata_connection.html#ad56319e90389c7e2d5592169ba23db75',1,'dataConnection::protocol()'],['../classopx_online.html#a13d0ec5813c030901ca2d6258fff5a5a',1,'opxOnline::protocol()']]],
   ['ptb',['ptb',['../classrun_experiment.html#a372e4e78a8061d1207d46c6876be9f32',1,'runExperiment']]],
-  ['pupil',['pupil',['../classeyelink_manager.html#a0d5d42689a1ceb4f463ce9b85bb376bf',1,'eyelinkManager']]]
+  ['pupil',['pupil',['../classeyelink_manager.html#a0d5d42689a1ceb4f463ce9b85bb376bf',1,'eyelinkManager::pupil()'],['../classeyelink_analysis.html#ab434d6865967e802463ab6fea11cd13f',1,'eyelinkAnalysis::PUPIL()']]]
 ];

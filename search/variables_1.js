@@ -17,6 +17,7 @@ var searchData=
   ['bpnames',['bpnames',['../class_l_f_p_analysis.html#a33484e457391c094b634db9ce8068aae',1,'LFPAnalysis']]],
   ['breakcmd',['breakCmd',['../classdata_connection.html#a161b924a62d5221a7af018b2d91651d5',1,'dataConnection']]],
   ['breakfix',['breakFix',['../classeyelink_analysis.html#a97c9d9c90fcf1b9703409d555dd69219',1,'eyelinkAnalysis']]],
+  ['breakfixvalue',['breakFixValue',['../classeyelink_analysis.html#a2056112be0fe12f1ea89e33c34eb40e3',1,'eyelinkAnalysis']]],
   ['busycmd',['busyCmd',['../classdata_connection.html#aadba20c085acea5e913a8644c42ec17f',1,'dataConnection']]],
   ['buttons',['buttons',['../classcolour_test.html#adaa01205c87c21bc3df3cc078683afc1',1,'colourTest::buttons()'],['../classrf_mapper.html#af95c5009caa6472e250172f4c9d196de',1,'rfMapper::buttons()']]]
 ];

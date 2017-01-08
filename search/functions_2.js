@@ -79,6 +79,7 @@ var searchData=
   ['copyvariable',['copyVariable',['../classopticka.html#a1cb6cc368fd219597c759bc84b0837e0',1,'opticka']]],
   ['createproceduralsinesmoothedgrating',['CreateProceduralSineSmoothedGrating',['../_create_procedural_sine_smoothed_grating_8m.html#acc778b1c1d9fdc33a3f0adb0ee55fea2',1,'CreateProceduralSineSmoothedGrating.m']]],
   ['createproceduralsinesquaregrating',['CreateProceduralSineSquareGrating',['../_create_procedural_sine_square_grating_8m.html#a1667f9d3a0e548ad8c6a678fbc457db6',1,'CreateProceduralSineSquareGrating.m']]],
+  ['createproceduralsmoothdisc',['CreateProceduralSmoothDisc',['../_create_procedural_smooth_disc_8m.html#a0d58e770654901badf861c59718c10b7',1,'CreateProceduralSmoothDisc.m']]],
   ['createsurrogate',['createSurrogate',['../class_l_f_p_analysis.html#af4dbab10e6604882986ba5075f94d149',1,'LFPAnalysis']]],
   ['currentmode',['currentMode',['../classeyelink_manager.html#a98f57ceaf9b6fd35fb072afe8c65680a',1,'eyelinkManager']]]
 ];

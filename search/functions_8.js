@@ -6,7 +6,7 @@ var searchData=
   ['infotext',['infoText',['../classrun_experiment.html#a253fd2d4b8488593f6d03648d46e31a3',1,'runExperiment']]],
   ['infotextui',['infoTextUI',['../classrun_experiment.html#a8a4aa968dc336f33d3e6788bebbe2a0c',1,'runExperiment']]],
   ['inheritplxreader',['inheritPlxReader',['../classanalysis_core.html#a4132e952b1673c8b1ad70d66747c9470',1,'analysisCore']]],
-  ['initialise',['initialise',['../classeyelink_manager.html#a289af271a270898005a135a2ad893979',1,'eyelinkManager::initialise()'],['../classanalysis_core.html#a40fea5e46ff69b6f7ab577bb51d49dfa',1,'analysisCore::initialise()'],['../classrun_experiment.html#a1e42e2c94a3f674c2250cbfc6995e0ea',1,'runExperiment::initialise()']]],
+  ['initialise',['initialise',['../classeyelink_manager.html#a289af271a270898005a135a2ad893979',1,'eyelinkManager::initialise()'],['../classanalysis_core.html#a40fea5e46ff69b6f7ab577bb51d49dfa',1,'analysisCore::initialise()'],['../classrun_experiment.html#a1e42e2c94a3f674c2250cbfc6995e0ea',1,'runExperiment::initialise()'],['../classstimulus_sequence.html#a7ddb8a42760259c7e27b3ca5bfc3e5ee',1,'stimulusSequence::initialise()']]],
   ['initialisedots',['initialiseDots',['../classndots_stimulus.html#a934d2ee93f76973474d6df992e2c9ee4',1,'ndotsStimulus']]],
   ['initialiseoptions',['initialiseOptions',['../classanalysis_core.html#a29bd5b94c314dd921054892ffee39eeb',1,'analysisCore']]],
   ['initialiserandom',['initialiseRandom',['../classstimulus_sequence.html#a4911c0c80b03e79f5d47fec888960851',1,'stimulusSequence']]],

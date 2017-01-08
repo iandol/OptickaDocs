@@ -39,6 +39,7 @@ var searchData=
   ['minblocks',['minBlocks',['../classstimulus_sequence.html#a8c4420a193f9f2d58148af86d4be1e18',1,'stimulusSequence']]],
   ['mindur',['MINDUR',['../classeyelink_analysis.html#a5f9b344f52f060980ffcdff5d237eaaa',1,'eyelinkAnalysis']]],
   ['minsaccadedistance',['minSaccadeDistance',['../classeyelink_analysis.html#a5d4818918eeb73a1c8e5c29154356fea',1,'eyelinkAnalysis']]],
+  ['missing_5fdata_5fvalue',['MISSING_DATA_VALUE',['../classeyelink_analysis.html#a8630ae9aed3671eefcee8617dc5cde5a',1,'eyelinkAnalysis']]],
   ['modelfit',['modelFit',['../classcalibrate_luminance.html#ae5f3c220856ab43bc1024334c9b73fe7',1,'calibrateLuminance']]],
   ['modify',['modify',['../classeyelink_manager.html#a29035769f9d480eb12d0edd43269b562',1,'eyelinkManager']]],
   ['modulatecolour',['modulateColour',['../classapparent_motion_stimulus.html#a6ba8febbe82ba8dcfe82506977d7f57d',1,'apparentMotionStimulus::modulateColour()'],['../classbar_stimulus.html#a28455c36e49440286f7cd04d578a2103',1,'barStimulus::modulateColour()']]],

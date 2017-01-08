@@ -3,7 +3,6 @@ var searchData=
   ['n',['n',['../classmeta_stimulus.html#ad2883f27a71e389743e5af3730e5f478',1,'metaStimulus']]],
   ['name',['name',['../classlab_jack.html#ab826ca7a5bc2794c7fd244c6e48257cb',1,'labJack::name()'],['../classsend_serial.html#a0d559ffcaeabff9c29abbf65bb27272c',1,'sendSerial::name()'],['../classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3',1,'optickaCore::name()']]],
   ['names',['names',['../classspike_analysis.html#a68fe7cd2d892ae3edc9c1ef925266e77',1,'spikeAnalysis']]],
-  ['nativebeamposition',['nativeBeamPosition',['../classscreen_manager.html#a458fec08dee566cb542895f090d0ad95',1,'screenManager']]],
   ['nbars',['nBars',['../classapparent_motion_stimulus.html#a9e0dfc0adecdeb1c661aa228e2141caf',1,'apparentMotionStimulus']]],
   ['nbits',['nBits',['../classd_pixx_manager.html#a893be96b4914969a1cf4e27686e8e7ce',1,'dPixxManager']]],
   ['nblocks',['nBlocks',['../classstimulus_sequence.html#a7e08a1219c836ca08cb74ce9e87b93d5',1,'stimulusSequence']]],

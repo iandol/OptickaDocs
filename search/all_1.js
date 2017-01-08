@@ -25,6 +25,7 @@ var searchData=
   ['bpnames',['bpnames',['../class_l_f_p_analysis.html#a33484e457391c094b634db9ce8068aae',1,'LFPAnalysis']]],
   ['breakcmd',['breakCmd',['../classdata_connection.html#a161b924a62d5221a7af018b2d91651d5',1,'dataConnection']]],
   ['breakfix',['breakFix',['../classeyelink_analysis.html#a97c9d9c90fcf1b9703409d555dd69219',1,'eyelinkAnalysis']]],
+  ['breakfixvalue',['breakFixValue',['../classeyelink_analysis.html#a2056112be0fe12f1ea89e33c34eb40e3',1,'eyelinkAnalysis']]],
   ['build_5fgui',['build_gui',['../classstimulus_sequence.html#a662c8d2c3cae0cf015192239cd94922f',1,'stimulusSequence']]],
   ['buildgui',['buildGUI',['../classseditor.html#abb4c4e7004493831e3dade45fd8f5c58',1,'seditor']]],
   ['busycmd',['busyCmd',['../classdata_connection.html#aadba20c085acea5e913a8644c42ec17f',1,'dataConnection']]],

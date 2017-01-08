@@ -20,6 +20,7 @@ var searchData=
   ['parseruns',['parseRuns',['../classparse_opx_spikes.html#a65d74abd16eb1f0ceba58f27b2348df9',1,'parseOpxSpikes']]],
   ['parsesaccades',['parseSaccades',['../classeyelink_analysis.html#aa41ee8f2058a71da7a3669f10f3af344',1,'eyelinkAnalysis']]],
   ['parsesecondaryeyepos',['parseSecondaryEyePos',['../classeyelink_analysis.html#aca127517c973b439ee9995b12ab93a9b',1,'eyelinkAnalysis']]],
+  ['parsesimple',['parseSimple',['../classeyelink_analysis.html#a6f68cbdbfc31ae05d773e148ebac6187',1,'eyelinkAnalysis']]],
   ['parsespikes',['parseSpikes',['../class_l_f_p_analysis.html#ad5087edafcedc5006e4d8573b70091fe',1,'LFPAnalysis::parseSpikes()'],['../classplx_reader.html#a0fe6526d47d086bbbce359d3147100d8',1,'plxReader::parseSpikes()']]],
   ['parsetoi',['parseTOI',['../classeyelink_analysis.html#a7519ce161413ffcecd7c043c0735f255',1,'eyelinkAnalysis']]],
   ['perlin',['perlin',['../perlin_8m.html#a2155fd78670add5168f0edb243dbeacc',1,'perlin.m']]],
@@ -59,6 +60,7 @@ var searchData=
   ['printchoice',['printChoice',['../classmeta_stimulus.html#a7ab9635a468ee33dabbf6938edf17965',1,'metaStimulus']]],
   ['printcurrenttick',['printCurrentTick',['../classstate_machine.html#a46eeb4024065256babb62f6dcf1021a9',1,'stateMachine']]],
   ['process',['process',['../class_l_f_p_meta.html#acf34c80e50233386c8e9a9ea41072997',1,'LFPMeta']]],
+  ['prunenonrttrials',['pruneNonRTTrials',['../classeyelink_analysis.html#ac459eaaf380861b98e267d88ab7953f3',1,'eyelinkAnalysis']]],
   ['prunetrials',['pruneTrials',['../classeyelink_analysis.html#ac12d8c5ebdb1fd7b230c67fff5f704c7',1,'eyelinkAnalysis']]],
   ['psth',['PSTH',['../classspike_analysis.html#a3d0b4aead47a4d70368db1bda5261104',1,'spikeAnalysis']]],
   ['putvar',['putVar',['../classdata_connection.html#a7d134f1d4f1a2fc9ece4de7b213b3cd6',1,'dataConnection']]]
