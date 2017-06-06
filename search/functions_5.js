@@ -5,7 +5,7 @@ var searchData=
   ['figpos',['figpos',['../figpos_8m.html#a42201e9dc140041c3b478e77d1d25da3',1,'figpos.m']]],
   ['filesize',['filesize',['../ft__read__plxheader_8m.html#ac87739496826e55826a8dd8595e37741',1,'ft_read_plxheader.m']]],
   ['finalisemovie',['finaliseMovie',['../classscreen_manager.html#af2647d844d208cae6a7b5a71e86a38da',1,'screenManager']]],
-  ['find',['find',['../classsend_serial.html#abdbe483227976883c500fa534dd40dcb',1,'sendSerial']]],
+  ['find',['find',['../classsend_serial_i_o_port.html#ab99ac647c7412766bf2d58bdaa48a450',1,'sendSerialIOPort']]],
   ['findattributes',['findAttributes',['../classopticka_core.html#a276b3ce2cc42f9aff6015ece9f0b16e1',1,'optickaCore']]],
   ['findattributesandtype',['findAttributesandType',['../classopticka_core.html#a641b0b58538b328c32e43075c4d18e7a',1,'optickaCore']]],
   ['finddistance',['findDistance',['../classbase_stimulus.html#a7405acd2b3143172879f61e3c5ce8208',1,'baseStimulus']]],

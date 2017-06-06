@@ -20,7 +20,7 @@ var searchData=
   ['finalisemovie',['finaliseMovie',['../classscreen_manager.html#af2647d844d208cae6a7b5a71e86a38da',1,'screenManager']]],
   ['finaltick',['finalTick',['../classstate_machine.html#ae23b9fa349563bbecfb7e763671d3a84',1,'stateMachine']]],
   ['finaltime',['finalTime',['../classstate_machine.html#a8a27227ce5163b9b7c9be941c4b25b93',1,'stateMachine']]],
-  ['find',['find',['../classsend_serial.html#abdbe483227976883c500fa534dd40dcb',1,'sendSerial']]],
+  ['find',['find',['../classsend_serial_i_o_port.html#ab99ac647c7412766bf2d58bdaa48a450',1,'sendSerialIOPort']]],
   ['findattributes',['findAttributes',['../classopticka_core.html#a276b3ce2cc42f9aff6015ece9f0b16e1',1,'optickaCore']]],
   ['findattributesandtype',['findAttributesandType',['../classopticka_core.html#a641b0b58538b328c32e43075c4d18e7a',1,'optickaCore']]],
   ['finddistance',['findDistance',['../classbase_stimulus.html#a7405acd2b3143172879f61e3c5ce8208',1,'baseStimulus']]],

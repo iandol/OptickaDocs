@@ -31,5 +31,5 @@ var searchData=
   ['uselabjack',['useLabJack',['../classrun_experiment.html#a5271203535de69556dde2b4574e1ea26',1,'runExperiment']]],
   ['useretina',['useRetina',['../classscreen_manager.html#aae804d413eb1e05788e76122a7df887b',1,'screenManager']]],
   ['usespikeselect',['useSpikeSelect',['../class_l_f_p_analysis.html#a2c695071a1a067bb2509942d1af14840',1,'LFPAnalysis']]],
-  ['uuid',['UUID',['../classstate_machine.html#ae465018ac21ffc5de5d4a20aba655512',1,'stateMachine::UUID()'],['../classcalibrate_luminance.html#a246d0d645dd2172d04503a41a26aab68',1,'calibrateLuminance::uuid()'],['../classlab_jack.html#a67bd91c5f492d2c38e753a4ee4f94ac1',1,'labJack::uuid()'],['../classopticka_core.html#a045e40ac081d9e2b909fe78e2c00b293',1,'optickaCore::uuid()']]]
+  ['uuid',['uuid',['../classcalibrate_luminance.html#a246d0d645dd2172d04503a41a26aab68',1,'calibrateLuminance::uuid()'],['../classlab_jack.html#a67bd91c5f492d2c38e753a4ee4f94ac1',1,'labJack::uuid()'],['../classopticka_core.html#a045e40ac081d9e2b909fe78e2c00b293',1,'optickaCore::uuid()'],['../classstate_machine.html#ae465018ac21ffc5de5d4a20aba655512',1,'stateMachine::UUID()']]]
 ];

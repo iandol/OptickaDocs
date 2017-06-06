@@ -77,7 +77,7 @@ var searchData=
   ['rfmapper_2em',['rfMapper.m',['../rf_mapper_8m.html',1,'']]],
   ['righteyeclosed',['rightEyeClosed',['../classeye_occluder.html#a49b5c3cddbe006808e9b5be7d9ffea01',1,'eyeOccluder']]],
   ['rmatrix',['rmatrix',['../classapparent_motion_stimulus.html#a48eff725100624516752b17d9882da5e',1,'apparentMotionStimulus::rmatrix()'],['../classbar_stimulus.html#a60e43d481defd1b1cdf491ebbc120a58',1,'barStimulus::rmatrix()']]],
-  ['roc',['ROC',['../classspike_analysis.html#a62dc52ad6028f9f3eeb2726dc0fece28',1,'spikeAnalysis::ROC()'],['../classanalysis_core.html#acb33651aec12c8cb5d6aabfb29116d32',1,'analysisCore::roc()']]],
+  ['roc',['roc',['../classanalysis_core.html#acb33651aec12c8cb5d6aabfb29116d32',1,'analysisCore::roc()'],['../classspike_analysis.html#a62dc52ad6028f9f3eeb2726dc0fece28',1,'spikeAnalysis::ROC()']]],
   ['roi',['ROI',['../classeyelink_analysis.html#a3292c89b52816b835380fb0e1d416f7b',1,'eyelinkAnalysis::ROI()'],['../classspike_analysis.html#a8dd03c0c61afa14c75de618b0235f4b5',1,'spikeAnalysis::ROI()']]],
   ['roiinfo',['ROIInfo',['../classeyelink_analysis.html#ab6b4847e8d77aba7e7914c1ebce73a36',1,'eyelinkAnalysis']]],
   ['rootdirectory',['rootDirectory',['../classanalysis_core.html#a6ea24ac621d5bdd6f3dee925589b597c',1,'analysisCore']]],

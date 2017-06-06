@@ -46,7 +46,7 @@ var searchData=
   ['restorerunlog',['restoreRunLog',['../classrun_experiment.html#a22cfe86ac3d789cf40b5317caf0ae844',1,'runExperiment']]],
   ['rfmapper',['rfMapper',['../classrf_mapper.html#a24b052f57ed66b51b2dd6cdc3f3cf227',1,'rfMapper']]],
   ['righteyeclosed',['rightEyeClosed',['../classeye_occluder.html#a49b5c3cddbe006808e9b5be7d9ffea01',1,'eyeOccluder']]],
-  ['roc',['ROC',['../classspike_analysis.html#a62dc52ad6028f9f3eeb2726dc0fece28',1,'spikeAnalysis::ROC()'],['../classanalysis_core.html#acb33651aec12c8cb5d6aabfb29116d32',1,'analysisCore::roc()']]],
+  ['roc',['roc',['../classanalysis_core.html#acb33651aec12c8cb5d6aabfb29116d32',1,'analysisCore::roc()'],['../classspike_analysis.html#a62dc52ad6028f9f3eeb2726dc0fece28',1,'spikeAnalysis::ROC()']]],
   ['router',['router',['../classopticka.html#af309ff6c83d8f3059530ace1225ff8bc',1,'opticka']]],
   ['rpad',['rpad',['../classpanel.html#a258601dadce3c24fc505e3d5a708f985',1,'panel']]],
   ['rstart',['rstart',['../classd_pixx_manager.html#a4ff62a40b1f8459af1e8baf21eeb7948',1,'dPixxManager']]],
