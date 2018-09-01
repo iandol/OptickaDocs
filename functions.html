@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -101,8 +101,10 @@ $(function() {
 : <a class="el" href="classanalysis_core.html#af5b0f6a9a12dfbef724c4ecb54f018c2">analysisCore</a>
 , <a class="el" href="classannulus_stimulus.html#a690e676c17fe0400415754aa5c9e37ff">annulusStimulus</a>
 , <a class="el" href="classapparent_motion_stimulus.html#aa7aaed162e393af0f8785c1b05577510">apparentMotionStimulus</a>
+, <a class="el" href="classarduino_manager.html#a84239f572063d6758a384711c4bb89b7">arduinoManager</a>
 , <a class="el" href="classbar_stimulus.html#a83e037738d906a89e1a8de0264c8908d">barStimulus</a>
 , <a class="el" href="classbase_stimulus.html#a0ac65ff56a6263e0c8db9d238b2c9144">baseStimulus</a>
+, <a class="el" href="classcolour_manager.html#aae1085e46ea6a0a163d3d542258d506b">colourManager</a>
 , <a class="el" href="classcolour_test.html#aadbb33f7cb500435fa5a842ae088eabe">colourTest</a>
 , <a class="el" href="classdata_connection.html#a0ac34ee8509158d445eea2496b1368d2">dataConnection</a>
 , <a class="el" href="classdisc_stimulus.html#afe37f4beaeaf9353a550ba124e9b6564">discStimulus</a>
@@ -112,6 +114,7 @@ $(function() {
 , <a class="el" href="classeyelink_manager.html#a68c280137bbcf03604652630dd8cf451">eyelinkManager</a>
 , <a class="el" href="classgabor_stimulus.html#a2d9267090de38475e9a1079b9a3708e1">gaborStimulus</a>
 , <a class="el" href="classgrating_stimulus.html#abac8b8a911034db5a5ce179177dc9010">gratingStimulus</a>
+, <a class="el" href="classio_manager.html#ad5bf4e2bdfab4b9b098cd1ddd4b938f6">ioManager</a>
 , <a class="el" href="classlab_jack.html#a5024eec3b586a65daf9a87a048b2b1a5">labJack</a>
 , <a class="el" href="class_l_f_p_analysis.html#af5cb8a599b9dc7dbc1ea38cd51063b0a">LFPAnalysis</a>
 , <a class="el" href="classmagstim_manager.html#ad7280ff5319f9752f8747b19133982ba">magstimManager</a>
@@ -122,11 +125,11 @@ $(function() {
 , <a class="el" href="classopticka_core.html#a69929e3bcfc86c82bd10d7e3437312da">optickaCore</a>
 , <a class="el" href="classopx_online.html#a75649bb775a9cc9bd84323985590a519">opxOnline</a>
 , <a class="el" href="classparse_opx_spikes.html#a46915a415f7a54a1e9a9713617757d6c">parseOpxSpikes</a>
+, <a class="el" href="classplusplus_manager.html#a7aacfdc3753d77bb3af3c7bc62111717">plusplusManager</a>
 , <a class="el" href="classplx_reader.html#a72eac16364462c1d2f45f676bd31f01c">plxReader</a>
 , <a class="el" href="classrf_mapper.html#a9bdcaa1be7bef42f6c02eb4b57292e11">rfMapper</a>
 , <a class="el" href="classrun_experiment.html#ae7f53594f63c398a08b7e36a2e5ffb1c">runExperiment</a>
 , <a class="el" href="classscreen_manager.html#ac1d2799439a321b58bd5dca2d23942ae">screenManager</a>
-, <a class="el" href="classsend_serial.html#adb3dce1012243f8f76f7aa7aafa8fed2">sendSerial</a>
 , <a class="el" href="classspike_analysis.html#a28635b4c4f1a569a93d0d298d1303bb8">spikeAnalysis</a>
 , <a class="el" href="classspot_stimulus.html#a308ad663c0dfe9b51739d6f8c26976ac">spotStimulus</a>
 , <a class="el" href="classstate_machine.html#a70c3f38b9cef01defd6bebb3c0dd09ec">stateMachine</a>
@@ -208,6 +211,12 @@ $(function() {
 <li>applyLayout2()
 : <a class="el" href="classpanel.html#af1ffd3c0c3674ebf6543b86b23fd8da7">panel</a>
 </li>
+<li>arduino
+: <a class="el" href="classrun_experiment.html#a7ed81149e1df8dc27bc96b95a189cd7f">runExperiment</a>
+</li>
+<li>arduinoManager()
+: <a class="el" href="classarduino_manager.html#a3272e342d9f4569e71ecaa7cbe724ef0">arduinoManager</a>
+</li>
 <li>areabar()
 : <a class="el" href="classanalysis_core.html#a23c6b5461c4547d5e4d3ccb3c927ad7d">analysisCore</a>
 </li>
@@ -225,6 +234,9 @@ $(function() {
 <li>autoOpen
 : <a class="el" href="classdata_connection.html#afd289a64efd00da2de7d33aa86cae5b7">dataConnection</a>
 </li>
+<li>autoPlot
+: <a class="el" href="classcolour_manager.html#a82cb96b3360f10c6e0668c86cba93797">colourManager</a>
+</li>
 <li>autoRun
 : <a class="el" href="classopx_online.html#a7840a619623dae78b33247f852d9adb4">opxOnline</a>
 </li>
@@ -232,16 +244,19 @@ $(function() {
 : <a class="el" href="classdata_connection.html#a0042be4b5f5485bcdb2ba05166ff6f04">dataConnection</a>
 </li>
 <li>availablePins
-: <a class="el" href="classsend_serial.html#a56bcd0cfad13f71d011e120801125361">sendSerial</a>
+: <a class="el" href="classarduino_manager.html#a79a1af4ad4a3136bb15d95046daadfd8">arduinoManager</a>
 </li>
 <li>axis
 : <a class="el" href="classpanel.html#a7363dbb8ac281be96b60d1cfbd5a25e3">panel</a>
+</li>
+<li>axisPriority
+: <a class="el" href="classcolour_manager.html#a81bf44ed1b294043170ea3ac1fd253a8">colourManager</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

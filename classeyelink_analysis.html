@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -81,9 +81,9 @@ Inheritance diagram for eyelinkAnalysis:</div>
 <div class="dyncontent">
 <div class="center"><img src="classeyelink_analysis__inherit__graph.png" border="0" usemap="#eyelink_analysis_inherit__map" alt="Inheritance graph"/></div>
 <map name="eyelink_analysis_inherit__map" id="eyelink_analysis_inherit__map">
-<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="12,152,111,177"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="15,79,108,104"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="31,5,92,31"/>
+<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="15,155,121,181"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="18,80,118,107"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="35,5,101,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -91,9 +91,9 @@ Collaboration diagram for eyelinkAnalysis:</div>
 <div class="dyncontent">
 <div class="center"><img src="classeyelink_analysis__coll__graph.png" border="0" usemap="#eyelink_analysis_coll__map" alt="Collaboration graph"/></div>
 <map name="eyelink_analysis_coll__map" id="eyelink_analysis_coll__map">
-<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="132,567,231,592"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="311,286,404,311"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="327,5,388,31"/>
+<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="133,612,240,639"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="329,309,429,335"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="345,5,412,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -251,6 +251,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a1de9eb45f96b5e73d9ffd072d45a1f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734fa87826fc731cf5894f8c33ffa095"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_analysis.html#a734fa87826fc731cf5894f8c33ffa095">trialEndMessage</a></td></tr>
 <tr class="separator:a734fa87826fc731cf5894f8c33ffa095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffffc19137c92db821cc12a1ea4b800"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_analysis.html#a7ffffc19137c92db821cc12a1ea4b800">rtOverrideMessage</a></td></tr>
+<tr class="memdesc:a7ffffc19137c92db821cc12a1ea4b800"><td class="mdescLeft">&#160;</td><td class="mdescRight">override the rtStart time with a custom message?  <a href="#a7ffffc19137c92db821cc12a1ea4b800">More...</a><br /></td></tr>
+<tr class="separator:a7ffffc19137c92db821cc12a1ea4b800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d4818918eeb73a1c8e5c29154356fea"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_analysis.html#a5d4818918eeb73a1c8e5c29154356fea">minSaccadeDistance</a></td></tr>
 <tr class="memdesc:a5d4818918eeb73a1c8e5c29154356fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum saccade distance in degrees  <a href="#a5d4818918eeb73a1c8e5c29154356fea">More...</a><br /></td></tr>
 <tr class="separator:a5d4818918eeb73a1c8e5c29154356fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -679,6 +682,7 @@ Private Attributes</h2></td></tr>
 <p>Area under ROC. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">me</td><td>- object </td></tr>
     <tr><td class="paramname">data</td><td>- [class , score] matrix </td></tr>
     <tr><td class="paramname">alpha</td><td>- level for confidence intervals (eg., enter 0.05 if you want 95% CIs) </td></tr>
     <tr><td class="paramname">flag</td><td>- 'hanley' yields Hanley-McNeil (1982) asymptotic CI; 'maxvar' yields maximum variance CI;'mann-whitney';'logit';'boot' yields bootstrapped CI (DEFAULT) </td></tr>
@@ -892,10 +896,11 @@ Aci - confidence intervals </dd></dl>
 <p>checkPaths: if we've saved an object then load it on a new machine paths to source files may be wrong. If so then allows us to find a new directory for the source files. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">varargin</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -4478,6 +4483,22 @@ fp - false positive rate </dd></dl>
 
 </div>
 </div>
+<a id="a7ffffc19137c92db821cc12a1ea4b800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ffffc19137c92db821cc12a1ea4b800">&#9670;&nbsp;</a></span>rtOverrideMessage</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property eyelinkAnalysis::rtOverrideMessage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>override the rtStart time with a custom message? </p>
+
+</div>
+</div>
 <a id="a8e0a622edd63700b41265b11540abfb0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8e0a622edd63700b41265b11540abfb0">&#9670;&nbsp;</a></span>rtStartMessage</h2>
 
@@ -4865,7 +4886,7 @@ fp - false positive rate </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

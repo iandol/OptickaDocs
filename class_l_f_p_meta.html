@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -78,9 +78,9 @@ Inheritance diagram for LFPMeta:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_l_f_p_meta__inherit__graph.png" border="0" usemap="#_l_f_p_meta_inherit__map" alt="Inheritance graph"/></div>
 <map name="_l_f_p_meta_inherit__map" id="_l_f_p_meta_inherit__map">
-<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="5,152,104,177"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="8,79,101,104"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="24,5,85,31"/>
+<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="5,155,112,181"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="9,80,109,107"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="25,5,92,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -88,9 +88,9 @@ Collaboration diagram for LFPMeta:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_l_f_p_meta__coll__graph.png" border="0" usemap="#_l_f_p_meta_coll__map" alt="Collaboration graph"/></div>
 <map name="_l_f_p_meta_coll__map" id="_l_f_p_meta_coll__map">
-<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="81,540,179,565"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="259,286,352,311"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="275,5,336,31"/>
+<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="85,583,191,609"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="280,309,380,335"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="297,5,363,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -584,6 +584,7 @@ Private Attributes</h2></td></tr>
 <p>Area under ROC. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">me</td><td>- object </td></tr>
     <tr><td class="paramname">data</td><td>- [class , score] matrix </td></tr>
     <tr><td class="paramname">alpha</td><td>- level for confidence intervals (eg., enter 0.05 if you want 95% CIs) </td></tr>
     <tr><td class="paramname">flag</td><td>- 'hanley' yields Hanley-McNeil (1982) asymptotic CI; 'maxvar' yields maximum variance CI;'mann-whitney';'logit';'boot' yields bootstrapped CI (DEFAULT) </td></tr>
@@ -761,10 +762,11 @@ Aci - confidence intervals </dd></dl>
 <p>checkPaths: if we've saved an object then load it on a new machine paths to source files may be wrong. If so then allows us to find a new directory for the source files. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">varargin</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -3682,7 +3684,7 @@ fp - false positive rate </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

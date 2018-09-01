@@ -1,6 +1,7 @@
 var searchData=
 [
   ['n',['n',['../classmeta_stimulus.html#ad2883f27a71e389743e5af3730e5f478',1,'metaStimulus::n()'],['../classmeta_stimulus.html#a7c572e1dfbfe0a4164308721dae41cce',1,'metaStimulus::n(in obj)']]],
+  ['n_5f',['n_',['../classmeta_stimulus.html#a29569e9d47e2269cfe2efabf38db177a',1,'metaStimulus']]],
   ['name',['name',['../classlab_jack.html#ab826ca7a5bc2794c7fd244c6e48257cb',1,'labJack::name()'],['../classsend_serial_i_o_port.html#a8f521fbf0638b3f0b9d36e36d224c10a',1,'sendSerialIOPort::name()'],['../classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3',1,'optickaCore::name()']]],
   ['names',['names',['../classspike_analysis.html#a68fe7cd2d892ae3edc9c1ef925266e77',1,'spikeAnalysis']]],
   ['nbars',['nBars',['../classapparent_motion_stimulus.html#a9e0dfc0adecdeb1c661aa228e2141caf',1,'apparentMotionStimulus']]],
@@ -12,7 +13,9 @@ var searchData=
   ['ndotsstimulus',['ndotsStimulus',['../classndots_stimulus.html',1,'ndotsStimulus'],['../classndots_stimulus.html#a89b782e2dd6a1d86704e9ff45aa1d66c',1,'ndotsStimulus::ndotsStimulus()']]],
   ['ndotsstimulus_2em',['ndotsStimulus.m',['../ndots_stimulus_8m.html',1,'']]],
   ['ne',['ne',['../classpanel.html#a8d87b03cadd49ace8813622121484e66',1,'panel']]],
+  ['needeyelinksample',['needEyelinkSample',['../classrun_experiment.html#a769602d75fcbac5a0d121e6753840e7b',1,'runExperiment']]],
   ['needoverride',['needOverride',['../classeyelink_analysis.html#a3a75bc253141d23e42b8ed092f0298d8',1,'eyelinkAnalysis']]],
+  ['needsample',['needSample',['../classrun_experiment.html#a26a333034042cde0db5e90b5e73e628c',1,'runExperiment']]],
   ['nextchannel',['nextChannel',['../class_l_f_p_analysis.html#a1183189f7c82f301d2971a5c6418c3e7',1,'LFPAnalysis']]],
   ['nexttick',['nextTick',['../classapparent_motion_stimulus.html#a4a0cf554b75cc79aca64be0d85d65f59',1,'apparentMotionStimulus']]],
   ['nexttickout',['nextTickOut',['../classstate_machine.html#a338c7ac4b5216086eb13aa2523f8074a',1,'stateMachine']]],
@@ -20,8 +23,11 @@ var searchData=
   ['nframes',['nFrames',['../classstimulus_sequence.html#a3db76f3df269ab38d80e15dd2f1ae25e',1,'stimulusSequence::nFrames()'],['../classstimulus_sequence.html#abcf14544576aa4c04a46dacaf4040a4b',1,'stimulusSequence::nFrames(in obj)']]],
   ['nlfps',['nLFPs',['../class_l_f_p_analysis.html#a88144cacc71b2c309f8abf605c7e3476',1,'LFPAnalysis::nLFPs()'],['../class_l_f_p_analysis.html#abbe79ed09f6cd9b29009d3bf5c484c62',1,'LFPAnalysis::nLFPs(in me)']]],
   ['nmask',['nMask',['../classmeta_stimulus.html#aae62e02c75a5bc6df7184c972e7257e8',1,'metaStimulus::nMask()'],['../classmeta_stimulus.html#aa1547172f54a4d874732701b654899e9',1,'metaStimulus::nMask(in obj)']]],
+  ['nmask_5f',['nMask_',['../classmeta_stimulus.html#ad4266663101ac1cbbaddb1e717abaaff',1,'metaStimulus']]],
   ['nmeasures',['nMeasures',['../classcalibrate_luminance.html#ad3183de5653d3ae47099c533fa5efe98',1,'calibrateLuminance']]],
+  ['noop',['noop',['../classrun_experiment.html#a55ea3f2256b189b9f900ab957e0cbf83',1,'runExperiment']]],
   ['normalisedimension',['normaliseDimension',['../classpanel.html#ac7f69fc446550dc7d0901523fa12b082',1,'panel']]],
+  ['normalize',['normalize',['../classcalibrate_luminance.html#ab798d59b3a16400b73432311745c82af',1,'calibrateLuminance']]],
   ['normalizedxy',['normalizedXY',['../classndots_stimulus.html#a8cccd1806afadbc74ec869af1a71db29',1,'ndotsStimulus']]],
   ['notifyui',['notifyUI',['../classanalysis_core.html#abfc5ddbc5ea65d335da530c12dd04200',1,'analysisCore::notifyUI()'],['../classeyelink_analysis.html#afacdfbd21ba22dbf9917552a3e58159b',1,'eyelinkAnalysis::notifyUI()'],['../class_l_f_p_analysis.html#adeba26bde309b04ebc050a7af3438822',1,'LFPAnalysis::notifyUI()'],['../class_l_f_p_meta.html#ae1ecda93d2b3443ade503a723147f121',1,'LFPMeta::notifyUI()'],['../classspike_analysis.html#afdb7ad95e6f11aaf7f1b2189c6bb1b5c',1,'spikeAnalysis::notifyUI()']]],
   ['nruns',['nRuns',['../classopx_online.html#a5060f1a16ea6c5f62f25e99d56a96e20',1,'opxOnline::nRuns()'],['../classparse_opx_spikes.html#a47b3988848f08735174b75e423d6f77f',1,'parseOpxSpikes::nRuns()'],['../classstimulus_sequence.html#a94cf1e59d798bfc153fd5ddc06e2635c',1,'stimulusSequence::nRuns()'],['../classstimulus_sequence.html#a4e625834ed07e83a0f915f93ee45af5b',1,'stimulusSequence::nRuns(in obj)']]],
@@ -34,5 +40,6 @@ var searchData=
   ['nunits',['nUnits',['../classspike_analysis.html#ae5cf24fe5549a874ab03b109c49398f6',1,'spikeAnalysis::nUnits()'],['../classspike_analysis.html#abc33d948d1e380bd4d0cf3cdf1364beb',1,'spikeAnalysis::nUnits(in me)']]],
   ['nvar',['nVar',['../classstimulus_sequence.html#a049c150c9c923d5708142e3a3499d996',1,'stimulusSequence::nVar()'],['../classstimulus_sequence.html#a78583e92ecedbb9fdf6364f4062cc3f7',1,'stimulusSequence::nVar(in obj, in invalue)']]],
   ['nvars',['nVars',['../classparse_opx_spikes.html#ac32f8192ba220c97ecd73725a308bd52',1,'parseOpxSpikes::nVars()'],['../classstimulus_sequence.html#a90a650903376b8a94f7ae5ca87baf5d4',1,'stimulusSequence::nVars()'],['../classstimulus_sequence.html#a798750289d8302bd033aa23faa8ceb89',1,'stimulusSequence::nVars(in obj)']]],
-  ['nvars_5f',['nVars_',['../classstimulus_sequence.html#a4381d107ec917d402ab1a1071898df54',1,'stimulusSequence']]]
+  ['nvars_5f',['nVars_',['../classstimulus_sequence.html#a4381d107ec917d402ab1a1071898df54',1,'stimulusSequence']]],
+  ['nwindows',['nWindows',['../classplusplus_manager.html#a066110e7c75bc59a3b9e3ed3c26147a2',1,'plusplusManager']]]
 ];

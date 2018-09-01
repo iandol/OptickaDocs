@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -110,8 +110,8 @@ $(function() {
 <li>info
 : <a class="el" href="classplx_reader.html#ac90d39dd306f0eecb5bf04742387830d">plxReader</a>
 </li>
-<li>initialClut
-: <a class="el" href="classcalibrate_luminance.html#aa7df8b88747f2ebd40802522f760c813">calibrateLuminance</a>
+<li>initialCLUT
+: <a class="el" href="classcalibrate_luminance.html#abc30b74f8c89f8c8401231e6252cdd1c">calibrateLuminance</a>
 </li>
 <li>initializeDate
 : <a class="el" href="classparse_opx_spikes.html#a43a7c9800a0caa625d6718a12ae5f981">parseOpxSpikes</a>
@@ -154,11 +154,18 @@ $(function() {
 , <a class="el" href="classmovie_stimulus.html#accaa04eaeff562d99b1b662f506ff0d6">movieStimulus</a>
 , <a class="el" href="classtexture_stimulus.html#a8c023665a3bb8fb915cca3a3b534737d">textureStimulus</a>
 </li>
+<li>io
+: <a class="el" href="classio_manager.html#a1127fbecc602d959d08c67e62fd0e99f">ioManager</a>
+, <a class="el" href="classrun_experiment.html#ac36f954244e5758d331a792ed0d094f4">runExperiment</a>
+</li>
 <li>IP
 : <a class="el" href="classeyelink_manager.html#a14b40eafb8b225cad022d700cfbd2ee5">eyelinkManager</a>
 </li>
-<li>isAnalysed
-: <a class="el" href="classcalibrate_luminance.html#a6c9a69019fb75fe342d4091e1780dc92">calibrateLuminance</a>
+<li>isAnalyzed
+: <a class="el" href="classcalibrate_luminance.html#ac33d01c979a99bddb85ae9b737db40d6">calibrateLuminance</a>
+</li>
+<li>isAttached
+: <a class="el" href="classplusplus_manager.html#a8842162a5b40534c4cfe805b97c76527">plusplusManager</a>
 </li>
 <li>isConnected
 : <a class="el" href="classeyelink_manager.html#a460f138fd97b7e37b76cc81f7f2ed6a8">eyelinkManager</a>
@@ -194,6 +201,7 @@ $(function() {
 : <a class="el" href="classdata_connection.html#a3110df3d868051f575619099d113defe">dataConnection</a>
 , <a class="el" href="classd_pixx_manager.html#a290d963e0eae6f0504adb8e9dd706d0c">dPixxManager</a>
 , <a class="el" href="classeye_occluder.html#af4b51bb62d2ebab9df84c4cb9d3aa181">eyeOccluder</a>
+, <a class="el" href="classio_manager.html#a86a6da7fe397bfd72686fb5c028cce98">ioManager</a>
 , <a class="el" href="classlab_jack.html#a5852274fcb114643342564f66dd280a7">labJack</a>
 , <a class="el" href="classmagstim_manager.html#ac1d5b6cc956be95dcc002fc2f07a4d54">magstimManager</a>
 , <a class="el" href="classscreen_manager.html#afde6254b31b5c149608a9d072b3db3b6">screenManager</a>
@@ -204,6 +212,9 @@ $(function() {
 <li>isPL2
 : <a class="el" href="classplx_reader.html#a87558b4549a613c4c1aad8421836eec6">plxReader</a>
 </li>
+<li>isPlusPlus
+: <a class="el" href="classscreen_manager.html#a5328ac9e36a23c56a09a3a9d32599c5b">screenManager</a>
+</li>
 <li>isPTB
 : <a class="el" href="classscreen_manager.html#a39a39763f39d848bf1ae945534cba54a">screenManager</a>
 </li>
@@ -211,7 +222,11 @@ $(function() {
 : <a class="el" href="classeyelink_manager.html#a6c0d84e0c48ffb3cea6e3641552ef32b">eyelinkManager</a>
 </li>
 <li>isRunning
-: <a class="el" href="classstate_machine.html#a2ac2855e94ae07223441b96e3ce11afe">stateMachine</a>
+: <a class="el" href="classrun_experiment.html#a2d66f8d8d3e08c30784f4da712e00a51">runExperiment</a>
+, <a class="el" href="classstate_machine.html#a2ac2855e94ae07223441b96e3ce11afe">stateMachine</a>
+</li>
+<li>isRunTask
+: <a class="el" href="classrun_experiment.html#a7ea3e6276af47548edf639f4bb8af50e">runExperiment</a>
 </li>
 <li>isSlaveConnected
 : <a class="el" href="classopx_online.html#aa6c8f23ce0ee01b047cc52d334ab8b42">opxOnline</a>
@@ -238,7 +253,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -81,8 +81,8 @@ Inheritance diagram for eyelinkManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="classeyelink_manager__inherit__graph.png" border="0" usemap="#eyelink_manager_inherit__map" alt="Inheritance graph"/></div>
 <map name="eyelink_manager_inherit__map" id="eyelink_manager_inherit__map">
-<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="17,79,109,104"/>
-<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="32,5,94,31"/>
+<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="19,80,119,107"/>
+<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="35,5,102,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -90,8 +90,8 @@ Collaboration diagram for eyelinkManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="classeyelink_manager__coll__graph.png" border="0" usemap="#eyelink_manager_coll__map" alt="Collaboration graph"/></div>
 <map name="eyelink_manager_coll__map" id="eyelink_manager_coll__map">
-<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="27,286,120,311"/>
-<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="5,5,67,31"/>
+<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="30,309,130,335"/>
+<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="5,5,72,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -140,6 +140,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1dbd8ab94d2d3675166c48042a5b15f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#ae1dbd8ab94d2d3675166c48042a5b15f">isFixated</a> (in obj)</td></tr>
 <tr class="memdesc:ae1dbd8ab94d2d3675166c48042a5b15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">isFixated tests for fixation and updates the fixLength time  <a href="#ae1dbd8ab94d2d3675166c48042a5b15f">More...</a><br /></td></tr>
 <tr class="separator:ae1dbd8ab94d2d3675166c48042a5b15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a832ed58f2fcddaa115012b627cfd8243"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a832ed58f2fcddaa115012b627cfd8243">testExclusion</a> (in obj)</td></tr>
+<tr class="memdesc:a832ed58f2fcddaa115012b627cfd8243"><td class="mdescLeft">&#160;</td><td class="mdescRight">testFixation returns input yes or no strings based on fixation state, useful for using via <a class="el" href="classstate_machine.html" title="stateMachine a state machine object ">stateMachine</a>  <a href="#a832ed58f2fcddaa115012b627cfd8243">More...</a><br /></td></tr>
+<tr class="separator:a832ed58f2fcddaa115012b627cfd8243"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ffbad3c17d794f71755062dc7080d2d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a2ffbad3c17d794f71755062dc7080d2d">testWithinFixationWindow</a> (in obj, in yesString, in noString)</td></tr>
 <tr class="memdesc:a2ffbad3c17d794f71755062dc7080d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">testFixation returns input yes or no strings based on fixation state, useful for using via <a class="el" href="classstate_machine.html" title="stateMachine a state machine object ">stateMachine</a>  <a href="#a2ffbad3c17d794f71755062dc7080d2d">More...</a><br /></td></tr>
 <tr class="separator:a2ffbad3c17d794f71755062dc7080d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +150,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa85829cd987b1bebfc903a6e5ba0af99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if we've maintained fixation for correct time, if true return yesString, if not return noString. This allows an external code to quickly select a string based on this.  <a href="#aa85829cd987b1bebfc903a6e5ba0af99">More...</a><br /></td></tr>
 <tr class="separator:aa85829cd987b1bebfc903a6e5ba0af99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae34d014e2072272bf753a7418d23c090"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#ae34d014e2072272bf753a7418d23c090">testSearchHoldFixation</a> (in obj, in yesString, in noString)</td></tr>
-<tr class="memdesc:ae34d014e2072272bf753a7418d23c090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if we're looking for fixation a set time. Input is 2 strings, either one is returned depending on success or failure, 'searching' may also be returned meaning the fixation window hasn't been entered yet...  <a href="#ae34d014e2072272bf753a7418d23c090">More...</a><br /></td></tr>
+<tr class="memdesc:ae34d014e2072272bf753a7418d23c090"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if we're looking for fixation a set time. Input is 2 strings, either one is returned depending on success or failure, 'searching' may also be returned meaning the fixation window hasn't been entered yet, and 'fixing' means the fixation time is not yet met...  <a href="#ae34d014e2072272bf753a7418d23c090">More...</a><br /></td></tr>
 <tr class="separator:ae34d014e2072272bf753a7418d23c090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97700a3f1401ec8b16931338ec7fcf5d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a97700a3f1401ec8b16931338ec7fcf5d">testHoldFixation</a> (in obj, in yesString, in noString)</td></tr>
+<tr class="memdesc:a97700a3f1401ec8b16931338ec7fcf5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if we're still within fix window. Input is 2 strings, either one is returned depending on success or failure, 'fixing' means the fixation time is not yet met...  <a href="#a97700a3f1401ec8b16931338ec7fcf5d">More...</a><br /></td></tr>
+<tr class="separator:a97700a3f1401ec8b16931338ec7fcf5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dcb22405ad4b6eb02325622249eec7a"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a3dcb22405ad4b6eb02325622249eec7a">checkEye</a> (in obj)</td></tr>
 <tr class="memdesc:a3dcb22405ad4b6eb02325622249eec7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks which eye is available, force left eye if binocular is enabled  <a href="#a3dcb22405ad4b6eb02325622249eec7a">More...</a><br /></td></tr>
 <tr class="separator:a3dcb22405ad4b6eb02325622249eec7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,18 +173,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a828c14ad73de9271224f923afb8e4944"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a828c14ad73de9271224f923afb8e4944">trackerClearScreen</a> (in obj)</td></tr>
 <tr class="memdesc:a828c14ad73de9271224f923afb8e4944"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the background colour  <a href="#a828c14ad73de9271224f923afb8e4944">More...</a><br /></td></tr>
 <tr class="separator:a828c14ad73de9271224f923afb8e4944"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b2340dce92036b5aaf79ecbdb0fcb2c"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a5b2340dce92036b5aaf79ecbdb0fcb2c">trackerDrawStimuli</a> (in obj, in ts)</td></tr>
-<tr class="memdesc:a5b2340dce92036b5aaf79ecbdb0fcb2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the stimuli boxes on the tracker display  <a href="#a5b2340dce92036b5aaf79ecbdb0fcb2c">More...</a><br /></td></tr>
-<tr class="separator:a5b2340dce92036b5aaf79ecbdb0fcb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ba8586350893d651d5c3a8530e7b403"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a5ba8586350893d651d5c3a8530e7b403">trackerDrawStimuli</a> (in obj, in ts, in clearScreen)</td></tr>
+<tr class="memdesc:a5ba8586350893d651d5c3a8530e7b403"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the stimuli boxes on the tracker display  <a href="#a5ba8586350893d651d5c3a8530e7b403">More...</a><br /></td></tr>
+<tr class="separator:a5ba8586350893d651d5c3a8530e7b403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e05e09fe64fdf14f4fd1d12e9defc0e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a3e05e09fe64fdf14f4fd1d12e9defc0e">trackerDrawFixation</a> (in obj)</td></tr>
 <tr class="memdesc:a3e05e09fe64fdf14f4fd1d12e9defc0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the fixation box on the tracker display  <a href="#a3e05e09fe64fdf14f4fd1d12e9defc0e">More...</a><br /></td></tr>
 <tr class="separator:a3e05e09fe64fdf14f4fd1d12e9defc0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380eaad88bc0f9b5effcbb2da75d0657"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a380eaad88bc0f9b5effcbb2da75d0657">trackerDrawExclusion</a> (in obj)</td></tr>
+<tr class="memdesc:a380eaad88bc0f9b5effcbb2da75d0657"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the fixation box on the tracker display  <a href="#a380eaad88bc0f9b5effcbb2da75d0657">More...</a><br /></td></tr>
+<tr class="separator:a380eaad88bc0f9b5effcbb2da75d0657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3df07cb1e65152bbbf5f79af4c6b020a"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a3df07cb1e65152bbbf5f79af4c6b020a">trackerDrawText</a> (in obj, in textIn)</td></tr>
+<tr class="memdesc:a3df07cb1e65152bbbf5f79af4c6b020a"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the fixation box on the tracker display  <a href="#a3df07cb1e65152bbbf5f79af4c6b020a">More...</a><br /></td></tr>
+<tr class="separator:a3df07cb1e65152bbbf5f79af4c6b020a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a98f57ceaf9b6fd35fb072afe8c65680a"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a98f57ceaf9b6fd35fb072afe8c65680a">currentMode</a> (in obj)</td></tr>
-<tr class="memdesc:a98f57ceaf9b6fd35fb072afe8c65680a"><td class="mdescLeft">&#160;</td><td class="mdescRight">check what mode the eyelink is in  <a href="#a98f57ceaf9b6fd35fb072afe8c65680a">More...</a><br /></td></tr>
+<tr class="memdesc:a98f57ceaf9b6fd35fb072afe8c65680a"><td class="mdescLeft">&#160;</td><td class="mdescRight">check what mode the eyelink is in </p><h2>define IN_UNKNOWN_MODE 0</h2>
+#define IN_IDLE_MODE 1 #define IN_SETUP_MODE 2 #define IN_RECORD_MODE 4 #define IN_TARGET_MODE 8 #define IN_DRIFTCORR_MODE 16 #define IN_IMAGE_MODE 32 #define IN_USER_MENU 64 #define IN_PLAYBACK_MODE 256 #define LINK_TERMINATED_RESULT -100  <a href="#a98f57ceaf9b6fd35fb072afe8c65680a">More...</a><br /></td></tr>
 <tr class="separator:a98f57ceaf9b6fd35fb072afe8c65680a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d29d4cf362ed87cdf813f97ae4a69c7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a4d29d4cf362ed87cdf813f97ae4a69c7">syncTime</a> (in obj)</td></tr>
 <tr class="memdesc:a4d29d4cf362ed87cdf813f97ae4a69c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sync time message for EDF file.  <a href="#a4d29d4cf362ed87cdf813f97ae4a69c7">More...</a><br /></td></tr>
 <tr class="separator:a4d29d4cf362ed87cdf813f97ae4a69c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc1abcef58be805cacbf1f18d321592"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#abbc1abcef58be805cacbf1f18d321592">getTimeOffset</a> (in obj)</td></tr>
+<tr class="memdesc:abbc1abcef58be805cacbf1f18d321592"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get offset between tracker and display computers.  <a href="#abbc1abcef58be805cacbf1f18d321592">More...</a><br /></td></tr>
+<tr class="separator:abbc1abcef58be805cacbf1f18d321592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c2ff9d4da55e8a5be5710bf53968ac"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#ab3c2ff9d4da55e8a5be5710bf53968ac">getTrackerTime</a> (in obj)</td></tr>
+<tr class="memdesc:ab3c2ff9d4da55e8a5be5710bf53968ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get offset between tracker and display computers.  <a href="#ab3c2ff9d4da55e8a5be5710bf53968ac">More...</a><br /></td></tr>
+<tr class="separator:ab3c2ff9d4da55e8a5be5710bf53968ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0a99aa54bce6f7482be19e9c098c159"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#ae0a99aa54bce6f7482be19e9c098c159">setOffline</a> (in obj)</td></tr>
 <tr class="memdesc:ae0a99aa54bce6f7482be19e9c098c159"><td class="mdescLeft">&#160;</td><td class="mdescRight">set into offline / idle mode  <a href="#ae0a99aa54bce6f7482be19e9c098c159">More...</a><br /></td></tr>
 <tr class="separator:ae0a99aa54bce6f7482be19e9c098c159"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,6 +272,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:acd6c83b4064625f58ad876e22755237c"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#acd6c83b4064625f58ad876e22755237c">fixationInitTime</a></td></tr>
 <tr class="memdesc:acd6c83b4064625f58ad876e22755237c"><td class="mdescLeft">&#160;</td><td class="mdescRight">time to initiate fixation in seconds  <a href="#acd6c83b4064625f58ad876e22755237c">More...</a><br /></td></tr>
 <tr class="separator:acd6c83b4064625f58ad876e22755237c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb424224d1e5a810eca128330edd87a"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#accb424224d1e5a810eca128330edd87a">exclusionZone</a></td></tr>
+<tr class="memdesc:accb424224d1e5a810eca128330edd87a"><td class="mdescLeft">&#160;</td><td class="mdescRight">exclusion zone no eye movement allowed inside  <a href="#accb424224d1e5a810eca128330edd87a">More...</a><br /></td></tr>
+<tr class="separator:accb424224d1e5a810eca128330edd87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04a8f6b85168d9079d132d3e611b3082"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a04a8f6b85168d9079d132d3e611b3082">sampleRate</a></td></tr>
 <tr class="memdesc:a04a8f6b85168d9079d132d3e611b3082"><td class="mdescLeft">&#160;</td><td class="mdescRight">tracker update speed (Hz), should be 250 500 1000 2000  <a href="#a04a8f6b85168d9079d132d3e611b3082">More...</a><br /></td></tr>
 <tr class="separator:a04a8f6b85168d9079d132d3e611b3082"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -272,9 +294,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7c62084f27ba5f4e827fde26033e00e9"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a7c62084f27ba5f4e827fde26033e00e9">stimulusPositions</a></td></tr>
 <tr class="memdesc:a7c62084f27ba5f4e827fde26033e00e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">stimulus positions to draw on screen  <a href="#a7c62084f27ba5f4e827fde26033e00e9">More...</a><br /></td></tr>
 <tr class="separator:a7c62084f27ba5f4e827fde26033e00e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91b211605d22c378c5a2cde34813e5a7"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a91b211605d22c378c5a2cde34813e5a7">win</a></td></tr>
-<tr class="memdesc:a91b211605d22c378c5a2cde34813e5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the PTB screen handle, normally set by <a class="el" href="classscreen_manager.html" title="screenManager Manages a Screen object screenManager manages PTB screen settings for opticka...">screenManager</a> but can force it to use another screen  <a href="#a91b211605d22c378c5a2cde34813e5a7">More...</a><br /></td></tr>
-<tr class="separator:a91b211605d22c378c5a2cde34813e5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a687b34b5c6764cff722b64f9c8d89788"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a687b34b5c6764cff722b64f9c8d89788">verbosityLevel</a></td></tr>
+<tr class="memdesc:a687b34b5c6764cff722b64f9c8d89788"><td class="mdescLeft">&#160;</td><td class="mdescRight">verbosity level  <a href="#a687b34b5c6764cff722b64f9c8d89788">More...</a><br /></td></tr>
+<tr class="separator:a687b34b5c6764cff722b64f9c8d89788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9696cd2e08792168569ed14df4d2e8e"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#ae9696cd2e08792168569ed14df4d2e8e">forceDriftCorrect</a></td></tr>
+<tr class="memdesc:ae9696cd2e08792168569ed14df4d2e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">force drift correction?  <a href="#ae9696cd2e08792168569ed14df4d2e8e">More...</a><br /></td></tr>
+<tr class="separator:ae9696cd2e08792168569ed14df4d2e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc4a23f508cc6df90a0e7de22512b9d3"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3">name</a></td></tr>
 <tr class="memdesc:afc4a23f508cc6df90a0e7de22512b9d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">object name  <a href="#afc4a23f508cc6df90a0e7de22512b9d3">More...</a><br /></td></tr>
 <tr class="separator:afc4a23f508cc6df90a0e7de22512b9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -336,18 +361,10 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a0d5d42689a1ceb4f463ce9b85bb376bf"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a0d5d42689a1ceb4f463ce9b85bb376bf">pupil</a></td></tr>
 <tr class="memdesc:a0d5d42689a1ceb4f463ce9b85bb376bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">pupil size  <a href="#a0d5d42689a1ceb4f463ce9b85bb376bf">More...</a><br /></td></tr>
 <tr class="separator:a0d5d42689a1ceb4f463ce9b85bb376bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a460f138fd97b7e37b76cc81f7f2ed6a8"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a460f138fd97b7e37b76cc81f7f2ed6a8">isConnected</a></td></tr>
-<tr class="separator:a460f138fd97b7e37b76cc81f7f2ed6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c0d84e0c48ffb3cea6e3641552ef32b"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a6c0d84e0c48ffb3cea6e3641552ef32b">isRecording</a></td></tr>
-<tr class="separator:a6c0d84e0c48ffb3cea6e3641552ef32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa12482e379801efaeb99602f0fe94fa0"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#aa12482e379801efaeb99602f0fe94fa0">eyeUsed</a></td></tr>
-<tr class="separator:aa12482e379801efaeb99602f0fe94fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af481c0294d102fc9bca0b4974c1687cb"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#af481c0294d102fc9bca0b4974c1687cb">currentSample</a></td></tr>
 <tr class="separator:af481c0294d102fc9bca0b4974c1687cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6efbf683ce2a0f32ff6911485cefdb01"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a6efbf683ce2a0f32ff6911485cefdb01">currentEvent</a></td></tr>
 <tr class="separator:a6efbf683ce2a0f32ff6911485cefdb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cd4122c25351878efd9d6fea08deb8d"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a0cd4122c25351878efd9d6fea08deb8d">version</a></td></tr>
-<tr class="separator:a0cd4122c25351878efd9d6fea08deb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb799fcf9fc966274ca47f9c0b7327ca"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#abb799fcf9fc966274ca47f9c0b7327ca">fixInitLength</a></td></tr>
 <tr class="memdesc:abb799fcf9fc966274ca47f9c0b7327ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initiate fixation length.  <a href="#abb799fcf9fc966274ca47f9c0b7327ca">More...</a><br /></td></tr>
 <tr class="separator:abb799fcf9fc966274ca47f9c0b7327ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -364,6 +381,23 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a77b04f35ed5feb9d5a35b6aadf40b728"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a77b04f35ed5feb9d5a35b6aadf40b728">fixTotal</a></td></tr>
 <tr class="memdesc:a77b04f35ed5feb9d5a35b6aadf40b728"><td class="mdescLeft">&#160;</td><td class="mdescRight">total time searching and holding fixation  <a href="#a77b04f35ed5feb9d5a35b6aadf40b728">More...</a><br /></td></tr>
 <tr class="separator:a77b04f35ed5feb9d5a35b6aadf40b728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69a6b0666a8f994bb15cc7932af3ac09"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a69a6b0666a8f994bb15cc7932af3ac09">currentOffset</a></td></tr>
+<tr class="memdesc:a69a6b0666a8f994bb15cc7932af3ac09"><td class="mdescLeft">&#160;</td><td class="mdescRight">last time offset betweeen tracker and display computers  <a href="#a69a6b0666a8f994bb15cc7932af3ac09">More...</a><br /></td></tr>
+<tr class="separator:a69a6b0666a8f994bb15cc7932af3ac09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff9476978c71a3a0823948561f08b85"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#aaff9476978c71a3a0823948561f08b85">trackerTime</a></td></tr>
+<tr class="memdesc:aaff9476978c71a3a0823948561f08b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">tracker time stamp  <a href="#aaff9476978c71a3a0823948561f08b85">More...</a><br /></td></tr>
+<tr class="separator:aaff9476978c71a3a0823948561f08b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a460f138fd97b7e37b76cc81f7f2ed6a8"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a460f138fd97b7e37b76cc81f7f2ed6a8">isConnected</a></td></tr>
+<tr class="separator:a460f138fd97b7e37b76cc81f7f2ed6a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0d84e0c48ffb3cea6e3641552ef32b"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a6c0d84e0c48ffb3cea6e3641552ef32b">isRecording</a></td></tr>
+<tr class="separator:a6c0d84e0c48ffb3cea6e3641552ef32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa12482e379801efaeb99602f0fe94fa0"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#aa12482e379801efaeb99602f0fe94fa0">eyeUsed</a></td></tr>
+<tr class="separator:aa12482e379801efaeb99602f0fe94fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd4122c25351878efd9d6fea08deb8d"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a0cd4122c25351878efd9d6fea08deb8d">version</a></td></tr>
+<tr class="separator:a0cd4122c25351878efd9d6fea08deb8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b211605d22c378c5a2cde34813e5a7"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a91b211605d22c378c5a2cde34813e5a7">win</a></td></tr>
+<tr class="memdesc:a91b211605d22c378c5a2cde34813e5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">the PTB screen handle, normally set by <a class="el" href="classscreen_manager.html" title="screenManager Manages a Screen object screenManager manages PTB screen settings for opticka...">screenManager</a> but can force it to use another screen  <a href="#a91b211605d22c378c5a2cde34813e5a7">More...</a><br /></td></tr>
+<tr class="separator:a91b211605d22c378c5a2cde34813e5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a835eae9d7298dfb1619e48a094946e5f"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a835eae9d7298dfb1619e48a094946e5f">ppd_</a></td></tr>
 <tr class="separator:a835eae9d7298dfb1619e48a094946e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2590ceea0fd2c6806042f66d55ff827c"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyelink_manager.html#a2590ceea0fd2c6806042f66d55ff827c">tempFile</a></td></tr>
@@ -590,7 +624,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>check what mode the eyelink is in </p>
+<p>check what mode the eyelink is in </p><h2>define IN_UNKNOWN_MODE 0</h2>
+#define IN_IDLE_MODE 1 #define IN_SETUP_MODE 2 #define IN_RECORD_MODE 4 #define IN_TARGET_MODE 8 #define IN_DRIFTCORR_MODE 16 #define IN_IMAGE_MODE 32 #define IN_USER_MENU 64 #define IN_PLAYBACK_MODE 256 #define LINK_TERMINATED_RESULT -100 </p>
 
 </div>
 </div>
@@ -846,6 +881,46 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>get a sample from the tracker, if dummymode=true then use the mouse as an eye signal </p>
+
+</div>
+</div>
+<a id="abbc1abcef58be805cacbf1f18d321592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc1abcef58be805cacbf1f18d321592">&#9670;&nbsp;</a></span>getTimeOffset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function eyelinkManager::getTimeOffset </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get offset between tracker and display computers. </p>
+
+</div>
+</div>
+<a id="ab3c2ff9d4da55e8a5be5710bf53968ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c2ff9d4da55e8a5be5710bf53968ac">&#9670;&nbsp;</a></span>getTrackerTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function eyelinkManager::getTrackerTime </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get offset between tracker and display computers. </p>
 
 </div>
 </div>
@@ -1260,6 +1335,26 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 </div>
 </div>
+<a id="a832ed58f2fcddaa115012b627cfd8243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a832ed58f2fcddaa115012b627cfd8243">&#9670;&nbsp;</a></span>testExclusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function eyelinkManager::testExclusion </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>testFixation returns input yes or no strings based on fixation state, useful for using via <a class="el" href="classstate_machine.html" title="stateMachine a state machine object ">stateMachine</a> </p>
+
+</div>
+</div>
 <a id="aa85829cd987b1bebfc903a6e5ba0af99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa85829cd987b1bebfc903a6e5ba0af99">&#9670;&nbsp;</a></span>testFixationTime()</h2>
 
@@ -1296,6 +1391,50 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 </div>
 </div>
+<a id="a97700a3f1401ec8b16931338ec7fcf5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97700a3f1401ec8b16931338ec7fcf5d">&#9670;&nbsp;</a></span>testHoldFixation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function eyelinkManager::testHoldFixation </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>yesString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>noString</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if we're still within fix window. Input is 2 strings, either one is returned depending on success or failure, 'fixing' means the fixation time is not yet met... </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">yesString</td><td>if this function succeeds return this string </td></tr>
+    <tr><td class="paramname">noString</td><td>if this function fails return this string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>out the output string which is 'fixing' if the fixation window was entered but not for the requisite fixation time, or the yes or no string. </dd></dl>
+
+</div>
+</div>
 <a id="ae34d014e2072272bf753a7418d23c090"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae34d014e2072272bf753a7418d23c090">&#9670;&nbsp;</a></span>testSearchHoldFixation()</h2>
 
@@ -1328,7 +1467,7 @@ searching boolean for if we are still searching for fixation </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Checks if we're looking for fixation a set time. Input is 2 strings, either one is returned depending on success or failure, 'searching' may also be returned meaning the fixation window hasn't been entered yet... </p>
+<p>Checks if we're looking for fixation a set time. Input is 2 strings, either one is returned depending on success or failure, 'searching' may also be returned meaning the fixation window hasn't been entered yet, and 'fixing' means the fixation time is not yet met... </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">yesString</td><td>if this function succeeds return this string </td></tr>
@@ -1336,7 +1475,7 @@ searching boolean for if we are still searching for fixation </dd></dl>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>out the output string which is 'searching' if fixation is still being initiated, or yes or no string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>out the output string which is 'searching' if fixation is still being initiated, 'fixing' if the fixation window was entered but not for the requisite fixation time, or the yes or no string. </dd></dl>
 
 </div>
 </div>
@@ -1480,6 +1619,26 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 </div>
 </div>
+<a id="a380eaad88bc0f9b5effcbb2da75d0657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380eaad88bc0f9b5effcbb2da75d0657">&#9670;&nbsp;</a></span>trackerDrawExclusion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function eyelinkManager::trackerDrawExclusion </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>draw the fixation box on the tracker display </p>
+
+</div>
+</div>
 <a id="a3e05e09fe64fdf14f4fd1d12e9defc0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3e05e09fe64fdf14f4fd1d12e9defc0e">&#9670;&nbsp;</a></span>trackerDrawFixation()</h2>
 
@@ -1500,8 +1659,8 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 </div>
 </div>
-<a id="a5b2340dce92036b5aaf79ecbdb0fcb2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5b2340dce92036b5aaf79ecbdb0fcb2c">&#9670;&nbsp;</a></span>trackerDrawStimuli()</h2>
+<a id="a5ba8586350893d651d5c3a8530e7b403"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ba8586350893d651d5c3a8530e7b403">&#9670;&nbsp;</a></span>trackerDrawStimuli()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1516,7 +1675,13 @@ searching boolean for if we are still searching for fixation </dd></dl>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>ts</em>&#160;</td>
+          <td class="paramname"><em>ts</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>clearScreen</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1527,6 +1692,36 @@ searching boolean for if we are still searching for fixation </dd></dl>
 </div><div class="memdoc">
 
 <p>draw the stimuli boxes on the tracker display </p>
+
+</div>
+</div>
+<a id="a3df07cb1e65152bbbf5f79af4c6b020a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3df07cb1e65152bbbf5f79af4c6b020a">&#9670;&nbsp;</a></span>trackerDrawText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function eyelinkManager::trackerDrawText </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>textIn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>draw the fixation box on the tracker display </p>
 
 </div>
 </div>
@@ -1838,6 +2033,30 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 </div>
 </div>
+<a id="a69a6b0666a8f994bb15cc7932af3ac09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a6b0666a8f994bb15cc7932af3ac09">&#9670;&nbsp;</a></span>currentOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property eyelinkManager::currentOffset</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>last time offset betweeen tracker and display computers </p>
+
+</div>
+</div>
 <a id="af481c0294d102fc9bca0b4974c1687cb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af481c0294d102fc9bca0b4974c1687cb">&#9670;&nbsp;</a></span>currentSample</h2>
 
@@ -1933,6 +2152,22 @@ searching boolean for if we are still searching for fixation </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="accb424224d1e5a810eca128330edd87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb424224d1e5a810eca128330edd87a">&#9670;&nbsp;</a></span>exclusionZone</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property eyelinkManager::exclusionZone</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>exclusion zone no eye movement allowed inside </p>
 
 </div>
 </div>
@@ -2219,6 +2454,22 @@ searching boolean for if we are still searching for fixation </dd></dl>
 </div><div class="memdoc">
 
 <p>total time searching and holding fixation </p>
+
+</div>
+</div>
+<a id="ae9696cd2e08792168569ed14df4d2e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9696cd2e08792168569ed14df4d2e8e">&#9670;&nbsp;</a></span>forceDriftCorrect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property eyelinkManager::forceDriftCorrect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>force drift correction? </p>
 
 </div>
 </div>
@@ -2614,6 +2865,30 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 </div>
 </div>
+<a id="aaff9476978c71a3a0823948561f08b85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff9476978c71a3a0823948561f08b85">&#9670;&nbsp;</a></span>trackerTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property eyelinkManager::trackerTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>tracker time stamp </p>
+
+</div>
+</div>
 <a id="a045e40ac081d9e2b909fe78e2c00b293"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a045e40ac081d9e2b909fe78e2c00b293">&#9670;&nbsp;</a></span>uuid</h2>
 
@@ -2654,6 +2929,22 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 </div>
 </div>
+<a id="a687b34b5c6764cff722b64f9c8d89788"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a687b34b5c6764cff722b64f9c8d89788">&#9670;&nbsp;</a></span>verbosityLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property eyelinkManager::verbosityLevel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>verbosity level </p>
+
+</div>
+</div>
 <a id="a0cd4122c25351878efd9d6fea08deb8d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cd4122c25351878efd9d6fea08deb8d">&#9670;&nbsp;</a></span>version</h2>
 
@@ -2681,11 +2972,19 @@ searching boolean for if we are still searching for fixation </dd></dl>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Property eyelinkManager::win</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>the PTB screen handle, normally set by <a class="el" href="classscreen_manager.html" title="screenManager Manages a Screen object screenManager manages PTB screen settings for opticka...">screenManager</a> but can force it to use another screen </p>
@@ -2746,7 +3045,7 @@ searching boolean for if we are still searching for fixation </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

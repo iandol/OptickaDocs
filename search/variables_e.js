@@ -30,7 +30,7 @@ var searchData=
   ['plotoptions',['plotOptions',['../classopx_online.html#a2d9556caaaf80ff40ef9be2e2c3a446f',1,'opxOnline']]],
   ['plotrange',['plotRange',['../classanalysis_core.html#a96691b0c950097bd9984d2d01306b6f8',1,'analysisCore']]],
   ['polltime',['pollTime',['../classopx_online.html#afe9930fdab3fe6f5a93ec2938cea8777',1,'opxOnline']]],
-  ['port',['port',['../classsend_serial.html#aff89fcdf32230fa2cdeb8c614008e2cb',1,'sendSerial']]],
+  ['port',['port',['../classcalibrate_luminance.html#a7df14281fe2fcb7d0033449329e526fc',1,'calibrateLuminance::port()'],['../classarduino_manager.html#a0d3a8ccddbc9bb57d47e73111dc3e3f7',1,'arduinoManager::port()']]],
   ['porthandle',['portHandle',['../classsend_serial_i_o_port.html#a6d80f7d0694e53e8509f108b59357aea',1,'sendSerialIOPort']]],
   ['position',['position',['../classpanel.html#afa86ae192b6dc50e577f0708fe4b768d',1,'panel']]],
   ['ppd',['ppd',['../classeyelink_analysis.html#acbd2ae3e481ebce57db2114bab0f57b7',1,'eyelinkAnalysis::ppd()'],['../classscreen_manager.html#a4121fa2e9f8f8b89862cf8bdc6c113b8',1,'screenManager::ppd()'],['../classbase_stimulus.html#a3a3bbf55c2559d8b227edb7884f532c0',1,'baseStimulus::ppd()']]],
@@ -43,5 +43,5 @@ var searchData=
   ['prop',['prop',['../classpanel.html#a0ca7f970a18d701826d5d9c2bce89823',1,'panel']]],
   ['protocol',['protocol',['../classdata_connection.html#ad56319e90389c7e2d5592169ba23db75',1,'dataConnection::protocol()'],['../classopx_online.html#a13d0ec5813c030901ca2d6258fff5a5a',1,'opxOnline::protocol()']]],
   ['ptb',['ptb',['../classrun_experiment.html#a372e4e78a8061d1207d46c6876be9f32',1,'runExperiment']]],
-  ['pupil',['pupil',['../classeyelink_manager.html#a0d5d42689a1ceb4f463ce9b85bb376bf',1,'eyelinkManager::pupil()'],['../classeyelink_analysis.html#ab434d6865967e802463ab6fea11cd13f',1,'eyelinkAnalysis::PUPIL()']]]
+  ['pupil',['PUPIL',['../classeyelink_analysis.html#ab434d6865967e802463ab6fea11cd13f',1,'eyelinkAnalysis::PUPIL()'],['../classeyelink_manager.html#a0d5d42689a1ceb4f463ce9b85bb376bf',1,'eyelinkManager::pupil()']]]
 ];

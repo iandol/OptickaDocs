@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -62,28 +62,29 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Opticka is a vision research system for behavioral electrophysiology.</div>  </div>
+<div class="title">Opticka Stimulus Generator </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a href="https://doi.org/10.5281/zenodo.592253"></a></p>
-<p>Opticka Stimulus Generator is an object oriented framework with optional GUI for the <a href="http://psychtoolbox.org/wikka.php?wakka=HomePage">Psychophysics toolbox (PTB)</a>, allowing randomised interleaved presentation of complex visual stimuli. It is designed to work on OS X, Windows or Linux, and interfaces via strobed words (using either a DataPixx [15+1bit] or a LabJack [11bit]) and ethernet with a Plexon Omniplex for recording neurophysiological and behavioural data. The communication class can send TTLs and strobed words out to other equipment types. Behavioural control uses the Eyelink eye tracker and a full behavioural repertoire is available by using <a href="http://iandol.github.io/OptickaDocs/classstate_machine.html#details">State-Machine</a> logic. Opticka uses the TCP interface to the Eyelink affording much better control, reliability and data recording over using analog voltages alone. The various base classes can be used without the need to run the GUI (see <a href="http://iandol.github.io/OptickaDocs/optickatest.html">optickatest.m</a> for an example), and plug-n-play stimuli provide a unified interface (setup, animate, draw, update, reset) to integrate into existing/other PTB routines. The various object methods take care of all the background geometry and normalization, meaning stimuli are much easier to use than “raw” PTB. Full analysis routines are also present for taking the raw Plexon files (.PLX or .PL2), Eyelink files (.EDF) and behavioural responses and parsing them into a consistent structure, interfacing directly with <a href="http://fieldtrip.fcdonders.nl/start">Fieldtrip</a> for further spike, LFP, and spike-LFP analysis. The data structures also allow the use of Jonathan Victor's <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2818590/">STA toolkit</a>, and <a href="http://www.neurostat.mit.edu/nstat/">nStat toolbox</a> (a pp-GLM modelling approach to analysing neural data). Opticka, because it is object oriented, is far more modular than MonkeyLogic (as well as having much better graphics).</p>
+<p>Opticka Stimulus Generator is an object oriented framework with optional GUI for the <a href="http://psychtoolbox.org/wikka.php?wakka=HomePage">Psychophysics toolbox (PTB)</a>, allowing randomised interleaved presentation of complex visual stimuli. It is designed to work on macOS, Linux, or Windows and interfaces via strobed words (using either a <a href="https://www.crsltd.com/tools-for-vision-science/calibrated-displays/displaypp-lcd-monitor/">Display++</a>, <a href="http://vpixx.com/products/tools-for-vision-sciences/">DataPixx/ViewPixx</a> or a <a href="https://labjack.com/">LabJack</a>) and ethernet for recording neurophysiological and behavioural data. Behavioural control uses the Eyelink eye tracker and a full behavioural repertoire is available by using <a href="http://iandol.github.io/OptickaDocs/classstate_machine.html#details">State-Machine</a> logic. Opticka uses the TCP interface to the Eyelink affording much better control, reliability and data recording over using analog voltages alone. The various base classes can be used without the need to run the GUI (see <a href="http://iandol.github.io/OptickaDocs/optickatest.html">optickatest.m</a> for an example), and plug-n-play stimuli provide a unified interface (setup, animate, draw, update, reset) to integrate into existing/other PTB routines. The various object methods take care of all the background geometry and normalization, meaning stimuli are much easier to use than “raw” PTB. Full analysis routines are also present for taking the raw Plexon files (.PLX or .PL2), Eyelink files (.EDF) and behavioural responses and parsing them into a consistent structure, interfacing directly with <a href="http://fieldtrip.fcdonders.nl/start">Fieldtrip</a> for further spike, LFP, and spike-LFP analysis. The data structures allow the use of Jonathan Victor's <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2818590/">STA toolkit</a>, and <a href="http://www.neurostat.mit.edu/nstat/">nStat toolbox</a> (a pp-GLM modelling approach to analysing neural data). Opticka, because it is object oriented, is far more modular than MonkeyLogic (as well as affording much better graphics).</p>
 <div class="image">
-<img width="900px" src="https://github.com/iandol/opticka/raw/gh-pages/images/opticka.png" alt="Opticka Screenshot"/>
+<img src="https://github.com/iandol/opticka/raw/gh-pages/images/opticka.png" alt="Opticka Screenshot"/>
 </div>
- <h2>Example hardware setup</h2>
+<h2>Example hardware setup</h2>
 <div class="image">
-<img width="900px" src="http://i62.tinypic.com/fxqq12.png" alt="Example hardware setup to run Opticka"/>
+<img src="http://i62.tinypic.com/fxqq12.png" alt="Example hardware setup to run Opticka"/>
 </div>
+<p>We have also recently got Opticka working well via the <a href="https://www.crsltd.com/tools-for-vision-science/calibrated-displays/displaypp-lcd-monitor/">Display++ developed by CRS</a>. This means we should now support both the VPixx and CRS display replacements for vision research, affording great bit depth display output and using their built-in I/O for more robust experimental control.</p>
 <h1>Quick Documentation</h1>
-<p><a class="el" href="optickatest_8m.html">optickatest.m</a> is a self-documenting minimal toy example showing a mini method of constants (MOC) experiment with 10 different stimuli. Read the Matlab-generated HTML for <code><a class="el" href="optickatest_8m.html">optickatest.m</a></code> here: <a href="http://iandol.github.io/OptickaDocs/optickatest.html">optickatest.m Report</a>. There is also auto-generated class documentation here: <a href="http://iandol.github.io/OptickaDocs/inherits.html">Opticka Class Docs</a>, however this is only as good as the comments in the code, which as always could be improved...</p>
+<p><code><a class="el" href="optickatest_8m.html">optickatest.m</a></code> is a self-documenting minimal toy example showing a mini method of constants (MOC) experiment with 10 different stimuli. Read the Matlab-generated documentation for <code><a class="el" href="optickatest_8m.html">optickatest.m</a></code> here: <a href="http://iandol.github.io/OptickaDocs/optickatest.html">optickatest.m Report</a>. There is also auto-generated class documentation here: <a href="http://iandol.github.io/OptickaDocs/inherits.html">Opticka Class Docs</a>, however this is only as good as the comments in the code, which as always could be improved...</p>
 <h1>Install Instructions</h1>
-<p>Opticka prefers the latest Psychophysics Toolbox (V3.0.12) and at least Matlab 2010a. It has been tested and is mostly used on 64bit OS X 10.12.x and Matlab 2017a (which is great update BTW). You can simply download the .ZIP from Github, and add the contents/subdirectories to Matlab path. Or if you have git installed, clone this Github repo and add to Matlab path.</p>
-<p>Opticka currently works both OS X, Linux and Windows, though the LabJack control of the Omniplex currently only works under OS X and Linux (Labjack uses a different interface on windows and *nix, but this is a minor interface issue). I'm not really testing under Windows as in OS X and Linux. Linux is the preferred OS for PTB according the Mario Kleiner at the moment, and we are slowly transitioning over to it.</p>
+<p>Opticka prefers the latest Psychophysics Toolbox (V3.0.14+) and at least Matlab 2014a. It has been tested and is mostly used on 64bit Ubuntu 18.04 / macOS 10.13.x &amp; Matlab 2018a. You can simply download the .ZIP from Github, and add the contents/subdirectories to Matlab path. Or if you have git installed, clone this Github repo and add to Matlab path.</p>
+<p>Opticka currently works on Linux, macOS and Windows, though the LabJack interface currently only works under Linux and macOS (Labjack uses a different interface on windows and *nix, but this is a minor interface issue and would be a quick fix). Linux is by far the preferred OS according the PTB developer Mario Kleiner, and recieves the majority of development work, therefore it is strongly advised to use it for experiments.</p>
 <h2>Features</h2>
 <ul>
 <li>Values are always given in eye-relevant co-ordinates (degrees etc.) that are internally calculated based on screen geometry/distance</li>
 <li>No limit on the number of independent variables, and variables can be linked to multiple stimuli.</li>
-<li>A state machine logic can run behavioural tasks driven by for e.g. eye position or behavioural response.</li>
+<li>A state machine logic can run behavioural tasks driven by for e.g. eye position or behavioural response. State machines can flexibly run tasks and chains of states define your experimental loop.</li>
 <li>Number of heterogeneous stimuli displayed simultaneously only limited by the GPU / computer power.</li>
 <li>Display lists are used, so one can easily change drawing order (i.e. what stimulus draws over other stimuli), by changing its order on the list.</li>
 <li>Object Oriented, allowing stimulus classes to be easily added and code to autodocument using DOxygen.</li>
@@ -113,7 +114,7 @@ $(function() {
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

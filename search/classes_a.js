@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['opticka',['opticka',['../classopticka.html',1,'']]],
-  ['optickacore',['optickaCore',['../classopticka_core.html',1,'']]],
-  ['opxonline',['opxOnline',['../classopx_online.html',1,'']]]
+  ['ndotsstimulus',['ndotsStimulus',['../classndots_stimulus.html',1,'']]]
 ];

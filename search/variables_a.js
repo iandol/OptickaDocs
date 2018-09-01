@@ -1,10 +1,14 @@
 var searchData=
 [
   ['laddress',['lAddress',['../classdata_connection.html#a3b4796e3d8a26d38e1a28fed521bd048',1,'dataConnection::lAddress()'],['../classopx_online.html#af2de4c5c0b0b52a580121a44199f5de4',1,'opxOnline::lAddress()']]],
+  ['lastdkl',['lastDKL',['../classcolour_manager.html#ae57bc3765f784af4627c8c6ea51da19c',1,'colourManager']]],
   ['lastfrequencymethod',['lastFrequencyMethod',['../class_l_f_p_analysis.html#a94fd029eb69673a71f23db72a557a80d',1,'LFPAnalysis']]],
   ['lastindex',['lastIndex',['../classrun_experiment.html#ad9ff3c19568b6e9a67fcb28ad90c1917',1,'runExperiment']]],
+  ['lastrgb',['lastRGB',['../classcolour_manager.html#ab5e6a60f79a0a6d6c9e8e3b82f393f46',1,'colourManager']]],
   ['lastsize',['lastSize',['../classrun_experiment.html#acd35aa5f2ed54b01585ab437dbbc7a9a',1,'runExperiment']]],
+  ['lastvalue',['lastValue',['../classd_pixx_manager.html#ae6379b19146d39380b9d78bf4496d04a',1,'dPixxManager::lastValue()'],['../classio_manager.html#a1857251e4e1346500e45030bdb196f6d',1,'ioManager::lastValue()'],['../classplusplus_manager.html#a79dc5a792d3f5116d8614083b07689ea',1,'plusplusManager::lastValue()']]],
   ['lastxposition',['lastXPosition',['../classrun_experiment.html#a8f316be26fca35d8c9488b167cd6bfc5',1,'runExperiment::lastXPosition()'],['../classmeta_stimulus.html#a9938214387bf564f2c12d8ac5e46978b',1,'metaStimulus::lastXPosition()']]],
+  ['lastxyy',['lastxyY',['../classcolour_manager.html#a02b50a2549acab374c30acacd26c3681',1,'colourManager']]],
   ['lastyposition',['lastYPosition',['../classrun_experiment.html#ae3e6565e7bcb3c64d9fd1033c4241cf9',1,'runExperiment::lastYPosition()'],['../classmeta_stimulus.html#a724cd127cf5a665de868732397132858',1,'metaStimulus::lastYPosition()']]],
   ['layout_5fmode_5fnormal',['LAYOUT_MODE_NORMAL',['../classpanel.html#a9aa37607d205664334e36800c4e636e2',1,'panel']]],
   ['layout_5fmode_5fpostprint',['LAYOUT_MODE_POSTPRINT',['../classpanel.html#ae30ca57530242e9227ca5013a0a703f2',1,'panel']]],

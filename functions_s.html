@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -95,10 +95,14 @@ $(function() {
 : <a class="el" href="classopticka.html#ad2df60dd22431853a5e087df7c7ed7b0">opticka</a>
 </li>
 <li>saveData()
-: <a class="el" href="classopx_online.html#a3a3c334ac8d9c58707e5dcc07d19054d">opxOnline</a>
+: <a class="el" href="classopticka.html#a337fa521aec2e3680180f1e905d3907b">opticka</a>
+, <a class="el" href="classopx_online.html#a3a3c334ac8d9c58707e5dcc07d19054d">opxOnline</a>
 </li>
 <li>saveDirectory
 : <a class="el" href="classopx_online.html#a2104647da85fd40b6c900a70aeda69cb">opxOnline</a>
+</li>
+<li>saveEyeInfo()
+: <a class="el" href="classrun_experiment.html#ad02e397ac6e6343c7c6493e172008584">runExperiment</a>
 </li>
 <li>saveFile
 : <a class="el" href="classeyelink_manager.html#a9402074302fb1f0d64d57572b0a3ba76">eyelinkManager</a>
@@ -120,6 +124,7 @@ $(function() {
 <li>scale
 : <a class="el" href="classapparent_motion_stimulus.html#aa9dd47538f079fdf98bc2dfa2d7a6dcd">apparentMotionStimulus</a>
 , <a class="el" href="classbar_stimulus.html#ae4a461d3ac2c3a3f88141a46d3ae7919">barStimulus</a>
+, <a class="el" href="classdisc_stimulus.html#aa4410f1d5a16d3650cb01cbdda3c8370">discStimulus</a>
 , <a class="el" href="classgabor_stimulus.html#aad8ad0d5cc40ac18963e79447d579db6">gaborStimulus</a>
 , <a class="el" href="classgrating_stimulus.html#ab191a4b7137ab38650cd23935858522d">gratingStimulus</a>
 , <a class="el" href="classmovie_stimulus.html#a71d684d813e787c20749e612a4832e51">movieStimulus</a>
@@ -128,6 +133,7 @@ $(function() {
 </li>
 <li>screen
 : <a class="el" href="classcalibrate_luminance.html#a2de85666724c5a79a079bdaa3e227719">calibrateLuminance</a>
+, <a class="el" href="classcolour_manager.html#a892b57fbb73cb2d016354c54ae86a90c">colourManager</a>
 , <a class="el" href="classeyelink_manager.html#a83270882053fdd1d4e0500bb7bea2cc9">eyelinkManager</a>
 , <a class="el" href="classmeta_stimulus.html#a896d5031578187225cb5c3d84201ccc7">metaStimulus</a>
 , <a class="el" href="classrun_experiment.html#afacf98420b6ea5fea269862b77cac625">runExperiment</a>
@@ -191,20 +197,46 @@ $(function() {
 <li>sendCommand()
 : <a class="el" href="classdata_connection.html#ac334b9aab3563afa496f1abf4ca25fc0">dataConnection</a>
 </li>
+<li>sendData
+: <a class="el" href="classplusplus_manager.html#ab8d7c16f40d1917605b5baa30817c17f">plusplusManager</a>
+</li>
+<li>sendMask
+: <a class="el" href="classplusplus_manager.html#aef13e79eb4801e88dbf2eac25c8cdfea">plusplusManager</a>
+</li>
 <li>sendOmniplexStimulus()
 : <a class="el" href="classopticka.html#a3278d61cd334754ffbbfb5c0ad83bcae">opticka</a>
 </li>
 <li>sendSerial()
-: <a class="el" href="classsend_serial.html#ad04084a717b9348d71dae07d6e01b5c7">sendSerial</a>
-, <a class="el" href="classsend_serial_i_o_port.html#a770d3c3b234a9ad75ece133c2a2e6efa">sendSerialIOPort</a>
+: <a class="el" href="classsend_serial_i_o_port.html#a770d3c3b234a9ad75ece133c2a2e6efa">sendSerialIOPort</a>
 </li>
 <li>sendStrobe()
 : <a class="el" href="classd_pixx_manager.html#a71818e90483fa5087f66613aa643a95d">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a9971dfb8876da4d5ff30ad43709c5321">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#aba5b6f39006bcb416faff1f6f1e0b1fa">plusplusManager</a>
 , <a class="el" href="classrun_experiment.html#aeff1d4b37a10dd76d6d3b1bc20a3e7e1">runExperiment</a>
 </li>
+<li>sendStrobeAndFlip()
+: <a class="el" href="classplusplus_manager.html#a2dad70894f1d8ee05c132647ed2e954a">plusplusManager</a>
+</li>
+<li>sendSyncTime
+: <a class="el" href="classrun_experiment.html#ac5ac349587f2b41195b2c4e066445b21">runExperiment</a>
+</li>
 <li>sendTTL()
-: <a class="el" href="classd_pixx_manager.html#a504d3e6532bca994a63026fb59481dea">dPixxManager</a>
-, <a class="el" href="classsend_serial.html#a0fc4f081df625cced4ab457c56657419">sendSerial</a>
+: <a class="el" href="classarduino_manager.html#ab0ccb6cea912e3f50f1c0e06f1895ddc">arduinoManager</a>
+, <a class="el" href="classd_pixx_manager.html#a504d3e6532bca994a63026fb59481dea">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a104ad859f62db3cdc02a0b9fd139b910">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#a33303adcf7ffdc50e97e8499b2c01643">plusplusManager</a>
+</li>
+<li>sendValue
+: <a class="el" href="classd_pixx_manager.html#a8a168b759b636e8cc5180329ce88e089">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a07f3777c75b4426cfba6ffc18aee2157">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#a8224bedfc2cd7ef3a7f63df13654e36b">plusplusManager</a>
+</li>
+<li>sensitivities
+: <a class="el" href="classcolour_manager.html#a19f199c0bc993f0db9ecaf8771e9fea3">colourManager</a>
+</li>
+<li>sensitivitiesCIE
+: <a class="el" href="classcolour_manager.html#a96d3f27ae001300fdb8247632bc90b82">colourManager</a>
 </li>
 <li>serialLink
 : <a class="el" href="classeye_occluder.html#a2ed9d2fc9686021e5d485e37a123718a">eyeOccluder</a>
@@ -410,6 +442,9 @@ $(function() {
 <li>showMask
 : <a class="el" href="classmeta_stimulus.html#aaefee7500fd53135a5c54153ec8ca9c7">metaStimulus</a>
 </li>
+<li>showOnTracker
+: <a class="el" href="classbase_stimulus.html#aabbb121d7515d0dca17e2e7089a5c60b">baseStimulus</a>
+</li>
 <li>showPanel()
 : <a class="el" href="classbase_stimulus.html#aa1855bf86208716253f289abb2e53009">baseStimulus</a>
 </li>
@@ -422,10 +457,12 @@ $(function() {
 , <a class="el" href="classtarget_inducer_stimulus.html#ae2ab9bd48294cf45834158e8f1e010d2">targetInducerStimulus</a>
 </li>
 <li>silentMode
-: <a class="el" href="classd_pixx_manager.html#a8f01bb88a348a408117dd3d7a19f43e8">dPixxManager</a>
+: <a class="el" href="classarduino_manager.html#a15f6752b5a53db4d98711c16f57f5f46">arduinoManager</a>
+, <a class="el" href="classd_pixx_manager.html#a8f01bb88a348a408117dd3d7a19f43e8">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a257af7fdb8d12e1c1aab0b7f80454a82">ioManager</a>
 , <a class="el" href="classlab_jack.html#a543bba2ce3a8e8f6dd98dfd93ad4546f">labJack</a>
 , <a class="el" href="classmagstim_manager.html#a83b59eff211b337119d50b72f6d7ddb4">magstimManager</a>
-, <a class="el" href="classsend_serial.html#af0ee259111b877744075733ca97d3ac4">sendSerial</a>
+, <a class="el" href="classplusplus_manager.html#a0fd6eea1cf0f2ca18a7679f995d6a3d9">plusplusManager</a>
 , <a class="el" href="classsend_serial_i_o_port.html#a7c4b04a4bf39cdd4e856d35d6d8b79a3">sendSerialIOPort</a>
 </li>
 <li>sIndex
@@ -451,6 +488,7 @@ $(function() {
 </li>
 <li>sM
 : <a class="el" href="classbase_stimulus.html#a2d70f5bd1dced469925157dbc59d8cef">baseStimulus</a>
+, <a class="el" href="classplusplus_manager.html#a2362f1400ea66484b5189effac292837">plusplusManager</a>
 </li>
 <li>sMap
 : <a class="el" href="classparse_opx_spikes.html#a4783f8cf3360a449952f88b62ba43406">parseOpxSpikes</a>
@@ -474,6 +512,12 @@ $(function() {
 </li>
 <li>spawnSlave()
 : <a class="el" href="classopx_online.html#a0f522954380ab3de78f4d2ac1d8cd2a2">opxOnline</a>
+</li>
+<li>spCAL
+: <a class="el" href="classcalibrate_luminance.html#a8dad960f17b52ce181847ac5a3beadd1">calibrateLuminance</a>
+</li>
+<li>spectroCalLaser()
+: <a class="el" href="classcalibrate_luminance.html#a73fac33480337192580c8ef27279d855">calibrateLuminance</a>
 </li>
 <li>spectrum
 : <a class="el" href="classcalibrate_luminance.html#a11ce1a7f7a08c09649e4babd2c4fd289">calibrateLuminance</a>
@@ -513,6 +557,11 @@ $(function() {
 <li>start()
 : <a class="el" href="classstate_machine.html#a7fa0d5a98f76ebaf1993dbc08a92a26b">stateMachine</a>
 </li>
+<li>startFixation()
+: <a class="el" href="classd_pixx_manager.html#a5e0564502e0713b20b1386fa7fb20a93">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a678ef50b0848538f98d316d11f1383f3">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#acbc0639f1efbec1d8833cda156aa8f74">plusplusManager</a>
+</li>
 <li>startOffset
 : <a class="el" href="classplx_reader.html#a75f58137be17a6dff7ed38328d689154">plxReader</a>
 , <a class="el" href="classspike_analysis.html#afd0e436e8638338937f591d6da476d40">spikeAnalysis</a>
@@ -521,7 +570,10 @@ $(function() {
 : <a class="el" href="classbase_stimulus.html#a9242ec61e6275510695c1bed0300bb43">baseStimulus</a>
 </li>
 <li>startRecording()
-: <a class="el" href="classeyelink_manager.html#a71b70867aeac0d89763d7176bd09416c">eyelinkManager</a>
+: <a class="el" href="classd_pixx_manager.html#a0146bf47b23af5f09a2023cc391b292b">dPixxManager</a>
+, <a class="el" href="classeyelink_manager.html#a71b70867aeac0d89763d7176bd09416c">eyelinkManager</a>
+, <a class="el" href="classio_manager.html#a1f1a0ad712da9dac83d997d432cfced0">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#af3fa53eea40ae8f647dcf8514da94f93">plusplusManager</a>
 </li>
 <li>startServer()
 : <a class="el" href="classdata_connection.html#ab23c475b86a0c0a1eaef7daf550a1ff0">dataConnection</a>
@@ -564,6 +616,9 @@ $(function() {
 : <a class="el" href="classdata_connection.html#a09b52a9d699e1132c8253319308a14f1">dataConnection</a>
 , <a class="el" href="classeyelink_manager.html#a82592dd435b84286a8149aec28d8b7f1">eyelinkManager</a>
 </li>
+<li>statusScreen()
+: <a class="el" href="classplusplus_manager.html#aa31e252016cf278eebd8419f2155ffe4">plusplusManager</a>
+</li>
 <li>stderr()
 : <a class="el" href="classanalysis_core.html#ad6f7964c4ff9468952f1f126f654c071">analysisCore</a>
 </li>
@@ -584,6 +639,10 @@ $(function() {
 </li>
 <li>stimList
 : <a class="el" href="classrun_experiment.html#acc89a6c43e22260810da65b9d9ee595e">runExperiment</a>
+</li>
+<li>stimOFFValue
+: <a class="el" href="classd_pixx_manager.html#aea8e6c16bce230ede41c419b2422f881">dPixxManager</a>
+, <a class="el" href="classrun_experiment.html#a4b3f69885b0890a1f6091fbf9f8551d5">runExperiment</a>
 </li>
 <li>stimulate()
 : <a class="el" href="classmagstim_manager.html#abc6c3ecf5c19ae69a59e3c6724f7161c">magstimManager</a>
@@ -619,7 +678,13 @@ $(function() {
 , <a class="el" href="classspot_stimulus.html#a35cf960f792312738f0b80fa8938f88c">spotStimulus</a>
 </li>
 <li>stopRecording()
-: <a class="el" href="classeyelink_manager.html#a1b4c5ef486c125cdfdcf926c6b3ac223">eyelinkManager</a>
+: <a class="el" href="classd_pixx_manager.html#a8f4b6b12969422f078171c08fe39285a">dPixxManager</a>
+, <a class="el" href="classeyelink_manager.html#a1b4c5ef486c125cdfdcf926c6b3ac223">eyelinkManager</a>
+, <a class="el" href="classio_manager.html#a5b6e69bbd9d14c7fcb7b6b5ac9ed2585">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#ae81158a5756fcd6b2ea6b5e6cef65e4e">plusplusManager</a>
+</li>
+<li>stopTask
+: <a class="el" href="classrun_experiment.html#a4bcdeac2b985f92abd826b8c3ece5f19">runExperiment</a>
 </li>
 <li>store
 : <a class="el" href="classopticka.html#a2f2c26f3eaf645885879c8ae5ab1d114">opticka</a>
@@ -638,12 +703,19 @@ $(function() {
 </li>
 <li>strobeLine
 : <a class="el" href="classd_pixx_manager.html#a1bf16013027b8cdd06df3fd056417cc4">dPixxManager</a>
+, <a class="el" href="classplusplus_manager.html#a29113707d207d0da0e4e9ed51f84d9f3">plusplusManager</a>
+</li>
+<li>strobeMode
+: <a class="el" href="classplusplus_manager.html#ac7f58cac1d4dbcac2c30ff509100b280">plusplusManager</a>
+</li>
+<li>strobeShift()
+: <a class="el" href="classplusplus_manager.html#a2735c9c7c49b9230b58a83706604855a">plusplusManager</a>
+</li>
+<li>strobeShift_
+: <a class="el" href="classplusplus_manager.html#a3c9342b06dba9a377136f15673cf915b">plusplusManager</a>
 </li>
 <li>strobeTime
 : <a class="el" href="classlab_jack.html#a3ea5c220ccd7da0c4bcda895f4c597ee">labJack</a>
-</li>
-<li>strobeValue
-: <a class="el" href="classrun_experiment.html#a55a623dcff852168d0bdb2c11c6c9bf4">runExperiment</a>
 </li>
 <li>strobeWord()
 : <a class="el" href="classlab_jack.html#a66cd4678fd6ba53967495bd53c062067">labJack</a>
@@ -675,7 +747,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

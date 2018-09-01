@@ -1,6 +1,6 @@
 <map id="apparentMotionStimulus" name="apparentMotionStimulus">
-<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="201,567,303,592"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="412,286,505,311"/>
-<area shape="rect" id="node4" href="$classhandle.html" title="handle" alt="" coords="428,5,489,31"/>
-<area shape="rect" id="node6" href="$classdynamicprops.html" title="dynamicprops" alt="" coords="284,286,388,311"/>
+<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="221,612,331,639"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="450,309,550,335"/>
+<area shape="rect" id="node4" href="$classhandle.html" title="handle" alt="" coords="467,5,533,32"/>
+<area shape="rect" id="node6" href="$classdynamicprops.html" title="dynamicprops" alt="" coords="311,309,425,335"/>
 </map>

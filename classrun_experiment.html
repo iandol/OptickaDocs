@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -83,8 +83,8 @@ Inheritance diagram for runExperiment:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrun_experiment__inherit__graph.png" border="0" usemap="#run_experiment_inherit__map" alt="Inheritance graph"/></div>
 <map name="run_experiment_inherit__map" id="run_experiment_inherit__map">
-<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="13,79,106,104"/>
-<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="29,5,90,31"/>
+<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="15,80,115,107"/>
+<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="31,5,98,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -92,8 +92,8 @@ Collaboration diagram for runExperiment:</div>
 <div class="dyncontent">
 <div class="center"><img src="classrun_experiment__coll__graph.png" border="0" usemap="#run_experiment_coll__map" alt="Collaboration graph"/></div>
 <map name="run_experiment_coll__map" id="run_experiment_coll__map">
-<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="27,286,120,311"/>
-<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="5,5,67,31"/>
+<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="30,309,130,335"/>
+<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="5,5,72,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -101,7 +101,7 @@ Collaboration diagram for runExperiment:</div>
 Public Types</h2></td></tr>
 <tr class="memitem:ab55a4d8546f28debb7f34fc18ce060bf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ab55a4d8546f28debb7f34fc18ce060bf">Events</a> { <a class="el" href="classrun_experiment.html#ab55a4d8546f28debb7f34fc18ce060bfa98fc4b8a5801fface108f25d96676041">runInfo</a>, 
 <a class="el" href="classrun_experiment.html#ab55a4d8546f28debb7f34fc18ce060bfa4327e34885b944f90f5b54c6037dc6fa">abortRun</a>, 
-<a class="el" href="classrun_experiment.html#ab55a4d8546f28debb7f34fc18ce060bfa89fb69eb09f01aa8bcec3d674254f881">endRun</a>
+<a class="el" href="classrun_experiment.html#ab55a4d8546f28debb7f34fc18ce060bfa4eb990f37d6fff3157ceac5e17dff329">endAllRuns</a>
  }</td></tr>
 <tr class="separator:ab55a4d8546f28debb7f34fc18ce060bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -119,6 +119,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1e42e2c94a3f674c2250cbfc6995e0ea"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a1e42e2c94a3f674c2250cbfc6995e0ea">initialise</a> (in obj, in config)</td></tr>
 <tr class="memdesc:a1e42e2c94a3f674c2250cbfc6995e0ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">prepare the object for the local machine  <a href="#a1e42e2c94a3f674c2250cbfc6995e0ea">More...</a><br /></td></tr>
 <tr class="separator:a1e42e2c94a3f674c2250cbfc6995e0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb0991bf281d08bbee9d559e47a96ba"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#aadb0991bf281d08bbee9d559e47a96ba">checkTaskEnded</a> (in obj)</td></tr>
+<tr class="memdesc:aadb0991bf281d08bbee9d559e47a96ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if <a class="el" href="classstate_machine.html" title="stateMachine a state machine object ">stateMachine</a> has finished, set tS.stopTask true  <a href="#aadb0991bf281d08bbee9d559e47a96ba">More...</a><br /></td></tr>
+<tr class="separator:aadb0991bf281d08bbee9d559e47a96ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7bf52aaafff530e3a62839903ecab0b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ad7bf52aaafff530e3a62839903ecab0b">getRunLog</a> (in obj)</td></tr>
 <tr class="memdesc:ad7bf52aaafff530e3a62839903ecab0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">getrunLog Prints out the frame time plots from a run  <a href="#ad7bf52aaafff530e3a62839903ecab0b">More...</a><br /></td></tr>
 <tr class="separator:ad7bf52aaafff530e3a62839903ecab0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,8 +150,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a92cd185447610cde55efc07d3be95188"><td class="mdescLeft">&#160;</td><td class="mdescRight">set strobe value  <a href="#a92cd185447610cde55efc07d3be95188">More...</a><br /></td></tr>
 <tr class="separator:a92cd185447610cde55efc07d3be95188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf44c8eec382b250d63f214ea39191f4"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#acf44c8eec382b250d63f214ea39191f4">doStrobe</a> (in obj, in value)</td></tr>
-<tr class="memdesc:acf44c8eec382b250d63f214ea39191f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set strobe on next flip  <a href="#acf44c8eec382b250d63f214ea39191f4">More...</a><br /></td></tr>
+<tr class="memdesc:acf44c8eec382b250d63f214ea39191f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set strobe to trigger on next flip  <a href="#acf44c8eec382b250d63f214ea39191f4">More...</a><br /></td></tr>
 <tr class="separator:acf44c8eec382b250d63f214ea39191f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00e051497a481a8286488df026edbd43"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a00e051497a481a8286488df026edbd43">doSyncTime</a> (in obj)</td></tr>
+<tr class="memdesc:a00e051497a481a8286488df026edbd43"><td class="mdescLeft">&#160;</td><td class="mdescRight">send SYNCTIME message to eyelink after flip  <a href="#a00e051497a481a8286488df026edbd43">More...</a><br /></td></tr>
+<tr class="separator:a00e051497a481a8286488df026edbd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a69fc46da1899d6a0800f4774a857af"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a2a69fc46da1899d6a0800f4774a857af">enableFlip</a> (in obj)</td></tr>
 <tr class="memdesc:a2a69fc46da1899d6a0800f4774a857af"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable screen flip  <a href="#a2a69fc46da1899d6a0800f4774a857af">More...</a><br /></td></tr>
 <tr class="separator:a2a69fc46da1899d6a0800f4774a857af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,15 +170,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1ee54682a31fa33e0b340b314acb6c1"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ab1ee54682a31fa33e0b340b314acb6c1">updateVariables</a> (in obj, in index, in override, in <a class="el" href="textprogressbar_8m.html#a5c2c81fc18bae0e222a6ca6715a8bce7">update</a>)</td></tr>
 <tr class="memdesc:ab1ee54682a31fa33e0b340b314acb6c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">updateVariables Updates the stimulus objects with the current variable set  <a href="#ab1ee54682a31fa33e0b340b314acb6c1">More...</a><br /></td></tr>
 <tr class="separator:ab1ee54682a31fa33e0b340b314acb6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a769602d75fcbac5a0d121e6753840e7b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a769602d75fcbac5a0d121e6753840e7b">needEyelinkSample</a> (in obj, in value)</td></tr>
+<tr class="memdesc:a769602d75fcbac5a0d121e6753840e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">do we use <a class="el" href="classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a simpler interface ...">eyelinkManager</a> getSample on current flip?  <a href="#a769602d75fcbac5a0d121e6753840e7b">More...</a><br /></td></tr>
+<tr class="separator:a769602d75fcbac5a0d121e6753840e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07cbb570c61e7e6688464d125d72ff8e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a07cbb570c61e7e6688464d125d72ff8e">deleteRunLog</a> (in obj)</td></tr>
-<tr class="memdesc:a07cbb570c61e7e6688464d125d72ff8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">getrunLog Prints out the frame time plots from a run  <a href="#a07cbb570c61e7e6688464d125d72ff8e">More...</a><br /></td></tr>
+<tr class="memdesc:a07cbb570c61e7e6688464d125d72ff8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">deletes the run logs  <a href="#a07cbb570c61e7e6688464d125d72ff8e">More...</a><br /></td></tr>
 <tr class="separator:a07cbb570c61e7e6688464d125d72ff8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22cfe86ac3d789cf40b5317caf0ae844"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a22cfe86ac3d789cf40b5317caf0ae844">restoreRunLog</a> (in obj, in tLog)</td></tr>
-<tr class="memdesc:a22cfe86ac3d789cf40b5317caf0ae844"><td class="mdescLeft">&#160;</td><td class="mdescRight">getTimeLog Prints out the frame time plots from a run  <a href="#a22cfe86ac3d789cf40b5317caf0ae844">More...</a><br /></td></tr>
-<tr class="separator:a22cfe86ac3d789cf40b5317caf0ae844"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f9c35b6bd13a950697b9fccdb3c5ef8"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a5f9c35b6bd13a950697b9fccdb3c5ef8">refreshScreen</a> (in obj)</td></tr>
 <tr class="memdesc:a5f9c35b6bd13a950697b9fccdb3c5ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">refresh the screen values stored in the object  <a href="#a5f9c35b6bd13a950697b9fccdb3c5ef8">More...</a><br /></td></tr>
 <tr class="separator:a5f9c35b6bd13a950697b9fccdb3c5ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5107bbc6a7b750735448e87a21829a1"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ab5107bbc6a7b750735448e87a21829a1">logRun</a> (in obj, in tag)</td></tr>
+<tr class="memdesc:ab5107bbc6a7b750735448e87a21829a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">print run info to command window  <a href="#ab5107bbc6a7b750735448e87a21829a1">More...</a><br /></td></tr>
+<tr class="separator:ab5107bbc6a7b750735448e87a21829a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ea3f2256b189b9f900ab957e0cbf83"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a55ea3f2256b189b9f900ab957e0cbf83">noop</a> (in obj)</td></tr>
+<tr class="memdesc:a55ea3f2256b189b9f900ab957e0cbf83"><td class="mdescLeft">&#160;</td><td class="mdescRight">no operation, tests method call overhead  <a href="#a55ea3f2256b189b9f900ab957e0cbf83">More...</a><br /></td></tr>
+<tr class="separator:a55ea3f2256b189b9f900ab957e0cbf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac972a6998c845cb2e1cdcb2f696e1906"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#ac972a6998c845cb2e1cdcb2f696e1906">fullName</a> (in obj)</td></tr>
 <tr class="memdesc:ac972a6998c845cb2e1cdcb2f696e1906"><td class="mdescLeft">&#160;</td><td class="mdescRight">concatenate the name with a uuid at get.  <a href="#ac972a6998c845cb2e1cdcb2f696e1906">More...</a><br /></td></tr>
 <tr class="separator:ac972a6998c845cb2e1cdcb2f696e1906"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,8 +213,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8622bd1789a13f84aec9800e443d02ea"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a8622bd1789a13f84aec9800e443d02ea">loadobj</a> (in in)</td></tr>
 <tr class="memdesc:a8622bd1789a13f84aec9800e443d02ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">loadobj To be backwards compatible to older saved protocols, we have to parse structures / objects specifically during object load  <a href="#a8622bd1789a13f84aec9800e443d02ea">More...</a><br /></td></tr>
 <tr class="separator:a8622bd1789a13f84aec9800e443d02ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac697a7c60118891f252c445f5f9bd9b8"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac697a7c60118891f252c445f5f9bd9b8">rebuild</a> (in obj, in in, in inObject)</td></tr>
-<tr class="separator:ac697a7c60118891f252c445f5f9bd9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29da259a92b171d1e90f3c36b5571a7a"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a29da259a92b171d1e90f3c36b5571a7a">rebuild</a> ()</td></tr>
+<tr class="separator:a29da259a92b171d1e90f3c36b5571a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -215,15 +227,27 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:afacf98420b6ea5fea269862b77cac625"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#afacf98420b6ea5fea269862b77cac625">screen</a></td></tr>
 <tr class="memdesc:afacf98420b6ea5fea269862b77cac625"><td class="mdescLeft">&#160;</td><td class="mdescRight">screen manager object  <a href="#afacf98420b6ea5fea269862b77cac625">More...</a><br /></td></tr>
 <tr class="separator:afacf98420b6ea5fea269862b77cac625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2cbbb481964872c6146ae6e9c77b2f"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a7e2cbbb481964872c6146ae6e9c77b2f">useDisplayPP</a></td></tr>
+<tr class="memdesc:a7e2cbbb481964872c6146ae6e9c77b2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">use Display++ for strobed digital I/O?  <a href="#a7e2cbbb481964872c6146ae6e9c77b2f">More...</a><br /></td></tr>
+<tr class="separator:a7e2cbbb481964872c6146ae6e9c77b2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dc2b20dbd3ddd4ab1b7e78b1faaa085"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a5dc2b20dbd3ddd4ab1b7e78b1faaa085">useDataPixx</a></td></tr>
-<tr class="memdesc:a5dc2b20dbd3ddd4ab1b7e78b1faaa085"><td class="mdescLeft">&#160;</td><td class="mdescRight">use dataPixx for digital I/O  <a href="#a5dc2b20dbd3ddd4ab1b7e78b1faaa085">More...</a><br /></td></tr>
+<tr class="memdesc:a5dc2b20dbd3ddd4ab1b7e78b1faaa085"><td class="mdescLeft">&#160;</td><td class="mdescRight">use dataPixx for strobed digital I/O?  <a href="#a5dc2b20dbd3ddd4ab1b7e78b1faaa085">More...</a><br /></td></tr>
 <tr class="separator:a5dc2b20dbd3ddd4ab1b7e78b1faaa085"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5271203535de69556dde2b4574e1ea26"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a5271203535de69556dde2b4574e1ea26">useLabJack</a></td></tr>
-<tr class="memdesc:a5271203535de69556dde2b4574e1ea26"><td class="mdescLeft">&#160;</td><td class="mdescRight">use LabJack for digital I/O  <a href="#a5271203535de69556dde2b4574e1ea26">More...</a><br /></td></tr>
-<tr class="separator:a5271203535de69556dde2b4574e1ea26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cab56021cea7762a737d85aaac153d6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a9cab56021cea7762a737d85aaac153d6">useLabJackStrobe</a></td></tr>
+<tr class="memdesc:a9cab56021cea7762a737d85aaac153d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">use LabJack for strobed digital I/O?  <a href="#a9cab56021cea7762a737d85aaac153d6">More...</a><br /></td></tr>
+<tr class="separator:a9cab56021cea7762a737d85aaac153d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2458bcd38d46720968e0c6d8b8aa2f5c"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a2458bcd38d46720968e0c6d8b8aa2f5c">useLabJackReward</a></td></tr>
+<tr class="memdesc:a2458bcd38d46720968e0c6d8b8aa2f5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">use LabJack for reward TTL?  <a href="#a2458bcd38d46720968e0c6d8b8aa2f5c">More...</a><br /></td></tr>
+<tr class="separator:a2458bcd38d46720968e0c6d8b8aa2f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21d047e7a779466d1bcc29675e7692d0"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a21d047e7a779466d1bcc29675e7692d0">useArduino</a></td></tr>
+<tr class="memdesc:a21d047e7a779466d1bcc29675e7692d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">use Arduino for reward TTL?  <a href="#a21d047e7a779466d1bcc29675e7692d0">More...</a><br /></td></tr>
+<tr class="separator:a21d047e7a779466d1bcc29675e7692d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e40055628a440605735a52f0787d756"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a4e40055628a440605735a52f0787d756">useEyeLink</a></td></tr>
-<tr class="memdesc:a4e40055628a440605735a52f0787d756"><td class="mdescLeft">&#160;</td><td class="mdescRight">use eyelink?  <a href="#a4e40055628a440605735a52f0787d756">More...</a><br /></td></tr>
+<tr class="memdesc:a4e40055628a440605735a52f0787d756"><td class="mdescLeft">&#160;</td><td class="mdescRight">use Eyelink?  <a href="#a4e40055628a440605735a52f0787d756">More...</a><br /></td></tr>
 <tr class="separator:a4e40055628a440605735a52f0787d756"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f4f3b0a22d55bbc8fadda523e949855"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a9f4f3b0a22d55bbc8fadda523e949855">useEyeOccluder</a></td></tr>
+<tr class="memdesc:a9f4f3b0a22d55bbc8fadda523e949855"><td class="mdescLeft">&#160;</td><td class="mdescRight">use eye occluder (custom arduino device) for LGN work ?  <a href="#a9f4f3b0a22d55bbc8fadda523e949855">More...</a><br /></td></tr>
+<tr class="separator:a9f4f3b0a22d55bbc8fadda523e949855"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac00a2126d4d24e94ef56b54c25ff181a"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac00a2126d4d24e94ef56b54c25ff181a">uiCommand</a></td></tr>
 <tr class="memdesc:ac00a2126d4d24e94ef56b54c25ff181a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this lets the opticka UI leave commands to <a class="el" href="classrun_experiment.html" title="runExperiment is the main Experiment manager; Inherits from optickaCore ">runExperiment</a>  <a href="#ac00a2126d4d24e94ef56b54c25ff181a">More...</a><br /></td></tr>
 <tr class="separator:ac00a2126d4d24e94ef56b54c25ff181a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,7 +255,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a857bb333cae037ff2acca0f172bca01b"><td class="mdescLeft">&#160;</td><td class="mdescRight">do we flip or not?  <a href="#a857bb333cae037ff2acca0f172bca01b">More...</a><br /></td></tr>
 <tr class="separator:a857bb333cae037ff2acca0f172bca01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a286b61cccbb903c73d66fb29cdf97a83"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a286b61cccbb903c73d66fb29cdf97a83">logFrames</a></td></tr>
-<tr class="memdesc:a286b61cccbb903c73d66fb29cdf97a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">log all frame times, gets slow for &gt; 1e6 frames  <a href="#a286b61cccbb903c73d66fb29cdf97a83">More...</a><br /></td></tr>
+<tr class="memdesc:a286b61cccbb903c73d66fb29cdf97a83"><td class="mdescLeft">&#160;</td><td class="mdescRight">log all frame times?  <a href="#a286b61cccbb903c73d66fb29cdf97a83">More...</a><br /></td></tr>
 <tr class="separator:a286b61cccbb903c73d66fb29cdf97a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad88c91e63cf8fb1acda515afec4adb44"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ad88c91e63cf8fb1acda515afec4adb44">debug</a></td></tr>
 <tr class="memdesc:ad88c91e63cf8fb1acda515afec4adb44"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable debugging? (poorer temporal fidelity)  <a href="#ad88c91e63cf8fb1acda515afec4adb44">More...</a><br /></td></tr>
@@ -239,18 +263,18 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:aee96217a24fc34c73e30388ba6901039"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#aee96217a24fc34c73e30388ba6901039">visualDebug</a></td></tr>
 <tr class="memdesc:aee96217a24fc34c73e30388ba6901039"><td class="mdescLeft">&#160;</td><td class="mdescRight">shows the info text and position grid during stimulus presentation  <a href="#aee96217a24fc34c73e30388ba6901039">More...</a><br /></td></tr>
 <tr class="separator:aee96217a24fc34c73e30388ba6901039"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a29c1500d7d54857d3f39c3822a3da9"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a5a29c1500d7d54857d3f39c3822a3da9">drawFixation</a></td></tr>
+<tr class="memdesc:a5a29c1500d7d54857d3f39c3822a3da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw simple fixation cross during trial?  <a href="#a5a29c1500d7d54857d3f39c3822a3da9">More...</a><br /></td></tr>
+<tr class="separator:a5a29c1500d7d54857d3f39c3822a3da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b5d425345931abed70d5ebf1dfaad6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a16b5d425345931abed70d5ebf1dfaad6">benchmark</a></td></tr>
 <tr class="memdesc:a16b5d425345931abed70d5ebf1dfaad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">flip as fast as possible?  <a href="#a16b5d425345931abed70d5ebf1dfaad6">More...</a><br /></td></tr>
 <tr class="separator:a16b5d425345931abed70d5ebf1dfaad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb2971360300da479520ce38d60f7790"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#aeb2971360300da479520ce38d60f7790">verbose</a></td></tr>
 <tr class="memdesc:aeb2971360300da479520ce38d60f7790"><td class="mdescLeft">&#160;</td><td class="mdescRight">verbose logging to command window?  <a href="#aeb2971360300da479520ce38d60f7790">More...</a><br /></td></tr>
 <tr class="separator:aeb2971360300da479520ce38d60f7790"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55a623dcff852168d0bdb2c11c6c9bf4"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a55a623dcff852168d0bdb2c11c6c9bf4">strobeValue</a></td></tr>
-<tr class="memdesc:a55a623dcff852168d0bdb2c11c6c9bf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">strobed word value  <a href="#a55a623dcff852168d0bdb2c11c6c9bf4">More...</a><br /></td></tr>
-<tr class="separator:a55a623dcff852168d0bdb2c11c6c9bf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeff1d4b37a10dd76d6d3b1bc20a3e7e1"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#aeff1d4b37a10dd76d6d3b1bc20a3e7e1">sendStrobe</a></td></tr>
-<tr class="memdesc:aeff1d4b37a10dd76d6d3b1bc20a3e7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">send strobe on next flip?  <a href="#aeff1d4b37a10dd76d6d3b1bc20a3e7e1">More...</a><br /></td></tr>
-<tr class="separator:aeff1d4b37a10dd76d6d3b1bc20a3e7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b3f69885b0890a1f6091fbf9f8551d5"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a4b3f69885b0890a1f6091fbf9f8551d5">stimOFFValue</a></td></tr>
+<tr class="memdesc:a4b3f69885b0890a1f6091fbf9f8551d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">what value to send on stimulus OFF  <a href="#a4b3f69885b0890a1f6091fbf9f8551d5">More...</a><br /></td></tr>
+<tr class="separator:a4b3f69885b0890a1f6091fbf9f8551d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f378ce19e6f8a42ecb341899bbd6878"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a7f378ce19e6f8a42ecb341899bbd6878">subjectName</a></td></tr>
 <tr class="memdesc:a7f378ce19e6f8a42ecb341899bbd6878"><td class="mdescLeft">&#160;</td><td class="mdescRight">subject name  <a href="#a7f378ce19e6f8a42ecb341899bbd6878">More...</a><br /></td></tr>
 <tr class="separator:a7f378ce19e6f8a42ecb341899bbd6878"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -261,6 +285,7 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a6b9f2484bb9239dbd94c36b593451cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure for <a class="el" href="classscreen_manager.html" title="screenManager Manages a Screen object screenManager manages PTB screen settings for opticka...">screenManager</a> on initialisation and info from opticka  <a href="#a6b9f2484bb9239dbd94c36b593451cec">More...</a><br /></td></tr>
 <tr class="separator:a6b9f2484bb9239dbd94c36b593451cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0b4536d12c9a5fdffb7cd59b829a4b8"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac0b4536d12c9a5fdffb7cd59b829a4b8">stimulus</a></td></tr>
+<tr class="memdesc:ac0b4536d12c9a5fdffb7cd59b829a4b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">our old stimulus structure used to be a simple cell, now we use <a class="el" href="classmeta_stimulus.html" title="metaStimulus is a wrapper for opticka stimuli METASTIMULUS a collection of stimuli, wrapped in one structure. It allows you to treat a group of heterogenous stimuli as if it is a single stimulus, so for example animate(metaStimulus) will run the animate method for all stimuli in the group without having to call it for each stimulus. You can also pick individual stimuli by using cell indexing of this object. So for example metaStimulus{2} actually calls metaStimulus.stimuli{2}. You can also pass a mask stimulus set, and when you toggle showMask, the mask stimuli will be drawn instead of the stimuli themselves, the timing is left to the calling function. ">metaStimulus</a>  <a href="#ac0b4536d12c9a5fdffb7cd59b829a4b8">More...</a><br /></td></tr>
 <tr class="separator:ac0b4536d12c9a5fdffb7cd59b829a4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc89a6c43e22260810da65b9d9ee595e"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#acc89a6c43e22260810da65b9d9ee595e">stimList</a></td></tr>
 <tr class="memdesc:acc89a6c43e22260810da65b9d9ee595e"><td class="mdescLeft">&#160;</td><td class="mdescRight">used to select single stimulus in training mode  <a href="#acc89a6c43e22260810da65b9d9ee595e">More...</a><br /></td></tr>
@@ -282,6 +307,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:acd35aa5f2ed54b01585ab437dbbc7a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9ff3c19568b6e9a67fcb28ad90c1917"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ad9ff3c19568b6e9a67fcb28ad90c1917">lastIndex</a></td></tr>
 <tr class="separator:ad9ff3c19568b6e9a67fcb28ad90c1917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acc3d50409c7ab1509318e56326c539"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a8acc3d50409c7ab1509318e56326c539">dPPMode</a></td></tr>
+<tr class="memdesc:a8acc3d50409c7ab1509318e56326c539"><td class="mdescLeft">&#160;</td><td class="mdescRight">what mode to run the DPP in?  <a href="#a8acc3d50409c7ab1509318e56326c539">More...</a><br /></td></tr>
+<tr class="separator:a8acc3d50409c7ab1509318e56326c539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc4a23f508cc6df90a0e7de22512b9d3"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3">name</a></td></tr>
 <tr class="memdesc:afc4a23f508cc6df90a0e7de22512b9d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">object name  <a href="#afc4a23f508cc6df90a0e7de22512b9d3">More...</a><br /></td></tr>
 <tr class="separator:afc4a23f508cc6df90a0e7de22512b9d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -327,42 +355,66 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
+<tr class="memitem:a2812d209f629f9173fbcfec9c8130d2e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a2812d209f629f9173fbcfec9c8130d2e">configureIO</a> (in obj)</td></tr>
+<tr class="memdesc:a2812d209f629f9173fbcfec9c8130d2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">configureIO Configures the IO devices.  <a href="#a2812d209f629f9173fbcfec9c8130d2e">More...</a><br /></td></tr>
+<tr class="separator:a2812d209f629f9173fbcfec9c8130d2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e338b5dc68d19f4255a68fee88fb8c"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a59e338b5dc68d19f4255a68fee88fb8c">initialiseTask</a> (in obj)</td></tr>
 <tr class="memdesc:a59e338b5dc68d19f4255a68fee88fb8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">InitialiseTask Sets up the task structure with dynamic properties.  <a href="#a59e338b5dc68d19f4255a68fee88fb8c">More...</a><br /></td></tr>
 <tr class="separator:a59e338b5dc68d19f4255a68fee88fb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3863c7dfe203926fdb03098f6672e3a1"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a3863c7dfe203926fdb03098f6672e3a1">updateVars</a> (in obj, in thisBlock, in thisRun)</td></tr>
 <tr class="memdesc:a3863c7dfe203926fdb03098f6672e3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">updateVars Updates the stimulus objects with the current variable set  <a href="#a3863c7dfe203926fdb03098f6672e3a1">More...</a><br /></td></tr>
 <tr class="separator:a3863c7dfe203926fdb03098f6672e3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac33f1f201a793e545645367ceafcf0ac"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac33f1f201a793e545645367ceafcf0ac">updateTask</a> (in obj)</td></tr>
-<tr class="memdesc:ac33f1f201a793e545645367ceafcf0ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">updateTask Updates the stimulus run state; update the stimulus values for the current trial and increments the switchTime and switchTick timer  <a href="#ac33f1f201a793e545645367ceafcf0ac">More...</a><br /></td></tr>
-<tr class="separator:ac33f1f201a793e545645367ceafcf0ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae725cf7f7e15dc70405f9da92c35ebdd"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ae725cf7f7e15dc70405f9da92c35ebdd">updateMOCTask</a> (in obj)</td></tr>
+<tr class="memdesc:ae725cf7f7e15dc70405f9da92c35ebdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">updateMOCTask Updates the stimulus run state; update the stimulus values for the current trial and increments the switchTime and switchTick timer  <a href="#ae725cf7f7e15dc70405f9da92c35ebdd">More...</a><br /></td></tr>
+<tr class="separator:ae725cf7f7e15dc70405f9da92c35ebdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e937bd47e44e1f05fb8f6ea5eca80e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a70e937bd47e44e1f05fb8f6ea5eca80e">infoTextScreen</a> (in obj)</td></tr>
+<tr class="memdesc:a70e937bd47e44e1f05fb8f6ea5eca80e"><td class="mdescLeft">&#160;</td><td class="mdescRight">infoTextScreen - draws text about frame to screen  <a href="#a70e937bd47e44e1f05fb8f6ea5eca80e">More...</a><br /></td></tr>
+<tr class="separator:a70e937bd47e44e1f05fb8f6ea5eca80e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a253fd2d4b8488593f6d03648d46e31a3"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a253fd2d4b8488593f6d03648d46e31a3">infoText</a> (in obj)</td></tr>
-<tr class="memdesc:a253fd2d4b8488593f6d03648d46e31a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">infoText - draws text about frame to screen  <a href="#a253fd2d4b8488593f6d03648d46e31a3">More...</a><br /></td></tr>
+<tr class="memdesc:a253fd2d4b8488593f6d03648d46e31a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">infoText - info string  <a href="#a253fd2d4b8488593f6d03648d46e31a3">More...</a><br /></td></tr>
 <tr class="separator:a253fd2d4b8488593f6d03648d46e31a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a4aa968dc336f33d3e6788bebbe2a0c"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a8a4aa968dc336f33d3e6788bebbe2a0c">infoTextUI</a> (in obj)</td></tr>
-<tr class="memdesc:a8a4aa968dc336f33d3e6788bebbe2a0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">infoText - draws text about frame to screen  <a href="#a8a4aa968dc336f33d3e6788bebbe2a0c">More...</a><br /></td></tr>
-<tr class="separator:a8a4aa968dc336f33d3e6788bebbe2a0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2091a0a118fd233a0cd88bf6c6265386"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a2091a0a118fd233a0cd88bf6c6265386">logMe</a> (in obj, in tag)</td></tr>
 <tr class="memdesc:a2091a0a118fd233a0cd88bf6c6265386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs the run loop parameters along with a calling tag.  <a href="#a2091a0a118fd233a0cd88bf6c6265386">More...</a><br /></td></tr>
 <tr class="separator:a2091a0a118fd233a0cd88bf6c6265386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad02e397ac6e6343c7c6493e172008584"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ad02e397ac6e6343c7c6493e172008584">saveEyeInfo</a> (in obj, in sM, in eL, in <a class="el" href="classrun_experiment.html#af418d6d6c2cacc8352306460c8b84b23">tS</a>)</td></tr>
+<tr class="memdesc:ad02e397ac6e6343c7c6493e172008584"><td class="mdescLeft">&#160;</td><td class="mdescRight">save this trial eye info  <a href="#ad02e397ac6e6343c7c6493e172008584">More...</a><br /></td></tr>
+<tr class="separator:ad02e397ac6e6343c7c6493e172008584"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1094869dddb55ea34ce7ff9457ecaf36"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a1094869dddb55ea34ce7ff9457ecaf36">checkFixationKeys</a> (in obj, in <a class="el" href="classrun_experiment.html#af418d6d6c2cacc8352306460c8b84b23">tS</a>)</td></tr>
 <tr class="memdesc:a1094869dddb55ea34ce7ff9457ecaf36"><td class="mdescLeft">&#160;</td><td class="mdescRight">manage key commands during task loop  <a href="#a1094869dddb55ea34ce7ff9457ecaf36">More...</a><br /></td></tr>
 <tr class="separator:a1094869dddb55ea34ce7ff9457ecaf36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:aeff1d4b37a10dd76d6d3b1bc20a3e7e1"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#aeff1d4b37a10dd76d6d3b1bc20a3e7e1">sendStrobe</a></td></tr>
+<tr class="memdesc:aeff1d4b37a10dd76d6d3b1bc20a3e7e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">send strobe on next flip?  <a href="#aeff1d4b37a10dd76d6d3b1bc20a3e7e1">More...</a><br /></td></tr>
+<tr class="separator:aeff1d4b37a10dd76d6d3b1bc20a3e7e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a333034042cde0db5e90b5e73e628c"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a26a333034042cde0db5e90b5e73e628c">needSample</a></td></tr>
+<tr class="memdesc:a26a333034042cde0db5e90b5e73e628c"><td class="mdescLeft">&#160;</td><td class="mdescRight">need eyelink sample on next flip?  <a href="#a26a333034042cde0db5e90b5e73e628c">More...</a><br /></td></tr>
+<tr class="separator:a26a333034042cde0db5e90b5e73e628c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ac349587f2b41195b2c4e066445b21"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac5ac349587f2b41195b2c4e066445b21">sendSyncTime</a></td></tr>
+<tr class="memdesc:ac5ac349587f2b41195b2c4e066445b21"><td class="mdescLeft">&#160;</td><td class="mdescRight">send eyelink SYNCTIME after next flip?  <a href="#ac5ac349587f2b41195b2c4e066445b21">More...</a><br /></td></tr>
+<tr class="separator:ac5ac349587f2b41195b2c4e066445b21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb95a795f776856ddf4bb7f16bb932e2"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#adb95a795f776856ddf4bb7f16bb932e2">stateMachine</a></td></tr>
 <tr class="memdesc:adb95a795f776856ddf4bb7f16bb932e2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classstate_machine.html" title="stateMachine a state machine object ">stateMachine</a>  <a href="#adb95a795f776856ddf4bb7f16bb932e2">More...</a><br /></td></tr>
 <tr class="separator:adb95a795f776856ddf4bb7f16bb932e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21cb2f840501011cc93786201e5e418d"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a21cb2f840501011cc93786201e5e418d">eyeLink</a></td></tr>
 <tr class="memdesc:a21cb2f840501011cc93786201e5e418d"><td class="mdescLeft">&#160;</td><td class="mdescRight">eyelink manager object  <a href="#a21cb2f840501011cc93786201e5e418d">More...</a><br /></td></tr>
 <tr class="separator:a21cb2f840501011cc93786201e5e418d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac36f954244e5758d331a792ed0d094f4"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac36f954244e5758d331a792ed0d094f4">io</a></td></tr>
+<tr class="memdesc:ac36f954244e5758d331a792ed0d094f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">generic IO manager  <a href="#ac36f954244e5758d331a792ed0d094f4">More...</a><br /></td></tr>
+<tr class="separator:ac36f954244e5758d331a792ed0d094f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8058d6326642826a834dfca141e5e960"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a8058d6326642826a834dfca141e5e960">dPixx</a></td></tr>
-<tr class="memdesc:a8058d6326642826a834dfca141e5e960"><td class="mdescLeft">&#160;</td><td class="mdescRight">data pixx control  <a href="#a8058d6326642826a834dfca141e5e960">More...</a><br /></td></tr>
+<tr class="memdesc:a8058d6326642826a834dfca141e5e960"><td class="mdescLeft">&#160;</td><td class="mdescRight">DataPixx control object.  <a href="#a8058d6326642826a834dfca141e5e960">More...</a><br /></td></tr>
 <tr class="separator:a8058d6326642826a834dfca141e5e960"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c5a0cd3a3520b928a6c277122f9da76"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a6c5a0cd3a3520b928a6c277122f9da76">dPP</a></td></tr>
+<tr class="memdesc:a6c5a0cd3a3520b928a6c277122f9da76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display++ control object.  <a href="#a6c5a0cd3a3520b928a6c277122f9da76">More...</a><br /></td></tr>
+<tr class="separator:a6c5a0cd3a3520b928a6c277122f9da76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83bc895664e8fd52492d0070805fc4a6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a83bc895664e8fd52492d0070805fc4a6">lJack</a></td></tr>
-<tr class="memdesc:a83bc895664e8fd52492d0070805fc4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">LabJack object.  <a href="#a83bc895664e8fd52492d0070805fc4a6">More...</a><br /></td></tr>
+<tr class="memdesc:a83bc895664e8fd52492d0070805fc4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">LabJack control object.  <a href="#a83bc895664e8fd52492d0070805fc4a6">More...</a><br /></td></tr>
 <tr class="separator:a83bc895664e8fd52492d0070805fc4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed81149e1df8dc27bc96b95a189cd7f"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a7ed81149e1df8dc27bc96b95a189cd7f">arduino</a></td></tr>
+<tr class="memdesc:a7ed81149e1df8dc27bc96b95a189cd7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino control object.  <a href="#a7ed81149e1df8dc27bc96b95a189cd7f">More...</a><br /></td></tr>
+<tr class="separator:a7ed81149e1df8dc27bc96b95a189cd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4795e87045c5c0cca5b411d167e3643"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ab4795e87045c5c0cca5b411d167e3643">stateInfo</a></td></tr>
 <tr class="memdesc:ab4795e87045c5c0cca5b411d167e3643"><td class="mdescLeft">&#160;</td><td class="mdescRight">state machine control cell array  <a href="#ab4795e87045c5c0cca5b411d167e3643">More...</a><br /></td></tr>
 <tr class="separator:ab4795e87045c5c0cca5b411d167e3643"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,13 +425,13 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a372e4e78a8061d1207d46c6876be9f32"><td class="mdescLeft">&#160;</td><td class="mdescRight">PTB info.  <a href="#a372e4e78a8061d1207d46c6876be9f32">More...</a><br /></td></tr>
 <tr class="separator:a372e4e78a8061d1207d46c6876be9f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd9fc639c0fd3f9f6aa9f297c6bbb0ff"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#afd9fc639c0fd3f9f6aa9f297c6bbb0ff">screenVals</a></td></tr>
-<tr class="memdesc:afd9fc639c0fd3f9f6aa9f297c6bbb0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">gamma tables and the like  <a href="#afd9fc639c0fd3f9f6aa9f297c6bbb0ff">More...</a><br /></td></tr>
+<tr class="memdesc:afd9fc639c0fd3f9f6aa9f297c6bbb0ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">gamma tables and the like from <a class="el" href="classscreen_manager.html" title="screenManager Manages a Screen object screenManager manages PTB screen settings for opticka...">screenManager</a>  <a href="#afd9fc639c0fd3f9f6aa9f297c6bbb0ff">More...</a><br /></td></tr>
 <tr class="separator:afd9fc639c0fd3f9f6aa9f297c6bbb0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91391fbbb6c446995b7ea5456ef81f4a"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a91391fbbb6c446995b7ea5456ef81f4a">runLog</a></td></tr>
 <tr class="memdesc:a91391fbbb6c446995b7ea5456ef81f4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">log times during display  <a href="#a91391fbbb6c446995b7ea5456ef81f4a">More...</a><br /></td></tr>
 <tr class="separator:a91391fbbb6c446995b7ea5456ef81f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae00428b7d1c41de805486312ed3ea40b"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ae00428b7d1c41de805486312ed3ea40b">taskLog</a></td></tr>
-<tr class="memdesc:ae00428b7d1c41de805486312ed3ea40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">training log  <a href="#ae00428b7d1c41de805486312ed3ea40b">More...</a><br /></td></tr>
+<tr class="memdesc:ae00428b7d1c41de805486312ed3ea40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">task log  <a href="#ae00428b7d1c41de805486312ed3ea40b">More...</a><br /></td></tr>
 <tr class="separator:ae00428b7d1c41de805486312ed3ea40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6d729f33f32b42db6e7c57100cded2a"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ad6d729f33f32b42db6e7c57100cded2a">trainingLog</a></td></tr>
 <tr class="memdesc:ad6d729f33f32b42db6e7c57100cded2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">training log  <a href="#ad6d729f33f32b42db6e7c57100cded2a">More...</a><br /></td></tr>
@@ -396,6 +448,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a9d63097092ed5ac01fbbb35af66d1ba3"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a9d63097092ed5ac01fbbb35af66d1ba3">savePrefix</a></td></tr>
 <tr class="memdesc:a9d63097092ed5ac01fbbb35af66d1ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">save prefix generated from clock time  <a href="#a9d63097092ed5ac01fbbb35af66d1ba3">More...</a><br /></td></tr>
 <tr class="separator:a9d63097092ed5ac01fbbb35af66d1ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d66f8d8d3e08c30784f4da712e00a51"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a2d66f8d8d3e08c30784f4da712e00a51">isRunning</a></td></tr>
+<tr class="memdesc:a2d66f8d8d3e08c30784f4da712e00a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if <a class="el" href="classrun_experiment.html" title="runExperiment is the main Experiment manager; Inherits from optickaCore ">runExperiment</a> is running or not  <a href="#a2d66f8d8d3e08c30784f4da712e00a51">More...</a><br /></td></tr>
+<tr class="separator:a2d66f8d8d3e08c30784f4da712e00a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea3e6276af47548edf639f4bb8af50e"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a7ea3e6276af47548edf639f4bb8af50e">isRunTask</a></td></tr>
+<tr class="memdesc:a7ea3e6276af47548edf639f4bb8af50e"><td class="mdescLeft">&#160;</td><td class="mdescRight">is it run (false) or runTask (true)?  <a href="#a7ea3e6276af47548edf639f4bb8af50e">More...</a><br /></td></tr>
+<tr class="separator:a7ea3e6276af47548edf639f4bb8af50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bcdeac2b985f92abd826b8c3ece5f19"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a4bcdeac2b985f92abd826b8c3ece5f19">stopTask</a></td></tr>
+<tr class="memdesc:a4bcdeac2b985f92abd826b8c3ece5f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">should we stop the task?  <a href="#a4bcdeac2b985f92abd826b8c3ece5f19">More...</a><br /></td></tr>
+<tr class="separator:a4bcdeac2b985f92abd826b8c3ece5f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7f53594f63c398a08b7e36a2e5ffb1c"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ae7f53594f63c398a08b7e36a2e5ffb1c">allowedProperties</a></td></tr>
 <tr class="memdesc:ae7f53594f63c398a08b7e36a2e5ffb1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">properties allowed to be modified during construction  <a href="#ae7f53594f63c398a08b7e36a2e5ffb1c">More...</a><br /></td></tr>
 <tr class="separator:ae7f53594f63c398a08b7e36a2e5ffb1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -421,7 +482,7 @@ Private Attributes</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab55a4d8546f28debb7f34fc18ce060bfa98fc4b8a5801fface108f25d96676041"></a>runInfo&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="ab55a4d8546f28debb7f34fc18ce060bfa4327e34885b944f90f5b54c6037dc6fa"></a>abortRun&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ab55a4d8546f28debb7f34fc18ce060bfa89fb69eb09f01aa8bcec3d674254f881"></a>endRun&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab55a4d8546f28debb7f34fc18ce060bfa4eb990f37d6fff3157ceac5e17dff329"></a>endAllRuns&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -560,6 +621,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aadb0991bf281d08bbee9d559e47a96ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadb0991bf281d08bbee9d559e47a96ba">&#9670;&nbsp;</a></span>checkTaskEnded()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function runExperiment::checkTaskEnded </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>check if <a class="el" href="classstate_machine.html" title="stateMachine a state machine object ">stateMachine</a> has finished, set tS.stopTask true </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aa8dfc21dce662f080040e17c3e2f8423"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa8dfc21dce662f080040e17c3e2f8423">&#9670;&nbsp;</a></span>clone()</h2>
 
@@ -589,6 +676,40 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2812d209f629f9173fbcfec9c8130d2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2812d209f629f9173fbcfec9c8130d2e">&#9670;&nbsp;</a></span>configureIO()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">function runExperiment::configureIO </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>configureIO Configures the IO devices. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a07cbb570c61e7e6688464d125d72ff8e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a07cbb570c61e7e6688464d125d72ff8e">&#9670;&nbsp;</a></span>deleteRunLog()</h2>
 
@@ -605,7 +726,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>getrunLog Prints out the frame time plots from a run </p>
+<p>deletes the run logs </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"></td><td></td></tr>
@@ -661,7 +782,27 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>set strobe on next flip </p>
+<p>set strobe to trigger on next flip </p>
+
+</div>
+</div>
+<a id="a00e051497a481a8286488df026edbd43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00e051497a481a8286488df026edbd43">&#9670;&nbsp;</a></span>doSyncTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function runExperiment::doSyncTime </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>send SYNCTIME message to eyelink after flip </p>
 
 </div>
 </div>
@@ -910,7 +1051,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>infoText - draws text about frame to screen </p>
+<p>infoText - info string </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"></td><td></td></tr>
@@ -920,8 +1061,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8a4aa968dc336f33d3e6788bebbe2a0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8a4aa968dc336f33d3e6788bebbe2a0c">&#9670;&nbsp;</a></span>infoTextUI()</h2>
+<a id="a70e937bd47e44e1f05fb8f6ea5eca80e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e937bd47e44e1f05fb8f6ea5eca80e">&#9670;&nbsp;</a></span>infoTextScreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -930,7 +1071,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">function runExperiment::infoTextUI </td>
+          <td class="memname">function runExperiment::infoTextScreen </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -944,7 +1085,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>infoText - draws text about frame to screen </p>
+<p>infoTextScreen - draws text about frame to screen </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"></td><td></td></tr>
@@ -1214,6 +1355,104 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab5107bbc6a7b750735448e87a21829a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5107bbc6a7b750735448e87a21829a1">&#9670;&nbsp;</a></span>logRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function runExperiment::logRun </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>tag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>print run info to command window </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a769602d75fcbac5a0d121e6753840e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a769602d75fcbac5a0d121e6753840e7b">&#9670;&nbsp;</a></span>needEyelinkSample()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function runExperiment::needEyelinkSample </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>do we use <a class="el" href="classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a simpler interface ...">eyelinkManager</a> getSample on current flip? </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55ea3f2256b189b9f900ab957e0cbf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ea3f2256b189b9f900ab957e0cbf83">&#9670;&nbsp;</a></span>noop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function runExperiment::noop </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>no operation, tests method call overhead </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a8cb0b5a1ef93815cb2d3a0e31afd55ed"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8cb0b5a1ef93815cb2d3a0e31afd55ed">&#9670;&nbsp;</a></span>parseArgs()</h2>
 
@@ -1312,8 +1551,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac697a7c60118891f252c445f5f9bd9b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac697a7c60118891f252c445f5f9bd9b8">&#9670;&nbsp;</a></span>rebuild()</h2>
+<a id="a29da259a92b171d1e90f3c36b5571a7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29da259a92b171d1e90f3c36b5571a7a">&#9670;&nbsp;</a></span>rebuild()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1324,25 +1563,8 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">static function runExperiment::rebuild </td>
           <td>(</td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>inObject</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1371,42 +1593,6 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>refresh the screen values stored in the object </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a22cfe86ac3d789cf40b5317caf0ae844"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22cfe86ac3d789cf40b5317caf0ae844">&#9670;&nbsp;</a></span>restoreRunLog()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">function runExperiment::restoreRunLog </td>
-          <td>(</td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>obj</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>tLog</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>getTimeLog Prints out the frame time plots from a run </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname"></td><td></td></tr>
@@ -1522,6 +1708,62 @@ Private Attributes</h2></td></tr>
     <tr><td class="paramname">in</td><td>the calling function or main info </td></tr>
     <tr><td class="paramname">message</td><td>additional message that needs printing to command window </td></tr>
     <tr><td class="paramname">override</td><td>force logging if true even if verbose is false </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad02e397ac6e6343c7c6493e172008584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02e397ac6e6343c7c6493e172008584">&#9670;&nbsp;</a></span>saveEyeInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">function runExperiment::saveEyeInfo </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>sM</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>eL</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>tS</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>save this trial eye info </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -1719,8 +1961,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac33f1f201a793e545645367ceafcf0ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac33f1f201a793e545645367ceafcf0ac">&#9670;&nbsp;</a></span>updateTask()</h2>
+<a id="ae725cf7f7e15dc70405f9da92c35ebdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae725cf7f7e15dc70405f9da92c35ebdd">&#9670;&nbsp;</a></span>updateMOCTask()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1729,7 +1971,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">function runExperiment::updateTask </td>
+          <td class="memname">function runExperiment::updateMOCTask </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -1743,7 +1985,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>updateTask Updates the stimulus run state; update the stimulus values for the current trial and increments the switchTime and switchTick timer </p>
+<p>updateMOCTask Updates the stimulus run state; update the stimulus values for the current trial and increments the switchTime and switchTick timer </p>
 
 </div>
 </div>
@@ -1919,6 +2161,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>properties allowed to be modified during construction </p>
+
+</div>
+</div>
+<a id="a7ed81149e1df8dc27bc96b95a189cd7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed81149e1df8dc27bc96b95a189cd7f">&#9670;&nbsp;</a></span>arduino</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::arduino</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Arduino control object. </p>
 
 </div>
 </div>
@@ -2158,7 +2424,63 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>data pixx control </p>
+<p>DataPixx control object. </p>
+
+</div>
+</div>
+<a id="a6c5a0cd3a3520b928a6c277122f9da76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c5a0cd3a3520b928a6c277122f9da76">&#9670;&nbsp;</a></span>dPP</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::dPP</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Display++ control object. </p>
+
+</div>
+</div>
+<a id="a8acc3d50409c7ab1509318e56326c539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8acc3d50409c7ab1509318e56326c539">&#9670;&nbsp;</a></span>dPPMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::dPPMode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>what mode to run the DPP in? </p>
+
+</div>
+</div>
+<a id="a5a29c1500d7d54857d3f39c3822a3da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a29c1500d7d54857d3f39c3822a3da9">&#9670;&nbsp;</a></span>drawFixation</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::drawFixation</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>draw simple fixation cross during trial? </p>
 
 </div>
 </div>
@@ -2207,6 +2529,78 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The fullName is the object name combined with its uuid and class name. </p>
+
+</div>
+</div>
+<a id="ac36f954244e5758d331a792ed0d094f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac36f954244e5758d331a792ed0d094f4">&#9670;&nbsp;</a></span>io</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::io</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>generic IO manager </p>
+
+</div>
+</div>
+<a id="a2d66f8d8d3e08c30784f4da712e00a51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d66f8d8d3e08c30784f4da712e00a51">&#9670;&nbsp;</a></span>isRunning</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::isRunning</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check if <a class="el" href="classrun_experiment.html" title="runExperiment is the main Experiment manager; Inherits from optickaCore ">runExperiment</a> is running or not </p>
+
+</div>
+</div>
+<a id="a7ea3e6276af47548edf639f4bb8af50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea3e6276af47548edf639f4bb8af50e">&#9670;&nbsp;</a></span>isRunTask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::isRunTask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>is it run (false) or runTask (true)? </p>
 
 </div>
 </div>
@@ -2286,7 +2680,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>LabJack object. </p>
+<p>LabJack control object. </p>
 
 </div>
 </div>
@@ -2302,7 +2696,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>log all frame times, gets slow for &gt; 1e6 frames </p>
+<p>log all frame times? </p>
 
 </div>
 </div>
@@ -2351,6 +2745,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>object name </p>
+
+</div>
+</div>
+<a id="a26a333034042cde0db5e90b5e73e628c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a333034042cde0db5e90b5e73e628c">&#9670;&nbsp;</a></span>needSample</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::needSample</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>need eyelink sample on next flip? </p>
 
 </div>
 </div>
@@ -2542,7 +2960,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>gamma tables and the like </p>
+<p>gamma tables and the like from <a class="el" href="classscreen_manager.html" title="screenManager Manages a Screen object screenManager manages PTB screen settings for opticka...">screenManager</a> </p>
 
 </div>
 </div>
@@ -2551,14 +2969,46 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Property runExperiment::sendStrobe</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>send strobe on next flip? </p>
+
+</div>
+</div>
+<a id="ac5ac349587f2b41195b2c4e066445b21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5ac349587f2b41195b2c4e066445b21">&#9670;&nbsp;</a></span>sendSyncTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::sendSyncTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>send eyelink SYNCTIME after next flip? </p>
 
 </div>
 </div>
@@ -2642,6 +3092,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4b3f69885b0890a1f6091fbf9f8551d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b3f69885b0890a1f6091fbf9f8551d5">&#9670;&nbsp;</a></span>stimOFFValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::stimOFFValue</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>what value to send on stimulus OFF </p>
+
+</div>
+</div>
 <a id="a6b81c85512ffe82a66785b184823b7e2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b81c85512ffe82a66785b184823b7e2">&#9670;&nbsp;</a></span>stimuli</h2>
 
@@ -2669,23 +3135,32 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>our old stimulus structure used to be a simple cell, now use stimuli </p>
+
+<p>our old stimulus structure used to be a simple cell, now we use <a class="el" href="classmeta_stimulus.html" title="metaStimulus is a wrapper for opticka stimuli METASTIMULUS a collection of stimuli, wrapped in one structure. It allows you to treat a group of heterogenous stimuli as if it is a single stimulus, so for example animate(metaStimulus) will run the animate method for all stimuli in the group without having to call it for each stimulus. You can also pick individual stimuli by using cell indexing of this object. So for example metaStimulus{2} actually calls metaStimulus.stimuli{2}. You can also pass a mask stimulus set, and when you toggle showMask, the mask stimuli will be drawn instead of the stimuli themselves, the timing is left to the calling function. ">metaStimulus</a> </p>
 
 </div>
 </div>
-<a id="a55a623dcff852168d0bdb2c11c6c9bf4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55a623dcff852168d0bdb2c11c6c9bf4">&#9670;&nbsp;</a></span>strobeValue</h2>
+<a id="a4bcdeac2b985f92abd826b8c3ece5f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bcdeac2b985f92abd826b8c3ece5f19">&#9670;&nbsp;</a></span>stopTask</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Property runExperiment::strobeValue</td>
+          <td class="memname">Property runExperiment::stopTask</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>strobed word value </p>
+<p>should we stop the task? </p>
 
 </div>
 </div>
@@ -2741,7 +3216,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>training log </p>
+<p>task log </p>
 
 </div>
 </div>
@@ -2817,6 +3292,22 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a21d047e7a779466d1bcc29675e7692d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21d047e7a779466d1bcc29675e7692d0">&#9670;&nbsp;</a></span>useArduino</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::useArduino</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>use Arduino for reward TTL? </p>
+
+</div>
+</div>
 <a id="a5dc2b20dbd3ddd4ab1b7e78b1faaa085"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5dc2b20dbd3ddd4ab1b7e78b1faaa085">&#9670;&nbsp;</a></span>useDataPixx</h2>
 
@@ -2829,7 +3320,23 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>use dataPixx for digital I/O </p>
+<p>use dataPixx for strobed digital I/O? </p>
+
+</div>
+</div>
+<a id="a7e2cbbb481964872c6146ae6e9c77b2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2cbbb481964872c6146ae6e9c77b2f">&#9670;&nbsp;</a></span>useDisplayPP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::useDisplayPP</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>use Display++ for strobed digital I/O? </p>
 
 </div>
 </div>
@@ -2845,23 +3352,55 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>use eyelink? </p>
+<p>use Eyelink? </p>
 
 </div>
 </div>
-<a id="a5271203535de69556dde2b4574e1ea26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5271203535de69556dde2b4574e1ea26">&#9670;&nbsp;</a></span>useLabJack</h2>
+<a id="a9f4f3b0a22d55bbc8fadda523e949855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f4f3b0a22d55bbc8fadda523e949855">&#9670;&nbsp;</a></span>useEyeOccluder</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Property runExperiment::useLabJack</td>
+          <td class="memname">Property runExperiment::useEyeOccluder</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>use LabJack for digital I/O </p>
+<p>use eye occluder (custom arduino device) for LGN work ? </p>
+
+</div>
+</div>
+<a id="a2458bcd38d46720968e0c6d8b8aa2f5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2458bcd38d46720968e0c6d8b8aa2f5c">&#9670;&nbsp;</a></span>useLabJackReward</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::useLabJackReward</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>use LabJack for reward TTL? </p>
+
+</div>
+</div>
+<a id="a9cab56021cea7762a737d85aaac153d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cab56021cea7762a737d85aaac153d6">&#9670;&nbsp;</a></span>useLabJackStrobe</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property runExperiment::useLabJackStrobe</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>use LabJack for strobed digital I/O? </p>
 
 </div>
 </div>
@@ -2927,7 +3466,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

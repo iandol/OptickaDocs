@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -83,10 +83,10 @@ Inheritance diagram for plaidStimulus:</div>
 <div class="dyncontent">
 <div class="center"><img src="classplaid_stimulus__inherit__graph.png" border="0" usemap="#plaid_stimulus_inherit__map" alt="Inheritance graph"/></div>
 <map name="plaid_stimulus_inherit__map" id="plaid_stimulus_inherit__map">
-<area shape="rect" id="node2" href="classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="62,152,164,177"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="5,79,98,104"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="21,5,82,31"/>
-<area shape="rect" id="node5" href="classdynamicprops.html" title="dynamicprops" alt="" coords="122,79,226,104"/>
+<area shape="rect" id="node2" href="classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="65,155,176,181"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="5,80,105,107"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="22,5,89,32"/>
+<area shape="rect" id="node5" href="classdynamicprops.html" title="dynamicprops" alt="" coords="130,80,245,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -94,10 +94,10 @@ Collaboration diagram for plaidStimulus:</div>
 <div class="dyncontent">
 <div class="center"><img src="classplaid_stimulus__coll__graph.png" border="0" usemap="#plaid_stimulus_coll__map" alt="Collaboration graph"/></div>
 <map name="plaid_stimulus_coll__map" id="plaid_stimulus_coll__map">
-<area shape="rect" id="node2" href="classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="124,567,225,592"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="332,286,425,311"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="348,5,409,31"/>
-<area shape="rect" id="node6" href="classdynamicprops.html" title="dynamicprops" alt="" coords="203,286,308,311"/>
+<area shape="rect" id="node2" href="classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="135,612,245,639"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="361,309,461,335"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="378,5,445,32"/>
+<area shape="rect" id="node6" href="classdynamicprops.html" title="dynamicprops" alt="" coords="222,309,337,335"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -139,9 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aebdbe1c005b61939cfbb750bceef61a6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#aebdbe1c005b61939cfbb750bceef61a6">getMousePosition</a> (in obj)</td></tr>
 <tr class="memdesc:aebdbe1c005b61939cfbb750bceef61a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">get mouse position we make sure this is only called once per animation tick to improve performance and ensure all stimuli that are following mouse position have consistent X and Y per frame update This sets mouseX and mouseY and mouseValid if mouse is within PTB screen (useful for mouse override positioning for stimuli)  <a href="#aebdbe1c005b61939cfbb750bceef61a6">More...</a><br /></td></tr>
 <tr class="separator:aebdbe1c005b61939cfbb750bceef61a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aa8407d75e5d5c152b1419adeba8292"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#a3aa8407d75e5d5c152b1419adeba8292">run</a> (in obj, in benchmark, in runtime, in s)</td></tr>
-<tr class="memdesc:a3aa8407d75e5d5c152b1419adeba8292"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run Stimulus in a window to preview.  <a href="#a3aa8407d75e5d5c152b1419adeba8292">More...</a><br /></td></tr>
-<tr class="separator:a3aa8407d75e5d5c152b1419adeba8292"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ac511102ec1c1633ef914e994fb952"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#a05ac511102ec1c1633ef914e994fb952">run</a> (in obj, in benchmark, in runtime, in s, in forceScreen)</td></tr>
+<tr class="memdesc:a05ac511102ec1c1633ef914e994fb952"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run Stimulus in a window to preview.  <a href="#a05ac511102ec1c1633ef914e994fb952">More...</a><br /></td></tr>
+<tr class="separator:a05ac511102ec1c1633ef914e994fb952"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d05ccd8d472ee2606372451f1ad64d6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#a9d05ccd8d472ee2606372451f1ad64d6">makePanel</a> (in obj, in parent)</td></tr>
 <tr class="memdesc:a9d05ccd8d472ee2606372451f1ad64d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">make a GUI properties panel for this object  <a href="#a9d05ccd8d472ee2606372451f1ad64d6">More...</a><br /></td></tr>
 <tr class="separator:a9d05ccd8d472ee2606372451f1ad64d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -263,12 +263,21 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8b4db209b2b824ae4ca4261f60aca8e2"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#a8b4db209b2b824ae4ca4261f60aca8e2">isVisible</a></td></tr>
 <tr class="memdesc:a8b4db209b2b824ae4ca4261f60aca8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">true or false, whether to <a class="el" href="classbase_stimulus.html#a530cb7db67d96d442e0fae993022cd78" title="draw to the screen buffer ">draw()</a> this object  <a href="#a8b4db209b2b824ae4ca4261f60aca8e2">More...</a><br /></td></tr>
 <tr class="separator:a8b4db209b2b824ae4ca4261f60aca8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbb121d7515d0dca17e2e7089a5c60b"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#aabbb121d7515d0dca17e2e7089a5c60b">showOnTracker</a></td></tr>
+<tr class="memdesc:aabbb121d7515d0dca17e2e7089a5c60b"><td class="mdescLeft">&#160;</td><td class="mdescRight">show the position on the Eyelink display?  <a href="#aabbb121d7515d0dca17e2e7089a5c60b">More...</a><br /></td></tr>
+<tr class="separator:aabbb121d7515d0dca17e2e7089a5c60b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8d3c84078ee99d5823a5b0989e56301"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#ad8d3c84078ee99d5823a5b0989e56301">dstRect</a></td></tr>
 <tr class="memdesc:ad8d3c84078ee99d5823a5b0989e56301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Our source screen rectangle position in PTB format.  <a href="#ad8d3c84078ee99d5823a5b0989e56301">More...</a><br /></td></tr>
 <tr class="separator:ad8d3c84078ee99d5823a5b0989e56301"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab5fa1c77f07da228a4b1006df6f06eae"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#ab5fa1c77f07da228a4b1006df6f06eae">mvRect</a></td></tr>
 <tr class="memdesc:ab5fa1c77f07da228a4b1006df6f06eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Our screen rectangle position in PTB format, update during animations.  <a href="#ab5fa1c77f07da228a4b1006df6f06eae">More...</a><br /></td></tr>
 <tr class="separator:ab5fa1c77f07da228a4b1006df6f06eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa55d04525a725f6f1a2da221d99d337d"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#aa55d04525a725f6f1a2da221d99d337d">xOut</a></td></tr>
+<tr class="memdesc:aa55d04525a725f6f1a2da221d99d337d"><td class="mdescLeft">&#160;</td><td class="mdescRight">computed X position for stimuli that don't use rects  <a href="#aa55d04525a725f6f1a2da221d99d337d">More...</a><br /></td></tr>
+<tr class="separator:aa55d04525a725f6f1a2da221d99d337d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef2b6b9801e9396c13f69012533cabd3"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#aef2b6b9801e9396c13f69012533cabd3">yOut</a></td></tr>
+<tr class="memdesc:aef2b6b9801e9396c13f69012533cabd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">computed Y position for stimuli that don't use rects  <a href="#aef2b6b9801e9396c13f69012533cabd3">More...</a><br /></td></tr>
+<tr class="separator:aef2b6b9801e9396c13f69012533cabd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed8479159ba696966bae936a74ea1fd3"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#aed8479159ba696966bae936a74ea1fd3">tick</a></td></tr>
 <tr class="memdesc:aed8479159ba696966bae936a74ea1fd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">tick updates +1 on each draw, resets on each update  <a href="#aed8479159ba696966bae936a74ea1fd3">More...</a><br /></td></tr>
 <tr class="separator:aed8479159ba696966bae936a74ea1fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,12 +350,6 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ada7e2bf2993a9d2a76daa15e81d2df37"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#ada7e2bf2993a9d2a76daa15e81d2df37">family</a></td></tr>
 <tr class="memdesc:ada7e2bf2993a9d2a76daa15e81d2df37"><td class="mdescLeft">&#160;</td><td class="mdescRight">the stimulus family (grating, dots etc.)  <a href="#ada7e2bf2993a9d2a76daa15e81d2df37">More...</a><br /></td></tr>
 <tr class="separator:ada7e2bf2993a9d2a76daa15e81d2df37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa55d04525a725f6f1a2da221d99d337d"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#aa55d04525a725f6f1a2da221d99d337d">xOut</a></td></tr>
-<tr class="memdesc:aa55d04525a725f6f1a2da221d99d337d"><td class="mdescLeft">&#160;</td><td class="mdescRight">computed X position for stimuli that don't use rects  <a href="#aa55d04525a725f6f1a2da221d99d337d">More...</a><br /></td></tr>
-<tr class="separator:aa55d04525a725f6f1a2da221d99d337d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef2b6b9801e9396c13f69012533cabd3"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#aef2b6b9801e9396c13f69012533cabd3">yOut</a></td></tr>
-<tr class="memdesc:aef2b6b9801e9396c13f69012533cabd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">computed Y position for stimuli that don't use rects  <a href="#aef2b6b9801e9396c13f69012533cabd3">More...</a><br /></td></tr>
-<tr class="separator:aef2b6b9801e9396c13f69012533cabd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a133b05fb2b2013a717c18e7bd6084d22"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbase_stimulus.html#a133b05fb2b2013a717c18e7bd6084d22">mouseValid</a></td></tr>
 <tr class="memdesc:a133b05fb2b2013a717c18e7bd6084d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">is mouse position within screen co-ordinates?  <a href="#a133b05fb2b2013a717c18e7bd6084d22">More...</a><br /></td></tr>
 <tr class="separator:a133b05fb2b2013a717c18e7bd6084d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1485,8 +1488,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3aa8407d75e5d5c152b1419adeba8292"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aa8407d75e5d5c152b1419adeba8292">&#9670;&nbsp;</a></span>run()</h2>
+<a id="a05ac511102ec1c1633ef914e994fb952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ac511102ec1c1633ef914e994fb952">&#9670;&nbsp;</a></span>run()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1516,7 +1519,13 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>s</em>&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>forceScreen</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1954,7 +1963,7 @@ Private Attributes</h2></td></tr>
 
 <p>update the stimulus </p>
 
-<p>Reimplemented in <a class="el" href="classtarget_inducer_stimulus.html#a09fce4d0884f765a7fc70bbf186868db">targetInducerStimulus</a>, <a class="el" href="classgrating_stimulus.html#ab815c3895290857953d8ccb98136c8a1">gratingStimulus</a>, <a class="el" href="classndots_stimulus.html#aafe055093d50475a0876441d248b5f6f">ndotsStimulus</a>, <a class="el" href="classdots_stimulus.html#a1fc30d18db1222e84745c5622c9b27ce">dotsStimulus</a>, <a class="el" href="classgabor_stimulus.html#a8693cad5c2752dd5cfd290cd49d955ad">gaborStimulus</a>, <a class="el" href="classapparent_motion_stimulus.html#a0c6d2952fa06c754bd1b812341add76a">apparentMotionStimulus</a>, <a class="el" href="classdisc_stimulus.html#a3b187efe3851cee8d1127fffe87b8613">discStimulus</a>, <a class="el" href="classtexture_stimulus.html#ab8c92af3f5ad23dd659bf14b207338db">textureStimulus</a>, <a class="el" href="classspot_stimulus.html#a0232995ff0c42ab3af2e3194fc4f42ce">spotStimulus</a>, <a class="el" href="classbar_stimulus.html#ac258b7b8f60cd2f2d63092f3965450b8">barStimulus</a>, and <a class="el" href="classmovie_stimulus.html#aa914051f3bb1af25a49996e6504f24bf">movieStimulus</a>.</p>
+<p>Reimplemented in <a class="el" href="classtarget_inducer_stimulus.html#a09fce4d0884f765a7fc70bbf186868db">targetInducerStimulus</a>, <a class="el" href="classgrating_stimulus.html#ab815c3895290857953d8ccb98136c8a1">gratingStimulus</a>, <a class="el" href="classndots_stimulus.html#aafe055093d50475a0876441d248b5f6f">ndotsStimulus</a>, <a class="el" href="classdots_stimulus.html#a1fc30d18db1222e84745c5622c9b27ce">dotsStimulus</a>, <a class="el" href="classgabor_stimulus.html#a8693cad5c2752dd5cfd290cd49d955ad">gaborStimulus</a>, <a class="el" href="classdisc_stimulus.html#a3b187efe3851cee8d1127fffe87b8613">discStimulus</a>, <a class="el" href="classapparent_motion_stimulus.html#a0c6d2952fa06c754bd1b812341add76a">apparentMotionStimulus</a>, <a class="el" href="classtexture_stimulus.html#ab8c92af3f5ad23dd659bf14b207338db">textureStimulus</a>, <a class="el" href="classspot_stimulus.html#a0232995ff0c42ab3af2e3194fc4f42ce">spotStimulus</a>, <a class="el" href="classbar_stimulus.html#ac258b7b8f60cd2f2d63092f3965450b8">barStimulus</a>, and <a class="el" href="classmovie_stimulus.html#aa914051f3bb1af25a49996e6504f24bf">movieStimulus</a>.</p>
 
 </div>
 </div>
@@ -2845,6 +2854,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aabbb121d7515d0dca17e2e7089a5c60b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbb121d7515d0dca17e2e7089a5c60b">&#9670;&nbsp;</a></span>showOnTracker</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property baseStimulus::showOnTracker</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>show the position on the Eyelink display? </p>
+
+</div>
+</div>
 <a id="a16e0fb4f64305c49337561f516e4c04f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16e0fb4f64305c49337561f516e4c04f">&#9670;&nbsp;</a></span>size</h2>
 
@@ -3101,7 +3134,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -3149,7 +3182,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -3188,7 +3221,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

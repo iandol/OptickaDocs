@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -170,6 +170,9 @@ $(function() {
 <li>checkRecording()
 : <a class="el" href="classeyelink_manager.html#a5308569f6cc06c78e217cad48b443a1a">eyelinkManager</a>
 </li>
+<li>checkreturn()
+: <a class="el" href="classcalibrate_luminance.html#ae9af85d317f2b4ee1665fa6692d424a9">calibrateLuminance</a>
+</li>
 <li>checkStatus()
 : <a class="el" href="classdata_connection.html#a34a78486c723ff3f42d26b3c795689f6">dataConnection</a>
 </li>
@@ -184,6 +187,9 @@ $(function() {
 </li>
 <li>CheckSuperclasses()
 : <a class="el" href="classopticka_core.html#a252429dc70a7aa6c67278071a612c81a">optickaCore</a>
+</li>
+<li>checkTaskEnded()
+: <a class="el" href="classrun_experiment.html#aadb0991bf281d08bbee9d559e47a96ba">runExperiment</a>
 </li>
 <li>children
 : <a class="el" href="classpanel.html#af89bf305e0c99ff7f6e8956356658b44">panel</a>
@@ -242,14 +248,16 @@ $(function() {
 : <a class="el" href="classopticka_core.html#a696c22ac5d2aead08c86ebdd4ff8a308">optickaCore</a>
 </li>
 <li>close()
-: <a class="el" href="classdata_connection.html#af63f17eb89677c4212bf812a04b765ff">dataConnection</a>
+: <a class="el" href="classarduino_manager.html#a52b989f6e873ca30bca3266fbd486e12">arduinoManager</a>
+, <a class="el" href="classdata_connection.html#af63f17eb89677c4212bf812a04b765ff">dataConnection</a>
 , <a class="el" href="classd_pixx_manager.html#a0b1c382d4ce225ef1091466432582dcc">dPixxManager</a>
 , <a class="el" href="classeyelink_manager.html#a605e1cb35cabf867d7aedc41dd4489d1">eyelinkManager</a>
 , <a class="el" href="classeye_occluder.html#ad72a81ff33d10979a9c62b1185e64e3c">eyeOccluder</a>
+, <a class="el" href="classio_manager.html#a8ac76895fb82fb9ab34e96e7f2a51c33">ioManager</a>
 , <a class="el" href="classlab_jack.html#a63ea0e6bc78f656d045e485bc758b40f">labJack</a>
 , <a class="el" href="classmagstim_manager.html#acb388609b803d3c28ff324b79a53eb0e">magstimManager</a>
+, <a class="el" href="classplusplus_manager.html#ae5d69494114aa1c39d2591666e7d1800">plusplusManager</a>
 , <a class="el" href="classscreen_manager.html#a4be183e343b199e4907dd51b3b7acb42">screenManager</a>
-, <a class="el" href="classsend_serial.html#a678131e113efa965ffeb46e9251f88d4">sendSerial</a>
 , <a class="el" href="classsend_serial_i_o_port.html#a303d0b2a1b1ab8ddb25a815ee5ad7451">sendSerialIOPort</a>
 </li>
 <li>closeAll()
@@ -264,6 +272,9 @@ $(function() {
 </li>
 <li>closePlexon()
 : <a class="el" href="classopx_online.html#a399e560db5beb6ee36ff7752be81b2f5">opxOnline</a>
+</li>
+<li>closeScreen()
+: <a class="el" href="classcolour_manager.html#a6b20b15d8b99b4bb5ba11b8a70743f52">colourManager</a>
 </li>
 <li>closeUI()
 : <a class="el" href="classanalysis_core.html#a63812be42ae671ad00946fdf61edc223">analysisCore</a>
@@ -290,11 +301,17 @@ $(function() {
 </li>
 <li>colourIndex
 : <a class="el" href="classcolour_test.html#a8ce3eb7449334cb35682c1b29032ee4a">colourTest</a>
-, <a class="el" href="classrf_mapper.html#a91cbdc534f400ad3de933321a25c15de">rfMapper</a>
+, <a class="el" href="classrf_mapper.html#a6298e31958105eb9259cee6ff7e1aab9">rfMapper</a>
 </li>
 <li>colourList
 : <a class="el" href="classcolour_test.html#a57027142bdbe130230c62980871a5e55">colourTest</a>
 , <a class="el" href="classrf_mapper.html#a3677f1eb1a8ec2509a45eef653c50a92">rfMapper</a>
+</li>
+<li>colourManager()
+: <a class="el" href="classcolour_manager.html#a735b32361ec9bb57a37d3172d2ff3d2c">colourManager</a>
+</li>
+<li>colourMode()
+: <a class="el" href="classplusplus_manager.html#abb980fe716625e234f462e7e0e1437b5">plusplusManager</a>
 </li>
 <li>colourOutTemp
 : <a class="el" href="classdisc_stimulus.html#a7a1d4d2eba1bda3fc6a3b87a93c43966">discStimulus</a>
@@ -314,6 +331,7 @@ $(function() {
 </li>
 <li>command
 : <a class="el" href="classlab_jack.html#a8303b3d9e3bdffa696064c25d8689c74">labJack</a>
+, <a class="el" href="classplusplus_manager.html#afdd519ccc1dadb7e00581eb7ee84fd67">plusplusManager</a>
 </li>
 <li>comment
 : <a class="el" href="classopticka_core.html#ab343e85982d594494a32860b94d23e22">optickaCore</a>
@@ -344,6 +362,12 @@ $(function() {
 </li>
 <li>computer
 : <a class="el" href="classrun_experiment.html#acc4ff842608a183901a15f54545e088f">runExperiment</a>
+</li>
+<li>configureIO()
+: <a class="el" href="classrun_experiment.html#a2812d209f629f9173fbcfec9c8130d2e">runExperiment</a>
+</li>
+<li>configureSpectroCAL()
+: <a class="el" href="classcalibrate_luminance.html#a076baad954bbd672adef7847bb3b4c4e">calibrateLuminance</a>
 </li>
 <li>conn
 : <a class="el" href="classdata_connection.html#a2d984b8ffbf430923f51cfa75b43890d">dataConnection</a>
@@ -392,8 +416,14 @@ $(function() {
 <li>copyVariable()
 : <a class="el" href="classopticka.html#a1cb6cc368fd219597c759bc84b0837e0">opticka</a>
 </li>
-<li>correct
-: <a class="el" href="classeyelink_analysis.html#a48e38e557f337f67833c4719b0a5cebb">eyelinkAnalysis</a>
+<li>correct()
+: <a class="el" href="classd_pixx_manager.html#a63a4303505f0daba44e75866b8eab387">dPixxManager</a>
+, <a class="el" href="classeyelink_analysis.html#a48e38e557f337f67833c4719b0a5cebb">eyelinkAnalysis</a>
+, <a class="el" href="classio_manager.html#a20e71a6b437d5adbc3c75d1717787731">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#ad43eb69bd83d56847cbdc0da9ebcffdb">plusplusManager</a>
+</li>
+<li>correctColour
+: <a class="el" href="classcalibrate_luminance.html#ae8d54b7b3c65e9a3269dcef541072345">calibrateLuminance</a>
 </li>
 <li>correctPhase
 : <a class="el" href="classgabor_stimulus.html#af3302548913eb653b41bf602b72a396e">gaborStimulus</a>
@@ -437,6 +467,9 @@ $(function() {
 <li>currentName
 : <a class="el" href="classstate_machine.html#a06aa80fe288230ed891d95d9776404c0">stateMachine</a>
 </li>
+<li>currentOffset
+: <a class="el" href="classeyelink_manager.html#a69a6b0666a8f994bb15cc7932af3ac09">eyelinkManager</a>
+</li>
 <li>currentSample
 : <a class="el" href="classeyelink_manager.html#af481c0294d102fc9bca0b4974c1687cb">eyelinkManager</a>
 </li>
@@ -467,7 +500,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

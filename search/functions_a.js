@@ -25,6 +25,7 @@ var searchData=
   ['local_5fopenfig',['local_openfig',['../opticka__ui_8m.html#a32fb8aaa5cf7d36ac38776f3cdba99b0',1,'opticka_ui.m']]],
   ['lockclass',['lockClass',['../classpanel.html#ae49cf4a64335faabaa7a4b0b128fa5f1',1,'panel']]],
   ['logme',['logMe',['../classrun_experiment.html#a2091a0a118fd233a0cd88bf6c6265386',1,'runExperiment']]],
+  ['logrun',['logRun',['../classrun_experiment.html#ab5107bbc6a7b750735448e87a21829a1',1,'runExperiment']]],
   ['lpad',['lpad',['../classpanel.html#acb202d9f1f8e5edeaf624006a21e26cd',1,'panel']]],
   ['lt',['lt',['../classpanel.html#ad6c11c15edd56e3429be4df52141bccb',1,'panel']]]
 ];

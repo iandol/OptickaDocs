@@ -20,6 +20,7 @@ var searchData=
   ['applylayout',['applyLayout',['../classpanel.html#a818ac919405ebd668720a2a923db84a1',1,'panel']]],
   ['applylayout1',['applyLayout1',['../classpanel.html#ac127c4a2e6bea1d39be46ea2ea7fa315',1,'panel']]],
   ['applylayout2',['applyLayout2',['../classpanel.html#af1ffd3c0c3674ebf6543b86b23fd8da7',1,'panel']]],
+  ['arduinomanager',['arduinoManager',['../classarduino_manager.html#a3272e342d9f4569e71ecaa7cbe724ef0',1,'arduinoManager']]],
   ['areabar',['areabar',['../classanalysis_core.html#a23c6b5461c4547d5e4d3ccb3c927ad7d',1,'analysisCore']]],
   ['auc',['auc',['../classanalysis_core.html#aab6a2ee5052f57b33d707f43d7f6af4a',1,'analysisCore']]],
   ['aucbootstrap',['aucBootstrap',['../classanalysis_core.html#a75700baddcca0eb12a45d093da0100a8',1,'analysisCore']]]

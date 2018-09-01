@@ -11,6 +11,7 @@ var searchData=
   ['eventstart',['eventStart',['../classopx_online.html#af3232162f243b54170b9f3dbd8a48427',1,'opxOnline']]],
   ['eventwindow',['eventWindow',['../classplx_reader.html#a16267714afb07e1f6c94a7931818b04b',1,'plxReader']]],
   ['excludeincorrect',['excludeIncorrect',['../classeyelink_analysis.html#a8ad1bfd1008fc2bae1c5467c2ade440a',1,'eyelinkAnalysis']]],
+  ['exclusionzone',['exclusionZone',['../classeyelink_manager.html#accb424224d1e5a810eca128330edd87a',1,'eyelinkManager']]],
   ['externalinput',['externalInput',['../classcalibrate_luminance.html#a6646779fa29f9930680551c5b7cb7ce8',1,'calibrateLuminance']]],
   ['eyelink',['eyeLink',['../classrun_experiment.html#a21cb2f840501011cc93786201e5e418d',1,'runExperiment']]],
   ['eyes',['EYES',['../classeyelink_analysis.html#a08d8c467825fb05041345f0ce94685e1',1,'eyelinkAnalysis']]],

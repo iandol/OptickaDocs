@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -82,9 +82,9 @@ Inheritance diagram for stimulusSequence:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstimulus_sequence__inherit__graph.png" border="0" usemap="#stimulus_sequence_inherit__map" alt="Inheritance graph"/></div>
 <map name="stimulus_sequence_inherit__map" id="stimulus_sequence_inherit__map">
-<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="5,79,98,104"/>
-<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="21,5,82,31"/>
-<area shape="rect" id="node4" href="classdynamicprops.html" title="dynamicprops" alt="" coords="122,79,226,104"/>
+<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="5,80,105,107"/>
+<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="22,5,89,32"/>
+<area shape="rect" id="node4" href="classdynamicprops.html" title="dynamicprops" alt="" coords="130,80,245,107"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -92,9 +92,9 @@ Collaboration diagram for stimulusSequence:</div>
 <div class="dyncontent">
 <div class="center"><img src="classstimulus_sequence__coll__graph.png" border="0" usemap="#stimulus_sequence_coll__map" alt="Collaboration graph"/></div>
 <map name="stimulus_sequence_coll__map" id="stimulus_sequence_coll__map">
-<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="27,286,120,311"/>
-<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="5,5,67,31"/>
-<area shape="rect" id="node5" href="classdynamicprops.html" title="dynamicprops" alt="" coords="268,286,372,311"/>
+<area shape="rect" id="node2" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="30,309,130,335"/>
+<area shape="rect" id="node3" href="classhandle.html" title="handle" alt="" coords="5,5,72,32"/>
+<area shape="rect" id="node5" href="classdynamicprops.html" title="dynamicprops" alt="" coords="285,309,400,335"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -121,6 +121,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7cbb0a335c13a2e72411364e754ce25e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a7cbb0a335c13a2e72411364e754ce25e">updateTask</a> (in obj, in thisResponse, in runTime, in info)</td></tr>
 <tr class="memdesc:a7cbb0a335c13a2e72411364e754ce25e"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the task with a response  <a href="#a7cbb0a335c13a2e72411364e754ce25e">More...</a><br /></td></tr>
 <tr class="separator:a7cbb0a335c13a2e72411364e754ce25e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41814af44833abbb335b5cb67d3248d6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a41814af44833abbb335b5cb67d3248d6">findRun</a> (in obj, in index)</td></tr>
+<tr class="memdesc:a41814af44833abbb335b5cb67d3248d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns block and run from number of runs  <a href="#a41814af44833abbb335b5cb67d3248d6">More...</a><br /></td></tr>
+<tr class="separator:a41814af44833abbb335b5cb67d3248d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af456b7581d01d0e0a8133cc5ef5dd04f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#af456b7581d01d0e0a8133cc5ef5dd04f">rewindTask</a> (in obj)</td></tr>
+<tr class="memdesc:af456b7581d01d0e0a8133cc5ef5dd04f"><td class="mdescLeft">&#160;</td><td class="mdescRight">the opposite of updateTask, step back one run  <a href="#af456b7581d01d0e0a8133cc5ef5dd04f">More...</a><br /></td></tr>
+<tr class="separator:af456b7581d01d0e0a8133cc5ef5dd04f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a912d70c639698bc531bdda52359e8d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a7a912d70c639698bc531bdda52359e8d">resetRun</a> (in obj)</td></tr>
+<tr class="memdesc:a7a912d70c639698bc531bdda52359e8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">we want to re-randomise the current run, replace it with another run in the same block. This adds some randomisation if a run needs to be rerun for a subject and you do not want the same stimulus repeatedly until there is a correct response...  <a href="#a7a912d70c639698bc531bdda52359e8d">More...</a><br /></td></tr>
+<tr class="separator:a7a912d70c639698bc531bdda52359e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78583e92ecedbb9fdf6364f4062cc3f7"><td class="memItemLeft" align="right" valign="top">function set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a78583e92ecedbb9fdf6364f4062cc3f7">nVar</a> (in obj, in invalue)</td></tr>
 <tr class="memdesc:a78583e92ecedbb9fdf6364f4062cc3f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set method for the nVar structure  <a href="#a78583e92ecedbb9fdf6364f4062cc3f7">More...</a><br /></td></tr>
 <tr class="separator:a78583e92ecedbb9fdf6364f4062cc3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,6 +275,9 @@ Private Member Functions</h2></td></tr>
 <tr class="memitem:ac4d7a4ffc25bc3aacc04602a64067e25"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#ac4d7a4ffc25bc3aacc04602a64067e25">resetTask</a> (in obj)</td></tr>
 <tr class="memdesc:ac4d7a4ffc25bc3aacc04602a64067e25"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset dynamic task properties  <a href="#ac4d7a4ffc25bc3aacc04602a64067e25">More...</a><br /></td></tr>
 <tr class="separator:ac4d7a4ffc25bc3aacc04602a64067e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace6c2f9b5f3777c5ded35aa576eb3578"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#ace6c2f9b5f3777c5ded35aa576eb3578">randomiseTimes</a> (in obj)</td></tr>
+<tr class="memdesc:ace6c2f9b5f3777c5ded35aa576eb3578"><td class="mdescLeft">&#160;</td><td class="mdescRight">reset dynamic task properties  <a href="#ace6c2f9b5f3777c5ded35aa576eb3578">More...</a><br /></td></tr>
+<tr class="separator:ace6c2f9b5f3777c5ded35aa576eb3578"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -273,7 +285,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a99abe21e040454f22ef35f90580d9898"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure of variable values  <a href="#a99abe21e040454f22ef35f90580d9898">More...</a><br /></td></tr>
 <tr class="separator:a99abe21e040454f22ef35f90580d9898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a334fdeb7ae5992ae85b3dc6913902a33"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a334fdeb7ae5992ae85b3dc6913902a33">outVars</a></td></tr>
-<tr class="memdesc:a334fdeb7ae5992ae85b3dc6913902a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable values wrapped in trial cell  <a href="#a334fdeb7ae5992ae85b3dc6913902a33">More...</a><br /></td></tr>
+<tr class="memdesc:a334fdeb7ae5992ae85b3dc6913902a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">variable values wrapped in a per-block cell  <a href="#a334fdeb7ae5992ae85b3dc6913902a33">More...</a><br /></td></tr>
 <tr class="separator:a334fdeb7ae5992ae85b3dc6913902a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a704991b1d6e87d5ccd704417440827cd"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a704991b1d6e87d5ccd704417440827cd">outIndex</a></td></tr>
 <tr class="memdesc:a704991b1d6e87d5ccd704417440827cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">the unique identifier for each stimulus  <a href="#a704991b1d6e87d5ccd704417440827cd">More...</a><br /></td></tr>
@@ -284,6 +296,15 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a8c4420a193f9f2d58148af86d4be1e18"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a8c4420a193f9f2d58148af86d4be1e18">minBlocks</a></td></tr>
 <tr class="memdesc:a8c4420a193f9f2d58148af86d4be1e18"><td class="mdescLeft">&#160;</td><td class="mdescRight">minimum number of blocks  <a href="#a8c4420a193f9f2d58148af86d4be1e18">More...</a><br /></td></tr>
 <tr class="separator:a8c4420a193f9f2d58148af86d4be1e18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5445e2852c98220c82b89fd14e59fd2"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#af5445e2852c98220c82b89fd14e59fd2">resetLog</a></td></tr>
+<tr class="memdesc:af5445e2852c98220c82b89fd14e59fd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">log of with block resets  <a href="#af5445e2852c98220c82b89fd14e59fd2">More...</a><br /></td></tr>
+<tr class="separator:af5445e2852c98220c82b89fd14e59fd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6b7b9b7cf61c91b15326c272f87dcd6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#af6b7b9b7cf61c91b15326c272f87dcd6">taskInitialised</a></td></tr>
+<tr class="memdesc:af6b7b9b7cf61c91b15326c272f87dcd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">have we initialised the dynamic task properties?  <a href="#af6b7b9b7cf61c91b15326c272f87dcd6">More...</a><br /></td></tr>
+<tr class="separator:af6b7b9b7cf61c91b15326c272f87dcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f2fde9ea96eb1d1ae2dc65dbbf84f4"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#ae7f2fde9ea96eb1d1ae2dc65dbbf84f4">taskFinished</a></td></tr>
+<tr class="memdesc:ae7f2fde9ea96eb1d1ae2dc65dbbf84f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">has task finished  <a href="#ae7f2fde9ea96eb1d1ae2dc65dbbf84f4">More...</a><br /></td></tr>
+<tr class="separator:ae7f2fde9ea96eb1d1ae2dc65dbbf84f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fc5901896c40eca1fa24e3eae3d7364"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a5fc5901896c40eca1fa24e3eae3d7364">states</a></td></tr>
 <tr class="memdesc:a5fc5901896c40eca1fa24e3eae3d7364"><td class="mdescLeft">&#160;</td><td class="mdescRight">reserved for future use of multiple random stream states  <a href="#a5fc5901896c40eca1fa24e3eae3d7364">More...</a><br /></td></tr>
 <tr class="separator:a5fc5901896c40eca1fa24e3eae3d7364"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,9 +328,6 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a90a650903376b8a94f7ae5ca87baf5d4"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a90a650903376b8a94f7ae5ca87baf5d4">nVars</a></td></tr>
 <tr class="memdesc:a90a650903376b8a94f7ae5ca87baf5d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">number of independant variables  <a href="#a90a650903376b8a94f7ae5ca87baf5d4">More...</a><br /></td></tr>
 <tr class="separator:a90a650903376b8a94f7ae5ca87baf5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6b7b9b7cf61c91b15326c272f87dcd6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#af6b7b9b7cf61c91b15326c272f87dcd6">taskInitialised</a></td></tr>
-<tr class="memdesc:af6b7b9b7cf61c91b15326c272f87dcd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">have we initialised the dynamic task properties?  <a href="#af6b7b9b7cf61c91b15326c272f87dcd6">More...</a><br /></td></tr>
-<tr class="separator:af6b7b9b7cf61c91b15326c272f87dcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4381d107ec917d402ab1a1071898df54"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a4381d107ec917d402ab1a1071898df54">nVars_</a></td></tr>
 <tr class="memdesc:a4381d107ec917d402ab1a1071898df54"><td class="mdescLeft">&#160;</td><td class="mdescRight">cache value for nVars  <a href="#a4381d107ec917d402ab1a1071898df54">More...</a><br /></td></tr>
 <tr class="separator:a4381d107ec917d402ab1a1071898df54"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,6 +346,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a86e00bb8c75c3642efc863e7ef5d4ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4285d9c7aa6fbb61ffa46eaea8ccbe1e"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a4285d9c7aa6fbb61ffa46eaea8ccbe1e">taskProperties</a></td></tr>
 <tr class="separator:a4285d9c7aa6fbb61ffa46eaea8ccbe1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40acdec62270675222da561ff2f29990"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstimulus_sequence.html#a40acdec62270675222da561ff2f29990">tProp</a></td></tr>
+<tr class="separator:a40acdec62270675222da561ff2f29990"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classstimulus_sequence.html" title="stimulusSequence a method of constanst variable manager ">stimulusSequence</a> a method of constanst variable manager </p>
@@ -607,6 +627,36 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a41814af44833abbb335b5cb67d3248d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41814af44833abbb335b5cb67d3248d6">&#9670;&nbsp;</a></span>findRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function stimulusSequence::findRun </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns block and run from number of runs </p>
+
+</div>
+</div>
 <a id="ac972a6998c845cb2e1cdcb2f696e1906"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac972a6998c845cb2e1cdcb2f696e1906">&#9670;&nbsp;</a></span>fullName()</h2>
 
@@ -764,7 +814,7 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialise the properties used to track the run. </p>
-<p>Initialise the properties used to track the run. These are dynamic props and are set to be transient so they are not saved. </p>
+<p>Initialise the properties used to track the run. These are dynamic props. </p>
 
 </div>
 </div>
@@ -963,6 +1013,34 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ace6c2f9b5f3777c5ded35aa576eb3578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace6c2f9b5f3777c5ded35aa576eb3578">&#9670;&nbsp;</a></span>randomiseTimes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">function stimulusSequence::randomiseTimes </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reset dynamic task properties </p>
+
+</div>
+</div>
 <a id="a32038677c91dd934bfd0173dae29be0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a32038677c91dd934bfd0173dae29be0e">&#9670;&nbsp;</a></span>resetRandom()</h2>
 
@@ -981,6 +1059,26 @@ Private Attributes</h2></td></tr>
 
 <p>Reset the random number generator. </p>
 <p>reset the random number generator </p>
+
+</div>
+</div>
+<a id="a7a912d70c639698bc531bdda52359e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a912d70c639698bc531bdda52359e8d">&#9670;&nbsp;</a></span>resetRun()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function stimulusSequence::resetRun </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>we want to re-randomise the current run, replace it with another run in the same block. This adds some randomisation if a run needs to be rerun for a subject and you do not want the same stimulus repeatedly until there is a correct response... </p>
 
 </div>
 </div>
@@ -1009,6 +1107,26 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>reset dynamic task properties </p>
+
+</div>
+</div>
+<a id="af456b7581d01d0e0a8133cc5ef5dd04f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af456b7581d01d0e0a8133cc5ef5dd04f">&#9670;&nbsp;</a></span>rewindTask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function stimulusSequence::rewindTask </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the opposite of updateTask, step back one run </p>
 
 </div>
 </div>
@@ -1863,7 +1981,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>variable values wrapped in trial cell </p>
+<p>variable values wrapped in a per-block cell </p>
 
 </div>
 </div>
@@ -1955,6 +2073,30 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="af5445e2852c98220c82b89fd14e59fd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5445e2852c98220c82b89fd14e59fd2">&#9670;&nbsp;</a></span>resetLog</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property stimulusSequence::resetLog</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>log of with block resets </p>
+
+</div>
+</div>
 <a id="a5fc5901896c40eca1fa24e3eae3d7364"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5fc5901896c40eca1fa24e3eae3d7364">&#9670;&nbsp;</a></span>states</h2>
 
@@ -1976,6 +2118,30 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>reserved for future use of multiple random stream states </p>
+
+</div>
+</div>
+<a id="ae7f2fde9ea96eb1d1ae2dc65dbbf84f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f2fde9ea96eb1d1ae2dc65dbbf84f4">&#9670;&nbsp;</a></span>taskFinished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property stimulusSequence::taskFinished</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>has task finished </p>
 
 </div>
 </div>
@@ -2046,6 +2212,28 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>current random number stream </p>
+
+</div>
+</div>
+<a id="a40acdec62270675222da561ff2f29990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a40acdec62270675222da561ff2f29990">&#9670;&nbsp;</a></span>tProp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property stimulusSequence::tProp</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2135,7 +2323,7 @@ Private Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

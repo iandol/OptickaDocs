@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -78,9 +78,9 @@ Inheritance diagram for LFPAnalysis:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_l_f_p_analysis__inherit__graph.png" border="0" usemap="#_l_f_p_analysis_inherit__map" alt="Inheritance graph"/></div>
 <map name="_l_f_p_analysis_inherit__map" id="_l_f_p_analysis_inherit__map">
-<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="5,152,104,177"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="8,79,101,104"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="24,5,85,31"/>
+<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="5,155,112,181"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="9,80,109,107"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="25,5,92,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -88,9 +88,9 @@ Collaboration diagram for LFPAnalysis:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_l_f_p_analysis__coll__graph.png" border="0" usemap="#_l_f_p_analysis_coll__map" alt="Collaboration graph"/></div>
 <map name="_l_f_p_analysis_coll__map" id="_l_f_p_analysis_coll__map">
-<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="93,567,191,592"/>
-<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="272,286,364,311"/>
-<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="287,5,349,31"/>
+<area shape="rect" id="node2" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="100,612,207,639"/>
+<area shape="rect" id="node3" href="classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="295,309,395,335"/>
+<area shape="rect" id="node4" href="classhandle.html" title="handle" alt="" coords="312,5,379,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -364,8 +364,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab06201b6ed2b1b2c674f672b570a37e9"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_f_p_analysis.html#ab06201b6ed2b1b2c674f672b570a37e9">parseLFPs</a> (in me)</td></tr>
 <tr class="memdesc:ab06201b6ed2b1b2c674f672b570a37e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the LFP signals into trial structures.  <a href="#ab06201b6ed2b1b2c674f672b570a37e9">More...</a><br /></td></tr>
 <tr class="separator:ab06201b6ed2b1b2c674f672b570a37e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fa5d6b1344654456d59cf5a874e872a"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_f_p_analysis.html#a7fa5d6b1344654456d59cf5a874e872a">findNrst</a> (in in, in value)</td></tr>
-<tr class="separator:a7fa5d6b1344654456d59cf5a874e872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4025b55a23f7c3bc02a122b096cb2c0b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_l_f_p_analysis.html#a4025b55a23f7c3bc02a122b096cb2c0b">selectTrials</a> (in me)</td></tr>
 <tr class="memdesc:a4025b55a23f7c3bc02a122b096cb2c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">selectTrials selects trials based on several filters  <a href="#a4025b55a23f7c3bc02a122b096cb2c0b">More...</a><br /></td></tr>
 <tr class="separator:a4025b55a23f7c3bc02a122b096cb2c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -671,6 +669,7 @@ Private Attributes</h2></td></tr>
 <p>Area under ROC. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">me</td><td>- object </td></tr>
     <tr><td class="paramname">data</td><td>- [class , score] matrix </td></tr>
     <tr><td class="paramname">alpha</td><td>- level for confidence intervals (eg., enter 0.05 if you want 95% CIs) </td></tr>
     <tr><td class="paramname">flag</td><td>- 'hanley' yields Hanley-McNeil (1982) asymptotic CI; 'maxvar' yields maximum variance CI;'mann-whitney';'logit';'boot' yields bootstrapped CI (DEFAULT) </td></tr>
@@ -884,10 +883,11 @@ Aci - confidence intervals </dd></dl>
 <p>checkPaths: if we've saved an object then load it on a new machine paths to source files may be wrong. If so then allows us to find a new directory for the source files. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">varargin</td><td></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -1668,42 +1668,6 @@ Aci - confidence intervals </dd></dl>
 val value of nearest value </dd>
 <dd>
 delta the difference between val and value </dd></dl>
-
-</div>
-</div>
-<a id="a7fa5d6b1344654456d59cf5a874e872a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7fa5d6b1344654456d59cf5a874e872a">&#9670;&nbsp;</a></span>findNrst()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">function LFPAnalysis::findNrst </td>
-          <td>(</td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>in</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -5341,7 +5305,7 @@ fp - false positive rate </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -76,6 +76,9 @@ $(function() {
 <li>randomiseStimuli()
 : <a class="el" href="classstimulus_sequence.html#ac795a52c8a61d098dc09c7f79383252d">stimulusSequence</a>
 </li>
+<li>randomiseTimes()
+: <a class="el" href="classstimulus_sequence.html#ace6c2f9b5f3777c5ded35aa576eb3578">stimulusSequence</a>
+</li>
 <li>randomiseTrainingList()
 : <a class="el" href="classrun_experiment.html#ad9297d181334ab0a81e138861d4b2aa8">runExperiment</a>
 </li>
@@ -108,7 +111,7 @@ $(function() {
 : <a class="el" href="classdata_connection.html#a313eeb0f6212ef27f0cd3cf7506d69d5">dataConnection</a>
 </li>
 <li>rebuild()
-: <a class="el" href="classrun_experiment.html#ac697a7c60118891f252c445f5f9bd9b8">runExperiment</a>
+: <a class="el" href="classrun_experiment.html#a29da259a92b171d1e90f3c36b5571a7a">runExperiment</a>
 </li>
 <li>recomputeLayout()
 : <a class="el" href="classpanel.html#a84cd90377e6d32b40fca700582ec7336">panel</a>
@@ -180,6 +183,9 @@ $(function() {
 , <a class="el" href="classtarget_inducer_stimulus.html#ace46008cc40dabca867fe31a04866a97">targetInducerStimulus</a>
 , <a class="el" href="classtexture_stimulus.html#a86e501a43219eca172b9f1bef55f4ab3">textureStimulus</a>
 </li>
+<li>resetAll()
+: <a class="el" href="classcalibrate_luminance.html#ab2eb78ee61fd3673f8456d04b8cc0900">calibrateLuminance</a>
+</li>
 <li>resetFixation()
 : <a class="el" href="classeyelink_manager.html#a4695e1721a74c704a92be0d510d89781">eyelinkManager</a>
 </li>
@@ -190,11 +196,22 @@ $(function() {
 <li>resetRandom()
 : <a class="el" href="classstimulus_sequence.html#a32038677c91dd934bfd0173dae29be0e">stimulusSequence</a>
 </li>
+<li>resetRun()
+: <a class="el" href="classstimulus_sequence.html#a7a912d70c639698bc531bdda52359e8d">stimulusSequence</a>
+</li>
 <li>resetScreenGamma()
 : <a class="el" href="classscreen_manager.html#aa8a18260edbd6d7863d9f9504caca9fc">screenManager</a>
 </li>
+<li>resetStrobe()
+: <a class="el" href="classd_pixx_manager.html#a3d9cbb444830c909660e87dfe6c9a447">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a6b42ab027eceb290071e51228c69a03c">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#a9eb7887b5ab2b89ba539540a71cdd69d">plusplusManager</a>
+</li>
 <li>resetTask()
 : <a class="el" href="classstimulus_sequence.html#ac4d7a4ffc25bc3aacc04602a64067e25">stimulusSequence</a>
+</li>
+<li>resetTested()
+: <a class="el" href="classcalibrate_luminance.html#aaa9c9aaa13664d9c8e36080bfa4a6575">calibrateLuminance</a>
 </li>
 <li>resetTicks()
 : <a class="el" href="classbase_stimulus.html#a1318d88cdd8000506cd302c1ef3579d9">baseStimulus</a>
@@ -211,11 +228,22 @@ $(function() {
 <li>restoreAxisState()
 : <a class="el" href="classpanel.html#a272928220cb7ff57b85e3d8f1adb3890">panel</a>
 </li>
-<li>restoreRunLog()
-: <a class="el" href="classrun_experiment.html#a22cfe86ac3d789cf40b5317caf0ae844">runExperiment</a>
+<li>resumeRecording()
+: <a class="el" href="classd_pixx_manager.html#a81863bddc6a64accdf3c6f52403b1981">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a6ef13259b9cda0b403b0cb45f74a9b23">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#a8396c00789c600fae5797530b0c2dfad">plusplusManager</a>
+</li>
+<li>rewindTask()
+: <a class="el" href="classstimulus_sequence.html#af456b7581d01d0e0a8133cc5ef5dd04f">stimulusSequence</a>
 </li>
 <li>rfMapper()
 : <a class="el" href="classrf_mapper.html#a24b052f57ed66b51b2dd6cdc3f3cf227">rfMapper</a>
+</li>
+<li>RGBtoDKL()
+: <a class="el" href="classcolour_manager.html#a16622db5b677b7129b0c0bc88804aa10">colourManager</a>
+</li>
+<li>RGBtoxyY()
+: <a class="el" href="classcolour_manager.html#a6720edbc7f00887bafe8a1866df9f5a1">colourManager</a>
 </li>
 <li>rightEyeClosed()
 : <a class="el" href="classeye_occluder.html#a49b5c3cddbe006808e9b5be7d9ffea01">eyeOccluder</a>
@@ -234,16 +262,20 @@ $(function() {
 </li>
 <li>rstart()
 : <a class="el" href="classd_pixx_manager.html#a4ff62a40b1f8459af1e8baf21eeb7948">dPixxManager</a>
+, <a class="el" href="classio_manager.html#aaca5282a9635ff9d0decd419aa375ea3">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#a1b7d5b92294d762147482dbe2c441f3b">plusplusManager</a>
 </li>
 <li>rstop()
 : <a class="el" href="classd_pixx_manager.html#a8660c5fd396e2cdb07178c776478ba35">dPixxManager</a>
+, <a class="el" href="classio_manager.html#a2bc84a80dc18c872f287a6a1c7a39b64">ioManager</a>
+, <a class="el" href="classplusplus_manager.html#ae0a8db6b95c7d2ebed5889a1f876edac">plusplusManager</a>
 </li>
 <li>run()
-: <a class="el" href="classbase_stimulus.html#a3aa8407d75e5d5c152b1419adeba8292">baseStimulus</a>
+: <a class="el" href="classbase_stimulus.html#a05ac511102ec1c1633ef914e994fb952">baseStimulus</a>
 , <a class="el" href="classcalibrate_luminance.html#a270d3ac37cbe9377349526d9f11fa045">calibrateLuminance</a>
 , <a class="el" href="classcolour_test.html#a9b57b260a51defe37801e06c6d2e0649">colourTest</a>
 , <a class="el" href="class_l_f_p_meta.html#ae1be2dd79d1a0969a65fcddb978732e2">LFPMeta</a>
-, <a class="el" href="classmeta_stimulus.html#a4cf6dff5a2a74baa265d32464eeb4921">metaStimulus</a>
+, <a class="el" href="classmeta_stimulus.html#a24356c95613f75570fa30e4ceb8b7ee4">metaStimulus</a>
 , <a class="el" href="classrf_mapper.html#ad045cd22d1146e54820c07abfed7d2e8">rfMapper</a>
 , <a class="el" href="classrun_experiment.html#a7c94a7c3c4ef2494cb0f3b50a8a1fcf3">runExperiment</a>
 , <a class="el" href="classstate_machine.html#a4f868e97b528a6aeaca8b085ec572e69">stateMachine</a>
@@ -278,7 +310,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

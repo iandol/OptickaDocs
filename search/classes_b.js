@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['panel',['panel',['../classpanel.html',1,'']]],
-  ['parseopxspikes',['parseOpxSpikes',['../classparse_opx_spikes.html',1,'']]],
-  ['plaidstimulus',['plaidStimulus',['../classplaid_stimulus.html',1,'']]],
-  ['plxreader',['plxReader',['../classplx_reader.html',1,'']]]
+  ['opticka',['opticka',['../classopticka.html',1,'']]],
+  ['optickacore',['optickaCore',['../classopticka_core.html',1,'']]],
+  ['opxonline',['opxOnline',['../classopx_online.html',1,'']]]
 ];

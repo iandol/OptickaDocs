@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['magstimmanager',['magstimManager',['../classmagstim_manager.html',1,'']]],
-  ['metastimulus',['metaStimulus',['../classmeta_stimulus.html',1,'']]],
-  ['moviestimulus',['movieStimulus',['../classmovie_stimulus.html',1,'']]]
+  ['labjack',['labJack',['../classlab_jack.html',1,'']]],
+  ['lfpanalysis',['LFPAnalysis',['../class_l_f_p_analysis.html',1,'']]],
+  ['lfpmeta',['LFPMeta',['../class_l_f_p_meta.html',1,'']]]
 ];

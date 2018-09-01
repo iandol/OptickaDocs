@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Opticka
-   &#160;<span id="projectnumber">1.021</span>
+   &#160;<span id="projectnumber">1.12</span>
    </div>
    <div id="projectbrief">Opticka is a vision research system for behavioral electrophysiology.</div>
   </td>
@@ -86,16 +86,18 @@ $(function() {
 : <a class="el" href="classplx_reader.html#ada4f19f55be0c0695f98321faa79c183">plxReader</a>
 </li>
 <li>delete()
-: <a class="el" href="classcalibrate_luminance.html#afa0dc6a2bec0117bac114ba0fa5c4c13">calibrateLuminance</a>
+: <a class="el" href="classarduino_manager.html#ab62f073e11cb0ffb011bea966d5090f3">arduinoManager</a>
+, <a class="el" href="classcalibrate_luminance.html#afa0dc6a2bec0117bac114ba0fa5c4c13">calibrateLuminance</a>
 , <a class="el" href="classdata_connection.html#a4732531d21d22b05083ac3e18de8355a">dataConnection</a>
 , <a class="el" href="classd_pixx_manager.html#a63f39cb92ca3a5c57555ac53cd2f6621">dPixxManager</a>
 , <a class="el" href="classeye_occluder.html#a79c8aa19b7decd2414d23eded4e7e648">eyeOccluder</a>
+, <a class="el" href="classio_manager.html#a7252729cf98503ff7a23fe54804effc1">ioManager</a>
 , <a class="el" href="classlab_jack.html#a75cbe4ce962eb478b9f024ef40f15164">labJack</a>
 , <a class="el" href="classmagstim_manager.html#a2947468f223d1a4f9b47f06a161ff2bd">magstimManager</a>
 , <a class="el" href="classopx_online.html#aad8149cf5c695b5ca81cd599ac86dab2">opxOnline</a>
 , <a class="el" href="classpanel.html#aec78a7e299a7472796bab448e1dea6ab">panel</a>
+, <a class="el" href="classplusplus_manager.html#a160adb08709e66d595dce42670a2b994">plusplusManager</a>
 , <a class="el" href="classscreen_manager.html#a63ef457299a10665607fc0f6418a634a">screenManager</a>
-, <a class="el" href="classsend_serial.html#affe464a671635c02d24c647808620607">sendSerial</a>
 , <a class="el" href="classsend_serial_i_o_port.html#a387a4d8e39672b789de8eb45b6eea1f1">sendSerialIOPort</a>
 </li>
 <li>deleteProtocol()
@@ -115,6 +117,9 @@ $(function() {
 </li>
 <li>demeanLFP()
 : <a class="el" href="class_l_f_p_analysis.html#a7e2c6ba8122fa95eabf904bd290bbec5">LFPAnalysis</a>
+</li>
+<li>demo()
+: <a class="el" href="classscreen_manager.html#a14ade0cdddcfb3a08a3fbe42825f69ab">screenManager</a>
 </li>
 <li>density()
 : <a class="el" href="classdots_stimulus.html#a6dd685dcf19aadc711aa3768f213e6fd">dotsStimulus</a>
@@ -142,11 +147,20 @@ $(function() {
 <li>distance()
 : <a class="el" href="classscreen_manager.html#a2b81446952b1c15e05dafad529a58ce9">screenManager</a>
 </li>
+<li>DKLtoRGB()
+: <a class="el" href="classcolour_manager.html#a3f7842d2bd0979c350ee9048ef9d4ec9">colourManager</a>
+</li>
+<li>DKLtoxyY()
+: <a class="el" href="classcolour_manager.html#adc07046625afbf1cdd41079991e45ae9">colourManager</a>
+</li>
 <li>do_fixdash()
 : <a class="el" href="classpanel.html#a95f5e4c2da43125aa9c43cd39f430b59">panel</a>
 </li>
 <li>doStrobe()
 : <a class="el" href="classrun_experiment.html#acf44c8eec382b250d63f214ea39191f4">runExperiment</a>
+</li>
+<li>doSyncTime()
+: <a class="el" href="classrun_experiment.html#a00e051497a481a8286488df026edbd43">runExperiment</a>
 </li>
 <li>dotsStimulus()
 : <a class="el" href="classdots_stimulus.html#a8fb50da8990fd47e4b3d9be6139ad5b3">dotsStimulus</a>
@@ -205,6 +219,9 @@ $(function() {
 <li>drawMap()
 : <a class="el" href="classrf_mapper.html#ad9b6ad6bb7393efef79d6cf8b66f5e85">rfMapper</a>
 </li>
+<li>drawPhotoDiode()
+: <a class="el" href="classscreen_manager.html#a67340d9301953fb5620a46775595d2a1">screenManager</a>
+</li>
 <li>drawPhotoDiodeSquare()
 : <a class="el" href="classscreen_manager.html#a3e4923c31d397940289a194aff319079">screenManager</a>
 </li>
@@ -219,6 +236,9 @@ $(function() {
 </li>
 <li>drawSpot()
 : <a class="el" href="classscreen_manager.html#a6af2773f81215d53a95dcf8b32b3a388">screenManager</a>
+</li>
+<li>drawTextNow()
+: <a class="el" href="classscreen_manager.html#a3b41f8b3fb6fd3411cec6ab76e5467c0">screenManager</a>
 </li>
 <li>drawTimedSpot()
 : <a class="el" href="classscreen_manager.html#a59bcbb86042bba020b5ccdd0418467f7">screenManager</a>
@@ -242,7 +262,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 6 2017 08:33:24 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Sep 1 2018 15:38:55 for Opticka by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

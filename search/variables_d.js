@@ -4,7 +4,7 @@ var searchData=
   ['oc',['oc',['../classopticka.html#af4ed4c9fd33c43298caa29ea23e9088f',1,'opticka']]],
   ['offticks',['offTicks',['../classbase_stimulus.html#afeb8aa0aabf247f3cb99547e973db14a',1,'baseStimulus']]],
   ['offtime',['offTime',['../classbase_stimulus.html#aa9935ac0b64238a6d329f0fbc0fdae82',1,'baseStimulus']]],
-  ['oldclut',['oldClut',['../classcalibrate_luminance.html#aaf378f1388d774f3d9c4bfa261e36cae',1,'calibrateLuminance']]],
+  ['oldclut',['oldCLUT',['../classcalibrate_luminance.html#af5c91fcf7d33a9c01618467cb55250c6',1,'calibrateLuminance']]],
   ['oldcv',['oldcv',['../classopx_online.html#ab9d287ca89a76884294affaaf176ba18',1,'opxOnline']]],
   ['olddir',['oldDir',['../class_l_f_p_meta.html#af56c63dc04798dc2eb75aeea105acbfb',1,'LFPMeta']]],
   ['oldstream',['oldStream',['../classstimulus_sequence.html#a5ed0df0f3963136da6d8c254472965b4',1,'stimulusSequence']]],

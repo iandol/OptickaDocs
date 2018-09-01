@@ -1,6 +1,6 @@
 <map id="gaborStimulus" name="gaborStimulus">
-<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="167,567,268,592"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="378,286,470,311"/>
-<area shape="rect" id="node4" href="$classhandle.html" title="handle" alt="" coords="393,5,455,31"/>
-<area shape="rect" id="node6" href="$classdynamicprops.html" title="dynamicprops" alt="" coords="249,286,353,311"/>
+<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="183,612,293,639"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="412,309,512,335"/>
+<area shape="rect" id="node4" href="$classhandle.html" title="handle" alt="" coords="429,5,495,32"/>
+<area shape="rect" id="node6" href="$classdynamicprops.html" title="dynamicprops" alt="" coords="273,309,387,335"/>
 </map>

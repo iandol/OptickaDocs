@@ -2,6 +2,7 @@ var searchData=
 [
   ['magstimmanager',['magstimManager',['../classmagstim_manager.html#aad3ad2300625232c694798831127d95b',1,'magstimManager']]],
   ['makecolours',['makeColours',['../classdots_stimulus.html#ac164dda55eff70282d299a7fdcefb6d8',1,'dotsStimulus']]],
+  ['makefinalclut',['makeFinalCLUT',['../classcalibrate_luminance.html#a789ed45c3a24d618b20cf92d9c9c343f',1,'calibrateLuminance']]],
   ['makegrid',['makeGrid',['../classscreen_manager.html#a7333b9fc308d53cd686d45f24f59e9b1',1,'screenManager']]],
   ['makepanel',['makePanel',['../classbase_stimulus.html#a9d05ccd8d472ee2606372451f1ad64d6',1,'baseStimulus']]],
   ['makesurrogate',['makeSurrogate',['../class_l_f_p_analysis.html#aedc4f43f691c34465e2a2e33dc6cb2bb',1,'LFPAnalysis']]],
@@ -12,6 +13,7 @@ var searchData=
   ['metastimulus',['metaStimulus',['../classmeta_stimulus.html#ac3e9d131cb30d20bfd2a49d73b28e5cd',1,'metaStimulus']]],
   ['microsacc',['microsacc',['../classeyelink_analysis.html#a3eff61fdb2f9006f7008f413b4847c72',1,'eyelinkAnalysis']]],
   ['modifystimulus',['modifyStimulus',['../classopticka.html#a4595a250dad1a5db14d2305a6d095e84',1,'opticka']]],
+  ['monomode',['monoMode',['../classplusplus_manager.html#a0d2422da9c1cd333c4648ba7fea0aeab',1,'plusplusManager']]],
   ['mouseposition',['mousePosition',['../classscreen_manager.html#a1beb33b45ae8e887bf4672a6bb13657e',1,'screenManager']]],
   ['moviestimulus',['movieStimulus',['../classmovie_stimulus.html#a986c28aac3d437c505efca16a7701e6f',1,'movieStimulus']]]
 ];

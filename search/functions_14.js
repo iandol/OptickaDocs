@@ -7,6 +7,7 @@ var searchData=
   ['var2se',['var2SE',['../classanalysis_core.html#a72b2ef7ae08378821cf0389856dbf2e2',1,'analysisCore']]],
   ['vecvel',['vecvel',['../classeyelink_analysis.html#afe766e7cc679bd651761c56ae84b032c',1,'eyelinkAnalysis']]],
   ['verbose',['verbose',['../classrun_experiment.html#af13c038c9b832bc40d19cbd92922498e',1,'runExperiment']]],
+  ['verbositylevel',['verbosityLevel',['../classscreen_manager.html#a9efbc9880ed2d28f1b6abef17136e657',1,'screenManager']]],
   ['version',['version',['../classpanel.html#a9ea4b377491e84bde93610eb621d28cb',1,'panel']]],
   ['vertcat',['vertcat',['../classpanel.html#a7464ff3a40f2748dd72941539af5e572',1,'panel']]]
 ];

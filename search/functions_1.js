@@ -8,8 +8,13 @@ var searchData=
   ['basestimulus',['baseStimulus',['../classbase_stimulus.html#aa49333e0a96e1f655a793a2573f477c9',1,'baseStimulus']]],
   ['bgcolourindex',['bgcolourIndex',['../classcolour_test.html#a32a8444eb125efb9665134f9adbc4310',1,'colourTest::bgcolourIndex()'],['../classrf_mapper.html#a47945fea59f40dccd40229c851a8615f',1,'rfMapper::bgcolourIndex()']]],
   ['binsacc',['binsacc',['../classeyelink_analysis.html#aafdaf7bc3882666c255d74db6e2accfb',1,'eyelinkAnalysis']]],
+  ['bitdepth',['bitDepth',['../classscreen_manager.html#af2c712418d3a2e572ef6caa4f7372afb',1,'screenManager']]],
+  ['bitscheckopen',['bitsCheckOpen',['../classscreen_manager.html#ac6dbca0127e78f3659babade190d023f',1,'screenManager']]],
+  ['bitsmode',['bitsMode',['../classplusplus_manager.html#a4020fd4742ea4b992e6a1b4005bab98a',1,'plusplusManager']]],
+  ['bitsswitchstatusscreen',['bitsSwitchStatusScreen',['../classscreen_manager.html#a1519f35e42d5dae34ed37f6e9aca3890',1,'screenManager']]],
   ['botheyesclosed',['bothEyesClosed',['../classeye_occluder.html#acc421e6fb1ff5169c95a946b28f41b79',1,'eyeOccluder']]],
   ['botheyesopen',['bothEyesOpen',['../classeye_occluder.html#ab28ac764ede0bf467a8d4239b194b1d1',1,'eyeOccluder']]],
+  ['breakfixation',['breakFixation',['../classd_pixx_manager.html#a144a875040db7106c0dccbfd32f4a877',1,'dPixxManager::breakFixation()'],['../classio_manager.html#ab2568bf830774a6116719986e28d1822',1,'ioManager::breakFixation()'],['../classplusplus_manager.html#a14c6febe127047d9641cdc8148ebac40',1,'plusplusManager::breakFixation()']]],
   ['build_5fgui',['build_gui',['../classstimulus_sequence.html#a662c8d2c3cae0cf015192239cd94922f',1,'stimulusSequence']]],
   ['buildgui',['buildGUI',['../classseditor.html#abb4c4e7004493831e3dade45fd8f5c58',1,'seditor']]]
 ];
