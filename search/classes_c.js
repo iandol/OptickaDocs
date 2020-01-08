@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['panel',['panel',['../classpanel.html',1,'']]],
-  ['parseopxspikes',['parseOpxSpikes',['../classparse_opx_spikes.html',1,'']]],
-  ['plaidstimulus',['plaidStimulus',['../classplaid_stimulus.html',1,'']]],
-  ['plusplusmanager',['plusplusManager',['../classplusplus_manager.html',1,'']]],
-  ['plxreader',['plxReader',['../classplx_reader.html',1,'']]]
+  ['panel_1927',['panel',['../classpanel.html',1,'']]],
+  ['parseopxspikes_1928',['parseOpxSpikes',['../classparse_opx_spikes.html',1,'']]],
+  ['plaidstimulus_1929',['plaidStimulus',['../classplaid_stimulus.html',1,'']]],
+  ['plusplusmanager_1930',['plusplusManager',['../classplusplus_manager.html',1,'']]],
+  ['plxreader_1931',['plxReader',['../classplx_reader.html',1,'']]]
 ];

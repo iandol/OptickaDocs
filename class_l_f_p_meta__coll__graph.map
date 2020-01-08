@@ -1,5 +1,7 @@
 <map id="LFPMeta" name="LFPMeta">
-<area shape="rect" id="node2" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="85,583,191,609"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="280,309,380,335"/>
-<area shape="rect" id="node4" href="$classhandle.html" title="handle" alt="" coords="297,5,363,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,615,81,640"/>
+<area shape="rect" id="node2" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="81,540,179,565"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="259,286,352,311"/>
+<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="275,5,336,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="94,5,166,31"/>
 </map>

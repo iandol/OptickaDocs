@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opticka_20stimulus_20generator',['Opticka Stimulus Generator',['../index.html',1,'']]]
+  ['opticka_20vision_20experiment_20generator_3902',['Opticka Vision Experiment Generator',['../index.html',1,'']]]
 ];

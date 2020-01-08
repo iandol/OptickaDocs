@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['gaborstimulus',['gaborStimulus',['../classgabor_stimulus.html',1,'']]],
-  ['gratingstimulus',['gratingStimulus',['../classgrating_stimulus.html',1,'']]]
+  ['gaborstimulus_1913',['gaborStimulus',['../classgabor_stimulus.html',1,'']]],
+  ['gratingstimulus_1914',['gratingStimulus',['../classgrating_stimulus.html',1,'']]]
 ];

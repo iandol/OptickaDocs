@@ -1,4 +1,5 @@
 <map id="metaStimulus" name="metaStimulus">
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="12,80,112,107"/>
-<area shape="rect" id="node3" href="$classhandle.html" title="handle" alt="" coords="29,5,95,32"/>
+<area shape="rect" id="node1" title="metaStimulus is a wrapper object for opticka stimuli METASTIMULUS a collection of stimuli,..." alt="" coords="5,152,107,177"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="10,79,103,104"/>
+<area shape="rect" id="node3" href="$classhandle.html" title=" " alt="" coords="26,5,87,31"/>
 </map>

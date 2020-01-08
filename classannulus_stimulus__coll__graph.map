@@ -1,6 +1,8 @@
 <map id="annulusStimulus" name="annulusStimulus">
-<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects " alt="" coords="142,612,253,639"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="365,309,465,335"/>
-<area shape="rect" id="node4" href="$classhandle.html" title="handle" alt="" coords="381,5,448,32"/>
-<area shape="rect" id="node6" href="$classdynamicprops.html" title="dynamicprops" alt="" coords="225,309,340,335"/>
+<area shape="rect" id="node1" title="annulusStimulus TODO" alt="" coords="5,641,124,667"/>
+<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="129,567,230,592"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="333,286,426,311"/>
+<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="349,5,410,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="54,5,126,31"/>
+<area shape="rect" id="node6" href="$classdynamicprops.html" title=" " alt="" coords="205,286,309,311"/>
 </map>
