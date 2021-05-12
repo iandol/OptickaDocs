@@ -1,0 +1,22 @@
+digraph "colourTest"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Graublau Slab",fontsize="10",labelfontname="Graublau Slab",labelfontsize="10"];
+  node [fontname="Graublau Slab",fontsize="10",shape=record];
+  Node1 [label="colourTest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="colour test is a simple RGB colour blender for teaching"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Graublau Slab"];
+  Node2 [label="spotStimulus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classspot_stimulus.html",tooltip="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Graublau Slab"];
+  Node3 [label="baseStimulus",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classbase_stimulus.html",tooltip="baseStimulus is the superclass for all opticka stimulus objects"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Graublau Slab"];
+  Node4 [label="optickaCore",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classopticka_core.html",tooltip="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..."];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Graublau Slab"];
+  Node5 [label="handle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classhandle.html",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allowedProperties\nclassName\ncloning\ncomment\ndateStamp\nfullName\nfullName_\nmversion\nname\npaths\n..." ,fontname="Graublau Slab"];
+  Node6 [label="Property",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node7 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Graublau Slab"];
+  Node7 [label="dynamicprops",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classdynamicprops.html",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allowedProperties\nalpha\nangle\nanimator\ncolour\ndX\ndX_\ndY\ndY_\ndelayTicks\n..." ,fontname="Graublau Slab"];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allowedProperties\ncolourOutTemp\ncontrast\ncurrentColour\nfamily\nflashBG\nflashColour\nflashColourOutTemp\nflashCounter\nflashFG\n..." ,fontname="Graublau Slab"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" allowedProperties\nbackgroundColour\nbgcolourIndex\nbuttons\ncolourIndex\ncolourList\ndEndTick\ndStartTick\nfhandle\nrchar\n..." ,fontname="Graublau Slab"];
+}

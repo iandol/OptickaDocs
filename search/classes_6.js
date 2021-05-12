@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['handle_1915',['handle',['../classhandle.html',1,'']]]
+  ['gaborstimulus_2093',['gaborStimulus',['../classgabor_stimulus.html',1,'']]],
+  ['gratingstimulus_2094',['gratingStimulus',['../classgrating_stimulus.html',1,'']]]
 ];

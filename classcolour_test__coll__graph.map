@@ -1,9 +1,0 @@
-<map id="colourTest" name="colourTest">
-<area shape="rect" id="node1" title="colour test is a simple RGB colour blender for teaching" alt="" coords="435,837,517,863"/>
-<area shape="rect" id="node2" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single disc stimulus,..." alt="" coords="373,763,470,788"/>
-<area shape="rect" id="node3" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="199,627,300,653"/>
-<area shape="rect" id="node4" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="24,286,117,311"/>
-<area shape="rect" id="node5" href="$classhandle.html" title=" " alt="" coords="5,5,67,31"/>
-<area shape="rect" id="node6" title=" " alt="" coords="257,5,329,31"/>
-<area shape="rect" id="node7" href="$classdynamicprops.html" title=" " alt="" coords="280,286,384,311"/>
-</map>

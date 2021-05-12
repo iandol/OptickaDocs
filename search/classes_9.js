@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['magstimmanager_1920',['magstimManager',['../classmagstim_manager.html',1,'']]],
-  ['metastimulus_1921',['metaStimulus',['../classmeta_stimulus.html',1,'']]],
-  ['moviestimulus_1922',['movieStimulus',['../classmovie_stimulus.html',1,'']]]
+  ['labjack_2098',['labJack',['../classlab_jack.html',1,'']]],
+  ['labjackt_2099',['labJackT',['../classlab_jack_t.html',1,'']]],
+  ['lfpanalysis_2100',['LFPAnalysis',['../class_l_f_p_analysis.html',1,'']]],
+  ['lfpmeta_2101',['LFPMeta',['../class_l_f_p_meta.html',1,'']]],
+  ['loggaborstimulus_2102',['logGaborStimulus',['../classlog_gabor_stimulus.html',1,'']]]
 ];

@@ -1,9 +1,0 @@
-<map id="rfMapper" name="rfMapper">
-<area shape="rect" id="node1" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="443,837,517,863"/>
-<area shape="rect" id="node2" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="375,763,467,788"/>
-<area shape="rect" id="node3" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="199,627,300,653"/>
-<area shape="rect" id="node4" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="24,286,117,311"/>
-<area shape="rect" id="node5" href="$classhandle.html" title=" " alt="" coords="5,5,67,31"/>
-<area shape="rect" id="node6" title=" " alt="" coords="257,5,329,31"/>
-<area shape="rect" id="node7" href="$classdynamicprops.html" title=" " alt="" coords="280,286,384,311"/>
-</map>

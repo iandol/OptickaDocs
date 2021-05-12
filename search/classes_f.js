@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['targetinducerstimulus_1941',['targetInducerStimulus',['../classtarget_inducer_stimulus.html',1,'']]],
-  ['texturestimulus_1942',['textureStimulus',['../classtexture_stimulus.html',1,'']]],
-  ['tobiianalysis_1943',['tobiiAnalysis',['../classtobii_analysis.html',1,'']]],
-  ['tobiimanager_1944',['tobiiManager',['../classtobii_manager.html',1,'']]]
+  ['screenmanager_2117',['screenManager',['../classscreen_manager.html',1,'']]],
+  ['seditor_2118',['seditor',['../classseditor.html',1,'']]],
+  ['sendserialioport_2119',['sendSerialIOPort',['../classsend_serial_i_o_port.html',1,'']]],
+  ['spikeanalysis_2120',['spikeAnalysis',['../classspike_analysis.html',1,'']]],
+  ['spotstimulus_2121',['spotStimulus',['../classspot_stimulus.html',1,'']]],
+  ['statemachine_2122',['stateMachine',['../classstate_machine.html',1,'']]],
+  ['stimulussequence_2123',['stimulusSequence',['../classstimulus_sequence.html',1,'']]]
 ];
