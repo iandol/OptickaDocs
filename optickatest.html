@@ -178,9 +178,9 @@ PTB-INFO: Connected to Advanced Micro Devices, Inc. [AMD/ATI] Ellesmere [Radeon 
 
 PTB-INFO: OpenGL-Renderer is AMD :: AMD Radeon (TM) Pro WX 5100 Graphics (POLARIS10, DRM 3.40.0, 5.11.15-051115-lowlatency, LLVM 12.0.0) :: 4.6 (Compatibility Profile) Mesa 21.1.0 - kisak-mesa PPA
 PTB-INFO: VBL startline = 1080 , VBL Endline = 1123
-PTB-INFO: Measured monitor refresh interval from beamposition = 16.666344 ms [60.001161 Hz].
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.666305 ms [60.001301 Hz].
 PTB-INFO: Will try to use OS-Builtin OpenML sync control support for accurate Flip timestamping.
-PTB-INFO: Measured monitor refresh interval from VBLsync = 16.666303 ms [60.001310 Hz]. (50 valid samples taken, stddev=0.000763 ms.)
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.666288 ms [60.001362 Hz]. (50 valid samples taken, stddev=0.000608 ms.)
 PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
 PTB-INFO: Small deviations between reported values are normal and no reason to worry.
 PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 5121 ...
@@ -217,47 +217,99 @@ Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox
 Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
 
 ---&gt;&gt;&gt; movieStimulus: /home/cog5/Code/opticka/stimuli/monkey-dance.avi
-	0.92 seconds duration, 25.000000 fps, w x h = 320 x 320, in 128ms
+	0.92 seconds duration, 25.000000 fps, w x h = 320 x 320, in 101ms
 	Blocking: 0 | Loop: 1 | Preloadsecs: -1 | Pixelformat:  | Flags: 
----&gt; ioManager#142BD4929: Constructor parsing input argument | name
+---&gt; ioManager#1DE3A2D03: Constructor parsing input argument | name
 ===&gt; No strobe output I/O...
----&gt; ioManager#142BD508B: Constructor parsing input argument | name
+---&gt; ioManager#1DE3A333D: Constructor parsing input argument | name
 ===&gt; No reward TTLs will be sent...
 ---&gt; stimulusSequence.initialise: Randomised and Initialised!
 
 ===&gt;&gt;&gt; Warming up the GPU and I/O systems... &lt;&lt;&lt;===
-START @B: 1 | R: 1 [1/24] | isBlank: 1 | Time: 0.000 (0) | V: 10 | / angle: 90.00 / contrast: 0.15 / xPosition: 6.00
+START @B: 1 | R: 1 [1/24] | isBlank: 1 | Time: 0.000 (0) | V: 7 | / angle: 45.00 / contrast: 0.55 / xPosition: -6.00
 
-@B: 1 | R: 1 [1/24] | isBlank: 1 | Time: 0.000 (2) | V: 10 | / angle: 90.00 / contrast: 0.15 / xPosition: 6.00
-
-IS TIME: 1
-@B: 1 | R: 2 [2/24] | isBlank: 1 | Time: 2.267 (135) | V: 12 | / angle: 90.00 / contrast: 0.55 / xPosition: 6.00
+@B: 1 | R: 1 [1/24] | isBlank: 1 | Time: 0.000 (2) | V: 7 | / angle: 45.00 / contrast: 0.55 / xPosition: -6.00
 
 IS TIME: 1
-@B: 1 | R: 3 [3/24] | isBlank: 1 | Time: 5.267 (314) | V: 2 | / angle: 0.00 / contrast: 0.15 / xPosition: 6.00
+@B: 1 | R: 2 [2/24] | isBlank: 1 | Time: 2.283 (136) | V: 5 | / angle: 45.00 / contrast: 0.15 / xPosition: -6.00
 
 IS TIME: 1
-@B: 1 | R: 4 [4/24] | isBlank: 1 | Time: 8.266 (494) | V: 3 | / angle: 0.00 / contrast: 0.55 / xPosition: -6.00
+@B: 1 | R: 3 [3/24] | isBlank: 1 | Time: 5.283 (315) | V: 8 | / angle: 45.00 / contrast: 0.55 / xPosition: 6.00
 
 IS TIME: 1
-@B: 1 | R: 5 [5/24] | isBlank: 1 | Time: 11.266 (674) | V: 11 | / angle: 90.00 / contrast: 0.55 / xPosition: -6.00
+@B: 1 | R: 4 [4/24] | isBlank: 1 | Time: 8.283 (495) | V: 4 | / angle: 0.00 / contrast: 0.55 / xPosition: 6.00
 
 IS TIME: 1
-@B: 1 | R: 6 [6/24] | isBlank: 1 | Time: 14.266 (854) | V: 6 | / angle: 45.00 / contrast: 0.15 / xPosition: 6.00
+@B: 1 | R: 5 [5/24] | isBlank: 1 | Time: 11.283 (675) | V: 2 | / angle: 0.00 / contrast: 0.15 / xPosition: 6.00
 
 IS TIME: 1
-@B: 1 | R: 7 [7/24] | isBlank: 1 | Time: 17.266 (1034) | V: 1 | / angle: 0.00 / contrast: 0.15 / xPosition: -6.00
+@B: 1 | R: 6 [6/24] | isBlank: 1 | Time: 14.283 (855) | V: 1 | / angle: 0.00 / contrast: 0.15 / xPosition: -6.00
 
+IS TIME: 1
+@B: 1 | R: 7 [7/24] | isBlank: 1 | Time: 17.283 (1035) | V: 10 | / angle: 90.00 / contrast: 0.15 / xPosition: 6.00
+
+IS TIME: 1
+@B: 1 | R: 8 [8/24] | isBlank: 1 | Time: 20.283 (1215) | V: 12 | / angle: 90.00 / contrast: 0.55 / xPosition: 6.00
+
+IS TIME: 1
+@B: 1 | R: 9 [9/24] | isBlank: 1 | Time: 23.283 (1395) | V: 6 | / angle: 45.00 / contrast: 0.15 / xPosition: 6.00
+
+IS TIME: 1
+@B: 1 | R: 10 [10/24] | isBlank: 1 | Time: 26.283 (1575) | V: 11 | / angle: 90.00 / contrast: 0.55 / xPosition: -6.00
+
+IS TIME: 1
+@B: 1 | R: 11 [11/24] | isBlank: 1 | Time: 29.283 (1755) | V: 3 | / angle: 0.00 / contrast: 0.55 / xPosition: -6.00
+
+IB TIME: 1
+@B: 1 | R: 12 [12/24] | isBlank: 1 | Time: 32.283 (1935) | V: 9 | / angle: 90.00 / contrast: 0.15 / xPosition: -6.00
+
+IS TIME: 1
+@B: 2 | R: 1 [13/24] | isBlank: 1 | Time: 35.283 (2115) | V: 1 | / angle: 0.00 / contrast: 0.15 / xPosition: -6.00
+
+IS TIME: 1
+@B: 2 | R: 2 [14/24] | isBlank: 1 | Time: 38.282 (2295) | V: 8 | / angle: 45.00 / contrast: 0.55 / xPosition: 6.00
+
+IS TIME: 1
+@B: 2 | R: 3 [15/24] | isBlank: 1 | Time: 41.282 (2475) | V: 12 | / angle: 90.00 / contrast: 0.55 / xPosition: 6.00
+
+IS TIME: 1
+@B: 2 | R: 4 [16/24] | isBlank: 1 | Time: 44.282 (2655) | V: 4 | / angle: 0.00 / contrast: 0.55 / xPosition: 6.00
+
+IS TIME: 1
+@B: 2 | R: 5 [17/24] | isBlank: 1 | Time: 47.282 (2835) | V: 2 | / angle: 0.00 / contrast: 0.15 / xPosition: 6.00
+
+IS TIME: 1
+@B: 2 | R: 6 [18/24] | isBlank: 1 | Time: 50.282 (3015) | V: 3 | / angle: 0.00 / contrast: 0.55 / xPosition: -6.00
+
+IS TIME: 1
+@B: 2 | R: 7 [19/24] | isBlank: 1 | Time: 53.282 (3195) | V: 11 | / angle: 90.00 / contrast: 0.55 / xPosition: -6.00
+
+IS TIME: 1
+@B: 2 | R: 8 [20/24] | isBlank: 1 | Time: 56.282 (3375) | V: 10 | / angle: 90.00 / contrast: 0.15 / xPosition: 6.00
+
+IS TIME: 1
+@B: 2 | R: 9 [21/24] | isBlank: 1 | Time: 59.282 (3555) | V: 5 | / angle: 45.00 / contrast: 0.15 / xPosition: -6.00
+
+IS TIME: 1
+@B: 2 | R: 10 [22/24] | isBlank: 1 | Time: 62.282 (3735) | V: 7 | / angle: 45.00 / contrast: 0.55 / xPosition: -6.00
+
+IS TIME: 1
+@B: 2 | R: 11 [23/24] | isBlank: 1 | Time: 65.282 (3915) | V: 6 | / angle: 45.00 / contrast: 0.15 / xPosition: 6.00
+
+IB TIME: 1
+@B: 2 | R: 12 [24/24] | isBlank: 1 | Time: 68.282 (4095) | V: 9 | / angle: 90.00 / contrast: 0.15 / xPosition: -6.00
+
+---&gt; stimulusSequence.updateTask: Task FINISHED, no more updates allowed
 
 ---&gt; screenManager: RESET GAMMA TABLES
 ---&gt; Number of dropped movie frames: 0
 
 
----&gt; screenManager 142B529DF: Closing screen = 1, Win = 10, Kind = 1
+---&gt; screenManager 1DE320B25: Closing screen = 1, Win = 10, Kind = 1
 
 
 INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
-INFO: a total of 3 times out of a total of 1183 flips during this session.
+INFO: a total of 3 times out of a total of 4281 flips during this session.
 
 INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
 INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);

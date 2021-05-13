@@ -13,6 +13,7 @@
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="extra.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -76,6 +77,7 @@ $(function() {
 </p>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Example hardware setup</h1>
+<p>The diagram below shows an example lab configuration:</p>
 <p><img src="https://github.com/iandol/opticka/raw/gh-pages/images/Opticka-Setup.png" alt="Example hardware setup to run Opticka" class="inline"/></p>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Hardware currently supported:</h2>
@@ -83,10 +85,10 @@ Hardware currently supported:</h2>
 <li><b>Display + digital I/O</b>: high quality display (high bit depths, great colour management) and microsecond precise frame-locked digital I/O: <a href="https://www.crsltd.com/tools-for-vision-science/calibrated-displays/displaypp-lcd-monitor/">Display++ developed by CRS</a>.</li>
 <li><b>Display + digital I/O</b>: high quality display (high bit depths) and microsecond precise digital I/O: <a href="http://vpixx.com/products/tools-for-vision-sciences/">DataPixx / ViewPixx / ProPixx</a>.</li>
 <li><b>Display</b>: any normal monitor.</li>
-<li><b>Digital I/O</b>: <a href="https://labjack.com/">LabJack</a> USB U3/U6/T4 DAQs, strobed words up to 12bits.</li>
+<li><b>Digital I/O</b>: <a href="https://labjack.com/">LabJack</a> USB U3/U6 or T4/T7 DAQs, strobed words up to 12bits.</li>
 <li><b>Digital I/O</b>: [Arduino]() boards for simple TTL triggers for reward systems, MagStim etc.</li>
 <li><b>Eyetracking</b>: [Eyelink 1000]() &ndash; uses the native ethernet link. This affords much better control, drawing stimuli and experiment values onto the eyelink screen. EDF files are stored and we use native EDF loading for full trial-by-trial analysis.</li>
-<li><b>Eyetracking</b>: [Tobii Pro Spectrum 1200]() &ndash; uses the excellent [Titta toolbox]() to manage calibration and recording. Tobii Pro eyetrackers do not require head fixation.</li>
+<li><b>Eyetracking</b>: [Tobii Pro Spectrum 1200]() &ndash; uses the excellent <a href="https://github.com/dcnieho/Titta">Titta toolbox</a> to manage calibration and recording. Tobii Pro eyetrackers do not require head fixation.</li>
 <li><b>Electrophysiology</b>: in theory any recording system that accepts digital triggers / strobed words, but I've only used Plexon Omniplex systems or EEG recording systems. Opticka can use TCP communication over ethernet to transmit current variable data to allow online data visualisation (PSTHs etc. for each experiment variable) on the Omniplex machine.</li>
 <li><b>Photodiode boxes</b>: we prefer TSL251R light-to-voltage photodiodes, which can be recorded directy into your electrophysiology system or can generate digital triggers via an <a href="https://github.com/iandol/opticka/tree/master/tools/photodiode">Arduino</a>.</li>
 </ul>
@@ -94,12 +96,12 @@ Hardware currently supported:</h2>
 Quick Documentation</h1>
 <p><code><a class="el" href="optickatest_8m.html">optickatest.m</a></code> is a minimal example showing a simple method of constants (MOC) experiment with 11 different animated stimuli varying across angle, contrast and orientation. Read the Matlab-generated documentation here: <a href="http://iandol.github.io/OptickaDocs/optickatest.html"><code>optickatest.m</code> Report</a>. More complex behavioural control uses a state machine, you can see examples in the [CoreProtocols]() folder. <br  />
 </p>
-<p>There is also auto-generated class documentation here: <a href="http://iandol.github.io/OptickaDocs/inherits.html">Opticka Class Docs</a>, however this is only as good as the comments in the code, which as always could be improved... <br  />
+<p>There is also auto-generated class documentation here: <a href="http://iandol.github.io/OptickaDocs/inherits.html">Opticka Class Docs</a>, that details the major classes and their methods and properties. This is generated from the comments in the code, which as always could be improved... <br  />
 </p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 Install Instructions</h1>
-<p>Opticka prefers the latest Psychophysics Toolbox (V3.0.14+) and at least Matlab 2017a (it uses object-oriented property validation introduced in that version). It has been tested and is mostly used on 64bit Ubuntu 18.04 &amp; macOS 10.14.x with Matlab 2019b. You can simply download the .ZIP from Github, and add the contents/subdirectories to Matlab path (or use <code>addoptickapaths.m</code>). Or to keep easily up-to-date if you have git installed, clone this Github repo (then folder/subfolders to Matlab path).</p>
-<p>Opticka currently works on Linux, macOS and Windows, though the LabJack interface currently only works under Linux and macOS (Labjack uses a different interface on windows and *nix, but this is a minor interface issue and would be a quick fix). Linux is <b>by far</b> the best OS according the PTB developer Mario Kleiner, and recieves the majority of development work from him, therefore it is strongly advised to use it for experiments. My experience is that Linux is much more robust and performant than macOS or Windows, and it is well worth the effort to use Linux for PTB experimental computers.</p>
+<p>Opticka prefers the latest Psychophysics Toolbox (V3.0.16+) and at least Matlab 2017a (it uses object-oriented property validation introduced in that version). It has been tested and is mostly used on 64bit Ubuntu 20.04 &amp; macOS 10.15.x with Matlab 2021a. You can simply download the ZIP from Github, and add the contents/subdirectories to Matlab path (or run <code><a class="el" href="add_opticka_to_path_8m.html">addOptickaToPath.m</a></code> to do it for you). Or to keep easily up-to-date if you have git installed, clone this Github repo, CD to the flder then run run <code><a class="el" href="add_opticka_to_path_8m.html">addOptickaToPath.m</a></code>.</p>
+<p>Opticka currently works on Linux, macOS and Windows, though the LabJack U3/U6 interface currently only works under Linux and macOS (Labjack uses a different interface on Windows and Linux/macOS; the LabJack T4/T7 does work cross-platform however). Linux is <b>by far</b> the best OS according the PTB developer Mario Kleiner, and recieves the majority of development work from him, therefore it is <em>strongly advised</em> to use it for experiments. My experience is that Linux is much more robust and performant than macOS or Windows, and it is well worth the effort to use Linux for PTB experimental computers.</p>
 <h2><a class="anchor" id="autotoc_md6"></a>
 Features</h2>
 <ul>
@@ -117,7 +119,7 @@ Features</h2>
 <li>Can talk to other machines on the network during display using TCP/UDP (used to control a Plexon online display, so one can see PSTHs for each stimulus variable shown in real time).</li>
 <li>Each stimulus has its own relative X &amp; Y position, and the screen centre can be arbitrarily moved via the GUI. This allows quick setup over particular parts of visual space, i.e. relative to a receptive field without needing to edit lots of other values.</li>
 <li>Can record stimuli to video files.</li>
-<li>Manages monitor calibration using ColorCalII from CRG or an i1Pro from ViewPixx. Calibration sets can be saved and loaded easily via the GUI.</li>
+<li>Manages monitor calibration using ColorCalII or SpectroCalII from CRG or an i1Pro from ViewPixx. Calibration sets can be saved and loaded easily via the GUI.</li>
 <li>Gratings (all using procedural textures for high performance):<ul>
 <li>Per-frame update of properties for arbitrary numbers of grating patches.</li>
 <li>Rectangular or circular aperture.</li>
@@ -138,7 +140,7 @@ Features</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 12 2021 13:00:18 for Opticka by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 12 2021 19:16:49 for Opticka by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
