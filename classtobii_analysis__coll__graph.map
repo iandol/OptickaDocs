@@ -1,0 +1,7 @@
+<map id="tobiiAnalysis" name="tobiiAnalysis">
+<area shape="rect" id="node1" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="5,688,101,715"/>
+<area shape="rect" id="node2" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="112,612,205,639"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="288,309,376,335"/>
+<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="321,5,383,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="123,5,195,32"/>
+</map>

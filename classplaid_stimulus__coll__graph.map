@@ -1,0 +1,8 @@
+<map id="plaidStimulus" name="plaidStimulus">
+<area shape="rect" id="node1" title="plaidStimulus TODO" alt="" coords="5,688,107,715"/>
+<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="129,612,228,639"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="343,309,431,335"/>
+<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="356,5,417,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="49,5,121,32"/>
+<area shape="rect" id="node6" href="$classdynamicprops.html" title=" " alt="" coords="215,309,318,335"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="stateMachine" name="stateMachine">
+<area shape="rect" id="node1" title="stateMachine a state machine object" alt="" coords="5,155,103,181"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="10,80,98,107"/>
+<area shape="rect" id="node3" href="$classhandle.html" title=" " alt="" coords="23,5,85,32"/>
+</map>

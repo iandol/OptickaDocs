@@ -1,0 +1,6 @@
+<map id="magstimManager" name="magstimManager">
+<area shape="rect" id="node1" title="magstimManager &#45; controls a MagStim Rapid TMS system using a LabJack" alt="" coords="94,423,215,449"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="36,294,124,321"/>
+<area shape="rect" id="node3" href="$classhandle.html" title=" " alt="" coords="5,5,67,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="141,5,213,32"/>
+</map>

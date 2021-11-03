@@ -1,0 +1,8 @@
+<map id="ndotsStimulus" name="ndotsStimulus">
+<area shape="rect" id="node1" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="5,688,111,715"/>
+<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="193,612,291,639"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="409,309,497,335"/>
+<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="422,5,483,32"/>
+<area shape="rect" id="node5" title=" " alt="" coords="115,5,187,32"/>
+<area shape="rect" id="node6" href="$classdynamicprops.html" title=" " alt="" coords="281,309,384,335"/>
+</map>
