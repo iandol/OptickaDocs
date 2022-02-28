@@ -1,8 +1,0 @@
-<map id="fixationCrossStimulus" name="fixationCrossStimulus">
-<area shape="rect" id="node1" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="5,688,152,715"/>
-<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="207,612,305,639"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="423,309,511,335"/>
-<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="436,5,497,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="129,5,201,32"/>
-<area shape="rect" id="node6" href="$classdynamicprops.html" title=" " alt="" coords="295,309,398,335"/>
-</map>

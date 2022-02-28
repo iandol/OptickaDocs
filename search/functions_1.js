@@ -2,7 +2,7 @@ var searchData=
 [
   ['backgroundcolour_0',['backgroundColour',['../classscreen_manager.html#ab5e45f35e5eb3e1d51940935f45660a1',1,'screenManager']]],
   ['backplot_1',['backPlot',['../class_l_f_p_analysis.html#a5382dc5738473c6da5975b454b62a105',1,'LFPAnalysis::backPlot()'],['../classplx_reader.html#a820d567cd6aaa8324f306e1222c01119',1,'plxReader::backPlot()']]],
-  ['backup_2',['backup',['../classtask_sequence.html#a8d83e6affad00ee554bb0ae9ae659f71',1,'taskSequence']]],
+  ['backup_2',['backup',['../classtask_sequence.html#a2d46fe521024566c45c62fe64d31fbb8',1,'taskSequence']]],
   ['barheight_3',['barHeight',['../classapparent_motion_stimulus.html#a50b070bb68dac71564afc5e525492589',1,'apparentMotionStimulus::barHeight()'],['../classbar_stimulus.html#a50c0274f797bb0626197516492b867d8',1,'barStimulus::barHeight(in me, in value)']]],
   ['barstimulus_4',['barStimulus',['../classbar_stimulus.html#ae48353230ed1ce535f11c6f823bae1fc',1,'barStimulus']]],
   ['barwidth_5',['barWidth',['../classapparent_motion_stimulus.html#aae11cd5e66c8eb7ce6e71907ead2e689',1,'apparentMotionStimulus::barWidth()'],['../classbar_stimulus.html#a5d430de8328f844083cd938301fa4a83',1,'barStimulus::barWidth()']]],
@@ -20,7 +20,6 @@ var searchData=
   ['botheyesclosed_17',['bothEyesClosed',['../classeye_occluder.html#acc421e6fb1ff5169c95a946b28f41b79',1,'eyeOccluder']]],
   ['botheyesopen_18',['bothEyesOpen',['../classeye_occluder.html#ab28ac764ede0bf467a8d4239b194b1d1',1,'eyeOccluder']]],
   ['breakfixation_19',['breakFixation',['../classd_pixx_manager.html#a144a875040db7106c0dccbfd32f4a877',1,'dPixxManager::breakFixation()'],['../classio_manager.html#ab2568bf830774a6116719986e28d1822',1,'ioManager::breakFixation()'],['../classlab_jack_t.html#aaf64430be9d7261f09cc88b13c14b2bc',1,'labJackT::breakFixation()'],['../classplusplus_manager.html#a56720ee46bdd97972ec636448e87cc04',1,'plusplusManager::breakFixation()']]],
-  ['build_5fgui_20',['build_gui',['../classtask_sequence.html#acb2e11c58a55ab17171c82ebf6316100',1,'taskSequence']]],
-  ['buildgui_21',['buildGUI',['../classseditor.html#abb4c4e7004493831e3dade45fd8f5c58',1,'seditor']]],
-  ['bytesavailable_22',['bytesAvailable',['../classarduino_i_o_port.html#acff77927c1929cf4fbf56471c538fe1d',1,'arduinoIOPort']]]
+  ['build_5fgui_20',['build_gui',['../classtask_sequence.html#acc51c870ed2b311a3e9e3eed85dc437d',1,'taskSequence']]],
+  ['bytesavailable_21',['bytesAvailable',['../classarduino_i_o_port.html#acff77927c1929cf4fbf56471c538fe1d',1,'arduinoIOPort']]]
 ];

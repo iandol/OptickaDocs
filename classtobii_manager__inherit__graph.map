@@ -1,5 +1,5 @@
 <map id="tobiiManager" name="tobiiManager">
-<area shape="rect" id="node1" title="tobiiManager wraps around the Titta toolbox functions offering a interface consistent with the previo..." alt="" coords="5,155,101,181"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="9,80,97,107"/>
-<area shape="rect" id="node3" href="$classhandle.html" title=" " alt="" coords="23,5,84,32"/>
+<area shape="rect" id="node1" title="tobiiManager wraps around the Titta toolbox functions offering a interface consistent with eyelinkMan..." alt="" coords="9,652,224,1023"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,131,228,604"/>
+<area shape="rect" id="node3" title=" " alt="" coords="81,5,152,83"/>
 </map>

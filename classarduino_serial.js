@@ -32,14 +32,5 @@ var classarduino_serial =
     [ "stepperStep", "classarduino_serial.html#a1de8c4fed43682e193a08617143f2978", null ],
     [ "timedTTL", "classarduino_serial.html#a429881c03531a698ffeb6a9dadaf90d9", null ],
     [ "chkp", "classarduino_serial.html#a1cca5b962f9a92215bc972371bd4c20d", null ],
-    [ "chks", "classarduino_serial.html#afd3d8e47494ab6a5f3f7c04510138b70", null ],
-    [ "conn", "classarduino_serial.html#a22f0f4973bc46dff2359dd2532b93a77", null ],
-    [ "encs", "classarduino_serial.html#a8053c36c20291289b80889b02847b93e", null ],
-    [ "isDemo", "classarduino_serial.html#ae2145612893637c0271653f648a8f81a", null ],
-    [ "mspd", "classarduino_serial.html#a6ab5b4ef000a84bbf011a9f17327dc52", null ],
-    [ "nPins", "classarduino_serial.html#aa229fd3471ba3f1e06e96d0e674307d2", null ],
-    [ "pins", "classarduino_serial.html#a0566d4224ca066bbcea5a76f6e80121f", null ],
-    [ "sktc", "classarduino_serial.html#a6b78d648382d8c8c84a96b6dee7b900a", null ],
-    [ "srvs", "classarduino_serial.html#a9840c7aeba5fec2266b327cec91236db", null ],
-    [ "sspd", "classarduino_serial.html#adbad2257225d5d32c7753ad3bb21e99a", null ]
+    [ "chks", "classarduino_serial.html#afd3d8e47494ab6a5f3f7c04510138b70", null ]
 ];

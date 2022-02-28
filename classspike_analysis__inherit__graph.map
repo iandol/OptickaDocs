@@ -1,6 +1,6 @@
 <map id="spikeAnalysis" name="spikeAnalysis">
-<area shape="rect" id="node1" title=" " alt="" coords="5,229,105,256"/>
-<area shape="rect" id="node2" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="9,155,102,181"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="11,80,99,107"/>
-<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="25,5,86,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="21,1393,236,1969"/>
+<area shape="rect" id="node2" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="5,652,252,1345"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="17,131,240,604"/>
+<area shape="rect" id="node4" title=" " alt="" coords="93,5,164,83"/>
 </map>

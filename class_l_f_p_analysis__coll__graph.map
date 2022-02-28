@@ -1,7 +1,0 @@
-<map id="LFPAnalysis" name="LFPAnalysis">
-<area shape="rect" id="node1" title=" " alt="" coords="5,703,96,729"/>
-<area shape="rect" id="node2" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="109,627,203,653"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="285,309,373,335"/>
-<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="319,5,380,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="120,5,192,32"/>
-</map>

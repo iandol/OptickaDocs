@@ -32,15 +32,5 @@ var classarduino_serial_port =
     [ "stepperStep", "classarduino_serial_port.html#ac54869f7c07ef44f1ee1c690feb53d4a", null ],
     [ "timedTTL", "classarduino_serial_port.html#aabae19958df61831794561028f6bf4c4", null ],
     [ "chkp", "classarduino_serial_port.html#a10f438821658e3fcb04a6d1b84b6259e", null ],
-    [ "chks", "classarduino_serial_port.html#ab7aca69eab1a1769d52aa4f85ac1f5c6", null ],
-    [ "conn", "classarduino_serial_port.html#a99809bd53b73179bc0ef7eef9ec85419", null ],
-    [ "encs", "classarduino_serial_port.html#ae1597f01a77fc35e10c81e20a13f59b8", null ],
-    [ "isDemo", "classarduino_serial_port.html#af92a1c0b806675afba7cc8e18df9ea7f", null ],
-    [ "mspd", "classarduino_serial_port.html#a2c5195dfa8d820d2cb15750ebd2d1689", null ],
-    [ "nPins", "classarduino_serial_port.html#ad0c0f5e2967ea233d533fb4a5a1c6b9a", null ],
-    [ "pins", "classarduino_serial_port.html#abce8ee1600ec08c970b3871d9511d798", null ],
-    [ "port", "classarduino_serial_port.html#ac895549b406c40351ff29a5dbf349a74", null ],
-    [ "sketchType", "classarduino_serial_port.html#a0ec721d427873f24d019636f6023efa9", null ],
-    [ "srvs", "classarduino_serial_port.html#a18c4171830e1241b390057edd2b44960", null ],
-    [ "sspd", "classarduino_serial_port.html#ab92a5b1ffef771a25740c7310def1bef", null ]
+    [ "chks", "classarduino_serial_port.html#ab7aca69eab1a1769d52aa4f85ac1f5c6", null ]
 ];

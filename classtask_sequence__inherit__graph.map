@@ -1,6 +1,6 @@
 <map id="taskSequence" name="taskSequence">
-<area shape="rect" id="node1" title="taskSequence a method of constants variable manager" alt="" coords="60,155,159,181"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="5,80,93,107"/>
-<area shape="rect" id="node3" href="$classhandle.html" title=" " alt="" coords="19,5,80,32"/>
-<area shape="rect" id="node4" href="$classdynamicprops.html" title=" " alt="" coords="118,80,221,107"/>
+<area shape="rect" id="node1" title="Block&#45;based variable randomisation manager." alt="" coords="111,652,317,1037"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,131,228,604"/>
+<area shape="rect" id="node3" title=" " alt="" coords="81,5,152,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="252,329,371,406"/>
 </map>

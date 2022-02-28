@@ -1,5 +1,5 @@
 <map id="colourManager" name="colourManager">
-<area shape="rect" id="node1" title="colourManager manages colours wrapping the CRS Color Toolbox" alt="" coords="5,155,112,181"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="15,80,103,107"/>
-<area shape="rect" id="node3" href="$classhandle.html" title=" " alt="" coords="28,5,89,32"/>
+<area shape="rect" id="node1" title="colourManager manages colours wrapping the CRS Color Toolbox" alt="" coords="33,652,200,1052"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,131,228,604"/>
+<area shape="rect" id="node3" title=" " alt="" coords="81,5,152,83"/>
 </map>

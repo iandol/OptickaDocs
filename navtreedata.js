@@ -25,15 +25,35 @@
 var NAVTREE =
 [
   [ "Opticka", "index.html", [
-    [ "Opticka: Sensory Experiment Generator", "index.html", [
-      [ "Example hardware setup", "index.html#autotoc_md2", [
-        [ "Hardware currently supported:", "index.html#autotoc_md3", null ]
-      ] ],
-      [ "Quick Documentation", "index.html#autotoc_md4", null ],
-      [ "Install Instructions", "index.html#autotoc_md5", [
-        [ "Features", "index.html#autotoc_md6", null ]
-      ] ]
+    [ "Opticka: Behavioural Experiment Manager", "index.html", [
+      [ "Sample hardware setup", "index.html#autotoc_md36", null ],
+      [ "GUI", "index.html#autotoc_md37", null ],
+      [ "State machine control", "index.html#autotoc_md38", null ],
+      [ "Hardware currently supported:", "index.html#autotoc_md39", null ],
+      [ "Quick Documentation", "index.html#autotoc_md40", null ],
+      [ "Basic Install Instructions", "index.html#autotoc_md41", null ],
+      [ "Features", "index.html#autotoc_md42", null ],
+      [ "Licence", "index.html#autotoc_md43", null ]
     ] ],
+    [ "Detailed Install Instructions", "install.html", [
+      [ "Requirements:", "install.html#autotoc_md1", null ],
+      [ "Using the Git repository", "install.html#autotoc_md2", null ],
+      [ "Using the ZIP file", "install.html#autotoc_md3", null ]
+    ] ],
+    [ "Behavioural Task Methods and Parameters [work-in-progress]", "md_help__m_e_t_h_o_d_s.html", [
+      [ "runExperiment (\"me\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md13", null ],
+      [ "Task Manager (\"task\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md15", null ],
+      [ "Eyetracker (\"eT\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md17", null ],
+      [ "Screen Manager (\"s\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md19", null ],
+      [ "MetaStimulus (\"stims\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md21", null ]
+    ] ],
+    [ "GNU LESSER GENERAL PUBLIC LICENSE", "md__l_i_c_e_n_c_e.html", null ],
+    [ "Todo List", "todo.html", null ],
+    [ "Opticka State Machine Test Output", "optickaBehaviourTest.html", null ],
+    [ "Opticka MOC Test Output", "optickaTest.html", null ],
+    [ "Github Source Repo", "^https://github.com/iandol/opticka", null ],
+    [ "PTB User Forum", "^https://psychtoolbox.discourse.group/", null ],
+    [ "PTB Home Page", "^http://psychtoolbox.org", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -49,8 +69,8 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
-        [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", "globals_func" ]
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -59,32 +79,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_area_summation_state_info_8m.html",
-"class_l_f_p_meta.html#a33e01da5e7fd36660dab2f3bcbb1317a",
-"classannulus_stimulus.html#a3a3bbf55c2559d8b227edb7884f532c0",
-"classarduino_i_o_port.html#a620b33ab9d9b13a2848dd2bbb45f709c",
-"classbar_stimulus.html#a256f0a4d5bf9b58230dbaeea51433bdb",
-"classcalibrate_luminance.html#a11ce1a7f7a08c09649e4babd2c4fd289",
-"classcolour_grating_stimulus.html#a15f406c6b3e0b63fdda2965c7ca5ff2c",
-"classcolour_test.html#a5d56f34b3c5a4a15184061f2697e9e93",
-"classdisc_stimulus.html#a529c28ef8c494c2fb73e5fddfa78af3e",
-"classdots_stimulus.html#aef65005060d8e0fcfeb292088484aca7",
-"classeyelink_manager.html#a311db7a32d4e0e670116949f73de83ef",
-"classgabor_stimulus.html#a133b05fb2b2013a717c18e7bd6084d22",
-"classgrating_stimulus.html#acb97f85c6f5fe6392b7b8d92f328f653",
-"classlab_jack.html#a5024eec3b586a65daf9a87a048b2b1a5",
-"classlog_gabor_stimulus.html#a9016df3301925a356effa16f869a100a",
-"classmovie_stimulus.html#a6ce996cd27271f39db873231f8754c62",
-"classopticka.html#a11d05f3580552fdce7698529a2481304",
-"classpanel.html#a7464ff3a40f2748dd72941539af5e572",
-"classplusplus_manager.html#a18cafa6378aedd6ba77a999b1c78520e",
-"classrf_mapper.html#a8439ae99ea4e8eca54dc0bfa30276fa1",
-"classscreen_manager.html#a2be13d07e2bd67f280641b20c797be7b",
-"classspike_analysis.html#aae29b0c1262f51848b6440229eb40999",
-"classstate_machine.html#ad923d07fb50d033b8f8ba05ff140835f",
-"classtask_sequence.html#acc7e971b338af0ad4889a2935e6308b2",
-"classtobii_manager.html#a33f283ba9b0b2935d2080c675aa97173",
-"globals_func_p.html",
-"opticka__ui__guide_8m.html#a504c34a63fb760d2c35109616986be0b"
+"classannulus_stimulus.html#a2a4cdf4c8cff8cf25600883e03382d75",
+"classbase_stimulus.html#a703773d0dabf520a6bba495f603d7787",
+"classcolour_manager.html#ad8cbbe599f962bc9829d37ec18bc97b2",
+"classeyelink_manager.html#a4f05c974c50996b96188200e658edfcf",
+"classlab_jack.html#a3feee3e10231d40deeef1d6979c50ca9",
+"classopticka.html#a119e95778cf2687e8e7f422ae40535fb",
+"classrun_experiment.html#a252f6853431de167a4aff45bad639679",
+"classstate_machine.html#a0e8b0508302e7606ab4837ead5f12f04",
+"classtobii_manager.html#a290b75d4960ee9720c1e2caf4ec0137c",
+"opx_run_master_8m.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

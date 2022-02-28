@@ -1,10 +1,10 @@
 <map id="analysisCore" name="analysisCore">
-<area shape="rect" id="node1" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="225,155,319,181"/>
-<area shape="rect" id="node4" href="$class_l_f_p_analysis.html" title=" " alt="" coords="5,229,96,256"/>
-<area shape="rect" id="node5" href="$class_l_f_p_meta.html" title=" " alt="" coords="121,229,191,256"/>
-<area shape="rect" id="node6" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="215,229,329,256"/>
-<area shape="rect" id="node7" href="$classspike_analysis.html" title=" " alt="" coords="353,229,453,256"/>
-<area shape="rect" id="node8" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="477,229,573,256"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="228,80,316,107"/>
-<area shape="rect" id="node3" href="$classhandle.html" title=" " alt="" coords="241,5,303,32"/>
+<area shape="rect" id="node1" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="451,652,697,1345"/>
+<area shape="rect" id="node4" href="$class_l_f_p_analysis.html" title=" " alt="" coords="5,1415,220,1977"/>
+<area shape="rect" id="node5" href="$class_l_f_p_meta.html" title=" " alt="" coords="244,1503,435,1889"/>
+<area shape="rect" id="node6" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="459,1393,689,1999"/>
+<area shape="rect" id="node7" href="$classspike_analysis.html" title=" " alt="" coords="713,1408,928,1984"/>
+<area shape="rect" id="node8" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="952,1393,1183,1999"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="463,131,685,604"/>
+<area shape="rect" id="node3" title=" " alt="" coords="539,5,609,83"/>
 </map>

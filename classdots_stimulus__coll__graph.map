@@ -1,8 +1,0 @@
-<map id="dotsStimulus" name="dotsStimulus">
-<area shape="rect" id="node1" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="5,688,103,715"/>
-<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="182,612,281,639"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes. optickaCore is itself derived from ha..." alt="" coords="398,309,486,335"/>
-<area shape="rect" id="node4" href="$classhandle.html" title=" " alt="" coords="411,5,473,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="105,5,177,32"/>
-<area shape="rect" id="node6" href="$classdynamicprops.html" title=" " alt="" coords="271,309,373,335"/>
-</map>

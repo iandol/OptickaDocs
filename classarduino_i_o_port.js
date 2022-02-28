@@ -18,19 +18,5 @@ var classarduino_i_o_port =
     [ "serial", "classarduino_i_o_port.html#af475f60b741109a20b28bc52c1b8e63b", null ],
     [ "serialRead", "classarduino_i_o_port.html#acf06b432db384f0b9d2376c22e94386c", null ],
     [ "strobeWord", "classarduino_i_o_port.html#a99b9e599e1d029a2c2f7a0b391269d6f", null ],
-    [ "timedTTL", "classarduino_i_o_port.html#ad769a94f452f9e8393522091c2623952", null ],
-    [ "allPorts", "classarduino_i_o_port.html#ac30e24fed65864a41aadd5f7c8a3b5e0", null ],
-    [ "avPorts", "classarduino_i_o_port.html#a398f840618dfdff952ea702fa2b0d0d8", null ],
-    [ "conn", "classarduino_i_o_port.html#a94a6ffed577f281a358ec4fa16e59a12", null ],
-    [ "encs", "classarduino_i_o_port.html#a071fa2baca2d943eccd791a6a925250b", null ],
-    [ "endPin", "classarduino_i_o_port.html#a7c7fe5089d113e482d50fa252082c772", null ],
-    [ "isDemo", "classarduino_i_o_port.html#ab2da8b06503e3f4327e42ee2668f2e60", null ],
-    [ "mspd", "classarduino_i_o_port.html#a9f388dd5f4cdfdb00c396e4b50c9de73", null ],
-    [ "pinn", "classarduino_i_o_port.html#a620b33ab9d9b13a2848dd2bbb45f709c", null ],
-    [ "pins", "classarduino_i_o_port.html#a88b18a27f365bce00e4c89b5e456cb10", null ],
-    [ "port", "classarduino_i_o_port.html#a4a456af97c6a9bb8b848391f0133078f", null ],
-    [ "sktc", "classarduino_i_o_port.html#a72005d84a4b535fdfd90e00a5a9bc81f", null ],
-    [ "srvs", "classarduino_i_o_port.html#a865215c9ca4bf9499a4681979c81e366", null ],
-    [ "sspd", "classarduino_i_o_port.html#aafa02df8d2f64509cc1a3b2a31a1eb0e", null ],
-    [ "startPin", "classarduino_i_o_port.html#a5c4e261e10c60d73f5c75f762493e074", null ]
+    [ "timedTTL", "classarduino_i_o_port.html#ad769a94f452f9e8393522091c2623952", null ]
 ];

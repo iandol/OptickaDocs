@@ -1,6 +1,6 @@
 var hierarchy =
 [
-    [ "dynamicprops", "classdynamicprops.html", [
+    [ "dynamicprops", null, [
       [ "baseStimulus", "classbase_stimulus.html", [
         [ "annulusStimulus", "classannulus_stimulus.html", null ],
         [ "apparentMotionStimulus", "classapparent_motion_stimulus.html", null ],
@@ -26,7 +26,7 @@ var hierarchy =
       ] ],
       [ "taskSequence", "classtask_sequence.html", null ]
     ] ],
-    [ "handle", "classhandle.html", [
+    [ "handle", null, [
       [ "arduinoIOPort", "classarduino_i_o_port.html", null ],
       [ "arduinoSerial", "classarduino_serial.html", null ],
       [ "arduinoSerialPort", "classarduino_serial_port.html", null ],
@@ -63,9 +63,7 @@ var hierarchy =
         [ "tobiiManager", "classtobii_manager.html", null ]
       ] ],
       [ "opxOnline", "classopx_online.html", null ],
-      [ "panel", "classpanel.html", null ],
       [ "parseOpxSpikes", "classparse_opx_spikes.html", null ],
-      [ "seditor", "classseditor.html", null ],
       [ "sendSerialIOPort", "classsend_serial_i_o_port.html", null ],
       [ "tittaCalMovieStimulus", "classtitta_cal_movie_stimulus.html", null ]
     ] ]

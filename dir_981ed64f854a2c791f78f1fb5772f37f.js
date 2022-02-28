@@ -15,5 +15,5 @@ var dir_981ed64f854a2c791f78f1fb5772f37f =
     [ "Saccade_AntiSaccadeStateInfo.m", "_saccade___anti_saccade_state_info_8m.html", null ],
     [ "SFTFStateInfo.m", "_s_f_t_f_state_info_8m.html", null ],
     [ "TwoFigureGroundStateInfo.m", "_two_figure_ground_state_info_8m.html", null ],
-    [ "Twostep_Saccade.m", "_twostep___saccade_8m.html", null ]
+    [ "Twostep_Saccade_StateInfo.m", "_twostep___saccade___state_info_8m.html", null ]
 ];

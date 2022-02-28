@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['screenmanager_0',['screenManager',['../classscreen_manager.html',1,'']]],
-  ['seditor_1',['seditor',['../classseditor.html',1,'']]],
-  ['sendserialioport_2',['sendSerialIOPort',['../classsend_serial_i_o_port.html',1,'']]],
-  ['spikeanalysis_3',['spikeAnalysis',['../classspike_analysis.html',1,'']]],
-  ['spotstimulus_4',['spotStimulus',['../classspot_stimulus.html',1,'']]],
-  ['statemachine_5',['stateMachine',['../classstate_machine.html',1,'']]]
+  ['targetinducerstimulus_0',['targetInducerStimulus',['../classtarget_inducer_stimulus.html',1,'']]],
+  ['tasksequence_1',['taskSequence',['../classtask_sequence.html',1,'']]],
+  ['tittacalmoviestimulus_2',['tittaCalMovieStimulus',['../classtitta_cal_movie_stimulus.html',1,'']]],
+  ['tobiianalysis_3',['tobiiAnalysis',['../classtobii_analysis.html',1,'']]],
+  ['tobiimanager_4',['tobiiManager',['../classtobii_manager.html',1,'']]]
 ];
