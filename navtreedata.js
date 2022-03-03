@@ -41,11 +41,11 @@ var NAVTREE =
       [ "Using the ZIP file", "install.html#autotoc_md3", null ]
     ] ],
     [ "Behavioural Task Methods and Parameters [work-in-progress]", "md_help__m_e_t_h_o_d_s.html", [
-      [ "runExperiment (\"me\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md13", null ],
-      [ "Task Manager (\"task\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md15", null ],
-      [ "Eyetracker (\"eT\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md17", null ],
-      [ "Screen Manager (\"s\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md19", null ],
-      [ "MetaStimulus (\"stims\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md21", null ]
+      [ "runExperiment (\"me\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md6", null ],
+      [ "Task Manager (\"task\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md8", null ],
+      [ "Eyetracker (\"eT\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md10", null ],
+      [ "Screen Manager (\"s\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md12", null ],
+      [ "MetaStimulus (\"stims\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md14", null ]
     ] ],
     [ "GNU LESSER GENERAL PUBLIC LICENSE", "md__l_i_c_e_n_c_e.html", null ],
     [ "Todo List", "todo.html", null ],
@@ -88,7 +88,7 @@ var NAVTREEINDEX =
 "classrun_experiment.html#a252f6853431de167a4aff45bad639679",
 "classstate_machine.html#a0e8b0508302e7606ab4837ead5f12f04",
 "classtobii_manager.html#a290b75d4960ee9720c1e2caf4ec0137c",
-"opx_run_master_8m.html"
+"target_inducer_stimulus_8m.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

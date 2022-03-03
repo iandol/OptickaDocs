@@ -111,7 +111,8 @@ $(document).ready(function(){initNavTree('md_help__m_e_t_h_o_d_s.html',''); init
 <div class="line">                                            └──────────┘</div>
 </div><!-- fragment --><p >In addition, it is preferable to use methods to evaluate properties method evaluation occurs during the experiment rather than at first load. <br  />
 </p>
-<p >For those unfamiliar with object-oriented design, a <em>CLASS</em> (e.g. <code><a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a></code>) is created as a variable <em>OBJECT</em> (named <code>sM</code> in this case, it is an <em>instance</em> of the class). ALL Opticka classes are <b>handle classes</b>; this means if we set <code>sM2 = sM</code> — both of these instances point to the same object. Below we list the class name and the object name.</p>
+<p >For those unfamiliar with object-oriented design, a <em>CLASS</em> (e.g. <code><a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a></code>) is created as a variable <em>OBJECT</em> (named <code>sM</code> in this case, it is an <em>instance</em> of the class). ALL Opticka classes are <b>handle classes</b>; this means if we set <code>sM2 = sM</code> — both of these instances point to the same object. Below we list the class name and the object name. <br  />
+</p>
 <p >As experiments are run <b>within</b> the <code><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a></code> class <code>runTask()</code> method, this object refers to <em>itself</em> as <code>me</code>, and so methods that belong to <code><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a></code> can be called by using <code>myMethod(me)</code> (or you can also use <code>me.myMethod()</code>, both forms are equivalent). Other object instances are given short names, for example the <code><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a></code> class is instantiated as <code>s</code>, so to call a method from <a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a> we use <code>myOtherMethod(s)</code>. You will see below the object names that are available as we run the experiment from <code><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a></code>. <br  />
 </p>
 <p >In some cases <code><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a></code> manages the other classes with similar methods, for example <code>updateTask(me)</code> will manage the call to <code>updateTask(task)</code>, this is often so that <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> can co-ordinate among the objects and maintain some state in <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> directly. If this is not required then we just call the methods for each object directly, e.g. <code>drawBackground(s)</code>. <br  />
@@ -119,7 +120,7 @@ $(document).ready(function(){initNavTree('md_help__m_e_t_h_o_d_s.html',''); init
 <p >We highlight the main classes and methods that are most useful when building a particular paradigm. See the <a class="el" href="_default_state_info_8m.html">DefaultStateInfo.m</a> and other CoreProtocols state info files for examples of their use… <br  />
 </p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 runExperiment ("me" in the state file)</h1>
 <ul>
 <li>**<code>var = getTaskIndex(me)</code>** <br  />
@@ -134,14 +135,14 @@ runExperiment ("me" in the state file)</h1>
  Say you have 4 stimuli each with a different angle changed on every trial by the task object, and want the stimulus matching <code>angle = 90</code> to be used as the fixation target. This method finds which stimulus is set to which particular variable value and assigns the fixation target to the X and Y position of that stimulus.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md8"></a>
 Task Manager ("task" in the state file)</h1>
 <ul>
 <li>**<code>resetRun(task)</code>** <br  />
  If the subject fails to respond correctly, this method randomises the next trial <b>within</b> the block, minimising the possibility the subject just guesses. If you are at the last trial of a block then this will not do anything.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Eyetracker ("eT" in the state file)</h1>
 <ul>
 <li><p class="startli">**<code>updateFixationValues(eT, X, Y, inittime, fixtime, radius, strict)</code>** <br  />
@@ -165,14 +166,14 @@ Eyetracker ("eT" in the state file)</h1>
  This simply gets the current X, Y, pupil data from the eyetracker (or if in dummy mode from the mouse position). This is saved in <code>eT.x</code> <code>eT.y</code> <code>eT.pupil</code> and logged to <code>eT.xAll</code> <code>eT.yAll</code> <code>eT.pupilAll</code>. NORMALLY you do not need to call this is it is called by <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> for you on every frame, depending on whether <code>needEyeSample(me)</code> method was set to <code>true</code> or <code>false</code>.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Screen Manager ("s" in the state file)</h1>
 <ul>
 <li>**<code>drawBackground(s)</code>** <br  />
  Draws the s.backgroundColour to screen.</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md21"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 MetaStimulus ("stims" in the state file)</h1>
 <p >This class manages groups of stimuli as a single object. Each stimulus can be shown or hidden and <a class="el" href="classmeta_stimulus.html" title="Manager for multiple opticka stimuli.">metaStimulus</a> can also managed masking stimuli if needed.</p>
 <ul>
@@ -197,7 +198,7 @@ MetaStimulus ("stims" in the state file)</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 28 2022 01:30:45 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+    <li class="footer">Generated on Thu Mar 3 2022 18:36:34 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>
 </body>
