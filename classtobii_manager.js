@@ -1,6 +1,6 @@
 var classtobii_manager =
 [
-    [ "tobiiManager", "classtobii_manager.html#a76a4b0595485a9a48a30f1ba3a974d78", null ],
+    [ "tobiiManager", "classtobii_manager.html#a5fd679cda9e5ff058180be7309ff6538", null ],
     [ "checkConnection", "classtobii_manager.html#a1657c05f0c5d001322082c2ab671a0c1", null ],
     [ "checkEye", "classtobii_manager.html#a4a5340dc251c633d723778d678d6efc7", null ],
     [ "checkRecording", "classtobii_manager.html#a2e709c41f37ee49375a5db3f1dba950c", null ],

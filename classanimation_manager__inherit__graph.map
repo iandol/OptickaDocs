@@ -1,5 +1,5 @@
 <map id="animationManager" name="animationManager">
-<area shape="rect" id="node1" title="ANIMATIONMANAGER TODO provides per frame paths for stimuli." alt="" coords="25,652,208,920"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,131,228,604"/>
-<area shape="rect" id="node3" title=" " alt="" coords="81,5,152,83"/>
+<area shape="rect" id="node1" title="ANIMATIONMANAGER TODO provides per frame paths for stimuli." alt="" coords="13,607,187,896"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,93,195,559"/>
+<area shape="rect" id="node3" title=" " alt="" coords="63,5,137,45"/>
 </map>

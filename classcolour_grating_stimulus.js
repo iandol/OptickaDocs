@@ -1,9 +1,5 @@
 var classcolour_grating_stimulus =
 [
-    [ "Events", "classcolour_grating_stimulus.html#a5b53b8515735b2cd50e8c340b06748b4", [
-      [ "changeScale", "classcolour_grating_stimulus.html#a5b53b8515735b2cd50e8c340b06748b4abc3d35bb635310ac6dbaf73428c634e1", null ],
-      [ "changePhaseIncrement", "classcolour_grating_stimulus.html#a5b53b8515735b2cd50e8c340b06748b4aebebb9b91ecbac377605ea1242a4b3b0", null ]
-    ] ],
     [ "colourGratingStimulus", "classcolour_grating_stimulus.html#a0185bd2235bc16626558000430fe0114", null ],
     [ "animate", "classcolour_grating_stimulus.html#a1904b49915e05cfc2c06d8da4cf00032", null ],
     [ "baseColour", "classcolour_grating_stimulus.html#af5e44d77898baed53fa41db827c52dce", null ],
@@ -12,12 +8,17 @@ var classcolour_grating_stimulus =
     [ "calculateScale", "classcolour_grating_stimulus.html#a0d2d04f549269c6c1436c7484dfebf7d", null ],
     [ "colour2", "classcolour_grating_stimulus.html#a76fcefde3f859aa37348f958534f5d2b", null ],
     [ "draw", "classcolour_grating_stimulus.html#a44bd7db8f5e0c33bb87560f6e2744864", null ],
+    [ "fixBaseColour", "classcolour_grating_stimulus.html#a0da250b4778b02b1b7c78a3a212f3e1b", null ],
     [ "getsfOut", "classcolour_grating_stimulus.html#a45fee29d862716d08a761d2f4519564d", null ],
     [ "reset", "classcolour_grating_stimulus.html#a620a6b2d3998aaa1011c516535bbdea6", null ],
+    [ "set_c2Out", "classcolour_grating_stimulus.html#a84064279a6c985cfef9f2d70ac5aa8b3", null ],
+    [ "set_cOut", "classcolour_grating_stimulus.html#a2596fc4e0b5cb38904a3cd3a51e6acd5", null ],
     [ "set_reverseDirectionOut", "classcolour_grating_stimulus.html#a4f170b15b737a7774ad89b047d2744c5", null ],
     [ "set_sfOut", "classcolour_grating_stimulus.html#a7d1a245b7d5ec9e77249d42fc65b1184", null ],
     [ "set_sizeOut", "classcolour_grating_stimulus.html#a4c9316222d0610fbb903feb384af663b", null ],
     [ "set_tfOut", "classcolour_grating_stimulus.html#abcd99abb0361548bdb1ec98370c23dba", null ],
+    [ "set_xPositionOut", "classcolour_grating_stimulus.html#a309e2ec337500cae3697ef92e5508c1e", null ],
+    [ "set_yPositionOut", "classcolour_grating_stimulus.html#ad0b404e9d4d76c5d99ffa65c547b84bf", null ],
     [ "setRect", "classcolour_grating_stimulus.html#a6d77430e2f6c91a9390c7a3593ae7e1e", null ],
     [ "setup", "classcolour_grating_stimulus.html#a7fde31c57c762069c599c1c06fdc3436", null ],
     [ "sf", "classcolour_grating_stimulus.html#a7d171580cee631188995ebe467eb17cb", null ],
@@ -29,6 +30,7 @@ var classcolour_grating_stimulus =
     [ "colour2Cache", "classcolour_grating_stimulus.html#acd4cd0c705a0813f533e2e9daf5cb4a7", null ],
     [ "colourCache", "classcolour_grating_stimulus.html#a8bf93435ef3883b66154bb5ab3033df0", null ],
     [ "contrast", "classcolour_grating_stimulus.html#a9654d182d0e29e7239a041ecf7b6d6e3", null ],
+    [ "correctBaseColour", "classcolour_grating_stimulus.html#a840d2cd4e145fb53c2de48a8d67d1675", null ],
     [ "correctPhase", "classcolour_grating_stimulus.html#a960e969bc9e37d1ed8159d09bab96a9a", null ],
     [ "direction", "classcolour_grating_stimulus.html#ab425698de6ea0443151e5582da9a840d", null ],
     [ "family", "classcolour_grating_stimulus.html#a61cc5bb973e4c4b60fc50895b69293e0", null ],

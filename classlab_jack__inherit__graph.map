@@ -1,4 +1,4 @@
 <map id="labJack" name="labJack">
-<area shape="rect" id="node1" title="LABJACK Connects and manages a LabJack U3 / U6." alt="" coords="5,131,156,545"/>
-<area shape="rect" id="node2" title=" " alt="" coords="45,5,116,83"/>
+<area shape="rect" id="node1" title="LABJACK Connects and manages a LabJack U3 / U6." alt="" coords="5,93,143,500"/>
+<area shape="rect" id="node2" title=" " alt="" coords="37,5,111,45"/>
 </map>

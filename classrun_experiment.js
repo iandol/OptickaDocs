@@ -33,6 +33,7 @@ var classrun_experiment =
     [ "arduinoPort", "classrun_experiment.html#a332b3dc2ae19e1d5ce552fbd1b453b88", null ],
     [ "benchmark", "classrun_experiment.html#a16b5d425345931abed70d5ebf1dfaad6", null ],
     [ "debug", "classrun_experiment.html#ad88c91e63cf8fb1acda515afec4adb44", null ],
+    [ "diaryMode", "classrun_experiment.html#a6f10f4f89d255464634d1187965263a8", null ],
     [ "dPPMode", "classrun_experiment.html#a8acc3d50409c7ab1509318e56326c539", null ],
     [ "drawFixation", "classrun_experiment.html#a5a29c1500d7d54857d3f39c3822a3da9", null ],
     [ "dummyMode", "classrun_experiment.html#a04e93c354e973398ef3cfd49a779ef6a", null ],
@@ -66,6 +67,7 @@ var classrun_experiment =
     [ "useLabJackReward", "classrun_experiment.html#a2458bcd38d46720968e0c6d8b8aa2f5c", null ],
     [ "useLabJackStrobe", "classrun_experiment.html#a9cab56021cea7762a737d85aaac153d6", null ],
     [ "useLabJackTStrobe", "classrun_experiment.html#a22ba9cbeb01a56b52fc1fac942179752", null ],
+    [ "userFunctionsFile", "classrun_experiment.html#a1ff1ae9cf84f430dea09f890c46409d5", null ],
     [ "useTobii", "classrun_experiment.html#aff235b2e1cfeac833896efd9b2e4e7d9", null ],
     [ "verbose", "classrun_experiment.html#a809183469b6bfe47f7a7388435ef679b", null ],
     [ "visualDebug", "classrun_experiment.html#aee96217a24fc34c73e30388ba6901039", null ]

@@ -55,5 +55,7 @@ var annotated_dup =
     [ "taskSequence", "classtask_sequence.html", "classtask_sequence" ],
     [ "tittaCalMovieStimulus", "classtitta_cal_movie_stimulus.html", "classtitta_cal_movie_stimulus" ],
     [ "tobiiAnalysis", "classtobii_analysis.html", "classtobii_analysis" ],
-    [ "tobiiManager", "classtobii_manager.html", "classtobii_manager" ]
+    [ "tobiiManager", "classtobii_manager.html", "classtobii_manager" ],
+    [ "touchManager", "classtouch_manager.html", "classtouch_manager" ],
+    [ "userFunctions", "classuser_functions.html", "classuser_functions" ]
 ];

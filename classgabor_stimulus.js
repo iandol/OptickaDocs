@@ -15,6 +15,8 @@ var classgabor_stimulus =
     [ "set_sfOut", "classgabor_stimulus.html#aa985f6bf4e70c8370ecefd0ba8ac739a", null ],
     [ "set_sizeOut", "classgabor_stimulus.html#a5252858b85922e06e9c99d5170bfec50", null ],
     [ "set_tfOut", "classgabor_stimulus.html#a70304d2943bf81ebd33dd0ff7bbaf562", null ],
+    [ "set_xPositionOut", "classgabor_stimulus.html#ab99493da52cbc1d56b6d55f07f649b71", null ],
+    [ "set_yPositionOut", "classgabor_stimulus.html#a24096b7f27f9f90779f5d4255e4d1ed7", null ],
     [ "setRect", "classgabor_stimulus.html#aed64ce01ba3d07b6cde28085e080b21f", null ],
     [ "setup", "classgabor_stimulus.html#a05a14e8576c4eccb4728107128daa82d", null ],
     [ "sf", "classgabor_stimulus.html#a224fcf93c261dc428fff7a2f1182a505", null ],

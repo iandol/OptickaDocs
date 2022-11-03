@@ -7,6 +7,8 @@ var classimage_stimulus =
     [ "findFiles", "classimage_stimulus.html#aa0dee92ae5d6eddea678e5f5488f83da", null ],
     [ "loadImage", "classimage_stimulus.html#ad5bd08b06d7e70253459f4982a032c08", null ],
     [ "reset", "classimage_stimulus.html#a4ec50da95575df8c80631827464cd0ef", null ],
+    [ "set_xPositionOut", "classimage_stimulus.html#ac7bab3e38e923f6aede4c3c44443eacf", null ],
+    [ "set_yPositionOut", "classimage_stimulus.html#a9eb2c782ebe0638765f1799e1dd989d2", null ],
     [ "setRect", "classimage_stimulus.html#a62a966ee8ab9c20075b7e410708baa9f", null ],
     [ "setup", "classimage_stimulus.html#a2374d1cf3873e88071ac5858c93a21d2", null ],
     [ "update", "classimage_stimulus.html#ab9959abd6c1c3600d12f8c767db2936e", null ],

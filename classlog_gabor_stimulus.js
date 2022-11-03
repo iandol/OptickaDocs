@@ -12,6 +12,8 @@ var classlog_gabor_stimulus =
     [ "reset", "classlog_gabor_stimulus.html#ac6d04dc402516df090b50d875e992a9a", null ],
     [ "scaleRange", "classlog_gabor_stimulus.html#af4bbc3a7a9e70f1e0f9e20790f72975e", null ],
     [ "set_sizeOut", "classlog_gabor_stimulus.html#a745f54676648573a35cc9e62c77d4f9d", null ],
+    [ "set_xPositionOut", "classlog_gabor_stimulus.html#a2f713ed462fb3028b13d7a23fe086bb4", null ],
+    [ "set_yPositionOut", "classlog_gabor_stimulus.html#aa1d8d7db9d9794718308ef3a714eed04", null ],
     [ "setRect", "classlog_gabor_stimulus.html#ab712e9bc64b3741e6c56db65414672da", null ],
     [ "setup", "classlog_gabor_stimulus.html#a5b55611fc059d023688d816fbd18fbdf", null ],
     [ "update", "classlog_gabor_stimulus.html#a6cbec0981140639a3438d07c47e375e8", null ],

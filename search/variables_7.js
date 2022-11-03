@@ -1,9 +1,7 @@
 var searchData=
 [
-  ['h_0',['h',['../classopticka.html#a5e4195b92c634f4eaa39c50a87b02024',1,'opticka']]],
-  ['handles_1',['handles',['../classanalysis_core.html#a04d6d1d8be22e7aae7d6d7cea31d2835',1,'analysisCore::handles()'],['../classbase_stimulus.html#a75c9e9217fb9b49a15df1bfa0edecff6',1,'baseStimulus::handles()']]],
-  ['header_2',['header',['../classlab_jack.html#aaccfeaabc0ec5d75e2159d490626c133',1,'labJack::header()'],['../classlab_jack_t.html#a15d2567e71a6fef8bb6413a9a1f30a61',1,'labJackT::header()']]],
-  ['height_3',['height',['../classimage_stimulus.html#aa97e5a66a5f60ffdc2afeabd09d25e7c',1,'imageStimulus::height()'],['../classlog_gabor_stimulus.html#a187d36b6ad1ddb048673081842545232',1,'logGaborStimulus::height()'],['../classmovie_stimulus.html#a9528ca13932dfb58cca2c5bb42ab64d7',1,'movieStimulus::height()']]],
-  ['hideflash_4',['hideFlash',['../classscreen_manager.html#a8141c4b63123d573bbb39a8574b10606',1,'screenManager']]],
-  ['history_5',['history',['../classopticka.html#a4872cff97925ce3b5bb3b0f99b96c1c3',1,'opticka']]]
+  ['handles_0',['handles',['../classanalysis_core.html#a04d6d1d8be22e7aae7d6d7cea31d2835',1,'analysisCore::handles()'],['../classbase_stimulus.html#a75c9e9217fb9b49a15df1bfa0edecff6',1,'baseStimulus::handles()']]],
+  ['header_1',['header',['../classlab_jack.html#aaccfeaabc0ec5d75e2159d490626c133',1,'labJack::header()'],['../classlab_jack_t.html#a15d2567e71a6fef8bb6413a9a1f30a61',1,'labJackT::header()']]],
+  ['height_2',['height',['../classimage_stimulus.html#aa97e5a66a5f60ffdc2afeabd09d25e7c',1,'imageStimulus::height()'],['../classlog_gabor_stimulus.html#a187d36b6ad1ddb048673081842545232',1,'logGaborStimulus::height()'],['../classmovie_stimulus.html#a9528ca13932dfb58cca2c5bb42ab64d7',1,'movieStimulus::height()']]],
+  ['hideflash_3',['hideFlash',['../classscreen_manager.html#a8141c4b63123d573bbb39a8574b10606',1,'screenManager']]]
 ];

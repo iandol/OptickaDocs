@@ -22,11 +22,12 @@ var searchData=
   ['normalizedxy_19',['normalizedXY',['../classndots_stimulus.html#a8cccd1806afadbc74ec869af1a71db29',1,'ndotsStimulus']]],
   ['notifyui_20',['notifyUI',['../classanalysis_core.html#abfc5ddbc5ea65d335da530c12dd04200',1,'analysisCore::notifyUI()'],['../classeyelink_analysis.html#afacdfbd21ba22dbf9917552a3e58159b',1,'eyelinkAnalysis::notifyUI()'],['../class_l_f_p_analysis.html#adeba26bde309b04ebc050a7af3438822',1,'LFPAnalysis::notifyUI()'],['../class_l_f_p_meta.html#ae1ecda93d2b3443ade503a723147f121',1,'LFPMeta::notifyUI()'],['../classspike_analysis.html#afdb7ad95e6f11aaf7f1b2189c6bb1b5c',1,'spikeAnalysis::notifyUI()'],['../classtobii_analysis.html#ab14b6d2648746dd5a24b1bfca8810310',1,'tobiiAnalysis::notifyUI()']]],
   ['nruns_21',['nRuns',['../classtask_sequence.html#a8125d85c64e21f433d810430567211c5',1,'taskSequence']]],
-  ['nselection_22',['nSelection',['../class_l_f_p_analysis.html#a2ec7b6655037ad6a59a6264e535d36b9',1,'LFPAnalysis::nSelection()'],['../classspike_analysis.html#a99a3817dddf4fce9d66c31f3edf4000b',1,'spikeAnalysis::nSelection()'],['../class_l_f_p_analysis.html#ae1fae3b9b880dbf2f52887af44c39dd6',1,'LFPAnalysis::nSelection()'],['../classspike_analysis.html#a5babd7fc24061b9c35f44c403224ece7',1,'spikeAnalysis::nSelection()']]],
+  ['nselection_22',['nSelection',['../class_l_f_p_analysis.html#ae1fae3b9b880dbf2f52887af44c39dd6',1,'LFPAnalysis::nSelection()'],['../classspike_analysis.html#a5babd7fc24061b9c35f44c403224ece7',1,'spikeAnalysis::nSelection(in me)'],['../classspike_analysis.html#a99a3817dddf4fce9d66c31f3edf4000b',1,'spikeAnalysis::nSelection()'],['../class_l_f_p_analysis.html#a2ec7b6655037ad6a59a6264e535d36b9',1,'LFPAnalysis::nSelection()']]],
   ['nsites_23',['nSites',['../class_l_f_p_meta.html#a2c520d79363f0ff87192d4ce8b960e85',1,'LFPMeta']]],
-  ['numchannels_24',['numChannels',['../classaudio_manager.html#a7d5d21cc9705847d4f9b83087124d43c',1,'audioManager']]],
-  ['nunits_25',['nUnits',['../classspike_analysis.html#ae5cf24fe5549a874ab03b109c49398f6',1,'spikeAnalysis::nUnits()'],['../classspike_analysis.html#abc33d948d1e380bd4d0cf3cdf1364beb',1,'spikeAnalysis::nUnits(in me)']]],
-  ['nvar_26',['nVar',['../classtask_sequence.html#a24cf03ae1d0753f33fcc2acf9e4e954e',1,'taskSequence::nVar()'],['../classtask_sequence.html#ad04cd87f06345e162001e5695c542f72',1,'taskSequence::nVar(in me, in invalue)']]],
-  ['nvars_27',['nVars',['../classtask_sequence.html#a0385e8156b4cfb20ad001c95c161643a',1,'taskSequence']]],
-  ['nwindows_28',['nWindows',['../classplusplus_manager.html#a066110e7c75bc59a3b9e3ed3c26147a2',1,'plusplusManager']]]
+  ['ntouchscreens_24',['nTouchScreens',['../classtouch_manager.html#a1880bb7c63bb3befa20e8bb1a980f0ac',1,'touchManager']]],
+  ['numchannels_25',['numChannels',['../classaudio_manager.html#a7d5d21cc9705847d4f9b83087124d43c',1,'audioManager']]],
+  ['nunits_26',['nUnits',['../classspike_analysis.html#ae5cf24fe5549a874ab03b109c49398f6',1,'spikeAnalysis::nUnits()'],['../classspike_analysis.html#abc33d948d1e380bd4d0cf3cdf1364beb',1,'spikeAnalysis::nUnits(in me)']]],
+  ['nvar_27',['nVar',['../classtask_sequence.html#a24cf03ae1d0753f33fcc2acf9e4e954e',1,'taskSequence::nVar()'],['../classtask_sequence.html#ad04cd87f06345e162001e5695c542f72',1,'taskSequence::nVar(in me, in invalue)']]],
+  ['nvars_28',['nVars',['../classtask_sequence.html#a0385e8156b4cfb20ad001c95c161643a',1,'taskSequence']]],
+  ['nwindows_29',['nWindows',['../classplusplus_manager.html#a066110e7c75bc59a3b9e3ed3c26147a2',1,'plusplusManager']]]
 ];

@@ -27,9 +27,14 @@ var menudata={children:[
 {text:"Related Pages",url:"pages.html",children:[
 {text:"Opticka State Machine Test Output",url:"optickaBehaviourTest.html"},
 {text:"Opticka MOC Test Output",url:"optickaTest.html"},
-{text:"Github Source Repo",url:"https://github.com/iandol/opticka"},
-{text:"PTB User Forum",url:"https://psychtoolbox.discourse.group/"},
-{text:"PTB Home Page",url:"http://psychtoolbox.org"}]},
+{text:"Opticka UI help: State-machine",url:"uihelpstate.html"},
+{text:"Opticka UI help: User Functions",url:"uihelpfunctions.html"},
+{text:"Opticka UI help: Task",url:"uihelptask.html"},
+{text:"Opticka UI help: Stimuli",url:"uihelpstims.html"},
+{text:"Opticka UI help: Variables",url:"uihelpvars.html"},
+{text:"Github Source Repo",url:"^https://github.com/iandol/opticka"},
+{text:"PTB User Forum",url:"^https://psychtoolbox.discourse.group/"},
+{text:"PTB Home Page",url:"^http://psychtoolbox.org"}]},
 {text:"Classes",url:"annotated.html",children:[
 {text:"Class List",url:"annotated.html"},
 {text:"Class Index",url:"classes.html"},

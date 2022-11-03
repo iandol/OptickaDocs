@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['backgroundcolour_0',['backgroundColour',['../classcalibrate_luminance.html#a8ceface7374386d9f80492da6db1ff7b',1,'calibrateLuminance::backgroundColour()'],['../classcolour_manager.html#a41477d27388d5a6019b585cef9ec5340',1,'colourManager::backgroundColour()'],['../classscreen_manager.html#a01ee58935b3fa482cb4ae759f7cd4515',1,'screenManager::backgroundColour()']]],
+  ['backgroundcolour_0',['backgroundColour',['../classcolour_manager.html#a41477d27388d5a6019b585cef9ec5340',1,'colourManager::backgroundColour()'],['../classscreen_manager.html#a01ee58935b3fa482cb4ae759f7cd4515',1,'screenManager::backgroundColour()'],['../classcalibrate_luminance.html#a8ceface7374386d9f80492da6db1ff7b',1,'calibrateLuminance::backgroundColour()']]],
   ['barheight_1',['barHeight',['../classapparent_motion_stimulus.html#af8d20cba40e327156272bc5ab6ef1aaa',1,'apparentMotionStimulus::barHeight()'],['../classbar_stimulus.html#a9fc4f9a6c9645962a075f05cb3fb0278',1,'barStimulus::barHeight()']]],
   ['barspacing_2',['barSpacing',['../classapparent_motion_stimulus.html#ad7cdbfeb8af94ca518374f1e5f1c465f',1,'apparentMotionStimulus']]],
   ['barwidth_3',['barWidth',['../classapparent_motion_stimulus.html#a754a61cec39b1c9e79b1d79021f951f6',1,'apparentMotionStimulus::barWidth()'],['../classbar_stimulus.html#afb3d003aa69e60e09e55741c1feaea58',1,'barStimulus::barWidth()']]],
@@ -9,7 +9,7 @@ var searchData=
   ['baudrate_6',['baudRate',['../classsend_serial_i_o_port.html#a9bf082e89b1c52039ef575783ce6f1e0',1,'sendSerialIOPort']]],
   ['benchmark_7',['benchmark',['../classrun_experiment.html#a16b5d425345931abed70d5ebf1dfaad6',1,'runExperiment']]],
   ['binsize_8',['binSize',['../classspike_analysis.html#a9e98aa51d42489f590e23cad13ca2480',1,'spikeAnalysis']]],
-  ['bitdepth_9',['bitDepth',['../classcalibrate_luminance.html#ae0901a5755d4af2c2061a0a4b6f7c508',1,'calibrateLuminance::bitDepth()'],['../classscreen_manager.html#a06f77129481f8abc98781d98114332da',1,'screenManager::bitDepth()']]],
+  ['bitdepth_9',['bitDepth',['../classscreen_manager.html#a06f77129481f8abc98781d98114332da',1,'screenManager::bitDepth()'],['../classcalibrate_luminance.html#ae0901a5755d4af2c2061a0a4b6f7c508',1,'calibrateLuminance::bitDepth()']]],
   ['bitdepths_10',['bitDepths',['../classscreen_manager.html#aefaae3a15d3ac9091eabefa558605b9d',1,'screenManager']]],
   ['blend_11',['blend',['../classscreen_manager.html#aace8bff0762f4f1ca6397efd8e806508',1,'screenManager::blend()'],['../classrf_mapper.html#ab5860146e07e7eb2b5dbc91486eb0d80',1,'rfMapper::blend()']]],
   ['blendmodes_12',['blendModes',['../classscreen_manager.html#ae658168fc33fbc2948a50f8c8fe0ecf4',1,'screenManager']]],

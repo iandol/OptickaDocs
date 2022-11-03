@@ -17,6 +17,8 @@ var classcheckerboard_stimulus =
     [ "set_sfOut", "classcheckerboard_stimulus.html#a0d25f38444f2e2f75b858e690232a19d", null ],
     [ "set_sizeOut", "classcheckerboard_stimulus.html#ab905f35161e003970d2187e618b2eeb1", null ],
     [ "set_tfOut", "classcheckerboard_stimulus.html#a32417e7b5400bc5a399e9d5be30b4e34", null ],
+    [ "set_xPositionOut", "classcheckerboard_stimulus.html#aaf3d6371eee587aa35847ec882e151e1", null ],
+    [ "set_yPositionOut", "classcheckerboard_stimulus.html#a2b461511f5355ddf57f7c63bce7d9c01", null ],
     [ "setRect", "classcheckerboard_stimulus.html#a8670b8e9722ae758b2adcb2269155b54", null ],
     [ "setup", "classcheckerboard_stimulus.html#aaa22abf0daab6e8d40dc2cc1d4dcd3c7", null ],
     [ "sf", "classcheckerboard_stimulus.html#a99888dca74407c62590ef826badeb95c", null ],

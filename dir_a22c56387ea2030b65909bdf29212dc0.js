@@ -1,82 +1,36 @@
 var dir_a22c56387ea2030b65909bdf29212dc0 =
 [
-    [ "animationManager.m", "animation_manager_8m.html", [
-      [ "animationManager", "classanimation_manager.html", "classanimation_manager" ]
-    ] ],
-    [ "annulusStimulus.m", "annulus_stimulus_8m.html", [
-      [ "annulusStimulus", "classannulus_stimulus.html", "classannulus_stimulus" ]
-    ] ],
-    [ "apparentMotionStimulus.m", "apparent_motion_stimulus_8m.html", [
-      [ "apparentMotionStimulus", "classapparent_motion_stimulus.html", "classapparent_motion_stimulus" ]
-    ] ],
-    [ "audioManager.m", "audio_manager_8m.html", [
-      [ "audioManager", "classaudio_manager.html", "classaudio_manager" ]
-    ] ],
-    [ "barStimulus.m", "bar_stimulus_8m.html", [
-      [ "barStimulus", "classbar_stimulus.html", "classbar_stimulus" ]
-    ] ],
-    [ "baseStimulus.m", "base_stimulus_8m.html", [
-      [ "baseStimulus", "classbase_stimulus.html", "classbase_stimulus" ]
-    ] ],
-    [ "checkerboardStimulus.m", "checkerboard_stimulus_8m.html", [
-      [ "checkerboardStimulus", "classcheckerboard_stimulus.html", "classcheckerboard_stimulus" ]
-    ] ],
-    [ "colourGratingStimulus.m", "colour_grating_stimulus_8m.html", [
-      [ "colourGratingStimulus", "classcolour_grating_stimulus.html", "classcolour_grating_stimulus" ]
-    ] ],
-    [ "colourTest.m", "colour_test_8m.html", [
-      [ "colourTest", "classcolour_test.html", "classcolour_test" ]
-    ] ],
+    [ "animationManager.m", "animation_manager_8m.html", "animation_manager_8m" ],
+    [ "annulusStimulus.m", "annulus_stimulus_8m.html", "annulus_stimulus_8m" ],
+    [ "apparentMotionStimulus.m", "apparent_motion_stimulus_8m.html", "apparent_motion_stimulus_8m" ],
+    [ "audioManager.m", "audio_manager_8m.html", "audio_manager_8m" ],
+    [ "barStimulus.m", "bar_stimulus_8m.html", "bar_stimulus_8m" ],
+    [ "baseStimulus.m", "base_stimulus_8m.html", "base_stimulus_8m" ],
+    [ "checkerboardStimulus.m", "checkerboard_stimulus_8m.html", "checkerboard_stimulus_8m" ],
+    [ "colourGratingStimulus.m", "colour_grating_stimulus_8m.html", "colour_grating_stimulus_8m" ],
+    [ "colourTest.m", "colour_test_8m.html", "colour_test_8m" ],
     [ "CreateProceduralCheckerboard.m", "_create_procedural_checkerboard_8m.html", "_create_procedural_checkerboard_8m" ],
     [ "CreateProceduralPolarGrating.m", "_create_procedural_polar_grating_8m.html", "_create_procedural_polar_grating_8m" ],
     [ "CreateProceduralPseudoYellowGrating.m", "_create_procedural_pseudo_yellow_grating_8m.html", "_create_procedural_pseudo_yellow_grating_8m" ],
     [ "CreateProceduralSineSmoothedGrating.m", "_create_procedural_sine_smoothed_grating_8m.html", "_create_procedural_sine_smoothed_grating_8m" ],
     [ "CreateProceduralSineSquareGrating.m", "_create_procedural_sine_square_grating_8m.html", "_create_procedural_sine_square_grating_8m" ],
     [ "CreateProceduralSmoothDisc.m", "_create_procedural_smooth_disc_8m.html", "_create_procedural_smooth_disc_8m" ],
-    [ "discStimulus.m", "disc_stimulus_8m.html", [
-      [ "discStimulus", "classdisc_stimulus.html", "classdisc_stimulus" ]
-    ] ],
+    [ "discStimulus.m", "disc_stimulus_8m.html", "disc_stimulus_8m" ],
     [ "doLogGabor.m", "do_log_gabor_8m.html", "do_log_gabor_8m" ],
-    [ "dotsStimulus.m", "dots_stimulus_8m.html", [
-      [ "dotsStimulus", "classdots_stimulus.html", "classdots_stimulus" ]
-    ] ],
-    [ "fixationCrossStimulus.m", "fixation_cross_stimulus_8m.html", [
-      [ "fixationCrossStimulus", "classfixation_cross_stimulus.html", "classfixation_cross_stimulus" ]
-    ] ],
-    [ "gaborStimulus.m", "gabor_stimulus_8m.html", [
-      [ "gaborStimulus", "classgabor_stimulus.html", "classgabor_stimulus" ]
-    ] ],
-    [ "gratingStimulus.m", "grating_stimulus_8m.html", [
-      [ "gratingStimulus", "classgrating_stimulus.html", "classgrating_stimulus" ]
-    ] ],
-    [ "imageStimulus.m", "image_stimulus_8m.html", [
-      [ "imageStimulus", "classimage_stimulus.html", "classimage_stimulus" ]
-    ] ],
-    [ "logGaborStimulus.m", "log_gabor_stimulus_8m.html", [
-      [ "logGaborStimulus", "classlog_gabor_stimulus.html", "classlog_gabor_stimulus" ]
-    ] ],
-    [ "metaStimulus.m", "meta_stimulus_8m.html", [
-      [ "metaStimulus", "classmeta_stimulus.html", "classmeta_stimulus" ]
-    ] ],
-    [ "movieStimulus.m", "movie_stimulus_8m.html", [
-      [ "movieStimulus", "classmovie_stimulus.html", "classmovie_stimulus" ]
-    ] ],
-    [ "ndotsStimulus.m", "ndots_stimulus_8m.html", [
-      [ "ndotsStimulus", "classndots_stimulus.html", "classndots_stimulus" ]
-    ] ],
+    [ "dotsStimulus.m", "dots_stimulus_8m.html", "dots_stimulus_8m" ],
+    [ "fixationCrossStimulus.m", "fixation_cross_stimulus_8m.html", "fixation_cross_stimulus_8m" ],
+    [ "gaborStimulus.m", "gabor_stimulus_8m.html", "gabor_stimulus_8m" ],
+    [ "gratingStimulus.m", "grating_stimulus_8m.html", "grating_stimulus_8m" ],
+    [ "imageStimulus.m", "image_stimulus_8m.html", "image_stimulus_8m" ],
+    [ "logGaborStimulus.m", "log_gabor_stimulus_8m.html", "log_gabor_stimulus_8m" ],
+    [ "metaStimulus.m", "meta_stimulus_8m.html", "meta_stimulus_8m" ],
+    [ "movieStimulus.m", "movie_stimulus_8m.html", "movie_stimulus_8m" ],
+    [ "ndotsStimulus.m", "ndots_stimulus_8m.html", "ndots_stimulus_8m" ],
     [ "perlin.m", "perlin_8m.html", "perlin_8m" ],
-    [ "plaidStimulus.m", "plaid_stimulus_8m.html", [
-      [ "plaidStimulus", "classplaid_stimulus.html", "classplaid_stimulus" ]
-    ] ],
+    [ "plaidStimulus.m", "plaid_stimulus_8m.html", "plaid_stimulus_8m" ],
     [ "ProceduralPolarGratingDemo.m", "_procedural_polar_grating_demo_8m.html", "_procedural_polar_grating_demo_8m" ],
-    [ "rfMapper.m", "rf_mapper_8m.html", [
-      [ "rfMapper", "classrf_mapper.html", "classrf_mapper" ]
-    ] ],
-    [ "spotStimulus.m", "spot_stimulus_8m.html", [
-      [ "spotStimulus", "classspot_stimulus.html", "classspot_stimulus" ]
-    ] ],
-    [ "targetInducerStimulus.m", "target_inducer_stimulus_8m.html", [
-      [ "targetInducerStimulus", "classtarget_inducer_stimulus.html", "classtarget_inducer_stimulus" ]
-    ] ],
+    [ "rfMapper.m", "rf_mapper_8m.html", "rf_mapper_8m" ],
+    [ "spotStimulus.m", "spot_stimulus_8m.html", "spot_stimulus_8m" ],
+    [ "targetInducerStimulus.m", "target_inducer_stimulus_8m.html", "target_inducer_stimulus_8m" ],
     [ "timeTest.m", "time_test_8m.html", "time_test_8m" ]
 ];

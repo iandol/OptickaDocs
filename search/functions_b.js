@@ -18,10 +18,11 @@ var searchData=
   ['mintrials_15',['minTrials',['../classtask_sequence.html#a463439a850fa681db574016a6fecb996',1,'taskSequence']]],
   ['mix_16',['mix',['../classbar_stimulus.html#a61367b83b1f6414e5a05974816122d7f',1,'barStimulus::mix()'],['../classdisc_stimulus.html#a1489a426f6ec9d82f8d4c8aea272e992',1,'discStimulus::mix()'],['../classspot_stimulus.html#a4b2131328307ab1089edf43ba2345520',1,'spotStimulus::mix()']]],
   ['model_17',['model',['../classtobii_manager.html#aab3490f37e9f49054d09517617bb40c4',1,'tobiiManager']]],
-  ['modifystimulus_18',['modifyStimulus',['../classopticka.html#ad61502cccb15bba07c10f3008dd674b9',1,'opticka']]],
+  ['modifystimulus_18',['modifyStimulus',['../classopticka.html#a71e17a91922c8f09451b9f57b9fda62e',1,'opticka']]],
   ['monomode_19',['monoMode',['../classplusplus_manager.html#af5f90ccd418d6acf648186b8813faa9a',1,'plusplusManager']]],
   ['motorrun_20',['motorRun',['../classarduino_serial.html#a1c9a21f87bd40eb1a70bea8fef6775c4',1,'arduinoSerial::motorRun()'],['../classarduino_serial_port.html#a753c59c22933dab23251d7c946cdbdeb',1,'arduinoSerialPort::motorRun()']]],
   ['motorspeed_21',['motorSpeed',['../classarduino_serial.html#ac987a80ace15cb417bd730abfecda748',1,'arduinoSerial::motorSpeed()'],['../classarduino_serial_port.html#a8540c06bcffa1f1f8cbdd4c346bac1da',1,'arduinoSerialPort::motorSpeed()']]],
   ['mouseposition_22',['mousePosition',['../classscreen_manager.html#a8c83178af5164230782e443b7dcf73be',1,'screenManager']]],
-  ['moviestimulus_23',['movieStimulus',['../classmovie_stimulus.html#a986c28aac3d437c505efca16a7701e6f',1,'movieStimulus']]]
+  ['moviestimulus_23',['movieStimulus',['../classmovie_stimulus.html#a986c28aac3d437c505efca16a7701e6f',1,'movieStimulus']]],
+  ['mytext_24',['myText',['../classuser_functions.html#a39503dfee8187084632a286e0302b46c',1,'userFunctions']]]
 ];

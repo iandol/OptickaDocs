@@ -17,6 +17,8 @@ var classbar_stimulus =
     [ "set_colourOut", "classbar_stimulus.html#a8e368912cedbf07f78a8e074d99fd315", null ],
     [ "set_scaleOut", "classbar_stimulus.html#a6ba636b996cda972430e9034fa8d0804", null ],
     [ "set_sizeOut", "classbar_stimulus.html#a531b06a9d0eff95ffc109dac2a649b4d", null ],
+    [ "set_xPositionOut", "classbar_stimulus.html#a70f1b9ab094dacf9b9fb95c4a1f4b5e9", null ],
+    [ "set_yPositionOut", "classbar_stimulus.html#a36c9ccfc4f51bfd5cfe53005aea3ccb8", null ],
     [ "setup", "classbar_stimulus.html#aecd721bdce0771c95f6331f678894ec9", null ],
     [ "update", "classbar_stimulus.html#a7defcc3bdc82b072b86a1d39ff8589f0", null ],
     [ "allowedProperties", "classbar_stimulus.html#a83e037738d906a89e1a8de0264c8908d", null ],

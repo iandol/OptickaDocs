@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['laddress_0',['lAddress',['../classdata_connection.html#a3b4796e3d8a26d38e1a28fed521bd048',1,'dataConnection::lAddress()'],['../classopx_online.html#af2de4c5c0b0b52a580121a44199f5de4',1,'opxOnline::lAddress()']]],
+  ['laddress_0',['lAddress',['../classopx_online.html#af2de4c5c0b0b52a580121a44199f5de4',1,'opxOnline::lAddress()'],['../classdata_connection.html#a3b4796e3d8a26d38e1a28fed521bd048',1,'dataConnection::lAddress()']]],
   ['lastdkl_1',['lastDKL',['../classcolour_manager.html#ae57bc3765f784af4627c8c6ea51da19c',1,'colourManager']]],
   ['lastfrequencymethod_2',['lastFrequencyMethod',['../class_l_f_p_analysis.html#a94fd029eb69673a71f23db72a557a80d',1,'LFPAnalysis']]],
   ['lastindex_3',['lastIndex',['../classrun_experiment.html#ad9ff3c19568b6e9a67fcb28ad90c1917',1,'runExperiment']]],

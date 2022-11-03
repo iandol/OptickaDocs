@@ -1,6 +1,6 @@
 var classarduino_serial =
 [
-    [ "arduinoSerial", "classarduino_serial.html#a9f358511227f3085d47307530671e122", null ],
+    [ "arduinoSerial", "classarduino_serial.html#ad6b65ac38cec5e05feb663721608f38e", null ],
     [ "analogRead", "classarduino_serial.html#a47a041ddf25607400956b00cf13c1dfa", null ],
     [ "analogReference", "classarduino_serial.html#a0979f5f6e7ed4b6b61abfb5c5db6db8b", null ],
     [ "analogWrite", "classarduino_serial.html#a292d1f7154f9bd6973f789895d51e3a1", null ],

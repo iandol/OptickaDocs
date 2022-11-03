@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Demonstration of a command-driven setup of an Opticka MOC Experiment.</title><meta name="generator" content="MATLAB 9.11"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-02-28"><meta name="DC.source" content="optickaTest.m"><style type="text/css">
+      --><title>Demonstration of a command-driven setup of an Opticka MOC Experiment.</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-11-03"><meta name="DC.source" content="optickaTest.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -138,18 +138,18 @@ myTask.nVar(3).values = [-6 6];
 myTask.nVar(3).offsetstimulus = 10;
 myTask.nVar(3).offsetvalue = 2;
 </pre><h2 id="16">Randomisation</h2><p>We call the method to randomise the trials in a block structure</p><pre class="codeinput">randomiseTask(myTask);
-</pre><pre class="codeoutput">---&gt; taskSequence &lt;taskSequence#2509152D&gt;: Took 23.6759 ms | randomiseTask
+</pre><pre class="codeoutput">---&gt; taskSequence &lt;taskSequence#1CB6CF0B8&gt;: Took 19.976 ms | randomiseTask
 </pre><h2 id="17">Visual Trial List</h2><p>Lets print out a table of the stimulus properties for every trial</p><pre class="codeinput">showLog(myTask);
 </pre><img vspace="5" hspace="5" src="optickaTest_01.png" alt=""> <h2 id="18">Setup screenManager Object</h2><p>we initialise the object with parameter options to open the PTB screen with. Note distance and pixels per cm define the resultant geometry &gt; pixel mappings. You can set several screen parameters, windowing, blending etc. hideFlash uses a trick from Mario to set the CLqUT to the task background colour so you don't see the black flash on PTB screen initialisation.</p><pre class="codeinput">myScreen = screenManager(<span class="string">'distance'</span>, 57.3,<span class="keyword">...</span><span class="comment"> %display distance from observer</span>
-	<span class="string">'pixelsPerCm'</span>, 32,<span class="keyword">...</span><span class="comment"> %calibration value for pixel density, measure using calibrateSize()</span>
+	<span class="string">'pixelsPerCm'</span>, 27,<span class="keyword">...</span><span class="comment"> %calibration value for pixel density, measure using calibrateSize()</span>
 	<span class="string">'backgroundColour'</span>, [0.5 0.5 0.5],<span class="keyword">...</span><span class="comment"> %initial background colour</span>
 	<span class="string">'blend'</span>, true,<span class="keyword">...</span><span class="comment"> %enable OpenGL blending, you can also set blend modes when needed</span>
 	<span class="string">'srcMode'</span>, <span class="string">'GL_SRC_ALPHA'</span>,<span class="keyword">...</span><span class="comment"> %src blend mode</span>
 	<span class="string">'dstMode'</span>, <span class="string">'GL_ONE_MINUS_SRC_ALPHA'</span>,<span class="keyword">...</span><span class="comment"> %dst blend mode</span>
 	<span class="string">'debug'</span>, false,<span class="keyword">...</span>
-	<span class="string">'windowed'</span>, [1000 800],<span class="keyword">...</span><span class="comment"> %set to a widthxheight for debugging i.e. [800 600]; set to empty for fullscreen</span>
-	<span class="string">'bitDepth'</span>, <span class="string">'FloatingPoint32bitIfPossible'</span>);
-</pre><pre class="codeoutput">---&gt; screenManager &lt;screenManager#25148904&gt;: Propery invalid! | bitDepth
+	<span class="string">'windowed'</span>, [],<span class="keyword">...</span><span class="comment"> %set to a widthxheight for debugging i.e. [800 600]; set to empty for fullscreen</span>
+	<span class="string">'bitDepth'</span>, <span class="string">'8bit'</span>);
+<span class="keyword">if</span> ismac; myScreen.useRetina = true; <span class="keyword">end</span>
 </pre><h2 id="19">Setup runExperiment Object</h2><p>We now pass our stimulus screen and sequence objects to the runExperiment class. runExperiment contains the runMOC() method that actually runs the task.</p><pre class="codeinput">myExp = runExperiment(<span class="string">'stimuli'</span>, myStims,<span class="keyword">...</span><span class="comment"> %stimulus objects</span>
 	<span class="string">'task'</span>, myTask,<span class="keyword">...</span><span class="comment"> %task design object</span>
 	<span class="string">'screen'</span>, myScreen,<span class="keyword">...</span><span class="comment"> %screen manager object</span>
@@ -157,152 +157,137 @@ myTask.nVar(3).offsetvalue = 2;
 	<span class="string">'verbose'</span>, false); <span class="comment">%minimal verbosity</span>
 </pre><p>run our method of constants (MOC) experiment; to exit early, press [q] during the interstimulus period.</p><pre class="codeinput">runMOC(myExp);
 </pre><pre class="codeoutput">
----&gt; screenManager: Skipping Sync Tests etc. - ONLY FOR DEVELOPMENT!
-BitsPlusPlus: Could not find a Bits# config file under [/Users/ian/Library/Preferences/Psychtoolbox/BitsSharpConfig.txt]. Assuming a Bits+ device instead of a Bits# is connected.
+---&gt; screenManager: Normal Screen Preferences used.
+BitsPlusPlus: Could not find a Bits# config file under [/home/cog5/.Psychtoolbox/BitsSharpConfig.txt]. Assuming a Bits+ device instead of a Bits# is connected.
 BitsPlusPlus: Please create a config file under this name if you have a Bits# and want to use it as Bits# instead of as a Bits+.
 BitsPlusPlus: The most simple way is to create an empty file. A more robust way is to store the name of the Bits# serial port
 BitsPlusPlus: in the first line of the text file, e.g., COM5 [Windows], or /dev/ttyACM0 [Linux] or similar.
 ---&gt; screenManager: Probing for a Display++...	NO Display++
----&gt; screenManager: Internal processing set to: FloatingPoint32BitIfPossible
-PTB-INFO: Retina display. Enabling panel fitter for scaled Retina compatibility mode.
+---&gt; screenManager: Internal processing set to: 8 bits
 
 
-PTB-INFO: This is Psychtoolbox-3 for Apple macOS, under Matlab 64-Bit (Version 3.0.18 - Build date: Jan 28 2022).
-PTB-INFO: OS support status: macOS version 12 Intel is not yet or no longer tested or officially supported at all for this Psychtoolbox release..
+PTB-INFO: This is Psychtoolbox-3 for GNU/Linux X11, under Matlab 64-Bit (Version 3.0.18 - Build date: Jun 27 2022).
+PTB-INFO: OS support status: Linux 6.0.3-060003-generic Supported.
 PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
 PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
 PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
 
-PTB-INFO: For information about paid priority support, community membership and commercial services, please type
+PTB-INFO: For information about paid support, support memberships and other commercial services, please type
 PTB-INFO: 'PsychPaidSupportAndServices'.
 
-PTB-INFO: Installation of the PsychtoolboxKernelDriver is strongly recommended if you care about precise visual
-PTB-INFO: onset timestamping or timing. See 'help PsychtoolboxKernelDriver' for installation instructions.
+PTB-INFO: Connected to Advanced Micro Devices, Inc. [AMD/ATI] Baffin [Radeon Pro WX 4100] GPU with DCE-11.0 display engine [6 heads].
 
 
-PTB-INFO: OpenGL-Renderer is ATI Technologies Inc. :: AMD Radeon R9 M370X OpenGL Engine :: 2.1 ATI-4.7.103
-PTB-INFO: Renderer has 2048 MB of VRAM and a maximum 1809 MB of texture memory.
-PTB-INFO: VBL startline = 2100 , VBL Endline = -1
-PTB-INFO: Beamposition queries unsupported or defective on this system. Using basic timestamping as fallback.
-PTB-INFO: Timestamps returned by Screen('Flip') will be therefore less robust and accurate.
-PTB-INFO: Measured monitor refresh interval from VBLsync = 0.000000 ms [inf Hz]. (0 valid samples taken, stddev=0.000000 ms.)
+PTB-INFO: OpenGL-Renderer is AMD :: AMD Radeon Pro WX 4100 (polaris11, LLVM 14.0.6, DRM 3.48, 6.0.3-060003-generic) :: 4.6 (Compatibility Profile) Mesa 22.3.0-devel (git-2a63387 2022-11-02 jammy-oibaf-ppa)
+PTB-INFO: VBL startline = 2160 , VBL Endline = 2220
+PTB-INFO: Measured monitor refresh interval from beamposition = 16.667653 ms [59.996449 Hz].
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667652 ms [59.996453 Hz]. (50 valid samples taken, stddev=0.000674 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.667778 ms [59.995998 Hz].
 PTB-INFO: Small deviations between reported values are normal and no reason to worry.
-PTB-WARNING: ==================================================================================================================
-PTB-WARNING: DESKTOP COMPOSITOR IS ACTIVE! ALL FLIP STIMULUS ONSET TIMESTAMPS WILL BE VERY LIKELY UNRELIABLE AND LESS ACCURATE!
-PTB-WARNING: STIMULUS ONSET TIMING WILL BE UNRELIABLE AS WELL, AND GRAPHICS PERFORMANCE MAY BE REDUCED!
-PTB-WARNING: DO NOT USE THIS MODE FOR RUNNING REAL EXPERIMENT SESSIONS WITH ANY REQUIREMENTS FOR ACCURATE TIMING!
-PTB-WARNING: ==================================================================================================================
-PTB-INFO: All display tests and calibrations disabled. Assuming a refresh interval of 60.000000 Hz. Timing will be inaccurate!
-PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 37889 ...
-PTB-INFO: Will use 32 bits per color component floating point framebuffer for stimulus drawing. Alpha blending should work correctly.
-PTB-INFO: Enabling panel fitter. Providing virtual framebuffer of 1000 x 800 pixels size.
-PTB-INFO: Will use 32 bits per color component floating point framebuffer for stimulus post-processing (if any).
+PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 1025 ...
+PTB-INFO: Will use 8 bits per color component framebuffer for stimulus drawing.
+PTB-INFO: Will use 8 bits per color component framebuffer for stimulus post-processing (if any).
 
 ---&gt; screenManager: Previous OpenGL blending: GL_ONE | GL_ZERO
 ---&gt; screenManager: OpenGL blending now: GL_SRC_ALPHA | GL_ONE_MINUS_SRC_ALPHA
 Compiling all shaders matching BasicSineGratingShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/BasicSineGratingShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/BasicSineGratingShader.vert.txt ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/BasicSineGratingShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/BasicSineGratingShader.vert.txt ...
 Compiling all shaders matching NonSymetricGaborShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/NonSymetricGaborShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/NonSymetricGaborShader.vert.txt ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/NonSymetricGaborShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/NonSymetricGaborShader.vert.txt ...
 Compiling all shaders matching SineGratingSmoothedApertureShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SineGratingSmoothedApertureShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SineGratingSmoothedApertureShader.vert.txt ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SineGratingSmoothedApertureShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SineGratingSmoothedApertureShader.vert.txt ...
 Compiling all shaders matching SquareWaveApertureShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SquareWaveApertureShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SquareWaveApertureShader.vert.txt ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SquareWaveApertureShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SquareWaveApertureShader.vert.txt ...
 Compiling all shaders matching SmoothedDiscShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
-Compiling all shaders matching /Users/ian/Code/opticka/stimuli/invert.frag * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/opticka/stimuli/invert.frag ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
+Compiling all shaders matching /home/cog5/Code/opticka/stimuli/invert.frag * into a GLSL program.
+Building a fragment shader:Reading shader from file /home/cog5/Code/opticka/stimuli/invert.frag ...
+---&gt; Red/green grating &lt;colourGratingStimulus#1CB6C6F4B&gt;: Reset sigma to -1 as type=squarewave | SETUP
 Compiling all shaders matching ColorGratingShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/ColorGratingShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/ColorGratingShader.vert.txt ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/ColorGratingShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/ColorGratingShader.vert.txt ...
 Compiling all shaders matching SmoothedDiscShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
 Compiling all shaders matching SmoothedDiscShader * into a GLSL program.
-Building a fragment shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
-Building a vertex shader:Reading shader from file /Users/ian/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
+Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
+Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
 
----&gt;&gt;&gt; movieStimulus: /Users/ian/Code/opticka/stimuli/monkey-dance.avi
-	0.92 seconds duration, 25.000000 fps, w x h = 320 x 320, in 177ms
+---&gt;&gt;&gt; movieStimulus: /home/cog5/Code/opticka/stimuli/monkey-dance.avi
+	0.92 seconds duration, 25.000000 fps, w x h = 320 x 320, in 87ms
 	Blocking: 0 | Loop: 1 | Preloadsecs: -1 | Pixelformat:  | Flags: 
 ---&gt; : Parsing input argument | name
 
 ===&gt;&gt;&gt; No strobe output I/O...
 ---&gt; : Parsing input argument | name
 ===&gt; No reward TTLs will be sent...
+---&gt; taskSequence.initialise: Initialised!
 
+===&gt;&gt;&gt; Warming up the GPU and I/O systems... &lt;&lt;&lt;===
+START @ Blank:1 | B:1 R:1 [1/24] | V: 4 | Time: 0.000 (0)  &gt; angle: 0.000 &gt; contrast: 0.550 &gt; xPosition:
+6.000
 
----!!! ERROR in runExperiment.runMOC()
+@ Blank:1 | B:1 R:1 [1/24] | V: 4 | Time: 0.000 (2)  &gt; angle: 0.000 &gt; contrast: 0.550 &gt; xPosition:
+6.000
 
-ans =
+IS TIME: 1
+@ Blank:1 | B:1 R:2 [2/24] | V: 3 | Time: 2.267 (135)  &gt; angle: 0.000 &gt; contrast: 0.550 &gt;
+xPosition: -6.000
 
-    'Unrecognized method, property, or field 'blankTick' for class 'taskSequence'.
-     
-     Error in runExperiment/updateMOCVars (line 1748)
-     				if me.task.blankTick &gt; 2 &amp;&amp; me.task.blankTick &lt;= me.stimuli.n + 2
-     
-     Error in runExperiment/runMOC (line 295)
-     				me.updateMOCVars(1,1); %set the variables for the very first run;
-     
-     Error in optickaTest (line 221)
-     runMOC(myExp);
-     
-     Error in evalmxdom&gt;instrumentAndRun (line 114)
-     text = evalc(evalstr);
-     
-     Error in evalmxdom (line 21)
-     [data,text,laste] = instrumentAndRun(file,cellBoundaries,imageDir,imagePrefix,options);
-     
-     Error in publish'
+IS TIME: 1
+@ Blank:1 | B:1 R:3 [3/24] | V: 5 | Time: 5.267 (314)  &gt; angle: 45.000 &gt; contrast: 0.150 &gt;
+xPosition: -6.000
+
+IS TIME: 1
+@ Blank:1 | B:1 R:4 [4/24] | V: 1 | Time: 8.267 (494)  &gt; angle: 0.000 &gt; contrast: 0.150 &gt;
+xPosition: -6.000
+
+IS TIME: 1
+@ Blank:1 | B:1 R:5 [5/24] | V: 10 | Time: 11.267 (674)  &gt; angle: 90.000 &gt; contrast: 0.150 &gt;
+xPosition: 6.000
+
+IS TIME: 1
+@ Blank:1 | B:1 R:6 [6/24] | V: 6 | Time: 14.268 (854)  &gt; angle: 45.000 &gt; contrast: 0.150 &gt;
+xPosition: 6.000
+
+IS TIME: 1
+@ Blank:1 | B:1 R:7 [7/24] | V: 12 | Time: 17.268 (1034)  &gt; angle: 90.000 &gt; contrast: 0.550 &gt;
+xPosition: 6.000
+
+IS TIME: 1
+@ Blank:1 | B:1 R:8 [8/24] | V: 11 | Time: 20.268 (1214)  &gt; angle: 90.000 &gt; contrast: 0.550 &gt;
+xPosition: -6.000
+
+IS TIME: 1
+@ Blank:1 | B:1 R:9 [9/24] | V: 7 | Time: 23.268 (1394)  &gt; angle: 45.000 &gt; contrast: 0.550 &gt;
+xPosition: -6.000
 
 
 ---&gt; screenManager: RESET GAMMA TABLES
+---&gt; Number of dropped movie frames: 0
 
 
----&gt; screenManager 25148904: Closing screen = 0, Win = 10, Kind = 1
+---&gt; screenManager 1CB7AC6E3: Closing screen = 0, Win = 10, Kind = 1
 
 
-PTB-INFO: There are still 1 movies open. Screen('CloseAll') will auto-close them.
-PTB-INFO: This may be fine for studies where you only use a single movie, but a large number of open
-PTB-INFO: movies can be an indication that you forgot to dispose no longer needed movie objects
-PTB-INFO: via a proper call to Screen('CloseMovie', moviePtr); , e.g., at the end of each trial. These
-PTB-INFO: stale movies linger around and can consume significant memory and cpu ressources, causing
-PTB-INFO: degraded performance, timing trouble and ultimately out of memory or out of ressource
-PTB-INFO: conditions or even crashes of Matlab/Octave (in rare cases). Please check your code.
+INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
+INFO: a total of 4 times out of a total of 1528 flips during this session.
 
+INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
+INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
+INFO: If you called Screen('Flip', window); without the 'when' argument, this count is more of a ''mild'' indicator
+INFO: of timing behaviour than a hard reliable measurement. Large numbers may indicate problems and should at least
+INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
+INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
 
-
-PTB-INFO: There are still 12 textures, offscreen windows or proxy windows open. Screen('CloseAll') will auto-close them.
-PTB-INFO: This may be fine for studies where you only use a few textures or windows, but a large number of open
-PTB-INFO: textures or offscreen windows can be an indication that you forgot to dispose no longer needed items
-PTB-INFO: via a proper call to Screen('Close', [windowOrTextureIndex]); , e.g., at the end of each trial. These
-PTB-INFO: stale objects linger around and can consume significant memory ressources, causing degraded performance,
-PTB-INFO: timing trouble (if the system has to resort to disk paging) and ultimately out of memory conditions or
-PTB-INFO: crashes. Please check your code. (Screen('Close') is a quick way to release all textures and offscreen windows)
-
-
-
-WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 2).
-WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
-WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
-WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
-</pre><pre class="codeoutput error">Unrecognized method, property, or field 'blankTick' for class 'taskSequence'.
-
-Error in runExperiment/updateMOCVars (line 1748)
-				if me.task.blankTick &gt; 2 &amp;&amp; me.task.blankTick &lt;= me.stimuli.n + 2
-
-Error in runExperiment/runMOC (line 295)
-				me.updateMOCVars(1,1); %set the variables for the very first run;
-
-Error in optickaTest (line 221)
-runMOC(myExp);
+---&gt; screenManager &lt;screenManager#1CB7AC6E3&gt;: Playing failed! | playMovie method
 </pre><p>Plot a timing log of every frame against the stimulus on/off times:</p><pre class="codeinput">showTimingLog(myExp);
-</pre><p>The image above is a graphical timing plot of every frame and whether any frames were dropped during stimulus presentation. This will not consider dropped frames during the GPU warming or inter trial time as dropped as the display is blank and we are using absolute time values for our trial transitions. Opticka actually resets and updates the stimulus objects on the second and subsequent frames of the inter trial blank, this forces any computation of stimulus parameter to when it doesn't matter; but note for complex stimuli a frame or two may be dropped during the blank and so ensure you set the inter trial time &gt; than the dropped frames!</p><h2 id="23">Manual control</h2><p>You don't need to use opticka's stimuli via runExperiment(), you can use them in your own experiments, lets have a quick look here, set runThis to true.</p><pre class="codeinput">runThis = false;
+</pre><img vspace="5" hspace="5" src="optickaTest_02.png" alt=""> <p>The image above is a graphical timing plot of every frame and whether any frames were dropped during stimulus presentation. This will not consider dropped frames during the GPU warming or inter trial time as dropped as the display is blank and we are using absolute time values for our trial transitions. Opticka actually resets and updates the stimulus objects on the second and subsequent frames of the inter trial blank, this forces any computation of stimulus parameter to when it doesn't matter; but note for complex stimuli a frame or two may be dropped during the blank and so ensure you set the inter trial time &gt; than the dropped frames!</p><h2 id="23">Manual control</h2><p>You don't need to use opticka's stimuli via runExperiment(), you can use them in your own experiments, lets have a quick look here, set runThis to true.</p><pre class="codeinput">runThis = false;
 <span class="keyword">if</span> ~runThis; <span class="keyword">return</span>; <span class="keyword">end</span>
 
 <span class="comment">% We'll use the movie stimulus, and run it on its own, using its methods</span>
@@ -332,7 +317,7 @@ setup(myMovie, myScreen); <span class="comment">%setup the stimulus with the scr
 <span class="keyword">end</span>
 reset(myMovie);
 close(myScreen);
-</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2021b</a><br></p></div><!--
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Demonstration of a command-driven setup of an Opticka MOC Experiment.
 % Opticka is an object-oriented framework plus optional GUI for the
@@ -532,14 +517,15 @@ showLog(myTask);
 % task background colour so you don't see the black flash on PTB screen
 % initialisation.
 myScreen = screenManager('distance', 57.3,... %display distance from observer
-	'pixelsPerCm', 32,... %calibration value for pixel density, measure using calibrateSize()
+	'pixelsPerCm', 27,... %calibration value for pixel density, measure using calibrateSize()
 	'backgroundColour', [0.5 0.5 0.5],... %initial background colour
 	'blend', true,... %enable OpenGL blending, you can also set blend modes when needed
 	'srcMode', 'GL_SRC_ALPHA',... %src blend mode
 	'dstMode', 'GL_ONE_MINUS_SRC_ALPHA',... %dst blend mode
 	'debug', false,...
-	'windowed', [1000 800],... %set to a widthxheight for debugging i.e. [800 600]; set to empty for fullscreen
-	'bitDepth', 'FloatingPoint32bitIfPossible');
+	'windowed', [],... %set to a widthxheight for debugging i.e. [800 600]; set to empty for fullscreen
+	'bitDepth', '8bit');
+if ismac; myScreen.useRetina = true; end
 
 %% Setup runExperiment Object
 % We now pass our stimulus screen and sequence objects to the

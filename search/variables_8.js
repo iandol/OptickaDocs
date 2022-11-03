@@ -23,7 +23,7 @@ var searchData=
   ['interleaving_20',['interleaving',['../classndots_stimulus.html#a200c1958718369b8448cfc7fbe3f8ca6',1,'ndotsStimulus']]],
   ['interpmethod_21',['interpMethod',['../classapparent_motion_stimulus.html#a6bcad17d527802fffd7e5444f601a95b',1,'apparentMotionStimulus::interpMethod()'],['../classbar_stimulus.html#a5f8242019d9128099af606c5e063e5c7',1,'barStimulus::interpMethod()']]],
   ['interpmethodlist_22',['interpMethodList',['../classbar_stimulus.html#a464c149780c93e01a68657bf2740669e',1,'barStimulus']]],
-  ['io_23',['io',['../classio_manager.html#a1127fbecc602d959d08c67e62fd0e99f',1,'ioManager']]],
+  ['io_23',['io',['../classuser_functions.html#af82da4b4f4ae253af66dd91b5eb9a296',1,'userFunctions::io()'],['../classio_manager.html#a1127fbecc602d959d08c67e62fd0e99f',1,'ioManager::io()']]],
   ['ip_24',['IP',['../classeyelink_manager.html#a14b40eafb8b225cad022d700cfbd2ee5',1,'eyelinkManager::IP()'],['../classlab_jack_t.html#aa6bc28c45a48516fbe6ad20da09e7504',1,'labJackT::IP()']]],
   ['isattached_25',['isAttached',['../classplusplus_manager.html#a8842162a5b40534c4cfe805b97c76527',1,'plusplusManager']]],
   ['isblink_26',['isBlink',['../classeyelink_manager.html#ac2efed0110b4ba769c589a5d473f747e',1,'eyelinkManager']]],

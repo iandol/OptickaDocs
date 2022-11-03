@@ -6,6 +6,8 @@ var classmovie_stimulus =
     [ "draw", "classmovie_stimulus.html#a642ea23e4d8580117362ebb10d1bf9b1", null ],
     [ "findFile", "classmovie_stimulus.html#a80b3d9ddecd313e5e8202eb6b1893cd0", null ],
     [ "reset", "classmovie_stimulus.html#ab40ce1b4552f0c26f396da94cebd2ebd", null ],
+    [ "set_xPositionOut", "classmovie_stimulus.html#a568502d91131621cfe51ec9a2cbf924c", null ],
+    [ "set_yPositionOut", "classmovie_stimulus.html#a1550047e0e0b46fd28b1a68c392107f4", null ],
     [ "setRect", "classmovie_stimulus.html#aba676c081299b8a01a8e84e1cce6d570", null ],
     [ "setup", "classmovie_stimulus.html#ac40f6a2ac3b737c6f0cce7180fa41584", null ],
     [ "update", "classmovie_stimulus.html#aba19544c662dd93b4b0c613e3b06ba0a", null ],

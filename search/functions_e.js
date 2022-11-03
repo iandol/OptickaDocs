@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parse_0',['parse',['../classeyelink_analysis.html#a95a35763637376e73a19dae75e4e5ac6',1,'eyelinkAnalysis::parse()'],['../class_l_f_p_analysis.html#a5b68dff97c1930392ba9bc3579c58d8a',1,'LFPAnalysis::parse()'],['../class_l_f_p_meta.html#a81fee7cc1d852b5e919ab81ab15c41eb',1,'LFPMeta::parse()'],['../classspike_analysis.html#a5617920b6f9f67aaf73fd653c39c7e55',1,'spikeAnalysis::parse()'],['../classtobii_analysis.html#af81b7b50d5ee58fb65578838d5240a53',1,'tobiiAnalysis::parse()'],['../classplx_reader.html#a3842d2054a23091fdae1263956d61113',1,'plxReader::parse()']]],
+  ['parse_0',['parse',['../class_l_f_p_analysis.html#a5b68dff97c1930392ba9bc3579c58d8a',1,'LFPAnalysis::parse()'],['../classeyelink_analysis.html#a95a35763637376e73a19dae75e4e5ac6',1,'eyelinkAnalysis::parse()'],['../classplx_reader.html#a3842d2054a23091fdae1263956d61113',1,'plxReader::parse()'],['../classtobii_analysis.html#af81b7b50d5ee58fb65578838d5240a53',1,'tobiiAnalysis::parse()'],['../class_l_f_p_meta.html#a81fee7cc1d852b5e919ab81ab15c41eb',1,'LFPMeta::parse()'],['../classspike_analysis.html#a5617920b6f9f67aaf73fd653c39c7e55',1,'spikeAnalysis::parse()']]],
   ['parseallruns_1',['parseAllRuns',['../classparse_opx_spikes.html#a0111a7c28fd908828d26df392628fc9a',1,'parseOpxSpikes']]],
   ['parseargs_2',['parseArgs',['../classopticka_core.html#a4ddb6bcfaaed78a039f3694283910381',1,'optickaCore']]],
   ['parseasvars_3',['parseAsVars',['../classeyelink_analysis.html#a1d3b2f6587a5c09532ace1940aa7f3ab',1,'eyelinkAnalysis::parseAsVars()'],['../classtobii_analysis.html#abdda21543319a8b0c0a645c0ae645d42',1,'tobiiAnalysis::parseAsVars()']]],
@@ -25,12 +25,12 @@ var searchData=
   ['phase_22',['phase',['../classanalysis_core.html#a506f34c92051ee4513b5a50d908705f9',1,'analysisCore']]],
   ['phasedifference_23',['phaseDifference',['../classanalysis_core.html#aa1e10a60c39ddc127482a7bc8f91b11f',1,'analysisCore']]],
   ['ping_24',['ping',['../classopticka.html#aa7daf8c463bad92e1d9eee643d448da0',1,'opticka']]],
-  ['pinmode_25',['pinMode',['../classarduino_i_o_port.html#aed0ce5b1f9731a95c065cf22eb70c428',1,'arduinoIOPort::pinMode()'],['../classarduino_serial.html#a23a6ca56041a3e4b42bcbdfd10fe7191',1,'arduinoSerial::pinMode()'],['../classarduino_serial_port.html#a9643a5bbfeab40a73a535306ffc4f3d5',1,'arduinoSerialPort::pinMode()']]],
+  ['pinmode_25',['pinMode',['../classarduino_manager.html#af227b9bcb62578bbe6e1403b7b10eaab',1,'arduinoManager::pinMode()'],['../classarduino_serial_port.html#a9643a5bbfeab40a73a535306ffc4f3d5',1,'arduinoSerialPort::pinMode()'],['../classarduino_serial.html#a23a6ca56041a3e4b42bcbdfd10fe7191',1,'arduinoSerial::pinMode()'],['../classarduino_i_o_port.html#aed0ce5b1f9731a95c065cf22eb70c428',1,'arduinoIOPort::pinMode()']]],
   ['pixelspercm_26',['pixelsPerCm',['../classscreen_manager.html#aa45f066b2b3c48646d3ab9ad77ccf312',1,'screenManager']]],
   ['plaidstimulus_27',['plaidStimulus',['../classplaid_stimulus.html#a9df2e34748184c2a217912f7aa75de56',1,'plaidStimulus']]],
   ['play_28',['play',['../classaudio_manager.html#ad75381527a3429e4b684d0ba2b7396f0',1,'audioManager']]],
   ['playmovie_29',['playMovie',['../classscreen_manager.html#a4b8e6b28de2120e5e5b04c8fc83f9ed8',1,'screenManager']]],
-  ['plot_30',['plot',['../class_l_f_p_analysis.html#a46c1388a292233f4192dc9cc253f3856',1,'LFPAnalysis::plot()'],['../class_l_f_p_meta.html#ad65d4938483b45a8d0f006d90ebabbc1',1,'LFPMeta::plot()'],['../classspike_analysis.html#a61edf72c51d6271f457e387ca810035d',1,'spikeAnalysis::plot()'],['../classtobii_analysis.html#a4a85ebb39c499ee303eeaa9cdda2a42a',1,'tobiiAnalysis::plot()'],['../classcalibrate_luminance.html#ae14bc2ab37b35d4fb51d05e973edad27',1,'calibrateLuminance::plot()'],['../classcolour_manager.html#a61d9cde94ce03d3a706a47b47358642e',1,'colourManager::plot()'],['../classopx_online.html#a540190fbb4889a14c20cdf14ed5b97cc',1,'opxOnline::plot()'],['../classeyelink_analysis.html#ae96f64beb6445b47cb80b4b2fccf357e',1,'eyelinkAnalysis::plot()']]],
+  ['plot_30',['plot',['../classopx_online.html#a540190fbb4889a14c20cdf14ed5b97cc',1,'opxOnline::plot()'],['../classcolour_manager.html#a61d9cde94ce03d3a706a47b47358642e',1,'colourManager::plot()'],['../classcalibrate_luminance.html#ae14bc2ab37b35d4fb51d05e973edad27',1,'calibrateLuminance::plot()'],['../classtobii_analysis.html#a4a85ebb39c499ee303eeaa9cdda2a42a',1,'tobiiAnalysis::plot()'],['../class_l_f_p_meta.html#ad65d4938483b45a8d0f006d90ebabbc1',1,'LFPMeta::plot()'],['../classeyelink_analysis.html#ae96f64beb6445b47cb80b4b2fccf357e',1,'eyelinkAnalysis::plot()'],['../classspike_analysis.html#a61edf72c51d6271f457e387ca810035d',1,'spikeAnalysis::plot()'],['../class_l_f_p_analysis.html#a46c1388a292233f4192dc9cc253f3856',1,'LFPAnalysis::plot(in me, in varargin)']]],
   ['plot_5fmatrix_31',['plot_matrix',['../class_l_f_p_analysis.html#ace14bdc7757557723a6e296220f297ce',1,'LFPAnalysis']]],
   ['plot_5fvector_32',['plot_vector',['../class_l_f_p_analysis.html#af2ec1545d09b38c3f5c67f2e2fde19a4',1,'LFPAnalysis']]],
   ['plotcurve_33',['plotCurve',['../classopx_online.html#a27b42bc2698cce1e23a6e0537c4a3d04',1,'opxOnline']]],
@@ -41,14 +41,14 @@ var searchData=
   ['plotisi_38',['plotISI',['../classspike_analysis.html#acfcfa150efd12703ffe1782d42944fe1',1,'spikeAnalysis']]],
   ['plotlogs_39',['plotLogs',['../classstate_machine.html#ac51e18b6588c70432122488f0cf98fa0',1,'stateMachine']]],
   ['plotpowline_40',['plotpowline',['../class_l_f_p_analysis.html#aa8a28ea9bf920f3b37b61a607b9e13bb',1,'LFPAnalysis']]],
-  ['plotpsth_41',['plotPSTH',['../classspike_analysis.html#a0cd46250a77a2b0f479bc484cd60f7d4',1,'spikeAnalysis::plotPSTH()'],['../classopx_online.html#a939e919da5f12e138910197963255e76',1,'opxOnline::plotPSTH()']]],
+  ['plotpsth_41',['plotPSTH',['../classopx_online.html#a939e919da5f12e138910197963255e76',1,'opxOnline::plotPSTH()'],['../classspike_analysis.html#a0cd46250a77a2b0f479bc484cd60f7d4',1,'spikeAnalysis::plotPSTH()']]],
   ['plotroi_42',['plotROI',['../classeyelink_analysis.html#aca52bf15d27dafbea818a72dbce9b293',1,'eyelinkAnalysis::plotROI()'],['../classtobii_analysis.html#a09e4bf9f39863c748ea9793b288df05a',1,'tobiiAnalysis::plotROI()']]],
   ['plotsecondaryeyelogs_43',['plotSecondaryEyeLogs',['../classeyelink_analysis.html#a2d084ceb79b890eb4d4da9ef65850924',1,'eyelinkAnalysis::plotSecondaryEyeLogs()'],['../classtobii_analysis.html#aed2e21f5acc7b5ac4a066d45baa47e2f',1,'tobiiAnalysis::plotSecondaryEyeLogs()']]],
   ['plotsite_44',['plotSite',['../class_l_f_p_meta.html#a452d6697d0e0709166bfb06694dbb0a3',1,'LFPMeta']]],
   ['plotstream_45',['plotStream',['../classlab_jack_t.html#a9ddb1fbaa28e4850be3636a92738cc6b',1,'labJackT']]],
   ['plotsurrogates_46',['plotSurrogates',['../class_l_f_p_analysis.html#a7b9feeab68d661e84317cf5d9396bc0a',1,'LFPAnalysis']]],
   ['plottogether_47',['plotTogether',['../class_l_f_p_analysis.html#a52a454a506f20117bcfe085a2aebcc73',1,'LFPAnalysis']]],
-  ['plottoi_48',['plotTOI',['../classtobii_analysis.html#aaa7cf0ddb34dff885155ad243ca5d508',1,'tobiiAnalysis::plotTOI()'],['../classeyelink_analysis.html#a2588b4443b53cc443336d51db7e5eda5',1,'eyelinkAnalysis::plotTOI()']]],
+  ['plottoi_48',['plotTOI',['../classeyelink_analysis.html#a2588b4443b53cc443336d51db7e5eda5',1,'eyelinkAnalysis::plotTOI()'],['../classtobii_analysis.html#aaa7cf0ddb34dff885155ad243ca5d508',1,'tobiiAnalysis::plotTOI()']]],
   ['plotwaveforms_49',['plotWaveforms',['../classspike_analysis.html#a2dc25d4df820710064668032a20cc00e',1,'spikeAnalysis']]],
   ['plusplusmanager_50',['plusplusManager',['../classplusplus_manager.html#a55c3be53b170bc2b901ce4a0040ab17c',1,'plusplusManager']]],
   ['plx_5forig_5fheader_51',['plx_orig_header',['../ft__read__plxheader_8m.html#a6f038fe424531a257cf493135f8222e4',1,'ft_read_plxheader.m']]],
@@ -65,5 +65,6 @@ var searchData=
   ['process_62',['process',['../class_l_f_p_meta.html#acf34c80e50233386c8e9a9ea41072997',1,'LFPMeta']]],
   ['prunenonrttrials_63',['pruneNonRTTrials',['../classeyelink_analysis.html#ac459eaaf380861b98e267d88ab7953f3',1,'eyelinkAnalysis::pruneNonRTTrials()'],['../classtobii_analysis.html#a205ea555f13c1a4a84616342dd893533',1,'tobiiAnalysis::pruneNonRTTrials()']]],
   ['prunetrials_64',['pruneTrials',['../classeyelink_analysis.html#ac12d8c5ebdb1fd7b230c67fff5f704c7',1,'eyelinkAnalysis::pruneTrials()'],['../classtobii_analysis.html#a55a830efed19bc0c5c28e521727f5807',1,'tobiiAnalysis::pruneTrials()']]],
-  ['psth_65',['PSTH',['../classspike_analysis.html#a3d0b4aead47a4d70368db1bda5261104',1,'spikeAnalysis']]]
+  ['psth_65',['PSTH',['../classspike_analysis.html#a3d0b4aead47a4d70368db1bda5261104',1,'spikeAnalysis']]],
+  ['purge_66',['purge',['../classarduino_i_o_port.html#a8dbfb002386bb6746154beccc1230be6',1,'arduinoIOPort']]]
 ];

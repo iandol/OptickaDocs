@@ -26,31 +26,52 @@ var NAVTREE =
 [
   [ "Opticka", "index.html", [
     [ "Opticka: Behavioural Experiment Manager", "index.html", [
-      [ "Sample hardware setup", "index.html#autotoc_md36", null ],
-      [ "GUI", "index.html#autotoc_md37", null ],
-      [ "State machine control", "index.html#autotoc_md38", null ],
-      [ "Hardware currently supported:", "index.html#autotoc_md39", null ],
-      [ "Quick Documentation", "index.html#autotoc_md40", null ],
-      [ "Basic Install Instructions", "index.html#autotoc_md41", null ],
-      [ "Features", "index.html#autotoc_md42", null ],
-      [ "Licence", "index.html#autotoc_md43", null ]
+      [ "Sample hardware setup", "index.html#autotoc_md48", null ],
+      [ "GUI", "index.html#autotoc_md49", null ],
+      [ "State machine control", "index.html#autotoc_md50", null ],
+      [ "Hardware currently supported", "index.html#autotoc_md51", null ],
+      [ "Quick Documentation", "index.html#autotoc_md52", null ],
+      [ "Basic Install Instructions", "index.html#autotoc_md53", null ],
+      [ "Features", "index.html#autotoc_md54", null ],
+      [ "Eye tracker control", "index.html#autotoc_md55", [
+        [ "Licence", "index.html#autotoc_md56", null ]
+      ] ]
     ] ],
     [ "Detailed Install Instructions", "install.html", [
       [ "Requirements:", "install.html#autotoc_md1", null ],
       [ "Using the Git repository", "install.html#autotoc_md2", null ],
       [ "Using the ZIP file", "install.html#autotoc_md3", null ]
     ] ],
-    [ "Behavioural Task Methods and Parameters [work-in-progress]", "md_help__m_e_t_h_o_d_s.html", [
-      [ "runExperiment (\"me\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md6", null ],
-      [ "Task Manager (\"task\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md8", null ],
-      [ "Eyetracker (\"eT\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md10", null ],
-      [ "Screen Manager (\"s\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md12", null ],
-      [ "MetaStimulus (\"stims\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md14", null ]
+    [ "Useful Task Methods", "md_help__m_e_t_h_o_d_s.html", [
+      [ "List of Methods", "md_help__m_e_t_h_o_d_s.html#autotoc_md12", [
+        [ "Similar named methods?", "md_help__m_e_t_h_o_d_s.html#autotoc_md8", null ],
+        [ "User Functions Files", "md_help__m_e_t_h_o_d_s.html#autotoc_md9", null ],
+        [ "runExperiment (\"me\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md13", null ],
+        [ "Task sequence manager (\"task\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md16", null ],
+        [ "The eye tracker (\"eT\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md18", null ],
+        [ "metaStimulus (\"stims\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md20", null ],
+        [ "Screen Manager (\"s\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md22", null ]
+      ] ],
+      [ "Definitions", "md_help__m_e_t_h_o_d_s.html#autotoc_md23", null ]
+    ] ],
+    [ "Configuring Stimuli", "md_help_uihelpstims.html", [
+      [ "Adding & Editing Stimuli", "md_help_uihelpstims.html#autotoc_md29", null ],
+      [ "Previewing Stimuli", "md_help_uihelpstims.html#autotoc_md30", null ]
+    ] ],
+    [ "Configuring Variables", "md_help_uihelpvars.html", [
+      [ "Log or Linear interpolation", "md_help_uihelpvars.html#autotoc_md36", null ],
+      [ "Variable modifiers", "md_help_uihelpvars.html#autotoc_md37", null ],
+      [ "Block and Trial level independent factors", "md_help_uihelpvars.html#autotoc_md38", null ]
     ] ],
     [ "GNU LESSER GENERAL PUBLIC LICENSE", "md__l_i_c_e_n_c_e.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Opticka State Machine Test Output", "optickaBehaviourTest.html", null ],
     [ "Opticka MOC Test Output", "optickaTest.html", null ],
+    [ "Opticka UI help: State-machine", "uihelpstate.html", null ],
+    [ "Opticka UI help: User Functions", "uihelpfunctions.html", null ],
+    [ "Opticka UI help: Task", "uihelptask.html", null ],
+    [ "Opticka UI help: Stimuli", "uihelpstims.html", null ],
+    [ "Opticka UI help: Variables", "uihelpvars.html", null ],
     [ "Github Source Repo", "^https://github.com/iandol/opticka", null ],
     [ "PTB User Forum", "^https://psychtoolbox.discourse.group/", null ],
     [ "PTB Home Page", "^http://psychtoolbox.org", null ],
@@ -79,16 +100,16 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_area_summation_state_info_8m.html",
-"classannulus_stimulus.html#a2a4cdf4c8cff8cf25600883e03382d75",
-"classbase_stimulus.html#a703773d0dabf520a6bba495f603d7787",
-"classcolour_manager.html#ad8cbbe599f962bc9829d37ec18bc97b2",
-"classeyelink_manager.html#a4f05c974c50996b96188200e658edfcf",
-"classlab_jack.html#a3feee3e10231d40deeef1d6979c50ca9",
-"classopticka.html#a119e95778cf2687e8e7f422ae40535fb",
-"classrun_experiment.html#a252f6853431de167a4aff45bad639679",
-"classstate_machine.html#a0e8b0508302e7606ab4837ead5f12f04",
-"classtobii_manager.html#a290b75d4960ee9720c1e2caf4ec0137c",
-"target_inducer_stimulus_8m.html"
+"classannulus_stimulus.html#a127c4b595be6d6d2cc79a997c58692d3",
+"classbase_stimulus.html#a3a3bbf55c2559d8b227edb7884f532c0",
+"classcolour_grating_stimulus.html#af9f535f9911b206b235ee8f36575269d",
+"classeyelink_manager.html#a1139eb77351c98ea4a596b3355212297",
+"classio_manager.html#a257af7fdb8d12e1c1aab0b7f80454a82",
+"classndots_stimulus.html#a250a22b68fc5c8fd497d7661ddfe4c01",
+"classplx_reader.html#ad38a379efaff1352c2b4e12dcaf4eb88",
+"classspike_analysis.html#acfcfa150efd12703ffe1782d42944fe1",
+"classtobii_analysis.html#a90d1248c78ad29baa7d3e981cd37acc6",
+"index.html#autotoc_md51"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

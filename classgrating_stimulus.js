@@ -1,9 +1,5 @@
 var classgrating_stimulus =
 [
-    [ "Events", "classgrating_stimulus.html#accb09f1518892f2e37c403eceafb7384", [
-      [ "changeScale", "classgrating_stimulus.html#accb09f1518892f2e37c403eceafb7384a7dc84b3f06a8b8b0dc5d2376438c5902", null ],
-      [ "changePhaseIncrement", "classgrating_stimulus.html#accb09f1518892f2e37c403eceafb7384ace86ada5a6e58ba50a37c7c5ef133815", null ]
-    ] ],
     [ "gratingStimulus", "classgrating_stimulus.html#ab540138e6196e1b01128d22bc0339946", null ],
     [ "animate", "classgrating_stimulus.html#abef1f1526174d5ebae307f9ed828ddc8", null ],
     [ "calculatePhase", "classgrating_stimulus.html#ac1fdbc49acac1fd76a9dd943592b520b", null ],
@@ -16,6 +12,8 @@ var classgrating_stimulus =
     [ "set_sfOut", "classgrating_stimulus.html#a0699417b22f569ba489aba01429130c6", null ],
     [ "set_sizeOut", "classgrating_stimulus.html#ac7e3fd31cd54be936e7855f34f2e8fff", null ],
     [ "set_tfOut", "classgrating_stimulus.html#a8216cff6d0ed9c230b78b7baf43a7cf7", null ],
+    [ "set_xPositionOut", "classgrating_stimulus.html#a2ff58e75627bdf89bb2324b87ee6e91f", null ],
+    [ "set_yPositionOut", "classgrating_stimulus.html#a250439da19a43e7f7aaff0d46a504cb7", null ],
     [ "setRect", "classgrating_stimulus.html#a18c6581e900b0c570b342bbf62ca439e", null ],
     [ "setup", "classgrating_stimulus.html#a2878b6a4d6dbd28c8f5ce2fcbbc1abbe", null ],
     [ "sf", "classgrating_stimulus.html#a2aba4f4a899876f7f4d47cdc8ea3710e", null ],

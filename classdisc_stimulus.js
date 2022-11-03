@@ -12,6 +12,8 @@ var classdisc_stimulus =
     [ "set_contrastOut", "classdisc_stimulus.html#aca569c24352a5dc26b441843bcf0af94", null ],
     [ "set_flashColourOut", "classdisc_stimulus.html#a774f1f7c42d1fff28415506d9a487e20", null ],
     [ "set_sizeOut", "classdisc_stimulus.html#a9eafe814c98d9c9410d24d76d1ca863d", null ],
+    [ "set_xPositionOut", "classdisc_stimulus.html#ae66d84c9b291a587e5825d0c7d044900", null ],
+    [ "set_yPositionOut", "classdisc_stimulus.html#a9b4874f53decb59407aa777311576741", null ],
     [ "setRect", "classdisc_stimulus.html#ac616edb1fe8cf2930fec4b6ca2e2456f", null ],
     [ "setup", "classdisc_stimulus.html#a5b8e1ebf374322c5be5ee95ea75e513a", null ],
     [ "setupFlash", "classdisc_stimulus.html#a9004e455ad47206850f95a05cc149f4b", null ],

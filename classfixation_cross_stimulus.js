@@ -13,6 +13,8 @@ var classfixation_cross_stimulus =
     [ "set_colourOut", "classfixation_cross_stimulus.html#a9c4529ff2ae045099a0ac251f2d31397", null ],
     [ "set_lineWidthOut", "classfixation_cross_stimulus.html#a823bad459b43169b2d0f429415472619", null ],
     [ "set_sizeOut", "classfixation_cross_stimulus.html#a4e9f9590fcd9a137adc73a6e917b8280", null ],
+    [ "set_xPositionOut", "classfixation_cross_stimulus.html#afa789a4236b4102a3ae4f89f944023bc", null ],
+    [ "set_yPositionOut", "classfixation_cross_stimulus.html#af3a1fbff7f5fb8f888f56df3a919784a", null ],
     [ "setup", "classfixation_cross_stimulus.html#a0858d76cea22d14330bfe11f71e202eb", null ],
     [ "setupFlash", "classfixation_cross_stimulus.html#a1cbcc76bfe66a8eaf0a0d7f5b223d3b0", null ],
     [ "update", "classfixation_cross_stimulus.html#a85f5839628e642754333da5757ccd436", null ],

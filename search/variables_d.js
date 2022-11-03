@@ -7,7 +7,7 @@ var searchData=
   ['oldclut_4',['oldCLUT',['../classcalibrate_luminance.html#af5c91fcf7d33a9c01618467cb55250c6',1,'calibrateLuminance']]],
   ['oldpos_5',['oldpos',['../classtitta_cal_movie_stimulus.html#ad9f1cd511402526c57145401e63eaef8',1,'tittaCalMovieStimulus']]],
   ['opengui_6',['openGUI',['../classarduino_manager.html#a6c17a70d16c586eb801f21ad11ac9c4d',1,'arduinoManager']]],
-  ['opennow_7',['openNow',['../classlab_jack.html#a3feee3e10231d40deeef1d6979c50ca9',1,'labJack::openNow()'],['../classlab_jack_t.html#a8195a4e6daad9e1a0e60fb7ce6a492fc',1,'labJackT::openNow()'],['../classsend_serial_i_o_port.html#acd2e8e0a0e2f431704825474ca43ed5d',1,'sendSerialIOPort::openNow()']]],
+  ['opennow_7',['openNow',['../classlab_jack_t.html#a8195a4e6daad9e1a0e60fb7ce6a492fc',1,'labJackT::openNow()'],['../classsend_serial_i_o_port.html#acd2e8e0a0e2f431704825474ca43ed5d',1,'sendSerialIOPort::openNow()'],['../classlab_jack.html#a3feee3e10231d40deeef1d6979c50ca9',1,'labJack::openNow()']]],
   ['openui_8',['openUI',['../classanalysis_core.html#a46b6a55719c032fa086e11afe34c977a',1,'analysisCore']]],
   ['operatorscreen_9',['operatorScreen',['../classtobii_manager.html#a91a67449be1b249847f8cb9d57fb3d6a',1,'tobiiManager']]],
   ['optickaversion_10',['optickaVersion',['../classopticka.html#a2758662912028f0306a48218d88f9395',1,'opticka']]],

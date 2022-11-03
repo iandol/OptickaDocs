@@ -1,5 +1,5 @@
 <map id="ioManager" name="ioManager">
-<area shape="rect" id="node1" title="Input Output manager, currently just a dummy class." alt="" coords="33,652,200,949"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,131,228,604"/>
-<area shape="rect" id="node3" title=" " alt="" coords="81,5,152,83"/>
+<area shape="rect" id="node1" title="Input Output manager, currently just a dummy class." alt="" coords="29,607,171,896"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,93,195,559"/>
+<area shape="rect" id="node3" title=" " alt="" coords="63,5,137,45"/>
 </map>

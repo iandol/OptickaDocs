@@ -29,7 +29,7 @@ var classscreen_manager =
     [ "drawRedSpot", "classscreen_manager.html#ae24bd4d23abed6632ade46d385eeaa44", null ],
     [ "drawScreenCenter", "classscreen_manager.html#a238dacaac8223404353bc0cdb237d85a", null ],
     [ "drawSimpleCross", "classscreen_manager.html#aee00e68533608e82c192e275b9d81601", null ],
-    [ "drawSpot", "classscreen_manager.html#af6e6b831a5d242cc4ebe771bf2fb816a", null ],
+    [ "drawSpot", "classscreen_manager.html#ac269462dc6b9c65d060723212dc95e47", null ],
     [ "drawText", "classscreen_manager.html#a5ec3269549b3e010fcc0b74ed9066ede", null ],
     [ "drawTextNow", "classscreen_manager.html#a06f5eb845f5c996062279995653a017b", null ],
     [ "drawTextWrapped", "classscreen_manager.html#ab23a9ac2d5a1ef68ab0688e00b3b85e9", null ],

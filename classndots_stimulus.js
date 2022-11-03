@@ -8,6 +8,8 @@ var classndots_stimulus =
     [ "reset", "classndots_stimulus.html#a29e9765b2a7349a9ff0e8a9ce2aeb4a2", null ],
     [ "set_dotSizeOut", "classndots_stimulus.html#a8fb24996d32a98d7fe697b5af08b1671", null ],
     [ "set_sizeOut", "classndots_stimulus.html#a84bc9db44e9ab4abd890d48f25fd79bd", null ],
+    [ "set_xPositionOut", "classndots_stimulus.html#a17c2750e514e2952ea3a663cd51b4f2b", null ],
+    [ "set_yPositionOut", "classndots_stimulus.html#ac07b865e26af330feadaf671b90b17ac", null ],
     [ "setup", "classndots_stimulus.html#a1debba9b5d2ad9c9c79a0d5fd85106c7", null ],
     [ "update", "classndots_stimulus.html#aafe055093d50475a0876441d248b5f6f", null ],
     [ "coherence", "classndots_stimulus.html#adaf71316f466dd594129415376df72bd", null ],

@@ -1,6 +1,7 @@
 var classanimation_manager =
 [
     [ "animationManager", "classanimation_manager.html#addc270d3c728d9ee952ad1ea44eea919", null ],
+    [ "animate", "classanimation_manager.html#a515085fd63b249d647777167e2bd251a", null ],
     [ "bezier", "classanimation_manager.html#a647a2fe271b2b363d179fe6e6e946062", null ],
     [ "d2r", "classanimation_manager.html#a33a3532b7803db05af84c370c87994fe", null ],
     [ "findDistance", "classanimation_manager.html#a505225aa27266662efb708e7f3c7f5b3", null ],
@@ -12,6 +13,7 @@ var classanimation_manager =
     [ "angleVariance", "classanimation_manager.html#ae7751169e3fba90d9af8fe5cd7aa7750", null ],
     [ "boundsCheck", "classanimation_manager.html#ac9f7a9c6e96ba395d9d344cd4570623e", null ],
     [ "length", "classanimation_manager.html#a160476f8e1f7b9551011edffe346df7a", null ],
+    [ "params", "classanimation_manager.html#aac28d6bb2e35bf8ea0817a64f210c0e1", null ],
     [ "seed", "classanimation_manager.html#a7be7f67b4f7e98bf0c06f7066e24fa84", null ],
     [ "type", "classanimation_manager.html#a7338b2646d5136efde4ebd90508112b2", null ],
     [ "verbose", "classanimation_manager.html#af8548d6444d71da4a72846472303936b", null ]

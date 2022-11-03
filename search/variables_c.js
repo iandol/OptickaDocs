@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['name_0',['name',['../classlab_jack.html#ab826ca7a5bc2794c7fd244c6e48257cb',1,'labJack::name()'],['../classlab_jack_t.html#a69019de24c469dab85b20fcee98a939e',1,'labJackT::name()'],['../classsend_serial_i_o_port.html#a8f521fbf0638b3f0b9d36e36d224c10a',1,'sendSerialIOPort::name()'],['../classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3',1,'optickaCore::name()']]],
+  ['name_0',['name',['../classlab_jack_t.html#a69019de24c469dab85b20fcee98a939e',1,'labJackT::name()'],['../classsend_serial_i_o_port.html#a8f521fbf0638b3f0b9d36e36d224c10a',1,'sendSerialIOPort::name()'],['../classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3',1,'optickaCore::name()'],['../classlab_jack.html#ab826ca7a5bc2794c7fd244c6e48257cb',1,'labJack::name()']]],
   ['names_1',['names',['../classspike_analysis.html#a68fe7cd2d892ae3edc9c1ef925266e77',1,'spikeAnalysis']]],
   ['nbars_2',['nBars',['../classapparent_motion_stimulus.html#a9e0dfc0adecdeb1c661aa228e2141caf',1,'apparentMotionStimulus']]],
   ['nbits_3',['nBits',['../classd_pixx_manager.html#a893be96b4914969a1cf4e27686e8e7ce',1,'dPixxManager']]],
@@ -13,8 +13,9 @@ var searchData=
   ['nmeasures_10',['nMeasures',['../classcalibrate_luminance.html#ad3183de5653d3ae47099c533fa5efe98',1,'calibrateLuminance']]],
   ['normalizedxy_11',['normalizedXY',['../classndots_stimulus.html#a8cccd1806afadbc74ec869af1a71db29',1,'ndotsStimulus']]],
   ['nselection_12',['nSelection',['../class_l_f_p_analysis.html#a2ec7b6655037ad6a59a6264e535d36b9',1,'LFPAnalysis::nSelection()'],['../classspike_analysis.html#a99a3817dddf4fce9d66c31f3edf4000b',1,'spikeAnalysis::nSelection()']]],
-  ['numchannels_13',['numChannels',['../classaudio_manager.html#a7d5d21cc9705847d4f9b83087124d43c',1,'audioManager']]],
-  ['nunits_14',['nUnits',['../classspike_analysis.html#ae5cf24fe5549a874ab03b109c49398f6',1,'spikeAnalysis']]],
-  ['nvar_15',['nVar',['../classtask_sequence.html#a24cf03ae1d0753f33fcc2acf9e4e954e',1,'taskSequence']]],
-  ['nwindows_16',['nWindows',['../classplusplus_manager.html#a066110e7c75bc59a3b9e3ed3c26147a2',1,'plusplusManager']]]
+  ['ntouchscreens_13',['nTouchScreens',['../classtouch_manager.html#a1880bb7c63bb3befa20e8bb1a980f0ac',1,'touchManager']]],
+  ['numchannels_14',['numChannels',['../classaudio_manager.html#a7d5d21cc9705847d4f9b83087124d43c',1,'audioManager']]],
+  ['nunits_15',['nUnits',['../classspike_analysis.html#ae5cf24fe5549a874ab03b109c49398f6',1,'spikeAnalysis']]],
+  ['nvar_16',['nVar',['../classtask_sequence.html#a24cf03ae1d0753f33fcc2acf9e4e954e',1,'taskSequence']]],
+  ['nwindows_17',['nWindows',['../classplusplus_manager.html#a066110e7c75bc59a3b9e3ed3c26147a2',1,'plusplusManager']]]
 ];

@@ -60,11 +60,13 @@ var hierarchy =
         [ "screenManager", "classscreen_manager.html", null ],
         [ "stateMachine", "classstate_machine.html", null ],
         [ "taskSequence", "classtask_sequence.html", null ],
-        [ "tobiiManager", "classtobii_manager.html", null ]
+        [ "tobiiManager", "classtobii_manager.html", null ],
+        [ "touchManager", "classtouch_manager.html", null ]
       ] ],
       [ "opxOnline", "classopx_online.html", null ],
       [ "parseOpxSpikes", "classparse_opx_spikes.html", null ],
       [ "sendSerialIOPort", "classsend_serial_i_o_port.html", null ],
-      [ "tittaCalMovieStimulus", "classtitta_cal_movie_stimulus.html", null ]
+      [ "tittaCalMovieStimulus", "classtitta_cal_movie_stimulus.html", null ],
+      [ "userFunctions", "classuser_functions.html", null ]
     ] ]
 ];

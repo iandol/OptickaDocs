@@ -11,6 +11,8 @@ var classdots_stimulus =
     [ "set_densityOut", "classdots_stimulus.html#a8a7225cbfaa70241c28c0b1c8834c93f", null ],
     [ "set_dotSizeOut", "classdots_stimulus.html#a381b361729b394bad9378559f0dc63fe", null ],
     [ "set_sizeOut", "classdots_stimulus.html#a299b2ed28b761ea5032f3658430a5291", null ],
+    [ "set_xPositionOut", "classdots_stimulus.html#a7a0a4882625e702e18abb831957f730d", null ],
+    [ "set_yPositionOut", "classdots_stimulus.html#adf629eb635b67de7c0e2c7f42d986952", null ],
     [ "setRect", "classdots_stimulus.html#a7d015cfc01b8642b4654d5c33e177641", null ],
     [ "setup", "classdots_stimulus.html#a1475f3155d5722cf3d2cc824cc68c16a", null ],
     [ "update", "classdots_stimulus.html#adea72b2279679beb9550727bc4ad771c", null ],

@@ -1,8 +1,8 @@
 <map id="colourTest" name="colourTest">
-<area shape="rect" id="node1" title="colour test is a simple RGB colour blender for teaching" alt="" coords="135,1827,293,1963"/>
-<area shape="rect" id="node2" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="115,1423,313,1779"/>
-<area shape="rect" id="node3" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="111,652,317,1375"/>
-<area shape="rect" id="node4" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,131,228,604"/>
-<area shape="rect" id="node5" title=" " alt="" coords="81,5,152,83"/>
-<area shape="rect" id="node6" title=" " alt="" coords="252,329,371,406"/>
+<area shape="rect" id="node1" title="colour test is a simple RGB colour blender for teaching" alt="" coords="120,1736,259,1849"/>
+<area shape="rect" id="node2" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="104,1340,275,1688"/>
+<area shape="rect" id="node3" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="93,607,285,1292"/>
+<area shape="rect" id="node4" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,93,195,559"/>
+<area shape="rect" id="node5" title=" " alt="" coords="63,5,137,45"/>
+<area shape="rect" id="node6" title=" " alt="" coords="219,306,341,346"/>
 </map>
