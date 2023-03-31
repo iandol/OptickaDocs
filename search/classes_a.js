@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ndotsstimulus_0',['ndotsStimulus',['../classndots_stimulus.html',1,'']]]
+  ['ndotsstimulus_1610',['ndotsStimulus',['../classndots_stimulus.html',1,'']]]
 ];

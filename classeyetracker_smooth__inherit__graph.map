@@ -1,0 +1,6 @@
+<map id="eyetrackerSmooth" name="eyetrackerSmooth">
+<area shape="rect" id="node1" title="Smoothes incoming eye sample data." alt="" coords="92,131,259,267"/>
+<area shape="rect" id="node3" href="$classi_rec_manager.html" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="5,315,161,671"/>
+<area shape="rect" id="node4" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="186,315,349,671"/>
+<area shape="rect" id="node2" title=" " alt="" coords="142,5,209,83"/>
+</map>

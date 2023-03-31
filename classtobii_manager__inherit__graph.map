@@ -1,5 +1,7 @@
 <map id="tobiiManager" name="tobiiManager">
-<area shape="rect" id="node1" title="Manages the Tobii eyetrackers." alt="" coords="9,607,191,969"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,93,195,559"/>
-<area shape="rect" id="node3" title=" " alt="" coords="63,5,137,45"/>
+<area shape="rect" id="node1" title="Manages the Tobii eyetrackers." alt="" coords="98,1144,261,1500"/>
+<area shape="rect" id="node2" href="$classeyetracker_core.html" title=" " alt="" coords="5,696,167,1096"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="19,131,209,648"/>
+<area shape="rect" id="node4" title=" " alt="" coords="146,5,213,83"/>
+<area shape="rect" id="node5" href="$classeyetracker_smooth.html" title="Smoothes incoming eye sample data." alt="" coords="191,828,357,964"/>
 </map>

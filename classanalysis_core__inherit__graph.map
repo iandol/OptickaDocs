@@ -1,10 +1,10 @@
 <map id="analysisCore" name="analysisCore">
-<area shape="rect" id="node1" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="409,607,606,1292"/>
-<area shape="rect" id="node4" href="$class_l_f_p_analysis.html" title=" " alt="" coords="5,1362,196,1915"/>
-<area shape="rect" id="node5" href="$class_l_f_p_meta.html" title=" " alt="" coords="221,1450,383,1827"/>
-<area shape="rect" id="node6" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="407,1340,607,1937"/>
-<area shape="rect" id="node7" href="$classspike_analysis.html" title=" " alt="" coords="632,1355,823,1923"/>
-<area shape="rect" id="node8" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="847,1340,1047,1937"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="413,93,602,559"/>
-<area shape="rect" id="node3" title=" " alt="" coords="470,5,545,45"/>
+<area shape="rect" id="node1" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="409,696,606,1389"/>
+<area shape="rect" id="node4" href="$class_l_f_p_analysis.html" title=" " alt="" coords="5,1459,196,2021"/>
+<area shape="rect" id="node5" href="$class_l_f_p_meta.html" title=" " alt="" coords="221,1547,383,1933"/>
+<area shape="rect" id="node6" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="407,1437,607,2043"/>
+<area shape="rect" id="node7" href="$classspike_analysis.html" title=" " alt="" coords="632,1452,823,2028"/>
+<area shape="rect" id="node8" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="847,1437,1047,2043"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="413,131,602,648"/>
+<area shape="rect" id="node3" title=" " alt="" coords="474,5,541,83"/>
 </map>

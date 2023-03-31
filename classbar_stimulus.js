@@ -2,8 +2,6 @@ var classbar_stimulus =
 [
     [ "barStimulus", "classbar_stimulus.html#ae48353230ed1ce535f11c6f823bae1fc", null ],
     [ "animate", "classbar_stimulus.html#af7d7919370df0b723c2f803f1b22ebe4", null ],
-    [ "barHeight", "classbar_stimulus.html#a50c0274f797bb0626197516492b867d8", null ],
-    [ "barWidth", "classbar_stimulus.html#a5d430de8328f844083cd938301fa4a83", null ],
     [ "colour2", "classbar_stimulus.html#a7c10d7e6d7228aac634cdca062dd8d7f", null ],
     [ "constructMatrix", "classbar_stimulus.html#a11cc724e03383e2b74cf09f621820c60", null ],
     [ "draw", "classbar_stimulus.html#a96b96e70ba8328c2e48c4aac2dd0cabd", null ],
@@ -28,6 +26,7 @@ var classbar_stimulus =
     [ "colour2", "classbar_stimulus.html#ad38b8908ff8f06172927e590e2eed7ca", null ],
     [ "contrast", "classbar_stimulus.html#a2617bc2298c5a902aea6c98fd4798f50", null ],
     [ "family", "classbar_stimulus.html#ae7aca62c757ff19f174157168e8834d7", null ],
+    [ "floatPrecision", "classbar_stimulus.html#a6a4dc5b191c0648eb8c2bf016eb17897", null ],
     [ "ignoreProperties", "classbar_stimulus.html#ac8a3868316d5bda57fda6f054e95470a", null ],
     [ "interpMethod", "classbar_stimulus.html#a5f8242019d9128099af606c5e063e5c7", null ],
     [ "interpMethodList", "classbar_stimulus.html#a464c149780c93e01a68657bf2740669e", null ],
@@ -43,5 +42,8 @@ var classbar_stimulus =
     [ "sf", "classbar_stimulus.html#a3f04afb7c8228958162cd25f820bd216", null ],
     [ "texture2", "classbar_stimulus.html#a4cf9f45c91335dcc62f95fe84a231a26", null ],
     [ "type", "classbar_stimulus.html#af7dbfdf96cc1d10da80ad467c6b867c5", null ],
-    [ "typeList", "classbar_stimulus.html#a5281b771147011f82dc60f3377aff65b", null ]
+    [ "typeList", "classbar_stimulus.html#a5281b771147011f82dc60f3377aff65b", null ],
+    [ "visibleFlip", "classbar_stimulus.html#a8fb3691b0df13a6cf03875d497be0fdc", null ],
+    [ "visibleRate", "classbar_stimulus.html#ac478074ec5efb3cbb44ec6f996c6dfcb", null ],
+    [ "visibleTick", "classbar_stimulus.html#a891010eb041770c3d556d2a82de11535", null ]
 ];

@@ -12,6 +12,8 @@ var classspot_stimulus =
     [ "set_contrastOut", "classspot_stimulus.html#a411dd8900e54d62614c40dd0cdfe9cac", null ],
     [ "set_flashColourOut", "classspot_stimulus.html#ad3c58b8e43f1f2d522b01eb1205ab4e4", null ],
     [ "set_sizeOut", "classspot_stimulus.html#a9018aca89ac4dd55c9211b9a1b249606", null ],
+    [ "set_xPositionOut", "classspot_stimulus.html#a83cc7d613cfa9fefb6909e4cf87cbbbb", null ],
+    [ "set_yPositionOut", "classspot_stimulus.html#abb01dfc60dfe60d66f08ae273f1baabf", null ],
     [ "setup", "classspot_stimulus.html#a12d0bcdc291c0d4fe528d409d07b6c3c", null ],
     [ "setupFlash", "classspot_stimulus.html#adecbae334709d04e3c29d0d3764256d2", null ],
     [ "update", "classspot_stimulus.html#a18f00a4701c02c33a51e96411e0ac233", null ],

@@ -26,6 +26,8 @@ var classfixation_cross_stimulus =
     [ "flashTime", "classfixation_cross_stimulus.html#a1296a2a4782e535a4099c02a1ca75c9f", null ],
     [ "ignorePropertiesUI", "classfixation_cross_stimulus.html#a7baf4e48228f1019d572ac008ecb9da6", null ],
     [ "lineWidth", "classfixation_cross_stimulus.html#a9bf910f03e18d407e26b10ed12a213fe", null ],
+    [ "pulseFrequency", "classfixation_cross_stimulus.html#a77561a39092c2f846225f138d706430c", null ],
+    [ "pulseRange", "classfixation_cross_stimulus.html#a53bb576c8b39baa769f02c6e79573bf6", null ],
     [ "showDisk", "classfixation_cross_stimulus.html#a2cd18ac55a0efbb5587c2ca108f729a7", null ],
     [ "type", "classfixation_cross_stimulus.html#a85d6a16480b4b6baefafee4040f84c50", null ]
 ];

@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Demonstration of a command-driven setup of an Opticka MOC Experiment.</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-11-03"><meta name="DC.source" content="optickaTest.m"><style type="text/css">
+      --><title>Demonstration of a command-driven setup of an Opticka MOC Experiment.</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-03-31"><meta name="DC.source" content="optickaTest.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -67,7 +67,7 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h1>Demonstration of a command-driven setup of an Opticka MOC Experiment.</h1><!--introduction--><p>Opticka is an object-oriented framework plus optional GUI for the Psychophysics toolbox, allowing randomised interleaved presentation of parameter-varying stimuli specified in experimenter-relevant values. It is designed to work on Linux, macOS or Windows and can interface via strobed words and ethernet with external harware for recording neurophysiological data.</p><p>In this example of a Methods of Constants (MOC) experiment, stimulus objects (myStims object), stimulus sequence (myTask object), and screenManager (myScreen object) are passed to the runExperiment class to run the experiment.</p><p>Opticka also has a UI (type opticka in the command window), which is a visual manager of the objects introduced here. The UI also controls other functions such as calibration, protocol loading/saving and communication with neurophysiological equipment via LabJack and ethernet. There is also an independent receptive field mapper (rfMapper) that uses mouse control to probe receptive fields for vision experiments and generates drawn hand maps.</p><p>The source of this file can be found at: <a href="https://github.com/iandol/opticka/blob/master/optickatest.m">https://github.com/iandol/opticka/blob/master/optickatest.m</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Initial clear up of previous runs</a></li><li><a href="#2">Stimulus Initialisation</a></li><li><a href="#12">Task Initialisation</a></li><li><a href="#13">Variable 1</a></li><li><a href="#14">Variable 2</a></li><li><a href="#15">Variable 3</a></li><li><a href="#16">Randomisation</a></li><li><a href="#17">Visual Trial List</a></li><li><a href="#18">Setup screenManager Object</a></li><li><a href="#19">Setup runExperiment Object</a></li><li><a href="#23">Manual control</a></li></ul></div><h2 id="1">Initial clear up of previous runs</h2><p>Make sure we start in a clean environment, not essential</p><pre class="codeinput">clear <span class="string">myStims</span> <span class="string">myTask</span> <span class="string">myExp</span> <span class="string">myScreen</span>
+  </style></head><body><div class="content"><h1>Demonstration of a command-driven setup of an Opticka MOC Experiment.</h1><!--introduction--><p>Opticka is an object-oriented framework plus optional GUI for the Psychophysics toolbox, allowing randomised interleaved presentation of parameter-varying stimuli specified in experimenter-relevant values. It is designed to work on Linux, macOS or Windows and can interface via strobed words and ethernet with external harware for recording neurophysiological data.</p><p>In this example of a Methods of Constants (MOC) experiment, stimulus objects (myStims object), stimulus sequence (myTask object), and screenManager (myScreen object) are passed to the runExperiment class to run the experiment.</p><p>Opticka also has a UI (type opticka in the command window), which is a visual manager of the objects introduced here. The UI also controls other functions such as calibration, protocol loading/saving and communication with neurophysiological equipment via LabJack and ethernet. There is also an independent receptive field mapper (rfMapper) that uses mouse control to probe receptive fields for vision experiments and generates drawn hand maps.</p><p>The source of this file can be found at: <a href="https://github.com/iandol/opticka/blob/master/optickatest.m">https://github.com/iandol/opticka/blob/master/optickatest.m</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Initial clear up of previous runs</a></li><li><a href="#2">Stimulus Initialisation</a></li><li><a href="#13">Task Initialisation</a></li><li><a href="#14">Variable 1</a></li><li><a href="#15">Variable 2</a></li><li><a href="#16">Variable 3</a></li><li><a href="#17">Randomisation</a></li><li><a href="#18">Setup screenManager Object</a></li><li><a href="#19">Setup runExperiment Object</a></li><li><a href="#21">Visual Trial List</a></li><li><a href="#24">Manual control</a></li></ul></div><h2 id="1">Initial clear up of previous runs</h2><p>Make sure we start in a clean environment, not essential</p><pre class="codeinput">clear <span class="string">myStims</span> <span class="string">myTask</span> <span class="string">myExp</span> <span class="string">myScreen</span>
 sca <span class="comment">%PTB screen clear all</span>
 </pre><h2 id="2">Stimulus Initialisation</h2><p>Set up 11 different stimuli. Values are in degrees, cycles/deg, deg/s etc. Colour is represented using floating point values from 0 - 1 and all objects accept an opacity (alpha) value. Each stimulus is a class object with a series of properties ('sf', 'colour' etc.) that you can set up by simply passing property name : value pairs into the stimulus class. You can also pass these in as a structure if you prefer. If you do not pass any properties, default values will be used without problems.</p><p>First we create a stimulus manager object that collects and handles groups of stimuli as if they were a single 'thing', so for example when you use the draw method on a metaStimulus myStims.draw(), it tells each of its child stimuli to draw in order</p><pre class="codeinput">myStims = metaStimulus();
 </pre><p>Stimului are made using stimulus classes. Each class inherits from baseStimulus, which has 5 abstract classes ALL stimuli must implement: [1] SETUP(screenManager) - takes a screenManager and sets up the stimulus properties ready for display. [2] DRAW() - draws the stimulus [3] ANIMATE() - for each stimulus class, animate takes speed, tf etc. and updates the position onscreen for the next flip. [4] UPDATE() - if any parameters have changed (size, position, colour etc.), then update ensures all properties are properly updated. [5] RESET() - returns the object back to its pre-setup state.</p><pre class="codeinput"><span class="comment">%The first few stimuli are gratings / gabors of varying kinds.</span>
@@ -106,17 +106,20 @@ myStims{4}=gratingStimulus(<span class="string">'type'</span>, <span class="stri
 	<span class="string">'name'</span>,<span class="string">'Flashing disc'</span>);
 </pre><p>a picture stimulus, by default this loads a picture from the opticka stimulus directory; you can rotate it, scale it etc and drift it across screen as in this case. Size is in degrees, scaling the whole picture</p><pre class="codeinput">myStims{10}=imageStimulus(<span class="string">'speed'</span>,2,<span class="string">'xPosition'</span>,-10,<span class="string">'yPosition'</span>,10,<span class="string">'size'</span>,4,<span class="keyword">...</span>
 	<span class="string">'name'</span>,<span class="string">'Image'</span>);
-</pre><p>a movie stimulus, by default this loads a movie from the opticka stimulus directory; you can rotate it, scale it etc and drift it across screen as in this case. Size is in degrees, scaling the whole movie</p><pre class="codeinput">myStims{11}=movieStimulus(<span class="string">'speed'</span>, 1, <span class="string">'xPosition'</span>, -7, <span class="string">'yPosition'</span>, -10,<span class="keyword">...</span>
-	<span class="string">'size'</span>, 4, <span class="string">'enforceBlending'</span>, true,<span class="keyword">...</span>
-	<span class="string">'name'</span>, <span class="string">'AVI transparent movie'</span>);
-</pre><h2 id="12">Task Initialisation</h2><p>The taskSequence class defines a stimulus sequence (task) which is composed of randomised stimulus parameter changes (called variables) repeated over a set of blocks. A trial is an individual stimulus presentation. This example has three different variables changing over 3*2*2 values (12 unique trials) which is then repeated over 2 blocks for 24 trials in total.</p><p>NOTE: for more complex behavioural tasks, Opticka uses a finite state machine to generate flexible experimental protocols, see stateMachine() for more details.</p><pre class="codeinput">myTask = taskSequence(); <span class="comment">%new taskSequence object instance</span>
+</pre><p>a picture stimulus, by default this loads a picture from the opticka stimulus directory; you can rotate it, scale it etc and drift it across screen as in this case. Size is in degrees, scaling the whole picture</p><pre class="codeinput">myStims{11}=imageStimulus(<span class="string">'speed'</span>,0,<span class="string">'xPosition'</span>,0,<span class="string">'yPosition'</span>,5,<span class="string">'size'</span>,5,<span class="keyword">...</span>
+	<span class="string">'fileName'</span>,[myStims.paths.root <span class="string">'/stimuli/star.png'</span>],<span class="keyword">...</span>
+	<span class="string">'modulateColour'</span>,[0.7 0.7 0.2], <span class="string">'name'</span>, <span class="string">'Image'</span>);
+</pre><p>a movie stimulus, by default this loads a movie from the opticka stimulus directory; you can rotate it, scale it etc and drift it across screen as in this case. Size is in degrees, scaling the whole movie</p><pre class="codeinput">myStims{12}=movieStimulus(<span class="string">'speed'</span>, 1, <span class="string">'xPosition'</span>, -7, <span class="string">'yPosition'</span>, -10,<span class="keyword">...</span>
+	<span class="string">'size'</span>, 4, <span class="string">'name'</span>, <span class="string">'AVI transparent movie'</span>);
+</pre><pre class="codeoutput">---&gt; movieStimulus: Didn't find specified file so replacing with default movie!
+</pre><h2 id="13">Task Initialisation</h2><p>The taskSequence class defines a stimulus sequence (task) which is composed of randomised stimulus parameter changes (called variables) repeated over a set of blocks. A trial is an individual stimulus presentation. This example has three different variables changing over 3*2*2 values (12 unique trials) which is then repeated over 2 blocks for 24 trials in total.</p><p>NOTE: for more complex behavioural tasks, Opticka uses a finite state machine to generate flexible experimental protocols, see stateMachine() for more details.</p><pre class="codeinput">myTask = taskSequence(); <span class="comment">%new taskSequence object instance</span>
 myTask.nBlocks = 2; <span class="comment">%number of blocks</span>
 myTask.trialTime = 2; <span class="comment">%time of stimulus display: 2 seconds</span>
 myTask.isTime = 0.25; <span class="comment">%inter-trial time: 0.25 seconds</span>
 myTask.ibTime=0.5; <span class="comment">%inter-block time: 1 second</span>
 myTask.realTime = true; <span class="comment">%we use real time for switching trials, false uses a tick timer updated every flip</span>
-</pre><h2 id="13">Variable 1</h2><p>Our first variable is angle, applied to 4 stimuli, randomly selected from values of 0 45 and 90 degrees</p><pre class="codeinput">myTask.nVar(1).name = <span class="string">'angle'</span>;
-myTask.nVar(1).stimulus = [1 3 8 10 11];
+</pre><h2 id="14">Variable 1</h2><p>Our first variable is angle, applied to 4 stimuli, randomly selected from values of 0 45 and 90 degrees</p><pre class="codeinput">myTask.nVar(1).name = <span class="string">'angle'</span>;
+myTask.nVar(1).stimulus = [1 3 8 10 11 12];
 myTask.nVar(1).values = [0 45 90];
 <span class="comment">% the next two parameters allow us to link a stimulus with</span>
 <span class="comment">% an offset; for example you could set stimulus 1 to values [1 2 3]</span>
@@ -124,40 +127,43 @@ myTask.nVar(1).values = [0 45 90];
 <span class="comment">% stimulus would change through [3 4 5];</span>
 myTask.nVar(1).offsetstimulus = [5 6];
 myTask.nVar(1).offsetvalue = 90;
-</pre><h2 id="14">Variable 2</h2><p>Our second variable is contrast, applied to stimuli 2 / 3 / 5, randomly selected from values of 0.025 and 0.1</p><pre class="codeinput">myTask.nVar(2).name = <span class="string">'contrast'</span>;
+</pre><h2 id="15">Variable 2</h2><p>Our second variable is contrast, applied to stimuli 2 / 3 / 5, randomly selected from values of 0.025 and 0.1</p><pre class="codeinput">myTask.nVar(2).name = <span class="string">'contrast'</span>;
 myTask.nVar(2).stimulus = [2 3 5];
 myTask.nVar(2).values = [0.15 0.55];
-</pre><h2 id="15">Variable 3</h2><p>Our third variable is X position, applied to stimulus 2 and 7, randomly selected from values of -3 and 3 degrees from visual center of screen</p><pre class="codeinput">myTask.nVar(3).name = <span class="string">'xPosition'</span>;
+</pre><h2 id="16">Variable 3</h2><p>Our third variable is X position, applied to stimulus 2 and 7, randomly selected from values of -3 and 3 degrees from visual center of screen</p><pre class="codeinput">myTask.nVar(3).name = <span class="string">'xPosition'</span>;
 myTask.nVar(3).stimulus = [2 7];
 myTask.nVar(3).values = [-6 6];
 <span class="comment">% the next two parameters allow us to link a stimulus with</span>
 <span class="comment">% an offset; for example you could set stimulus 1 to values [1 2 3]</span>
 <span class="comment">% and if offsetvalue was 2 and offsetstimulus was 2 then the second</span>
 <span class="comment">% stimulus would change through [3 4 5]; in this case we offset stimulus 10</span>
-<span class="comment">% to +1 the values above i.e. [-4 8]</span>
-myTask.nVar(3).offsetstimulus = 10;
+<span class="comment">% to +2 the values above i.e. [-4 8]</span>
+myTask.nVar(3).offsetstimulus = [10];
 myTask.nVar(3).offsetvalue = 2;
-</pre><h2 id="16">Randomisation</h2><p>We call the method to randomise the trials in a block structure</p><pre class="codeinput">randomiseTask(myTask);
-</pre><pre class="codeoutput">---&gt; taskSequence &lt;taskSequence#1CB6CF0B8&gt;: Took 19.976 ms | randomiseTask
-</pre><h2 id="17">Visual Trial List</h2><p>Lets print out a table of the stimulus properties for every trial</p><pre class="codeinput">showLog(myTask);
-</pre><img vspace="5" hspace="5" src="optickaTest_01.png" alt=""> <h2 id="18">Setup screenManager Object</h2><p>we initialise the object with parameter options to open the PTB screen with. Note distance and pixels per cm define the resultant geometry &gt; pixel mappings. You can set several screen parameters, windowing, blending etc. hideFlash uses a trick from Mario to set the CLqUT to the task background colour so you don't see the black flash on PTB screen initialisation.</p><pre class="codeinput">myScreen = screenManager(<span class="string">'distance'</span>, 57.3,<span class="keyword">...</span><span class="comment"> %display distance from observer</span>
-	<span class="string">'pixelsPerCm'</span>, 27,<span class="keyword">...</span><span class="comment"> %calibration value for pixel density, measure using calibrateSize()</span>
+</pre><h2 id="17">Randomisation</h2><p>We call the method to randomise the trials in a block structure</p><pre class="codeinput">randomiseTask(myTask);
+</pre><pre class="codeoutput">---&gt; taskSequence &lt;taskSequence#165322E1E&gt;: Took 58.923 ms | randomiseTask
+</pre><h2 id="18">Setup screenManager Object</h2><p>we initialise the object with parameter options to open the PTB screen with. Note distance and pixels per cm define the resultant geometry &gt; pixel mappings. You can set several screen parameters, windowing, blending etc. hideFlash uses a trick from Mario to set the CLqUT to the task background colour so you don't see the black flash on PTB screen initialisation.</p><pre class="codeinput">myScreen = screenManager(<span class="string">'distance'</span>, 57.3,<span class="keyword">...</span><span class="comment"> %display distance from observer</span>
+	<span class="string">'pixelsPerCm'</span>, 36,<span class="keyword">...</span><span class="comment"> %calibration value for pixel density, measure using calibrateSize()</span>
 	<span class="string">'backgroundColour'</span>, [0.5 0.5 0.5],<span class="keyword">...</span><span class="comment"> %initial background colour</span>
 	<span class="string">'blend'</span>, true,<span class="keyword">...</span><span class="comment"> %enable OpenGL blending, you can also set blend modes when needed</span>
-	<span class="string">'srcMode'</span>, <span class="string">'GL_SRC_ALPHA'</span>,<span class="keyword">...</span><span class="comment"> %src blend mode</span>
-	<span class="string">'dstMode'</span>, <span class="string">'GL_ONE_MINUS_SRC_ALPHA'</span>,<span class="keyword">...</span><span class="comment"> %dst blend mode</span>
-	<span class="string">'debug'</span>, false,<span class="keyword">...</span>
+	<span class="string">'debug'</span>, false,<span class="keyword">...</span><span class="comment"> %enable debug mode?</span>
 	<span class="string">'windowed'</span>, [],<span class="keyword">...</span><span class="comment"> %set to a widthxheight for debugging i.e. [800 600]; set to empty for fullscreen</span>
 	<span class="string">'bitDepth'</span>, <span class="string">'8bit'</span>);
 <span class="keyword">if</span> ismac; myScreen.useRetina = true; <span class="keyword">end</span>
 </pre><h2 id="19">Setup runExperiment Object</h2><p>We now pass our stimulus screen and sequence objects to the runExperiment class. runExperiment contains the runMOC() method that actually runs the task.</p><pre class="codeinput">myExp = runExperiment(<span class="string">'stimuli'</span>, myStims,<span class="keyword">...</span><span class="comment"> %stimulus objects</span>
 	<span class="string">'task'</span>, myTask,<span class="keyword">...</span><span class="comment"> %task design object</span>
 	<span class="string">'screen'</span>, myScreen,<span class="keyword">...</span><span class="comment"> %screen manager object</span>
-	<span class="string">'debug'</span>, false,<span class="keyword">...</span><span class="comment"> %disable debug mode</span>
+	<span class="string">'debug'</span>, false,<span class="keyword">...</span><span class="comment"> %use debug mode?</span>
 	<span class="string">'verbose'</span>, false); <span class="comment">%minimal verbosity</span>
-</pre><p>run our method of constants (MOC) experiment; to exit early, press [q] during the interstimulus period.</p><pre class="codeinput">runMOC(myExp);
-</pre><pre class="codeoutput">
+</pre><p>run our method of constants (MOC) experiment; to exit early, press [q] during the interstimulus period.</p><pre class="codeinput">opts.askForComments = false;
+runMOC(myExp, opts);
+</pre><pre class="codeoutput">---&gt;arduinoManager: Ports available: /dev/ttyS0
+---&gt; taskSequence &lt;taskSequence#165322E1E&gt;: Took 21.812 ms | randomiseTask
+---&gt; taskSequence.initialise: Initialised!
+===&gt;&gt;&gt; Save initial state: /tmp//Simulcra-2023-3-31-14-22-57.mat
+
 ---&gt; screenManager: Normal Screen Preferences used.
+PsychVulkanCore-ERROR: Vulkan instance creation failed: -1
 BitsPlusPlus: Could not find a Bits# config file under [/home/cog5/.Psychtoolbox/BitsSharpConfig.txt]. Assuming a Bits+ device instead of a Bits# is connected.
 BitsPlusPlus: Please create a config file under this name if you have a Bits# and want to use it as Bits# instead of as a Bits+.
 BitsPlusPlus: The most simple way is to create an empty file. A more robust way is to store the name of the Bits# serial port
@@ -166,8 +172,8 @@ BitsPlusPlus: in the first line of the text file, e.g., COM5 [Windows], or /dev/
 ---&gt; screenManager: Internal processing set to: 8 bits
 
 
-PTB-INFO: This is Psychtoolbox-3 for GNU/Linux X11, under Matlab 64-Bit (Version 3.0.18 - Build date: Jun 27 2022).
-PTB-INFO: OS support status: Linux 6.0.3-060003-generic Supported.
+PTB-INFO: This is Psychtoolbox-3 for GNU/Linux X11, under Matlab 64-Bit (Version 3.0.19 - Build date: Feb 19 2023).
+PTB-INFO: OS support status: Linux 6.2.7-060207-generic Supported.
 PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
 PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
 PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
@@ -175,14 +181,14 @@ PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root fol
 PTB-INFO: For information about paid support, support memberships and other commercial services, please type
 PTB-INFO: 'PsychPaidSupportAndServices'.
 
-PTB-INFO: Connected to Advanced Micro Devices, Inc. [AMD/ATI] Baffin [Radeon Pro WX 4100] GPU with DCE-11.0 display engine [6 heads].
+PTB-INFO: Connected to NVidia TU104 [GeForce RTX 2070 SUPER] GPU of NV-160 family with 4 display heads.
 
 
-PTB-INFO: OpenGL-Renderer is AMD :: AMD Radeon Pro WX 4100 (polaris11, LLVM 14.0.6, DRM 3.48, 6.0.3-060003-generic) :: 4.6 (Compatibility Profile) Mesa 22.3.0-devel (git-2a63387 2022-11-02 jammy-oibaf-ppa)
-PTB-INFO: VBL startline = 2160 , VBL Endline = 2220
-PTB-INFO: Measured monitor refresh interval from beamposition = 16.667653 ms [59.996449 Hz].
-PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667652 ms [59.996453 Hz]. (50 valid samples taken, stddev=0.000674 ms.)
-PTB-INFO: Reported monitor refresh interval from operating system = 16.667778 ms [59.995998 Hz].
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2 :: 4.6.0 NVIDIA 525.89.02
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1143
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.334593 ms [119.981865 Hz].
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.334079 ms [119.989266 Hz]. (50 valid samples taken, stddev=0.030685 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.334653 ms [119.981003 Hz].
 PTB-INFO: Small deviations between reported values are normal and no reason to worry.
 PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 1025 ...
 PTB-INFO: Will use 8 bits per color component framebuffer for stimulus drawing.
@@ -207,7 +213,7 @@ Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox
 Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
 Compiling all shaders matching /home/cog5/Code/opticka/stimuli/invert.frag * into a GLSL program.
 Building a fragment shader:Reading shader from file /home/cog5/Code/opticka/stimuli/invert.frag ...
----&gt; Red/green grating &lt;colourGratingStimulus#1CB6C6F4B&gt;: Reset sigma to -1 as type=squarewave | SETUP
+---&gt; Red/green grating &lt;colourGratingStimulus#1653192EE&gt;: Reset sigma to -1 as type=squarewave | SETUP
 Compiling all shaders matching ColorGratingShader * into a GLSL program.
 Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/ColorGratingShader.frag.txt ...
 Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/ColorGratingShader.vert.txt ...
@@ -219,64 +225,47 @@ Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox
 Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
 
 ---&gt;&gt;&gt; movieStimulus: /home/cog5/Code/opticka/stimuli/monkey-dance.avi
-	0.92 seconds duration, 25.000000 fps, w x h = 320 x 320, in 87ms
+	0.92 seconds duration,  frames @ 25.000000 fps, w x h = 320 x 320, in 158ms
 	Blocking: 0 | Loop: 1 | Preloadsecs: -1 | Pixelformat:  | Flags: 
----&gt; : Parsing input argument | name
 
 ===&gt;&gt;&gt; No strobe output I/O...
----&gt; : Parsing input argument | name
 ===&gt; No reward TTLs will be sent...
----&gt; taskSequence.initialise: Initialised!
+--&gt; dataConnection: Trying to close local connection... | close Method
+--&gt; dataConnection: Cleaning up now... | dataConnection delete Method
+--&gt; dataConnection: Trying to close local connection... | close Method
+--&gt; dataConnection: Configuring setting in constructor | protocol
 
 ===&gt;&gt;&gt; Warming up the GPU and I/O systems... &lt;&lt;&lt;===
-START @ Blank:1 | B:1 R:1 [1/24] | V: 4 | Time: 0.000 (0)  &gt; angle: 0.000 &gt; contrast: 0.550 &gt; xPosition:
-6.000
-
-@ Blank:1 | B:1 R:1 [1/24] | V: 4 | Time: 0.000 (2)  &gt; angle: 0.000 &gt; contrast: 0.550 &gt; xPosition:
-6.000
-
-IS TIME: 1
-@ Blank:1 | B:1 R:2 [2/24] | V: 3 | Time: 2.267 (135)  &gt; angle: 0.000 &gt; contrast: 0.550 &gt;
-xPosition: -6.000
-
-IS TIME: 1
-@ Blank:1 | B:1 R:3 [3/24] | V: 5 | Time: 5.267 (314)  &gt; angle: 45.000 &gt; contrast: 0.150 &gt;
-xPosition: -6.000
-
-IS TIME: 1
-@ Blank:1 | B:1 R:4 [4/24] | V: 1 | Time: 8.267 (494)  &gt; angle: 0.000 &gt; contrast: 0.150 &gt;
-xPosition: -6.000
-
-IS TIME: 1
-@ Blank:1 | B:1 R:5 [5/24] | V: 10 | Time: 11.267 (674)  &gt; angle: 90.000 &gt; contrast: 0.150 &gt;
+PTB-INFO: Movie playback had to drop 1 frames of movie 0 to keep playback in sync.
+START @ Blank:1 | B:1 R:1 [1/24] | V: 10 | Time: 0.000 (0)  &gt; angle: 90.000 &gt; contrast: 0.150 &gt;
 xPosition: 6.000
 
-IS TIME: 1
-@ Blank:1 | B:1 R:6 [6/24] | V: 6 | Time: 14.268 (854)  &gt; angle: 45.000 &gt; contrast: 0.150 &gt;
+===&gt;IN BLANK: Blank:1 | B:1 R:1 [1/24] | V: 10 | Time: 0.000 (1)  &gt; angle: 90.000 &gt; contrast: 0.150 &gt;
 xPosition: 6.000
-
-IS TIME: 1
-@ Blank:1 | B:1 R:7 [7/24] | V: 12 | Time: 17.268 (1034)  &gt; angle: 90.000 &gt; contrast: 0.550 &gt;
+===&gt;IN BLANK: Blank:1 | B:1 R:2 [2/24] | V: 3 | Time: 2.267 (265)  &gt; angle: 0.000 &gt; contrast: 0.550 &gt;
+xPosition: -6.000
+===&gt;IN BLANK: Blank:1 | B:1 R:3 [3/24] | V: 2 | Time: 5.259 (620)  &gt; angle: 0.000 &gt; contrast: 0.150 &gt;
 xPosition: 6.000
-
-IS TIME: 1
-@ Blank:1 | B:1 R:8 [8/24] | V: 11 | Time: 20.268 (1214)  &gt; angle: 90.000 &gt; contrast: 0.550 &gt;
+===&gt;IN BLANK: Blank:1 | B:1 R:4 [4/24] | V: 5 | Time: 8.260 (979)  &gt; angle: 45.000 &gt; contrast: 0.150 &gt;
 xPosition: -6.000
-
-IS TIME: 1
-@ Blank:1 | B:1 R:9 [9/24] | V: 7 | Time: 23.268 (1394)  &gt; angle: 45.000 &gt; contrast: 0.550 &gt;
+===&gt;IN BLANK: Blank:1 | B:1 R:5 [5/24] | V: 12 | Time: 11.260 (1337)  &gt; angle: 90.000 &gt; contrast: 0.550 &gt;
+xPosition: 6.000
+===&gt;IN BLANK: Blank:1 | B:1 R:6 [6/24] | V: 11 | Time: 14.261 (1695)  &gt; angle: 90.000 &gt; contrast: 0.550 &gt;
 xPosition: -6.000
-
+===&gt;IN BLANK: Blank:1 | B:1 R:7 [7/24] | V: 7 | Time: 17.261 (2054)  &gt; angle: 45.000 &gt; contrast: 0.550 &gt;
+xPosition: -6.000
+===&gt;IN BLANK: Blank:1 | B:1 R:8 [8/24] | V: 8 | Time: 20.261 (2413)  &gt; angle: 45.000 &gt; contrast: 0.550 &gt;
+xPosition: 6.000
 
 ---&gt; screenManager: RESET GAMMA TABLES
 ---&gt; Number of dropped movie frames: 0
 
 
----&gt; screenManager 1CB7AC6E3: Closing screen = 0, Win = 10, Kind = 1
+---&gt; screenManager 16532CD1F: Closing screen = 1, Win = 10, Kind = 1
 
 
 INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
-INFO: a total of 4 times out of a total of 1528 flips during this session.
+INFO: a total of 26 times out of a total of 2719 flips during this session.
 
 INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
 INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
@@ -285,9 +274,19 @@ INFO: of timing behaviour than a hard reliable measurement. Large numbers may in
 INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
 INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
 
----&gt; screenManager &lt;screenManager#1CB7AC6E3&gt;: Playing failed! | playMovie method
-</pre><p>Plot a timing log of every frame against the stimulus on/off times:</p><pre class="codeinput">showTimingLog(myExp);
-</pre><img vspace="5" hspace="5" src="optickaTest_02.png" alt=""> <p>The image above is a graphical timing plot of every frame and whether any frames were dropped during stimulus presentation. This will not consider dropped frames during the GPU warming or inter trial time as dropped as the display is blank and we are using absolute time values for our trial transitions. Opticka actually resets and updates the stimulus objects on the second and subsequent frames of the inter trial blank, this forces any computation of stimulus parameter to when it doesn't matter; but note for complex stimuli a frame or two may be dropped during the blank and so ensure you set the inter trial time &gt; than the dropped frames!</p><h2 id="23">Manual control</h2><p>You don't need to use opticka's stimuli via runExperiment(), you can use them in your own experiments, lets have a quick look here, set runThis to true.</p><pre class="codeinput">runThis = false;
+
+
+#####################
+===&gt;&gt;&gt; SAVED DATA to: /home/cog5/OptickaFiles/SavedData/Simulcra-2023-3-31-14-22-57.mat
+#####################
+
+
+!!!&gt;&gt;&gt; &gt;&gt;&gt; &gt;&gt;&gt; There were 1 MISSED FRAMES &lt;&lt;&lt; &lt;&lt;&lt; &lt;&lt;&lt;!!!
+--&gt; dataConnection: Cleaning up now... | dataConnection delete Method
+--&gt; dataConnection: Trying to close local connection... | close Method
+</pre><h2 id="21">Visual Trial List</h2><p>Lets print out a table of the stimulus properties for every trial</p><pre class="codeinput">showTable(myTask);
+</pre><img vspace="5" hspace="5" src="optickaTest_01.png" alt=""> <p>Plot a timing log of every frame against the stimulus on/off times:</p><pre class="codeinput">showTimingLog(myExp);
+</pre><img vspace="5" hspace="5" src="optickaTest_02.png" alt=""> <img vspace="5" hspace="5" src="optickaTest_03.png" alt=""> <p>The image above is a graphical timing plot of every frame and whether any frames were dropped during stimulus presentation. This will not consider dropped frames during the GPU warming or inter trial time as dropped as the display is blank and we are using absolute time values for our trial transitions. Opticka actually resets and updates the stimulus objects on the second and subsequent frames of the inter trial blank, this forces any computation of stimulus parameter to when it doesn't matter; but note for complex stimuli a frame or two may be dropped during the blank and so ensure you set the inter trial time &gt; than the dropped frames!</p><h2 id="24">Manual control</h2><p>You don't need to use opticka's stimuli via runExperiment(), you can use them in your own experiments, lets have a quick look here, set runThis to true to run the following code:</p><pre class="codeinput">runThis = false;
 <span class="keyword">if</span> ~runThis; <span class="keyword">return</span>; <span class="keyword">end</span>
 
 <span class="comment">% We'll use the movie stimulus, and run it on its own, using its methods</span>
@@ -296,7 +295,7 @@ WaitSecs(<span class="string">'YieldSecs'</span>,2);
 reset(myStims); <span class="comment">% reset them back to their defaults</span>
 
 <span class="comment">%stimulus</span>
-myMovie = myStims{11}; <span class="comment">% the movie stimulus from above</span>
+myMovie = myStims{12}; <span class="comment">% the movie stimulus from above</span>
 myMovie.xPosition = 0; myMovie.yPosition = 0;
 myMovie.speed = 5;
 myMovie.size = 0; <span class="comment">%if size is zero, then native dimensions are used.</span>
@@ -317,7 +316,7 @@ setup(myMovie, myScreen); <span class="comment">%setup the stimulus with the scr
 <span class="keyword">end</span>
 reset(myMovie);
 close(myScreen);
-</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+</pre><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Demonstration of a command-driven setup of an Opticka MOC Experiment.
 % Opticka is an object-oriented framework plus optional GUI for the
@@ -444,12 +443,19 @@ myStims{10}=imageStimulus('speed',2,'xPosition',-10,'yPosition',10,'size',4,...
 	'name','Image');
 
 %%
+% a picture stimulus, by default this loads a picture from the opticka
+% stimulus directory; you can rotate it, scale it etc and drift it across screen as
+% in this case. Size is in degrees, scaling the whole picture
+myStims{11}=imageStimulus('speed',0,'xPosition',0,'yPosition',5,'size',5,...
+	'fileName',[myStims.paths.root '/stimuli/star.png'],...
+	'modulateColour',[0.7 0.7 0.2], 'name', 'Image');
+
+%%
 % a movie stimulus, by default this loads a movie from the opticka
 % stimulus directory; you can rotate it, scale it etc and drift it across screen as
 % in this case. Size is in degrees, scaling the whole movie
-myStims{11}=movieStimulus('speed', 1, 'xPosition', -7, 'yPosition', -10,...
-	'size', 4, 'enforceBlending', true,...
-	'name', 'AVI transparent movie');
+myStims{12}=movieStimulus('speed', 1, 'xPosition', -7, 'yPosition', -10,...
+	'size', 4, 'name', 'AVI transparent movie');
 
 %% Task Initialisation
 % The taskSequence class defines a stimulus sequence (task) which is composed
@@ -471,7 +477,7 @@ myTask.realTime = true; %we use real time for switching trials, false uses a tic
 % Our first variable is angle, applied to 4 stimuli, randomly
 % selected from values of 0 45 and 90 degrees
 myTask.nVar(1).name = 'angle';
-myTask.nVar(1).stimulus = [1 3 8 10 11];
+myTask.nVar(1).stimulus = [1 3 8 10 11 12];
 myTask.nVar(1).values = [0 45 90];
 % the next two parameters allow us to link a stimulus with
 % an offset; for example you could set stimulus 1 to values [1 2 3]
@@ -497,17 +503,13 @@ myTask.nVar(3).values = [-6 6];
 % an offset; for example you could set stimulus 1 to values [1 2 3]
 % and if offsetvalue was 2 and offsetstimulus was 2 then the second
 % stimulus would change through [3 4 5]; in this case we offset stimulus 10
-% to +1 the values above i.e. [-4 8]
-myTask.nVar(3).offsetstimulus = 10;
+% to +2 the values above i.e. [-4 8]
+myTask.nVar(3).offsetstimulus = [10];
 myTask.nVar(3).offsetvalue = 2;
 
 %% Randomisation
 % We call the method to randomise the trials in a block structure
 randomiseTask(myTask);
-
-%% Visual Trial List
-% Lets print out a table of the stimulus properties for every trial
-showLog(myTask);
 
 %% Setup screenManager Object
 % we initialise the object with parameter options to open the PTB screen
@@ -517,12 +519,10 @@ showLog(myTask);
 % task background colour so you don't see the black flash on PTB screen
 % initialisation.
 myScreen = screenManager('distance', 57.3,... %display distance from observer
-	'pixelsPerCm', 27,... %calibration value for pixel density, measure using calibrateSize()
+	'pixelsPerCm', 36,... %calibration value for pixel density, measure using calibrateSize()
 	'backgroundColour', [0.5 0.5 0.5],... %initial background colour
 	'blend', true,... %enable OpenGL blending, you can also set blend modes when needed
-	'srcMode', 'GL_SRC_ALPHA',... %src blend mode
-	'dstMode', 'GL_ONE_MINUS_SRC_ALPHA',... %dst blend mode
-	'debug', false,...
+	'debug', false,... %enable debug mode?
 	'windowed', [],... %set to a widthxheight for debugging i.e. [800 600]; set to empty for fullscreen
 	'bitDepth', '8bit');
 if ismac; myScreen.useRetina = true; end
@@ -534,13 +534,18 @@ if ismac; myScreen.useRetina = true; end
 myExp = runExperiment('stimuli', myStims,... %stimulus objects
 	'task', myTask,... %task design object
 	'screen', myScreen,... %screen manager object
-	'debug', false,... %disable debug mode
+	'debug', false,... %use debug mode?
 	'verbose', false); %minimal verbosity
 
 %%
 % run our method of constants (MOC) experiment; 
 % to exit early, press [q] during the interstimulus period.
-runMOC(myExp);
+opts.askForComments = false;
+runMOC(myExp, opts);
+
+%% Visual Trial List
+% Lets print out a table of the stimulus properties for every trial
+showTable(myTask);
 
 %%
 % Plot a timing log of every frame against the stimulus on/off times:
@@ -560,7 +565,7 @@ showTimingLog(myExp);
 %% Manual control
 % You don't need to use opticka's stimuli via runExperiment(), you can
 % use them in your own experiments, lets have a quick look here, set
-% runThis to true.
+% runThis to true to run the following code:
 
 runThis = false;
 if ~runThis; return; end
@@ -571,7 +576,7 @@ WaitSecs('YieldSecs',2);
 reset(myStims); % reset them back to their defaults
 
 %stimulus
-myMovie = myStims{11}; % the movie stimulus from above
+myMovie = myStims{12}; % the movie stimulus from above
 myMovie.xPosition = 0; myMovie.yPosition = 0;
 myMovie.speed = 5;
 myMovie.size = 0; %if size is zero, then native dimensions are used.

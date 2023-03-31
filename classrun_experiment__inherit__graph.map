@@ -1,5 +1,5 @@
 <map id="runExperiment" name="runExperiment">
-<area shape="rect" id="node1" title="The main experiment manager." alt="" coords="5,607,264,984"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="40,93,229,559"/>
-<area shape="rect" id="node3" title=" " alt="" coords="97,5,172,45"/>
+<area shape="rect" id="node1" title="The main experiment manager." alt="" coords="5,696,264,1111"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="40,131,229,648"/>
+<area shape="rect" id="node3" title=" " alt="" coords="101,5,168,83"/>
 </map>

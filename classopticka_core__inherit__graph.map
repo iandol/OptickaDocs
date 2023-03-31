@@ -1,49 +1,51 @@
 <map id="optickaCore" name="optickaCore">
-<area shape="rect" id="node1" title="optickaCore base class inherited by many other opticka classes." alt="" coords="3747,93,3937,559"/>
-<area shape="rect" id="node3" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="519,607,717,1292"/>
-<area shape="rect" id="node9" href="$classanimation_manager.html" title="ANIMATIONMANAGER TODO provides per frame paths for stimuli." alt="" coords="2083,805,2257,1094"/>
-<area shape="rect" id="node10" href="$classarduino_manager.html" title="Arduino Manager &gt; Connects and manages arduino communication. By default it connects using arduinoIOP..." alt="" coords="2282,783,2439,1116"/>
-<area shape="rect" id="node11" href="$classaudio_manager.html" title=" " alt="" coords="2464,783,2623,1116"/>
-<area shape="rect" id="node12" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="2647,607,2839,1292"/>
-<area shape="rect" id="node32" href="$classcolour_manager.html" title="colourManager manages colours wrapping the CRS Color Toolbox" alt="" coords="2863,753,3018,1145"/>
-<area shape="rect" id="node33" href="$classd_pixx_manager.html" title="DataPixx Communication Class." alt="" coords="3042,790,3186,1109"/>
-<area shape="rect" id="node34" href="$classeye_occluder.html" title=" " alt="" coords="3211,856,3361,1043"/>
-<area shape="rect" id="node35" href="$classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods..." alt="" coords="3385,768,3568,1131"/>
-<area shape="rect" id="node36" href="$classio_manager.html" title="Input Output manager, currently just a dummy class." alt="" coords="3592,805,3735,1094"/>
-<area shape="rect" id="node37" href="$classmagstim_manager.html" title="magstimManager &#45; controls a MagStim Rapid TMS system using a LabJack" alt="" coords="3759,834,3925,1065"/>
-<area shape="rect" id="node38" href="$classmeta_stimulus.html" title="Manager for multiple opticka stimuli." alt="" coords="3949,753,4092,1145"/>
-<area shape="rect" id="node39" href="$classopticka.html" title="GUI Manager for runExperiment() class." alt="" coords="4116,702,4315,1197"/>
-<area shape="rect" id="node40" href="$classplusplus_manager.html" title="Display++ Communication Class." alt="" coords="4339,768,4508,1131"/>
-<area shape="rect" id="node41" href="$classplx_reader.html" title=" " alt="" coords="4533,739,4703,1160"/>
-<area shape="rect" id="node42" href="$classrun_experiment.html" title="The main experiment manager." alt="" coords="4727,761,4986,1138"/>
-<area shape="rect" id="node43" href="$classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen" alt="" coords="5010,724,5213,1175"/>
-<area shape="rect" id="node44" href="$classstate_machine.html" title="run a task via a series of states." alt="" coords="5237,687,5463,1211"/>
-<area shape="rect" id="node45" href="$classtask_sequence.html" title="Block&#45;based variable randomisation manager." alt="" coords="5487,761,5655,1138"/>
-<area shape="rect" id="node46" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="5680,768,5863,1131"/>
-<area shape="rect" id="node47" href="$classtouch_manager.html" title=" " alt="" coords="5887,900,6031,999"/>
-<area shape="rect" id="node2" title=" " alt="" coords="3805,5,3879,45"/>
-<area shape="rect" id="node4" href="$class_l_f_p_analysis.html" title=" " alt="" coords="5,1384,196,1937"/>
-<area shape="rect" id="node5" href="$class_l_f_p_meta.html" title=" " alt="" coords="221,1472,383,1849"/>
-<area shape="rect" id="node6" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="407,1362,607,1959"/>
-<area shape="rect" id="node7" href="$classspike_analysis.html" title=" " alt="" coords="632,1377,823,1945"/>
-<area shape="rect" id="node8" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="847,1362,1047,1959"/>
-<area shape="rect" id="node13" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="1072,1538,1231,1783"/>
-<area shape="rect" id="node14" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="1255,1472,1466,1849"/>
-<area shape="rect" id="node15" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="1490,1369,1663,1952"/>
-<area shape="rect" id="node17" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="1687,1406,1898,1915"/>
-<area shape="rect" id="node18" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="1922,1384,2133,1937"/>
-<area shape="rect" id="node19" href="$classdisc_stimulus.html" title="single disc stimulus, inherits from baseStimulus DISCSTIMULUS single disc stimulus,..." alt="" coords="2157,1443,2327,1879"/>
-<area shape="rect" id="node20" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="2351,1435,2509,1886"/>
-<area shape="rect" id="node21" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="2533,1479,2727,1842"/>
-<area shape="rect" id="node22" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="2751,1399,2962,1923"/>
-<area shape="rect" id="node23" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="2986,1340,3197,1981"/>
-<area shape="rect" id="node24" href="$classimage_stimulus.html" title="textureStimulus" alt="" coords="3221,1472,3378,1849"/>
-<area shape="rect" id="node25" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="3403,1435,3569,1886"/>
-<area shape="rect" id="node26" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="3593,1443,3760,1879"/>
-<area shape="rect" id="node27" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="3785,1472,3961,1849"/>
-<area shape="rect" id="node28" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="3985,1582,4125,1739"/>
-<area shape="rect" id="node29" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="4150,1487,4321,1835"/>
-<area shape="rect" id="node31" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="4345,1377,4555,1945"/>
-<area shape="rect" id="node16" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="1499,2029,1654,2319"/>
-<area shape="rect" id="node30" href="$classcolour_test.html" title="colour test is a simple RGB colour blender for teaching" alt="" coords="4166,2117,4305,2231"/>
+<area shape="rect" id="node1" title="optickaCore base class inherited by other opticka classes." alt="" coords="4166,131,4355,648"/>
+<area shape="rect" id="node3" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="519,703,717,1397"/>
+<area shape="rect" id="node9" href="$classanimation_manager.html" title="ANIMATIONMANAGER TODO provides per frame paths for stimuli." alt="" coords="2602,901,2773,1199"/>
+<area shape="rect" id="node10" href="$classarduino_manager.html" title="Arduino Manager &gt; Connects and manages arduino communication. By default it connects using arduinoIOP..." alt="" coords="2797,865,2951,1235"/>
+<area shape="rect" id="node11" href="$classaudio_manager.html" title=" " alt="" coords="2975,865,3133,1235"/>
+<area shape="rect" id="node12" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="3158,696,3371,1404"/>
+<area shape="rect" id="node32" href="$classcolour_manager.html" title="colourManager manages colours wrapping the CRS Color Toolbox" alt="" coords="3395,850,3550,1250"/>
+<area shape="rect" id="node33" href="$classd_pixx_manager.html" title="DataPixx Communication Class." alt="" coords="3575,887,3717,1213"/>
+<area shape="rect" id="node34" href="$classeye_occluder.html" title=" " alt="" coords="3741,953,3892,1147"/>
+<area shape="rect" id="node35" href="$classeyetracker_core.html" title=" " alt="" coords="3916,850,4077,1250"/>
+<area shape="rect" id="node39" href="$classio_manager.html" title="Input Output manager, currently just a dummy class." alt="" coords="4101,894,4244,1206"/>
+<area shape="rect" id="node40" href="$classmagstim_manager.html" title="magstimManager &#45; controls a MagStim Rapid TMS system using a LabJack" alt="" coords="4269,931,4431,1169"/>
+<area shape="rect" id="node41" href="$classmeta_stimulus.html" title="Manager for multiple opticka stimuli." alt="" coords="4456,850,4599,1250"/>
+<area shape="rect" id="node42" href="$classopticka.html" title="GUI Manager for runExperiment() class." alt="" coords="4623,799,4821,1301"/>
+<area shape="rect" id="node43" href="$classplusplus_manager.html" title="Display++ Communication Class." alt="" coords="4845,865,5015,1235"/>
+<area shape="rect" id="node44" href="$classplx_reader.html" title=" " alt="" coords="5039,835,5210,1265"/>
+<area shape="rect" id="node45" href="$classrun_experiment.html" title="The main experiment manager." alt="" coords="5234,843,5493,1257"/>
+<area shape="rect" id="node46" href="$classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen" alt="" coords="5517,806,5719,1294"/>
+<area shape="rect" id="node47" href="$classstate_machine.html" title="run a task via a series of states." alt="" coords="5743,791,5970,1309"/>
+<area shape="rect" id="node48" href="$classtask_sequence.html" title="Block&#45;based variable randomisation manager." alt="" coords="5994,857,6162,1243"/>
+<area shape="rect" id="node49" href="$classtouch_manager.html" title=" " alt="" coords="6186,879,6367,1221"/>
+<area shape="rect" id="node2" title=" " alt="" coords="4227,5,4294,83"/>
+<area shape="rect" id="node4" href="$class_l_f_p_analysis.html" title=" " alt="" coords="5,1496,196,2057"/>
+<area shape="rect" id="node5" href="$class_l_f_p_meta.html" title=" " alt="" coords="221,1584,383,1969"/>
+<area shape="rect" id="node6" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="407,1474,607,2079"/>
+<area shape="rect" id="node7" href="$classspike_analysis.html" title=" " alt="" coords="632,1489,823,2065"/>
+<area shape="rect" id="node8" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="847,1474,1047,2079"/>
+<area shape="rect" id="node13" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="1071,1650,1226,1903"/>
+<area shape="rect" id="node14" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="1251,1584,1457,1969"/>
+<area shape="rect" id="node15" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="1482,1496,1655,2057"/>
+<area shape="rect" id="node16" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="1679,1518,1890,2035"/>
+<area shape="rect" id="node17" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="1914,1481,2125,2072"/>
+<area shape="rect" id="node18" href="$classdisc_stimulus.html" title="single disc stimulus, inherits from baseStimulus DISCSTIMULUS single disc stimulus,..." alt="" coords="2149,1555,2319,1999"/>
+<area shape="rect" id="node19" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="2343,1547,2501,2006"/>
+<area shape="rect" id="node20" href="$classexample_stimulus.html" title=" " alt="" coords="2525,1665,2687,1889"/>
+<area shape="rect" id="node21" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="2711,1577,2901,1977"/>
+<area shape="rect" id="node22" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="2925,1511,3135,2043"/>
+<area shape="rect" id="node23" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="3159,1452,3370,2101"/>
+<area shape="rect" id="node24" href="$classimage_stimulus.html" title="textureStimulus" alt="" coords="3394,1577,3551,1977"/>
+<area shape="rect" id="node25" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="3575,1547,3738,2006"/>
+<area shape="rect" id="node26" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="3763,1555,3929,1999"/>
+<area shape="rect" id="node27" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="3954,1584,4130,1969"/>
+<area shape="rect" id="node28" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="4154,1694,4290,1859"/>
+<area shape="rect" id="node29" href="$classrevcor_stimulus.html" title="revcorStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="4315,1489,4473,2065"/>
+<area shape="rect" id="node30" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="4498,1584,4669,1969"/>
+<area shape="rect" id="node31" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="4693,1489,4903,2065"/>
+<area shape="rect" id="node36" href="$classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods..." alt="" coords="4928,1584,5087,1969"/>
+<area shape="rect" id="node37" href="$classi_rec_manager.html" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="5111,1599,5267,1955"/>
+<area shape="rect" id="node38" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="5291,1599,5454,1955"/>
 </map>

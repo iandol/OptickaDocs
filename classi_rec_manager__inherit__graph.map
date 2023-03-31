@@ -1,0 +1,7 @@
+<map id="iRecManager" name="iRecManager">
+<area shape="rect" id="node1" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="101,1144,257,1500"/>
+<area shape="rect" id="node2" href="$classeyetracker_core.html" title=" " alt="" coords="5,696,167,1096"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="19,131,209,648"/>
+<area shape="rect" id="node4" title=" " alt="" coords="146,5,213,83"/>
+<area shape="rect" id="node5" href="$classeyetracker_smooth.html" title="Smoothes incoming eye sample data." alt="" coords="191,828,357,964"/>
+</map>

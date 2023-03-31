@@ -1,7 +1,7 @@
 <map id="colourGratingStimulus" name="colourGratingStimulus">
-<area shape="rect" id="node1" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="84,1340,295,1893"/>
-<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="93,607,285,1292"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="5,93,195,559"/>
-<area shape="rect" id="node4" title=" " alt="" coords="63,5,137,45"/>
-<area shape="rect" id="node5" title=" " alt="" coords="219,306,341,346"/>
+<area shape="rect" id="node1" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="83,1452,293,2043"/>
+<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="81,696,295,1404"/>
+<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,131,195,648"/>
+<area shape="rect" id="node4" title=" " alt="" coords="67,5,133,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="219,351,333,428"/>
 </map>

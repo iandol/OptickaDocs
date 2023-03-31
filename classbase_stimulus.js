@@ -4,6 +4,7 @@ var classbase_stimulus =
       [ "readPanelUpdate", "classbase_stimulus.html#a63658d31bffcb4a11a3becdfcbd3dd94a2af4589eb689995d32d2b014fd422b68", null ]
     ] ],
     [ "baseStimulus", "classbase_stimulus.html#aa49333e0a96e1f655a793a2573f477c9", null ],
+    [ "addRuntimeProperties", "classbase_stimulus.html#aed63606b7c20de8369513a4fcd144bb4", null ],
     [ "alpha", "classbase_stimulus.html#ad89bfc17caa14c55c2104c8bb767be93", null ],
     [ "animate", "classbase_stimulus.html#a71eb257145b431b29f85247b6b7d8053", null ],
     [ "cleanHandles", "classbase_stimulus.html#abd2e4ef9f6b8e848363b7cdc48c243f8", null ],
@@ -13,7 +14,6 @@ var classbase_stimulus =
     [ "d2r", "classbase_stimulus.html#a529c28ef8c494c2fb73e5fddfa78af3e", null ],
     [ "delete", "classbase_stimulus.html#a6073efb6759ba2831a8567f2cccd71ca", null ],
     [ "delta", "classbase_stimulus.html#a1b9e9e5cb964e0e4049dafba9e22692f", null ],
-    [ "doProperties", "classbase_stimulus.html#a87432916c51fdfbe5bc8cfbf30bec11e", null ],
     [ "draw", "classbase_stimulus.html#a757e420a8550e6ef78d2fc3cce5d1468", null ],
     [ "dX", "classbase_stimulus.html#ae640fcf76dd7907bcfee799f263ec9f4", null ],
     [ "dY", "classbase_stimulus.html#a1bea3ea94f146442a45315f44e9af736", null ],
@@ -39,6 +39,7 @@ var classbase_stimulus =
     [ "toStructure", "classbase_stimulus.html#a8439ae99ea4e8eca54dc0bfa30276fa1", null ],
     [ "update", "classbase_stimulus.html#a94f3db9543db155a0b7c659787dabf6d", null ],
     [ "updatePosition", "classbase_stimulus.html#ac03d575dda0fa46ce52457dc35f1fde5", null ],
+    [ "updateRuntimeProperties", "classbase_stimulus.html#a6c0698278c60bc8a65cb545268c6ff1c", null ],
     [ "alpha", "classbase_stimulus.html#a710bb7099a18f3f20c83d8bddd195bab", null ],
     [ "angle", "classbase_stimulus.html#ab6d399eb0051ec2933dba1f4dca78ba6", null ],
     [ "animator", "classbase_stimulus.html#a9125a6e84a249e7d035cd59fba9099ad", null ],
@@ -82,8 +83,8 @@ var classbase_stimulus =
     [ "tick", "classbase_stimulus.html#aed8479159ba696966bae936a74ea1fd3", null ],
     [ "type", "classbase_stimulus.html#a8da1dd8bc4a0421c97a0dfb27152ab80", null ],
     [ "verbose", "classbase_stimulus.html#a836e732badb648879b682b335d5f2928", null ],
-    [ "xOut", "classbase_stimulus.html#aa55d04525a725f6f1a2da221d99d337d", null ],
+    [ "xFinal", "classbase_stimulus.html#a3b27664cde362f2d789e77942ae43871", null ],
     [ "xPosition", "classbase_stimulus.html#aef65005060d8e0fcfeb292088484aca7", null ],
-    [ "yOut", "classbase_stimulus.html#aef2b6b9801e9396c13f69012533cabd3", null ],
+    [ "yFinal", "classbase_stimulus.html#a8c8c547f317770de6243f276f5891b18", null ],
     [ "yPosition", "classbase_stimulus.html#a9fab9f6a10fd7d4ddb6d5b3821c359e6", null ]
 ];

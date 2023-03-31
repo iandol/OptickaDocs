@@ -1,25 +1,27 @@
 <map id="baseStimulus" name="baseStimulus">
-<area shape="rect" id="node1" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="1694,607,1886,1292"/>
-<area shape="rect" id="node5" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="5,1538,164,1783"/>
-<area shape="rect" id="node6" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="189,1472,399,1849"/>
-<area shape="rect" id="node7" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="423,1369,597,1952"/>
-<area shape="rect" id="node9" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="621,1406,831,1915"/>
-<area shape="rect" id="node10" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="855,1384,1066,1937"/>
-<area shape="rect" id="node11" href="$classdisc_stimulus.html" title="single disc stimulus, inherits from baseStimulus DISCSTIMULUS single disc stimulus,..." alt="" coords="1090,1443,1261,1879"/>
-<area shape="rect" id="node12" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="1285,1435,1442,1886"/>
-<area shape="rect" id="node13" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="1467,1479,1660,1842"/>
-<area shape="rect" id="node14" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="1685,1399,1895,1923"/>
-<area shape="rect" id="node15" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="1919,1340,2130,1981"/>
-<area shape="rect" id="node16" href="$classimage_stimulus.html" title="textureStimulus" alt="" coords="2154,1472,2311,1849"/>
-<area shape="rect" id="node17" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="2336,1435,2503,1886"/>
-<area shape="rect" id="node18" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="2527,1443,2693,1879"/>
-<area shape="rect" id="node19" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="2718,1472,2894,1849"/>
-<area shape="rect" id="node20" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="2919,1582,3059,1739"/>
-<area shape="rect" id="node21" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="3083,1487,3254,1835"/>
-<area shape="rect" id="node23" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="3278,1377,3489,1945"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by many other opticka classes." alt="" coords="1606,93,1795,559"/>
-<area shape="rect" id="node3" title=" " alt="" coords="1663,5,1738,45"/>
-<area shape="rect" id="node4" title=" " alt="" coords="1819,306,1942,346"/>
-<area shape="rect" id="node8" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="433,2029,587,2319"/>
-<area shape="rect" id="node22" href="$classcolour_test.html" title="colour test is a simple RGB colour blender for teaching" alt="" coords="3099,2117,3238,2231"/>
+<area shape="rect" id="node1" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="1857,696,2071,1404"/>
+<area shape="rect" id="node5" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="5,1650,160,1903"/>
+<area shape="rect" id="node6" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="185,1584,391,1969"/>
+<area shape="rect" id="node7" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="416,1496,589,2057"/>
+<area shape="rect" id="node9" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="613,1518,824,2035"/>
+<area shape="rect" id="node10" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="848,1481,1059,2072"/>
+<area shape="rect" id="node11" href="$classdisc_stimulus.html" title="single disc stimulus, inherits from baseStimulus DISCSTIMULUS single disc stimulus,..." alt="" coords="1083,1555,1253,1999"/>
+<area shape="rect" id="node12" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="1277,1547,1435,2006"/>
+<area shape="rect" id="node13" href="$classexample_stimulus.html" title=" " alt="" coords="1459,1665,1621,1889"/>
+<area shape="rect" id="node14" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="1645,1577,1835,1977"/>
+<area shape="rect" id="node15" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="1859,1511,2069,2043"/>
+<area shape="rect" id="node16" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="2093,1452,2304,2101"/>
+<area shape="rect" id="node17" href="$classimage_stimulus.html" title="textureStimulus" alt="" coords="2328,1577,2485,1977"/>
+<area shape="rect" id="node18" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="2509,1547,2672,2006"/>
+<area shape="rect" id="node19" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="2697,1555,2863,1999"/>
+<area shape="rect" id="node20" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="2888,1584,3064,1969"/>
+<area shape="rect" id="node21" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="3088,1694,3224,1859"/>
+<area shape="rect" id="node22" href="$classrevcor_stimulus.html" title="revcorStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="3249,1489,3407,2065"/>
+<area shape="rect" id="node23" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="3432,1584,3603,1969"/>
+<area shape="rect" id="node25" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="3627,1489,3837,2065"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="1781,131,1971,648"/>
+<area shape="rect" id="node3" title=" " alt="" coords="1843,5,1909,83"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1995,351,2109,428"/>
+<area shape="rect" id="node8" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="425,2149,580,2476"/>
+<area shape="rect" id="node24" href="$classcolour_test.html" title="colour test is a simple RGB colour blender for teaching" alt="" coords="3448,2245,3587,2381"/>
 </map>

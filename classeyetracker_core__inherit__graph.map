@@ -1,0 +1,8 @@
+<map id="eyetrackerCore" name="eyetrackerCore">
+<area shape="rect" id="node1" title=" " alt="" coords="185,696,347,1096"/>
+<area shape="rect" id="node4" href="$classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods..." alt="" coords="5,1144,164,1529"/>
+<area shape="rect" id="node5" href="$classi_rec_manager.html" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="188,1159,344,1515"/>
+<area shape="rect" id="node6" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="369,1159,531,1515"/>
+<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="171,131,361,648"/>
+<area shape="rect" id="node3" title=" " alt="" coords="233,5,299,83"/>
+</map>

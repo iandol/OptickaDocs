@@ -26,15 +26,15 @@ var NAVTREE =
 [
   [ "Opticka", "index.html", [
     [ "Opticka: Behavioural Experiment Manager", "index.html", [
-      [ "Sample hardware setup", "index.html#autotoc_md48", null ],
-      [ "GUI", "index.html#autotoc_md49", null ],
-      [ "State machine control", "index.html#autotoc_md50", null ],
-      [ "Hardware currently supported", "index.html#autotoc_md51", null ],
-      [ "Quick Documentation", "index.html#autotoc_md52", null ],
-      [ "Basic Install Instructions", "index.html#autotoc_md53", null ],
-      [ "Features", "index.html#autotoc_md54", null ],
-      [ "Eye tracker control", "index.html#autotoc_md55", [
-        [ "Licence", "index.html#autotoc_md56", null ]
+      [ "Sample hardware setup", "index.html#autotoc_md54", null ],
+      [ "GUI", "index.html#autotoc_md55", null ],
+      [ "State machine control", "index.html#autotoc_md56", null ],
+      [ "Hardware currently supported", "index.html#autotoc_md57", null ],
+      [ "Quick Documentation", "index.html#autotoc_md58", null ],
+      [ "Basic Install Instructions", "index.html#autotoc_md59", null ],
+      [ "Features", "index.html#autotoc_md60", null ],
+      [ "Eye tracker control", "index.html#autotoc_md61", [
+        [ "Licence", "index.html#autotoc_md62", null ]
       ] ]
     ] ],
     [ "Detailed Install Instructions", "install.html", [
@@ -43,25 +43,26 @@ var NAVTREE =
       [ "Using the ZIP file", "install.html#autotoc_md3", null ]
     ] ],
     [ "Useful Task Methods", "md_help__m_e_t_h_o_d_s.html", [
-      [ "List of Methods", "md_help__m_e_t_h_o_d_s.html#autotoc_md12", [
-        [ "Similar named methods?", "md_help__m_e_t_h_o_d_s.html#autotoc_md8", null ],
-        [ "User Functions Files", "md_help__m_e_t_h_o_d_s.html#autotoc_md9", null ],
-        [ "runExperiment (\"me\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md13", null ],
-        [ "Task sequence manager (\"task\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md16", null ],
-        [ "The eye tracker (\"eT\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md18", null ],
-        [ "metaStimulus (\"stims\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md20", null ],
-        [ "Screen Manager (\"s\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md22", null ]
+      [ "List of Methods", "md_help__m_e_t_h_o_d_s.html#autotoc_md8", [
+        [ "Similar named methods?", "md_help__m_e_t_h_o_d_s.html#autotoc_md5", null ],
+        [ "User Functions Files", "md_help__m_e_t_h_o_d_s.html#autotoc_md6", null ],
+        [ "runExperiment (\"me\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md9", null ],
+        [ "Task sequence manager (\"task\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md11", null ],
+        [ "The eye tracker (\"eT\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md13", null ],
+        [ "metaStimulus (\"stims\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md15", null ],
+        [ "Screen Manager (\"s\" in the state file)", "md_help__m_e_t_h_o_d_s.html#autotoc_md17", null ]
       ] ],
-      [ "Definitions", "md_help__m_e_t_h_o_d_s.html#autotoc_md23", null ]
+      [ "FAQ", "md_help__m_e_t_h_o_d_s.html#autotoc_md18", null ],
+      [ "Definitions", "md_help__m_e_t_h_o_d_s.html#autotoc_md22", null ]
     ] ],
     [ "Configuring Stimuli", "md_help_uihelpstims.html", [
-      [ "Adding & Editing Stimuli", "md_help_uihelpstims.html#autotoc_md29", null ],
-      [ "Previewing Stimuli", "md_help_uihelpstims.html#autotoc_md30", null ]
+      [ "Adding & Editing Stimuli", "md_help_uihelpstims.html#autotoc_md33", null ],
+      [ "Previewing Stimuli", "md_help_uihelpstims.html#autotoc_md34", null ]
     ] ],
     [ "Configuring Variables", "md_help_uihelpvars.html", [
-      [ "Log or Linear interpolation", "md_help_uihelpvars.html#autotoc_md36", null ],
-      [ "Variable modifiers", "md_help_uihelpvars.html#autotoc_md37", null ],
-      [ "Block and Trial level independent factors", "md_help_uihelpvars.html#autotoc_md38", null ]
+      [ "Log or Linear interpolation", "md_help_uihelpvars.html#autotoc_md40", null ],
+      [ "Variable modifiers", "md_help_uihelpvars.html#autotoc_md42", null ],
+      [ "Block and Trial level independent factors", "md_help_uihelpvars.html#autotoc_md43", null ]
     ] ],
     [ "GNU LESSER GENERAL PUBLIC LICENSE", "md__l_i_c_e_n_c_e.html", null ],
     [ "Todo List", "todo.html", null ],
@@ -100,16 +101,17 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_area_summation_state_info_8m.html",
-"classannulus_stimulus.html#a127c4b595be6d6d2cc79a997c58692d3",
-"classbase_stimulus.html#a3a3bbf55c2559d8b227edb7884f532c0",
-"classcolour_grating_stimulus.html#af9f535f9911b206b235ee8f36575269d",
-"classeyelink_manager.html#a1139eb77351c98ea4a596b3355212297",
-"classio_manager.html#a257af7fdb8d12e1c1aab0b7f80454a82",
-"classndots_stimulus.html#a250a22b68fc5c8fd497d7661ddfe4c01",
-"classplx_reader.html#ad38a379efaff1352c2b4e12dcaf4eb88",
-"classspike_analysis.html#acfcfa150efd12703ffe1782d42944fe1",
-"classtobii_analysis.html#a90d1248c78ad29baa7d3e981cd37acc6",
-"index.html#autotoc_md51"
+"classanimation_manager.html#addc270d3c728d9ee952ad1ea44eea919",
+"classbase_stimulus.html#a01f316e8c0b0e0e4c2730d35df8f4dca",
+"classcolour_grating_stimulus.html#a9654d182d0e29e7239a041ecf7b6d6e3",
+"classeyelink_analysis.html#aa587acf2971c0c873478c9e26f4d5ab1",
+"classgrating_stimulus.html#a0699417b22f569ba489aba01429130c6",
+"classlog_gabor_stimulus.html#a7bcbdb90ad6325c66ca57d62186b8758",
+"classopx_online.html#a2104647da85fd40b6c900a70aeda69cb",
+"classrun_experiment.html#ac521b81755f8dad3d14ba5eb33066d09",
+"classstate_machine.html#a8a27227ce5163b9b7c9be941c4b25b93",
+"classtouch_manager.html#a49d79ba5e1f305905980bac773d235ca",
+"send_serial_i_o_port_8m.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -27,5 +27,6 @@ var classio_manager =
     [ "lastValue", "classio_manager.html#a1857251e4e1346500e45030bdb196f6d", null ],
     [ "sendValue", "classio_manager.html#a07f3777c75b4426cfba6ffc18aee2157", null ],
     [ "silentMode", "classio_manager.html#a257af7fdb8d12e1c1aab0b7f80454a82", null ],
+    [ "stimOFFValue", "classio_manager.html#adc1feace6a5887fd89b8c08a91af9de5", null ],
     [ "verbose", "classio_manager.html#ae7b7f5a34438722581de504453de28c3", null ]
 ];

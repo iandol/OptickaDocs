@@ -5,6 +5,7 @@ var classarduino_i_o_port =
     [ "analogReference", "classarduino_i_o_port.html#a1f0dc2be8ff9d5f8a8a3cd881f0a6e64", null ],
     [ "analogWrite", "classarduino_i_o_port.html#acf3a2ad444845c98e11c724f49bc46b1", null ],
     [ "bytesAvailable", "classarduino_i_o_port.html#acff77927c1929cf4fbf56471c538fe1d", null ],
+    [ "checkPorts", "classarduino_i_o_port.html#a01d26d3027900220e7e82b092dbcd6fe", null ],
     [ "checkSketch", "classarduino_i_o_port.html#abf6ba30d6447aae685af0f4125ce0fe0", null ],
     [ "cleanup", "classarduino_i_o_port.html#a6f460a6e8e6f2cf2002d0dbee1253e25", null ],
     [ "close", "classarduino_i_o_port.html#a2f3854b93b074724575a3cf176596f8d", null ],

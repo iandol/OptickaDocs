@@ -38,7 +38,7 @@ var classopticka =
     [ "saveCalibration", "classopticka.html#a7abaca30a82b13e00ee2510267c722dc", null ],
     [ "saveData", "classopticka.html#a746d2e52c8a94ca82ee243af9ed874ac", null ],
     [ "savePrefs", "classopticka.html#a26e6257beeaab9ec438a6c67fcf5c746", null ],
-    [ "saveProtocol", "classopticka.html#a053a12f31eebbd97d562729da0760acc", null ],
+    [ "saveProtocol", "classopticka.html#a9b311ce52e93f3b01cc9a36fc593f7d0", null ],
     [ "sendOmniplexStimulus", "classopticka.html#a9f4482d43f72eb9bcc992bc3dc37719e", null ],
     [ "updateVariable", "classopticka.html#abbdcec0cf11bd0850e4c2aa28e5abcfe", null ],
     [ "initUI", "classopticka.html#acc2195a207f64d1191039e55860afa7d", null ],

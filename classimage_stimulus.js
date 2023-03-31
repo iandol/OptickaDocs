@@ -21,6 +21,7 @@ var classimage_stimulus =
     [ "multipleImages", "classimage_stimulus.html#a7ee244fb42eaa6342f2556b5389a01ce", null ],
     [ "precision", "classimage_stimulus.html#ad7b3d8381aef7d3c26d0eb32f65ffd73", null ],
     [ "scale", "classimage_stimulus.html#a3f9ab3960c085dd5f085f61648c26ded", null ],
+    [ "specialFlags", "classimage_stimulus.html#a8d710c5beb5db3aac33919bd2e33bb98", null ],
     [ "type", "classimage_stimulus.html#a384ca08062ed00484d07a46ad865ada3", null ],
     [ "width", "classimage_stimulus.html#a5688b35a448984187fa7b30fea062ad4", null ]
 ];

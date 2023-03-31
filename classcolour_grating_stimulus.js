@@ -35,6 +35,7 @@ var classcolour_grating_stimulus =
     [ "direction", "classcolour_grating_stimulus.html#ab425698de6ea0443151e5582da9a840d", null ],
     [ "family", "classcolour_grating_stimulus.html#a61cc5bb973e4c4b60fc50895b69293e0", null ],
     [ "ignoreProperties", "classcolour_grating_stimulus.html#a272b2489862030d6119edf34dc5c88b4", null ],
+    [ "ignorePropertiesUI", "classcolour_grating_stimulus.html#a1b5b60819267a0194a64df08e4952c91", null ],
     [ "mask", "classcolour_grating_stimulus.html#a3aa15f9f87e53fd240fc2b97e9c3900b", null ],
     [ "maskValue", "classcolour_grating_stimulus.html#ade376936440ae33c344122ebaa27369d", null ],
     [ "phase", "classcolour_grating_stimulus.html#a9eb00ef5041861d85d112495a0f0db93", null ],
@@ -52,5 +53,8 @@ var classcolour_grating_stimulus =
     [ "sigma", "classcolour_grating_stimulus.html#af694b63e26ec9f949db1e5dbe8617a1c", null ],
     [ "tf", "classcolour_grating_stimulus.html#aa88975df0c02ba3e3612fea921d28033", null ],
     [ "type", "classcolour_grating_stimulus.html#a34cd98e31e454a5778a0d4e59cb65236", null ],
-    [ "typeList", "classcolour_grating_stimulus.html#a46aac46507b4c58f4813f6b9ed01034c", null ]
+    [ "typeList", "classcolour_grating_stimulus.html#a46aac46507b4c58f4813f6b9ed01034c", null ],
+    [ "visibleFlip", "classcolour_grating_stimulus.html#a173a3fc4de7df89cc4073d06806fb007", null ],
+    [ "visibleRate", "classcolour_grating_stimulus.html#ade4a0eb33aa04de951ad6f8e6f7ba6da", null ],
+    [ "visibleTick", "classcolour_grating_stimulus.html#abec4e782729d5bac010859dfd6baa19c", null ]
 ];

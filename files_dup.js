@@ -9,14 +9,28 @@ var files_dup =
     [ "stimuli", "dir_a22c56387ea2030b65909bdf29212dc0.html", "dir_a22c56387ea2030b65909bdf29212dc0" ],
     [ "addOptickaToPath.m", "add_opticka_to_path_8m.html", "add_opticka_to_path_8m" ],
     [ "DefaultStateInfo.m", "_default_state_info_8m.html", null ],
-    [ "opticka.m", "opticka_8m.html", "opticka_8m" ],
+    [ "opticka.m", "opticka_8m.html", [
+      [ "opticka", "classopticka.html", "classopticka" ]
+    ] ],
     [ "optickaBehaviourTest.m", "opticka_behaviour_test_8m.html", null ],
-    [ "optickaCore.m", "opticka_core_8m.html", "opticka_core_8m" ],
+    [ "optickaCore.m", "opticka_core_8m.html", [
+      [ "optickaCore", "classopticka_core.html", "classopticka_core" ]
+    ] ],
     [ "optickaTest.m", "opticka_test_8m.html", null ],
-    [ "runExperiment.m", "run_experiment_8m.html", "run_experiment_8m" ],
+    [ "runExperiment.m", "run_experiment_8m.html", [
+      [ "runExperiment", "classrun_experiment.html", "classrun_experiment" ]
+    ] ],
     [ "runOpticka.m", "run_opticka_8m.html", null ],
-    [ "screenManager.m", "screen_manager_8m.html", "screen_manager_8m" ],
-    [ "stateMachine.m", "state_machine_8m.html", "state_machine_8m" ],
-    [ "taskSequence.m", "task_sequence_8m.html", "task_sequence_8m" ],
-    [ "userFunctions.m", "user_functions_8m.html", "user_functions_8m" ]
+    [ "screenManager.m", "screen_manager_8m.html", [
+      [ "screenManager", "classscreen_manager.html", "classscreen_manager" ]
+    ] ],
+    [ "stateMachine.m", "state_machine_8m.html", [
+      [ "stateMachine", "classstate_machine.html", "classstate_machine" ]
+    ] ],
+    [ "taskSequence.m", "task_sequence_8m.html", [
+      [ "taskSequence", "classtask_sequence.html", "classtask_sequence" ]
+    ] ],
+    [ "userFunctions.m", "user_functions_8m.html", [
+      [ "userFunctions", "classuser_functions.html", "classuser_functions" ]
+    ] ]
 ];

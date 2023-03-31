@@ -25,6 +25,7 @@ var classmovie_stimulus =
     [ "fps", "classmovie_stimulus.html#a3331fa956f7aa00e451e56487d826cab", null ],
     [ "height", "classmovie_stimulus.html#a9528ca13932dfb58cca2c5bb42ab64d7", null ],
     [ "ignoreProperties", "classmovie_stimulus.html#a917e047d17624c5be0db1b845a9ac8d9", null ],
+    [ "ignorePropertiesUI", "classmovie_stimulus.html#ab7b4a221b3068078ac85a102b3ec949e", null ],
     [ "lockAngle", "classmovie_stimulus.html#a519ec427590d6be00758cbde7d88acf1", null ],
     [ "loopStrategy", "classmovie_stimulus.html#a857d98f57b96e83c2e79ba388c3b58d9", null ],
     [ "mask", "classmovie_stimulus.html#a30040327e67c75b29fd4369dfe7accfb", null ],

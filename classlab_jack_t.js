@@ -20,6 +20,7 @@ var classlab_jack_t =
     [ "reset", "classlab_jack_t.html#ae0ffd701156c4d423d31252ab5d61e94", null ],
     [ "resetStrobe", "classlab_jack_t.html#a59180db7458c7686e79a462b6fb8bbbf", null ],
     [ "resumeRecording", "classlab_jack_t.html#aa8d005766a2be1674bacf5d09aa123ea", null ],
+    [ "rstop", "classlab_jack_t.html#a6afde22aafcb72e5f9752d41a055bebb", null ],
     [ "sendStrobe", "classlab_jack_t.html#a214fa7c59f396d9a61061e59e34172d0", null ],
     [ "sendStrobedCIO", "classlab_jack_t.html#ab7ac4c70833644ddb4989e225e7a6406", null ],
     [ "sendStrobedEIO", "classlab_jack_t.html#a7b396581a378a9d1921bf3fd0fa35361", null ],
@@ -49,6 +50,7 @@ var classlab_jack_t =
     [ "streamSampleRate", "classlab_jack_t.html#a29e45ef04ec153bee7cc73559231cf40", null ],
     [ "streamSamples", "classlab_jack_t.html#af507ffb2aba2d1b8a633fffb066a3009", null ],
     [ "strobeTime", "classlab_jack_t.html#a7eab6b24dcf10e90add38be04c33ba1a", null ],
+    [ "timeOut", "classlab_jack_t.html#aee390580a9a569de418a5f4d6afa3b7f", null ],
     [ "verbose", "classlab_jack_t.html#afd24ac1a8e60b965962b7d38614efde3", null ],
     [ "winHeader", "classlab_jack_t.html#aa8e810972fa783bee2a5212caa891460", null ],
     [ "winLibrary", "classlab_jack_t.html#ac66ba50734a06d20530a8c5fcf58613e", null ]

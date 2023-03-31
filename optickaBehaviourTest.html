@@ -6,7 +6,7 @@
    <!--
 This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
-      --><title>Demo of a state-machine-driven Opticka Behavioural Experiment.</title><meta name="generator" content="MATLAB 9.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2022-11-03"><meta name="DC.source" content="optickaBehaviourTest.m"><style type="text/css">
+      --><title>Demo of a state-machine-driven Opticka Behavioural Experiment.</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2023-03-31"><meta name="DC.source" content="optickaBehaviourTest.m"><style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
 
 html { min-height:100%; margin-bottom:1px; }
@@ -92,10 +92,10 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
                                            &#9660;                            &#9474;
                                          &#9484;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9488;  &#9474;
                                          &#9474;         BREAKFIX          &#9474; &#9472;&#9496;
-                                         &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;</pre><p>For this demo a dummy eyetracker object (where the mouse input transparently replaces the eye movements), is used to demonstrate behavioural control of the paradigm.</p><p>Opticka also offers an optional GUI (type `opticka` in the command window), which is a visual manager of the objects introduced here. The UI also controls other functions such as screen calibration, protocol loading/saving and managing communication with neurophysiological equipment via LabJack, Arduino and ethernet.</p><p><b>The source of this file can be found at</b> : <a href="https://github.com/iandol/opticka/blob/master/optickaBehaviourTest.m">https://github.com/iandol/opticka/blob/master/optickaBehaviourTest.m</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Initial clear up of any previous objects</a></li><li><a href="#2">Setup our visual stimuli</a></li><li><a href="#5">Task Initialisation</a></li><li><a href="#9">Setup screenManager Object</a></li><li><a href="#10">Setup runExperiment Object</a></li><li><a href="#11">Run the full behavioural task</a></li><li><a href="#12">Plot a timing log of every frame against the stimulus on/off times</a></li><li><a href="#13">Plot a timing log of all states and their function evaluation transition times</a></li></ul></div><h2 id="1">Initial clear up of any previous objects</h2><p>Make sure we start in a clean environment, not essential</p><pre class="codeinput">clear <span class="string">myStims</span> <span class="string">myTask</span> <span class="string">myExp</span> <span class="string">myScreen</span>
+                                         &#9492;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9496;</pre><p>For this demo a dummy eyetracker object (where the mouse input transparently replaces the eye movements), is used to demonstrate behavioural control of the paradigm.</p><p>Opticka also offers an optional GUI (type `opticka` in the command window), which is a visual manager of the objects introduced here. The UI also controls other functions such as screen calibration, protocol loading/saving and managing communication with neurophysiological equipment via LabJack, Arduino and ethernet.</p><p><b>The source of this file can be found at</b> : <a href="https://github.com/iandol/opticka/blob/master/optickaBehaviourTest.m">https://github.com/iandol/opticka/blob/master/optickaBehaviourTest.m</a></p><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Initial clear up of any previous objects</a></li><li><a href="#2">Setup our visual stimuli</a></li><li><a href="#5">Task Initialisation</a></li><li><a href="#8">Setup screenManager Object</a></li><li><a href="#9">Setup runExperiment Object</a></li><li><a href="#10">Run the full behavioural task</a></li><li><a href="#12">Plot a timing log of every frame against the stimulus on/off times</a></li><li><a href="#13">Plot a timing log of all states and their function evaluation transition times</a></li></ul></div><h2 id="1">Initial clear up of any previous objects</h2><p>Make sure we start in a clean environment, not essential</p><pre class="codeinput">clear <span class="string">myStims</span> <span class="string">myTask</span> <span class="string">myExp</span> <span class="string">myScreen</span>
 sca <span class="comment">%PTB screen clear all</span>
 </pre><h2 id="2">Setup our visual stimuli</h2><p>First we use the metaStimulus class to create a stimulus manager object that collects and handles groups of stimuli as if they were a single 'thing', so for example when you use the draw method myStims.draw(), it tells each of its child stimuli to draw in order. You can show and hide each stimulus in the group and only thoses set to draw will do so. Note you can control each stimulus yourself (each stimulus has its own set of control functions), but using metaStimulus makes the code simpler...</p><pre class="codeinput">myStims			= metaStimulus();
-</pre><p>first stimulus is a smoothed 5&deg; red disc</p><pre class="codeinput">myStims{1}		= discStimulus(<span class="string">'colour'</span>, [0.7 0 0], <span class="string">'size'</span>, 5, <span class="string">'sigma'</span>, 25);
+</pre><p>first stimulus is a smoothed 5&deg; red disc</p><pre class="codeinput">myStims{1}		= discStimulus(<span class="string">'colour'</span>, [0.7 0.2 0], <span class="string">'size'</span>, 5, <span class="string">'sigma'</span>, 20);
 </pre><p>second stimulus is an optimised 0.8&deg; fixation cross from Thaler et al., 2013</p><pre class="codeinput">myStims{2}		= fixationCrossStimulus(<span class="string">'size'</span>, 0.8);
 </pre><h2 id="5">Task Initialisation</h2><p>The taskSequence class defines a stimulus sequence (task) which is composed of randomised stimulus parameter changes (called variables) repeated over a set of blocks. A trial is an individual stimulus presentation. This</p><p>For behavioural tasks, several of the parameters like myTask.trialTime are not used as the state machine takes over the job of task timing, but the stimulus randomisation is still useful for such tasks. In this case the state info file can use taskSequence to deterimine the next stimulus value. There are functions to handle what happens if the subject responds incorrectly, where we can re-randomise the next value within the block.</p><pre class="codeinput">myTask					= taskSequence(); <span class="comment">%new taskSequence object instance</span>
 </pre><p>Our variable is xPosition, applied to stimulus 1 only. 3 different position values so 3 trials per block...</p><pre class="codeinput">myTask.nVar(1).name		= <span class="string">'xPosition'</span>;
@@ -103,46 +103,47 @@ myTask.nVar(1).stimulus	= 1;
 myTask.nVar(1).values	= [-10 0 10];
 </pre><p>We call the method to randomise the trials into a block (3 blocks, 3 trials) structure.</p><pre class="codeinput">myTask.nBlocks			= 3;
 randomiseTask(myTask);
-</pre><pre class="codeoutput">---&gt; taskSequence &lt;taskSequence#1CBBD2AC8&gt;: Took 14.664 ms | randomiseTask
-</pre><p>Lets print out a table of the stimulus values for every trial to be run</p><pre class="codeinput">showLog(myTask);
-</pre><img vspace="5" hspace="5" src="optickaBehaviourTest_01.png" alt=""> <h2 id="9">Setup screenManager Object</h2><p>screenManager controls the PTB Screen(). We initialise the object with parameters to open the PTB screen with. Note distance and pixels per cm define the resultant geometry &gt; pixel mappings. You can set several screen parameters, windowing, blending etc.</p><pre class="codeinput">myScreen = screenManager(<span class="string">'distance'</span>, 57.3,<span class="keyword">...</span><span class="comment"> % display distance from observer</span>
+</pre><pre class="codeoutput">---&gt; taskSequence &lt;taskSequence#165864C6E&gt;: Took 38.324 ms | randomiseTask
+</pre><h2 id="8">Setup screenManager Object</h2><p>screenManager controls the PTB Screen(). We initialise the object with parameters to open the PTB screen with. Note distance and pixels per cm define the resultant geometry &gt; pixel mappings. You can set several screen parameters, windowing, blending etc.</p><pre class="codeinput">myScreen = screenManager(<span class="string">'distance'</span>, 57.3,<span class="keyword">...</span><span class="comment"> % display distance from observer</span>
 	<span class="string">'pixelsPerCm'</span>, 27,<span class="keyword">...</span><span class="comment"> % calibration value for pixel density, measure using calibrateSize()</span>
-	<span class="string">'windowed'</span>, [0 0 800 600],<span class="keyword">...</span><span class="comment"> % use fullscreen [] or window [X Y]?</span>
+	<span class="string">'windowed'</span>, [],<span class="keyword">...</span><span class="comment"> % use fullscreen [] or window [X Y]?</span>
 	<span class="string">'backgroundColour'</span>, [0.5 0.5 0.5],<span class="keyword">...</span><span class="comment"> % initial background colour</span>
 	<span class="string">'blend'</span>, true,<span class="keyword">...</span><span class="comment"> % enable OpenGL blending, you can also set blend modes when needed</span>
 	<span class="string">'bitDepth'</span>, <span class="string">'8bit'</span>); <span class="comment">% FloatingPoint32bit, 8bit, FloatingPoint16bit etc.</span>
 <span class="comment">% use retina mode for macOS</span>
 <span class="keyword">if</span> ismac; myScreen.useRetina = true; <span class="keyword">end</span>
-</pre><h2 id="10">Setup runExperiment Object</h2><p>We now pass our stimulus, screen and task objects to the runExperiment class. runExperiment contains the runTask() method that actually runs the behavioural task.</p><p>Importantly, the stateInfoFile 'FixationTrainingStateInfo.m' determines the behavioural protocol that the state machine will run. The state machine is available as myExp.stateMachine. Read through that StateInfo file to better understand what is being done. stateInfoFiles contain some general configuration, then a set of cell-arrays of functions, and a table of states which run these function arrays as the states are entered and exited. For this simple task, it starts in a paused state, then transitions to a blank period, then the stimulus presentation, where initiating and maintaining fixation on the cross leads to a correct state or breaking fixation leads to breakFix state, then the state machine loops back to blank etc. using the myTask object to set variable values on each trial.</p><pre class="codeinput">myExp = runExperiment(<span class="string">'stimuli'</span>, myStims,<span class="keyword">...</span><span class="comment"> %stimulus objects</span>
+</pre><h2 id="9">Setup runExperiment Object</h2><p>We now pass our stimulus, screen and task objects to the runExperiment class. runExperiment contains the runTask() method that actually runs the behavioural task.</p><p>Importantly, the stateInfoFile 'FixationTrainingStateInfo.m' determines the behavioural protocol that the state machine will run. The state machine is available as myExp.stateMachine. Read through that StateInfo file to better understand what is being done. stateInfoFiles contain some general configuration, then a set of cell-arrays of functions, and a table of states which run these function arrays as the states are entered and exited. For this simple task, it starts in a paused state, then transitions to a blank period, then the stimulus presentation, where initiating and maintaining fixation on the cross leads to a correct state or breaking fixation leads to breakFix state, then the state machine loops back to blank etc. using the myTask object to set variable values on each trial.</p><pre class="codeinput">myExp = runExperiment(<span class="string">'stimuli'</span>, myStims,<span class="keyword">...</span><span class="comment"> %stimulus objects</span>
 	<span class="string">'screen'</span>, myScreen,<span class="keyword">...</span><span class="comment"> %screen manager object</span>
 	<span class="string">'task'</span>, myTask,<span class="keyword">...</span><span class="comment"> % task randomised stimulus sequence</span>
 	<span class="string">'stateInfoFile'</span>, <span class="string">'DefaultStateInfo.m'</span>, <span class="keyword">...</span><span class="comment"> % use the default state info file</span>
-	<span class="string">'debug'</span>, true,<span class="keyword">...</span><span class="comment"> % enable debug mode for testing</span>
+	<span class="string">'debug'</span>, false,<span class="keyword">...</span><span class="comment"> % debug mode for testing?</span>
 	<span class="string">'useEyeLink'</span>, true, <span class="keyword">...</span><span class="comment"> % use the eyelink manager</span>
 	<span class="string">'dummyMode'</span>, true, <span class="keyword">...</span><span class="comment"> % use dummy mode so the mouse replaces eye movements for testing</span>
+	<span class="string">'logStateTimers'</span>,true,<span class="keyword">...</span>
 	<span class="string">'subjectName'</span>, <span class="string">'Simulcra'</span>, <span class="keyword">...</span>
 	<span class="string">'researcherName'</span>, <span class="string">'Joanna Doe'</span>);
-</pre><h2 id="11">Run the full behavioural task</h2><pre class="codeinput">runTask(myExp);
+</pre><pre class="codeoutput">---&gt; Run Experiment &lt;runExperiment#16586CE66&gt;: Propery invalid! | dummyMode
+</pre><h2 id="10">Run the full behavioural task</h2><pre class="codeinput">runTask(myExp);
 </pre><pre class="codeoutput">---&gt;arduinoManager: Ports available: /dev/ttyS0
----&gt; : Parsing input argument | name
-PTB-INFO: Using modified PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
----&gt; audio-manager &lt;audioManager#1CBC3003F&gt;: Audio Manager initialisation complete | constructor
+PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
+PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
+---&gt; audio-manager &lt;audioManager#16586FC4F&gt;: Audio Manager initialisation complete | constructor
+PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
 PTB-INFO: Choosing deviceIndex 0 [HDA Intel PCH: ALC3234 Analog (hw:0,0)] as default output audio device.
 PTB-INFO: New audio device -1 with handle 0 opened as PortAudio stream:
 PTB-INFO: For 2 channels Playback: Audio subsystem is ALSA, Audio device name is HDA Intel PCH: ALC3234 Analog (hw:0,0)
 PTB-INFO: Real samplerate 44100.000000 Hz. Input latency 0.000000 msecs, Output latency 9.977324 msecs.
-Snd(): Using PsychPortAudio via shared handle 0, until you call Snd('Close'); to unshare.
 
 
 
-===&gt;&gt;&gt;&gt;&gt;&gt; Start task: Simulcra-2022-11-3-18-30 &lt;&lt;&lt;&lt;&lt;&lt;===
+===&gt;&gt;&gt;&gt;&gt;&gt; Start task: Simulcra-2023-3-31-14-23-45 &lt;&lt;&lt;&lt;&lt;&lt;===
 
 
----&gt; : Parsing input argument | name
----&gt; taskSequence &lt;taskSequence#1CBBD2AC8&gt;: Took 8.546 ms | randomiseTask
+---&gt; taskSequence &lt;taskSequence#165864C6E&gt;: Took 37.022 ms | randomiseTask
 ---&gt; taskSequence.initialise: Initialised!
 
----&gt; screenManager: Skipping Sync Tests etc. - ONLY FOR DEVELOPMENT!
+---&gt; screenManager: Normal Screen Preferences used.
+PsychVulkanCore-ERROR: Vulkan instance creation failed: -1
 BitsPlusPlus: Could not find a Bits# config file under [/home/cog5/.Psychtoolbox/BitsSharpConfig.txt]. Assuming a Bits+ device instead of a Bits# is connected.
 BitsPlusPlus: Please create a config file under this name if you have a Bits# and want to use it as Bits# instead of as a Bits+.
 BitsPlusPlus: The most simple way is to create an empty file. A more robust way is to store the name of the Bits# serial port
@@ -151,8 +152,8 @@ BitsPlusPlus: in the first line of the text file, e.g., COM5 [Windows], or /dev/
 ---&gt; screenManager: Internal processing set to: 8 bits
 
 
-PTB-INFO: This is Psychtoolbox-3 for GNU/Linux X11, under Matlab 64-Bit (Version 3.0.18 - Build date: Jun 27 2022).
-PTB-INFO: OS support status: Linux 6.0.3-060003-generic Supported.
+PTB-INFO: This is Psychtoolbox-3 for GNU/Linux X11, under Matlab 64-Bit (Version 3.0.19 - Build date: Feb 19 2023).
+PTB-INFO: OS support status: Linux 6.2.7-060207-generic Supported.
 PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
 PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
 PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
@@ -160,20 +161,14 @@ PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root fol
 PTB-INFO: For information about paid support, support memberships and other commercial services, please type
 PTB-INFO: 'PsychPaidSupportAndServices'.
 
-PTB-INFO: Connected to Advanced Micro Devices, Inc. [AMD/ATI] Baffin [Radeon Pro WX 4100] GPU with DCE-11.0 display engine [6 heads].
-PTB-INFO: Proper timing and timestamping of visual stimulus onset is not reliably supported at all on this desktop GUI
-PTB-INFO: when running in windowed mode (non-fullscreen), or for transparent windows. If PTB aborts with
-PTB-INFO: 'Synchronization failure' you can disable the sync test via a call to Screen('Preference', 'SkipSyncTests', 2).
-PTB-INFO: You won't get proper stimulus onset timestamps in any case though, so windowed mode is of limited use.
-PTB-INFO: Using a desktop GUI like GNOME-3 or Ubuntu desktop, which uses the Mutter compositor, may give better timing if
-PTB-INFO: you opt-in into our new experimental(!) support: Call setenv('PSYCH_EXPERIMENTAL_NETWMTS', '1') at start of your script.
+PTB-INFO: Connected to NVidia TU104 [GeForce RTX 2070 SUPER] GPU of NV-160 family with 4 display heads.
 
 
-PTB-INFO: OpenGL-Renderer is AMD :: AMD Radeon Pro WX 4100 (polaris11, LLVM 14.0.6, DRM 3.48, 6.0.3-060003-generic) :: 4.6 (Compatibility Profile) Mesa 22.3.0-devel (git-2a63387 2022-11-02 jammy-oibaf-ppa)
-PTB-INFO: VBL startline = 2160 , VBL Endline = 2220
-PTB-INFO: Measured monitor refresh interval from beamposition = 16.667653 ms [59.996449 Hz].
-PTB-INFO: Measured monitor refresh interval from VBLsync = 16.667662 ms [59.996418 Hz]. (50 valid samples taken, stddev=0.000631 ms.)
-PTB-INFO: Reported monitor refresh interval from operating system = 16.667778 ms [59.995998 Hz].
+PTB-INFO: OpenGL-Renderer is NVIDIA Corporation :: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2 :: 4.6.0 NVIDIA 525.89.02
+PTB-INFO: VBL startline = 1080 , VBL Endline = 1143
+PTB-INFO: Measured monitor refresh interval from beamposition = 8.334588 ms [119.981935 Hz].
+PTB-INFO: Measured monitor refresh interval from VBLsync = 8.334203 ms [119.987481 Hz]. (50 valid samples taken, stddev=0.032203 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 8.334653 ms [119.981003 Hz].
 PTB-INFO: Small deviations between reported values are normal and no reason to worry.
 PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 1025 ...
 PTB-INFO: Will use 8 bits per color component framebuffer for stimulus drawing.
@@ -184,10 +179,12 @@ PTB-INFO: Will use 8 bits per color component framebuffer for stimulus post-proc
 Compiling all shaders matching SmoothedDiscShader * into a GLSL program.
 Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
 Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
----&gt; : Parsing input argument | name
 
 ===&gt;&gt;&gt; No strobe output I/O...
 ===&gt; No reward TTLs will be sent...
+--&gt; dataConnection: Trying to close local connection... | close Method
+--&gt; dataConnection: Cleaning up now... | dataConnection delete Method
+--&gt; dataConnection: Trying to close local connection... | close Method
 
 
 ===&gt;&gt;&gt; User Functions instantiated&#8230;
@@ -197,16 +194,17 @@ Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3
   Columns 1 through 4
 
     {'name'     }    {'next'     }    {'time'  }    {'entryFcn'}
-    {'pause'    }    {'prefix'   }    {[   Inf]}    {11x1 cell }
-    {'prefix'   }    {'fixate'   }    {[0.5000]}    { 4x1 cell }
-    {'fixate'   }    {'incorrect'}    {[    10]}    {11x1 cell }
+    {'pause'    }    {'prefix'   }    {[   Inf]}    {12x1 cell }
+    {'prefix'   }    {'fixate'   }    {[0.5000]}    { 8x1 cell }
+    {'fixate'   }    {'incorrect'}    {[    10]}    { 2x1 cell }
     {'stimulus' }    {'incorrect'}    {[    10]}    { 2x1 cell }
-    {'incorrect'}    {'timeout'  }    {[0.5000]}    { 8x1 cell }
-    {'breakfix' }    {'timeout'  }    {[0.5000]}    {11x1 cell }
-    {'correct'  }    {'prefix'   }    {[0.5000]}    {10x1 cell }
-    {'timeout'  }    {'prefix'   }    {[     5]}    { 0x0 cell }
-    {'calibrate'}    {'pause'    }    {[0.5000]}    { 5x1 cell }
-    {'drift'    }    {'pause'    }    {[0.5000]}    { 5x1 cell }
+    {'incorrect'}    {'timeout'  }    {[0.5000]}    { 9x1 cell }
+    {'breakfix' }    {'timeout'  }    {[0.5000]}    {10x1 cell }
+    {'correct'  }    {'prefix'   }    {[0.5000]}    {11x1 cell }
+    {'timeout'  }    {'prefix'   }    {[     2]}    { 0x0 cell }
+    {'calibrate'}    {'pause'    }    {[0.5000]}    { 4x1 cell }
+    {'drift'    }    {'pause'    }    {[0.5000]}    { 4x1 cell }
+    {'offset'   }    {'pause'    }    {[0.5000]}    { 4x1 cell }
     {'override' }    {'pause'    }    {[0.5000]}    { 1x1 cell }
     {'flash'    }    {'pause'    }    {[0.5000]}    { 1x1 cell }
     {'showgrid' }    {'pause'    }    {[    10]}    { 0x0 cell }
@@ -215,108 +213,87 @@ Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3
 
     {'withinFcn'}    {'transitionFcn'}    {'exitFcn'}
     {0x0 cell   }    {0x0 cell       }    { 1x1 cell}
-    {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
-    {3x1 cell   }    {1x1 cell       }    { 4x1 cell}
+    {1x1 cell   }    {0x0 cell       }    { 0x0 cell}
+    {2x1 cell   }    {1x1 cell       }    { 4x1 cell}
     {3x1 cell   }    {1x1 cell       }    { 1x1 cell}
     {1x1 cell   }    {0x0 cell       }    {10x1 cell}
     {1x1 cell   }    {0x0 cell       }    {10x1 cell}
-    {1x1 cell   }    {0x0 cell       }    {11x1 cell}
+    {1x1 cell   }    {0x0 cell       }    {12x1 cell}
     {1x1 cell   }    {0x0 cell       }    { 0x0 cell}
+    {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
     {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
     {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
     {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
     {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
     {1x1 cell   }    {0x0 cell       }    { 0x0 cell}
 
-=================&gt;&gt; Loaded state info file &lt;&lt;=================
+=================&gt;&gt; Built state info file &lt;&lt;=================
 
 ===&gt;&gt;&gt; Dummy eyelink being initialised...
 Eyelink: Opening Eyelink in DUMMY mode
----&gt; eyelink manager &lt;eyelinkManager#1CBC3F6F9&gt;: Running on a Dummy Eyelink @  0 (time offset:  0) | Initialise Method
+---&gt; Eyelink &lt;eyelinkManager#16588F575&gt;: Running on a Dummy Eyelink @  0 (time offset:  0) | Initialise Method
 
 ===&gt;&gt;&gt; Warming up the GPU, Eyetracker and I/O systems... &lt;&lt;&lt;===
-===&gt;&gt;&gt; Save initial state: /tmp//Simulcra-2022-11-3-18-30.mat
-===&gt; Saving behaviouralRecord object...
+begin state: stateMachine warmup... ...exit
+middle state: stateMachine warmup... ...exit
+surprise state: stateMachine warmup... ...exit
+end state: stateMachine warmup... ...exit
+
+---&gt;&gt;&gt; Total time to do state traversal: 0.303071 secs 
+---&gt;&gt;&gt; Loops: 298 thus 1.01702 ms per loop
+---&gt; state machine &lt;stateMachine#1658C7860&gt;: stateMachine not running... | finish method
+===&gt;&gt;&gt; Save initial state: /tmp//Simulcra-2023-3-31-14-23-45.mat ...
+	 ... Saved!
+===&gt;&gt;&gt; Increasing Priority...
+
+===&gt;&gt;&gt; Igniting the State Machine... &lt;&lt;&lt;===
 PAUSED, press [p] to resume...
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CBDCCE4D | B:1 R:1 [1/9] | V: 2 | Time: 3.600 (28) isFix:0 isExcl:0 isFixInit:0 fixLength:
-0.00 &gt; xPosition: 0.000 | updateVariables: B:1 R:1 T:1 V:2&gt;S1:xPositionOut=0 
-
-===&gt;CORRECT:correct:1CBE08BD0 | B:1 R:1 [1/9] | V: 2 | Time: 5.717 (154) isFix:1 isExcl:0 isFixInit:0
-fixLength: 1.51 &gt; xPosition: 0.000 | updateVariables: B:1 R:1 T:1 V:2&gt;S1:xPositionOut=0 
-
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CBE6C0E4 | B:1 R:2 [2/9] | V: 3 | Time: 9.234 (215) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: 10.000 | updateVariables: B:1 R:2 T:2 V:3&gt;S1:xPositionOut=10 
-
-===&gt;CORRECT:correct:1CBEB0551 | B:1 R:2 [2/9] | V: 3 | Time: 11.651 (360) isFix:1 isExcl:0 isFixInit:0
-fixLength: 1.51 &gt; xPosition: 10.000 | updateVariables: B:1 R:2 T:2 V:3&gt;S1:xPositionOut=10 
-
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CBEE3ABC | B:1 R:3 [3/9] | V: 1 | Time: 13.467 (422) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: -10.000 | updateVariables: B:1 R:3 T:3 V:1&gt;S1:xPositionOut=-10 
-
-===&gt;CORRECT:correct:1CBF28E0C | B:1 R:3 [3/9] | V: 1 | Time: 15.918 (568) isFix:1 isExcl:0 isFixInit:0
-fixLength: 1.51 &gt; xPosition: -10.000 | updateVariables: B:1 R:3 T:3 V:1&gt;S1:xPositionOut=-10 
-
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CBF5961C | B:2 R:1 [4/9] | V: 3 | Time: 17.634 (630) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: 10.000 | updateVariables: B:2 R:1 T:4 V:3&gt;S1:xPositionOut=10 
-
-===&gt;CORRECT:correct:1CBF9D356 | B:2 R:1 [4/9] | V: 3 | Time: 20.035 (774) isFix:1 isExcl:0 isFixInit:0
-fixLength: 1.51 &gt; xPosition: 10.000 | updateVariables: B:2 R:1 T:4 V:3&gt;S1:xPositionOut=10 
-
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CBFCCC78 | B:2 R:2 [5/9] | V: 1 | Time: 21.718 (836) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: -10.000 | updateVariables: B:2 R:2 T:5 V:1&gt;S1:xPositionOut=-10 
-
-===&gt;CORRECT:correct:1CC012068 | B:2 R:2 [5/9] | V: 1 | Time: 24.168 (983) isFix:1 isExcl:0 isFixInit:0
-fixLength: 1.51 &gt; xPosition: -10.000 | updateVariables: B:2 R:2 T:5 V:1&gt;S1:xPositionOut=-10 
-
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CC044671 | B:2 R:3 [6/9] | V: 2 | Time: 25.952 (1045) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: 0.000 | updateVariables: B:2 R:3 T:6 V:2&gt;S1:xPositionOut=0 
-
-===&gt;CORRECT:correct:1CC083841 | B:2 R:3 [6/9] | V: 2 | Time: 28.185 (1179) isFix:1 isExcl:0 isFixInit:0
-fixLength: 1.52 &gt; xPosition: 0.000 | updateVariables: B:2 R:3 T:6 V:2&gt;S1:xPositionOut=0 
+PsychHID-WARNING: Failed to setup international keyboard handling due to failed input method creation.
+PsychHID-WARNING: Only US keyboard layouts will be mapped properly due to this failure for GetChar() et al.
+===&gt;INITFIX:fixate:165AF05E3 | B:1 R:1 [1/9] | V: 2 | Time: 16.544 (57)  &gt; xPosition: 0.000 | updateVariables:
+B:1 R:1 T:1 V:2&gt;S1:xPositionOut=0 
+===&gt;CORRECT:correct:165B39A93 | B:1 R:1 [1/9] | V: 2 | Time: 19.145 (366)  &gt; xPosition: 0.000 |
+updateVariables: B:1 R:1 T:1 V:2&gt;S1:xPositionOut=0 
+===&gt;INITFIX:fixate:165B56DB3 | B:1 R:2 [2/9] | V: 1 | Time: 20.178 (487)  &gt; xPosition: -10.000 |
+updateVariables: B:1 R:2 T:2 V:1&gt;S1:xPositionOut=-10 
+===&gt;CORRECT:correct:165B92ABD | B:1 R:2 [2/9] | V: 1 | Time: 22.295 (741)  &gt; xPosition: -10.000 |
+updateVariables: B:1 R:2 T:2 V:1&gt;S1:xPositionOut=-10 
+===&gt;INITFIX:fixate:165BAFDC6 | B:1 R:3 [3/9] | V: 3 | Time: 23.329 (863)  &gt; xPosition: 10.000 |
+updateVariables: B:1 R:3 T:3 V:3&gt;S1:xPositionOut=10 
+===&gt;CORRECT:correct:165BEE84E | B:1 R:3 [3/9] | V: 3 | Time: 25.546 (1128)  &gt; xPosition: 10.000 |
+updateVariables: B:1 R:3 T:3 V:3&gt;S1:xPositionOut=10 
+===&gt;INITFIX:fixate:165C0B794 | B:2 R:1 [4/9] | V: 2 | Time: 26.571 (1249)  &gt; xPosition: 0.000 |
+updateVariables: B:2 R:1 T:4 V:2&gt;S1:xPositionOut=0 
+===&gt;CORRECT:correct:165C474D1 | B:2 R:1 [4/9] | V: 2 | Time: 28.688 (1503)  &gt; xPosition: 0.000 |
+updateVariables: B:2 R:1 T:4 V:2&gt;S1:xPositionOut=0 
+===&gt;INITFIX:fixate:165C64441 | B:2 R:2 [5/9] | V: 1 | Time: 29.713 (1624)  &gt; xPosition: -10.000 |
+updateVariables: B:2 R:2 T:5 V:1&gt;S1:xPositionOut=-10 
+===&gt;CORRECT:correct:165CA7673 | B:2 R:2 [5/9] | V: 1 | Time: 32.088 (1909)  &gt; xPosition: -10.000 |
+updateVariables: B:2 R:2 T:5 V:1&gt;S1:xPositionOut=-10 
+===&gt;INITFIX:fixate:165CC495A | B:2 R:3 [6/9] | V: 3 | Time: 33.122 (2031)  &gt; xPosition: 10.000 |
+updateVariables: B:2 R:3 T:6 V:3&gt;S1:xPositionOut=10 
+===&gt;CORRECT:correct:165D042CE | B:2 R:3 [6/9] | V: 3 | Time: 35.372 (2301)  &gt; xPosition: 10.000 |
+updateVariables: B:2 R:3 T:6 V:3&gt;S1:xPositionOut=10 
+===&gt;INITFIX:fixate:165D20E7C | B:3 R:1 [7/9] | V: 2 | Time: 36.389 (2423)  &gt; xPosition: 0.000 |
+updateVariables: B:3 R:1 T:7 V:2&gt;S1:xPositionOut=0 
+===&gt;CORRECT:correct:165D607E3 | B:3 R:1 [7/9] | V: 2 | Time: 38.639 (2693)  &gt; xPosition: 0.000 |
+updateVariables: B:3 R:1 T:7 V:2&gt;S1:xPositionOut=0 
+===&gt;INITFIX:fixate:165D7D3A2 | B:3 R:2 [8/9] | V: 1 | Time: 39.656 (2815)  &gt; xPosition: -10.000 |
+updateVariables: B:3 R:2 T:8 V:1&gt;S1:xPositionOut=-10 
+===&gt;CORRECT:correct:165DB8570 | B:3 R:2 [8/9] | V: 1 | Time: 41.748 (3066)  &gt; xPosition: -10.000 |
+updateVariables: B:3 R:2 T:8 V:1&gt;S1:xPositionOut=-10 
+===&gt;INITFIX:fixate:165DD5127 | B:3 R:3 [9/9] | V: 3 | Time: 42.765 (3188)  &gt; xPosition: 10.000 |
+updateVariables: B:3 R:3 T:9 V:3&gt;S1:xPositionOut=10 
+===&gt;CORRECT:correct:165E18319 | B:3 R:3 [9/9] | V: 3 | Time: 45.140 (3473)  &gt; xPosition: 10.000 |
+updateVariables: B:3 R:3 T:9 V:3&gt;S1:xPositionOut=10 
+---&gt; taskSequence.updateTask: Task FINISHED, no more updates allowed
 
 
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CC0B0426 | B:3 R:1 [7/9] | V: 2 | Time: 29.768 (1241) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: 0.000 | updateVariables: B:3 R:1 T:7 V:2&gt;S1:xPositionOut=0 
-
-===&gt;CORRECT:correct:1CC0EE6E6 | B:3 R:1 [7/9] | V: 2 | Time: 31.969 (1373) isFix:1 isExcl:0 isFixInit:0
-fixLength: 1.52 &gt; xPosition: 0.000 | updateVariables: B:3 R:1 T:7 V:2&gt;S1:xPositionOut=0 
-
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CC11C1C2 | B:3 R:2 [8/9] | V: 3 | Time: 33.585 (1435) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: 10.000 | updateVariables: B:3 R:2 T:8 V:3&gt;S1:xPositionOut=10 
-
-
-ans =
-
-     0
-
-PAUSED, press [p] to resume...
-
-===&gt;&gt;&gt; Hello from userFunctions.testFunction() for:Simulcra-2022-11-3-18-30 &lt;runExperiment#1CBC2B4D4&gt;
-===&gt;INITFIX:fixate:1CC17599A | B:3 R:2 [8/9] | V: 3 | Time: 36.752 (1529) isFix:0 isExcl:0 isFixInit:0
-fixLength: 0.00 &gt; xPosition: 10.000 | updateVariables: B:3 R:2 T:8 V:3&gt;S1:xPositionOut=10 
-
-
-
----&gt; screenManager 1CBC28428: Closing screen = 0, Win = 10, Kind = 1
+---&gt; screenManager 16586A67A: Closing screen = 1, Win = 10, Kind = 1
 
 
 INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
-INFO: a total of 10 times out of a total of 1609 flips during this session.
+INFO: a total of 10 times out of a total of 3665 flips during this session.
 
 INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
 INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
@@ -325,13 +302,15 @@ INFO: of timing behaviour than a hard reliable measurement. Large numbers may in
 INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
 INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
 
+--&gt; dataConnection: Trying to close local connection... | close Method
 
 
-======&gt;&gt;&gt; Total ticks: 1537 | stateMachine ticks: 1775
-======&gt;&gt;&gt; Tracker Time: 0 | PTB time: 36.9008 | Drift Offset: 0
-</pre><img vspace="5" hspace="5" src="optickaBehaviourTest_02.png" alt=""> <img vspace="5" hspace="5" src="optickaBehaviourTest_03.png" alt=""> <h2 id="12">Plot a timing log of every frame against the stimulus on/off times</h2><p>PTB has the most reliable and precise timing control of any experimental control system, and we therefore log every flip time alongside the stimulus transitions. The timing log shows every recorded frame in relation to the stimulus transitions.</p><pre class="codeinput">showTimingLog(myExp);
-</pre><img vspace="5" hspace="5" src="optickaBehaviourTest_04.png" alt=""> <h2 id="13">Plot a timing log of all states and their function evaluation transition times</h2><p>The state machine also records the timestamps when states are entered and exited. In addition, it times how long each cell array of functions take to run on enter/within/exit, to check for any potential timing problems (you do not want enter/within states to take too long in case it causes frame drops, this can be seen via these plots).</p><pre class="codeinput">showLog(myExp.stateMachine);
-</pre><img vspace="5" hspace="5" src="optickaBehaviourTest_05.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2022b</a><br></p></div><!--
+======&gt;&gt;&gt; Total ticks: 3536 | stateMachine ticks: 5391
+======&gt;&gt;&gt; Tracker Time: 0 | PTB time: 45.657 | Drift Offset: 0
+</pre><p>Lets print out a table of the stimulus values for every trial run</p><pre class="codeinput">showTable(myTask);
+</pre><img vspace="5" hspace="5" src="optickaBehaviourTest_01.png" alt=""> <h2 id="12">Plot a timing log of every frame against the stimulus on/off times</h2><p>PTB has the most reliable and precise timing control of any experimental control system, and we therefore log every flip time alongside the stimulus transitions. The timing log shows every recorded frame in relation to the stimulus transitions.</p><pre class="codeinput">showTimingLog(myExp);
+</pre><img vspace="5" hspace="5" src="optickaBehaviourTest_02.png" alt=""> <img vspace="5" hspace="5" src="optickaBehaviourTest_03.png" alt=""> <h2 id="13">Plot a timing log of all states and their function evaluation transition times</h2><p>The state machine also records the timestamps when states are entered and exited. In addition, it times how long each cell array of functions take to run on enter/within/exit, to check for any potential timing problems (you do not want enter/within states to take too long in case it causes frame drops, this can be seen via these plots).</p><pre class="codeinput">showLog(myExp.stateMachine);
+</pre><img vspace="5" hspace="5" src="optickaBehaviourTest_04.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023a</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Demo of a state-machine-driven Opticka Behavioural Experiment. 
 % Opticka is an object-oriented framework for the Psychophysics toolbox
@@ -410,7 +389,7 @@ myStims			= metaStimulus();
 
 %%
 % first stimulus is a smoothed 5° red disc
-myStims{1}		= discStimulus('colour', [0.7 0 0], 'size', 5, 'sigma', 25);
+myStims{1}		= discStimulus('colour', [0.7 0.2 0], 'size', 5, 'sigma', 20);
 
 %%
 % second stimulus is an optimised 0.8° fixation cross from Thaler et al., 2013
@@ -443,10 +422,6 @@ myTask.nVar(1).values	= [-10 0 10];
 myTask.nBlocks			= 3;
 randomiseTask(myTask);
 
-%%
-% Lets print out a table of the stimulus values for every trial to be run
-showLog(myTask);
-
 %% Setup screenManager Object
 % screenManager controls the PTB Screen(). We initialise the object with
 % parameters to open the PTB screen with. Note distance and pixels
@@ -454,7 +429,7 @@ showLog(myTask);
 % several screen parameters, windowing, blending etc.
 myScreen = screenManager('distance', 57.3,... % display distance from observer
 	'pixelsPerCm', 27,... % calibration value for pixel density, measure using calibrateSize()
-	'windowed', [0 0 800 600],... % use fullscreen [] or window [X Y]?
+	'windowed', [],... % use fullscreen [] or window [X Y]?
 	'backgroundColour', [0.5 0.5 0.5],... % initial background colour
 	'blend', true,... % enable OpenGL blending, you can also set blend modes when needed
 	'bitDepth', '8bit'); % FloatingPoint32bit, 8bit, FloatingPoint16bit etc.
@@ -482,15 +457,20 @@ myExp = runExperiment('stimuli', myStims,... %stimulus objects
 	'screen', myScreen,... %screen manager object
 	'task', myTask,... % task randomised stimulus sequence
 	'stateInfoFile', 'DefaultStateInfo.m', ... % use the default state info file
-	'debug', true,... % enable debug mode for testing
+	'debug', false,... % debug mode for testing?
 	'useEyeLink', true, ... % use the eyelink manager
 	'dummyMode', true, ... % use dummy mode so the mouse replaces eye movements for testing
+	'logStateTimers',true,...
 	'subjectName', 'Simulcra', ...
 	'researcherName', 'Joanna Doe');
 
 %% Run the full behavioural task
 % 
 runTask(myExp);
+
+%%
+% Lets print out a table of the stimulus values for every trial run
+showTable(myTask);
 
 %% Plot a timing log of every frame against the stimulus on/off times
 % PTB has the most reliable and precise timing control of any experimental

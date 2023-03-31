@@ -11,6 +11,7 @@ var hierarchy =
         [ "colourGratingStimulus", "classcolour_grating_stimulus.html", null ],
         [ "discStimulus", "classdisc_stimulus.html", null ],
         [ "dotsStimulus", "classdots_stimulus.html", null ],
+        [ "exampleStimulus", "classexample_stimulus.html", null ],
         [ "fixationCrossStimulus", "classfixation_cross_stimulus.html", null ],
         [ "gaborStimulus", "classgabor_stimulus.html", null ],
         [ "gratingStimulus", "classgrating_stimulus.html", null ],
@@ -19,6 +20,7 @@ var hierarchy =
         [ "movieStimulus", "classmovie_stimulus.html", null ],
         [ "ndotsStimulus", "classndots_stimulus.html", null ],
         [ "plaidStimulus", "classplaid_stimulus.html", null ],
+        [ "revcorStimulus", "classrevcor_stimulus.html", null ],
         [ "spotStimulus", "classspot_stimulus.html", [
           [ "colourTest", "classcolour_test.html", null ]
         ] ],
@@ -32,6 +34,10 @@ var hierarchy =
       [ "arduinoSerialPort", "classarduino_serial_port.html", null ],
       [ "calibrateLuminance", "classcalibrate_luminance.html", null ],
       [ "dataConnection", "classdata_connection.html", null ],
+      [ "eyetrackerSmooth", "classeyetracker_smooth.html", [
+        [ "iRecManager", "classi_rec_manager.html", null ],
+        [ "tobiiManager", "classtobii_manager.html", null ]
+      ] ],
       [ "labJack", "classlab_jack.html", null ],
       [ "labJackT", "classlab_jack_t.html", null ],
       [ "optickaCore", "classopticka_core.html", [
@@ -49,7 +55,11 @@ var hierarchy =
         [ "colourManager", "classcolour_manager.html", null ],
         [ "dPixxManager", "classd_pixx_manager.html", null ],
         [ "eyeOccluder", "classeye_occluder.html", null ],
-        [ "eyelinkManager", "classeyelink_manager.html", null ],
+        [ "eyetrackerCore", "classeyetracker_core.html", [
+          [ "eyelinkManager", "classeyelink_manager.html", null ],
+          [ "iRecManager", "classi_rec_manager.html", null ],
+          [ "tobiiManager", "classtobii_manager.html", null ]
+        ] ],
         [ "ioManager", "classio_manager.html", null ],
         [ "magstimManager", "classmagstim_manager.html", null ],
         [ "metaStimulus", "classmeta_stimulus.html", null ],
@@ -60,7 +70,6 @@ var hierarchy =
         [ "screenManager", "classscreen_manager.html", null ],
         [ "stateMachine", "classstate_machine.html", null ],
         [ "taskSequence", "classtask_sequence.html", null ],
-        [ "tobiiManager", "classtobii_manager.html", null ],
         [ "touchManager", "classtouch_manager.html", null ]
       ] ],
       [ "opxOnline", "classopx_online.html", null ],
