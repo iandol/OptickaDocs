@@ -1,0 +1,12 @@
+<map id="pupilCoreManager" name="pupilCoreManager">
+<area shape="rect" id="Node000001" title="Manages the Pupil Labs Core." alt="" coords="105,1545,255,2091"/>
+<area shape="rect" id="Node000002" href="$classeyetracker_core.html" title=" " alt="" coords="5,972,173,1497"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,1510,140,1545,135,1545,130,1511"/>
+<area shape="rect" id="Node000003" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="30,119,205,924"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,938,102,972,97,972,98,938"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="152,5,208,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,85,172,119,167,118,172,84"/>
+<area shape="rect" id="Node000005" href="$classeyetracker_smooth.html" title="Smoothes incoming eye sample data." alt="" coords="198,1162,346,1307"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="206,82,219,118,249,266,269,418,282,570,289,717,289,977,280,1162,275,1161,283,977,284,717,277,570,264,419,243,267,213,119,201,84"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="261,1322,226,1545,220,1545,256,1321"/>
+</map>

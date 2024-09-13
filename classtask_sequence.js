@@ -20,6 +20,7 @@ var classtask_sequence =
     [ "rewindTask", "classtask_sequence.html#a4d9ba90194a3f0c95c325518f97f5fcd", null ],
     [ "showLog", "classtask_sequence.html#a16b4f8255493d1ec5dcf108b356e1e08", null ],
     [ "showTable", "classtask_sequence.html#a3527ed63415c2cf59535e5e05a25ccf8", null ],
+    [ "updateStaircase", "classtask_sequence.html#a5251cb61db2d7d8199f082ab9298e7d7", null ],
     [ "updateTask", "classtask_sequence.html#a47a3581a872cbbe8693f2f317874865f", null ],
     [ "validate", "classtask_sequence.html#a96e4efe68cc17e1cd97848b630a26811", null ],
     [ "addBlank", "classtask_sequence.html#a33c3b26b8eb5b8a70f26ad776c531f2c", null ],

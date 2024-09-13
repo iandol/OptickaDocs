@@ -11,13 +11,17 @@ var dir_981ed64f854a2c791f78f1fb5772f37f =
     [ "FixationTrainingAnimatedStateInfo.m", "_fixation_training_animated_state_info_8m.html", null ],
     [ "FixationTrainingDistractorStateInfo.m", "_fixation_training_distractor_state_info_8m.html", null ],
     [ "FixationTrainingStateInfo.m", "_fixation_training_state_info_8m.html", null ],
+    [ "fNIRS.m", "f_n_i_r_s_8m.html", null ],
     [ "Isoluminant_Colours_StateInfo.m", "_isoluminant___colours___state_info_8m.html", null ],
     [ "OrientationTuningStateInfo.m", "_orientation_tuning_state_info_8m.html", null ],
+    [ "PupillaryReflex.m", "_pupillary_reflex_8m.html", null ],
     [ "RevCorStateInfo.m", "_rev_cor_state_info_8m.html", null ],
     [ "RFLocaliserStateInfo.m", "_r_f_localiser_state_info_8m.html", null ],
     [ "Saccade_AntiSaccadeStateInfo.m", "_saccade___anti_saccade_state_info_8m.html", null ],
     [ "SaccadePhospheneStateInfo.m", "_saccade_phosphene_state_info_8m.html", null ],
+    [ "Saccadic_Countermanding.m", "_saccadic___countermanding_8m.html", null ],
+    [ "Saccadic_DoubleStep.m", "_saccadic___double_step_8m.html", null ],
     [ "SFTFStateInfo.m", "_s_f_t_f_state_info_8m.html", null ],
-    [ "TwoFigureGroundStateInfo.m", "_two_figure_ground_state_info_8m.html", null ],
-    [ "Twostep_Saccade_StateInfo.m", "_twostep___saccade___state_info_8m.html", null ]
+    [ "Two_Images.m", "_two___images_8m.html", null ],
+    [ "TwoFigureGroundStateInfo.m", "_two_figure_ground_state_info_8m.html", null ]
 ];

@@ -1,5 +1,7 @@
 <map id="plxReader" name="plxReader">
-<area shape="rect" id="node1" title=" " alt="" coords="15,696,185,1125"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,131,195,648"/>
-<area shape="rect" id="node3" title=" " alt="" coords="67,5,133,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="17,972,168,1517"/>
+<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,924"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,938,95,972,90,972,90,938"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="65,5,121,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,84,95,119,90,119,90,84"/>
 </map>

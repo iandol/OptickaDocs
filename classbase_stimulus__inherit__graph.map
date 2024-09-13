@@ -1,27 +1,59 @@
 <map id="baseStimulus" name="baseStimulus">
-<area shape="rect" id="node1" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="1857,696,2071,1404"/>
-<area shape="rect" id="node5" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="5,1650,160,1903"/>
-<area shape="rect" id="node6" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="185,1584,391,1969"/>
-<area shape="rect" id="node7" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="416,1496,589,2057"/>
-<area shape="rect" id="node9" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="613,1518,824,2035"/>
-<area shape="rect" id="node10" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="848,1481,1059,2072"/>
-<area shape="rect" id="node11" href="$classdisc_stimulus.html" title="single disc stimulus, inherits from baseStimulus DISCSTIMULUS single disc stimulus,..." alt="" coords="1083,1555,1253,1999"/>
-<area shape="rect" id="node12" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="1277,1547,1435,2006"/>
-<area shape="rect" id="node13" href="$classexample_stimulus.html" title=" " alt="" coords="1459,1665,1621,1889"/>
-<area shape="rect" id="node14" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="1645,1577,1835,1977"/>
-<area shape="rect" id="node15" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="1859,1511,2069,2043"/>
-<area shape="rect" id="node16" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="2093,1452,2304,2101"/>
-<area shape="rect" id="node17" href="$classimage_stimulus.html" title="textureStimulus" alt="" coords="2328,1577,2485,1977"/>
-<area shape="rect" id="node18" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="2509,1547,2672,2006"/>
-<area shape="rect" id="node19" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="2697,1555,2863,1999"/>
-<area shape="rect" id="node20" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="2888,1584,3064,1969"/>
-<area shape="rect" id="node21" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="3088,1694,3224,1859"/>
-<area shape="rect" id="node22" href="$classrevcor_stimulus.html" title="revcorStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="3249,1489,3407,2065"/>
-<area shape="rect" id="node23" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="3432,1584,3603,1969"/>
-<area shape="rect" id="node25" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="3627,1489,3837,2065"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="1781,131,1971,648"/>
-<area shape="rect" id="node3" title=" " alt="" coords="1843,5,1909,83"/>
-<area shape="rect" id="node4" title=" " alt="" coords="1995,351,2109,428"/>
-<area shape="rect" id="node8" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="425,2149,580,2476"/>
-<area shape="rect" id="node24" href="$classcolour_test.html" title="colour test is a simple RGB colour blender for teaching" alt="" coords="3448,2245,3587,2381"/>
+<area shape="rect" id="Node000001" title="baseStimulus is the superclass for all stimulus objects" alt="" coords="2050,972,2245,1897"/>
+<area shape="rect" id="Node000005" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="5,2215,140,2521"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2037,1451,1857,1474,1619,1509,1343,1554,1052,1611,765,1679,631,1717,506,1758,393,1801,295,1847,215,1896,182,1921,155,1947,132,1975,113,2006,87,2074,72,2146,66,2215,61,2215,67,2145,81,2073,108,2004,128,1972,151,1944,179,1917,212,1892,293,1843,391,1796,504,1753,629,1712,764,1674,1051,1606,1342,1549,1618,1504,1857,1469,2036,1446"/>
+<area shape="rect" id="Node000006" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="165,2125,351,2611"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="2037,1456,1661,1521,1416,1571,1158,1630,906,1698,787,1735,677,1774,578,1815,491,1858,419,1902,365,1947,334,1986,309,2030,291,2077,277,2126,272,2124,286,2075,305,2028,330,1983,361,1943,416,1898,488,1853,575,1810,675,1769,786,1730,904,1693,1157,1625,1415,1565,1660,1516,2036,1450"/>
+<area shape="rect" id="Node000007" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="376,2105,535,2631"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="2036,1439,1906,1444,1738,1458,1544,1485,1441,1504,1335,1529,1228,1558,1121,1593,1015,1634,911,1681,812,1736,717,1798,629,1868,549,1947,522,1982,501,2021,484,2063,471,2106,466,2105,479,2061,496,2019,518,1979,545,1944,626,1864,714,1794,809,1731,909,1676,1013,1629,1119,1588,1226,1553,1334,1523,1440,1499,1544,1480,1737,1453,1905,1439,2036,1433"/>
+<area shape="rect" id="Node000009" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="559,2035,749,2701"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="2037,1446,1921,1458,1775,1479,1609,1513,1431,1560,1340,1591,1249,1625,1159,1665,1071,1710,986,1760,906,1816,831,1878,763,1947,731,1989,706,2036,702,2034,727,1986,759,1944,828,1874,903,1812,983,1755,1068,1705,1156,1660,1247,1620,1338,1586,1430,1555,1608,1507,1775,1474,1920,1452,2036,1440"/>
+<area shape="rect" id="Node000010" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="773,1985,962,2751"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="2037,1454,1936,1472,1813,1500,1674,1539,1525,1590,1375,1654,1301,1693,1229,1735,1159,1781,1093,1832,1032,1887,976,1947,948,1986,943,1983,972,1944,1028,1883,1090,1828,1156,1777,1226,1730,1298,1688,1372,1650,1523,1585,1672,1534,1811,1495,1935,1467,2036,1449"/>
+<area shape="rect" id="Node000011" href="$classdisc_stimulus.html" title="single disc stimulus, inherits from baseStimulus DISCSTIMULUS single disc stimulus,..." alt="" coords="986,2085,1138,2651"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="2037,1462,1949,1485,1843,1517,1725,1559,1601,1612,1477,1676,1357,1753,1300,1796,1247,1843,1197,1893,1152,1947,1131,1979,1113,2013,1087,2086,1082,2084,1108,2011,1126,1976,1148,1944,1193,1890,1243,1839,1297,1792,1354,1749,1474,1672,1599,1607,1723,1554,1841,1512,1947,1480,2036,1457"/>
+<area shape="rect" id="Node000012" href="$classdotline_stimulus.html" title="Show lines made of dots." alt="" coords="1162,2075,1301,2661"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="2038,1473,1873,1537,1777,1582,1676,1636,1575,1699,1478,1772,1390,1855,1351,1899,1315,1947,1281,2008,1257,2076,1252,2074,1276,2006,1310,1944,1347,1896,1386,1851,1475,1768,1572,1695,1673,1632,1774,1577,1871,1532,2036,1468"/>
+<area shape="rect" id="Node000013" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="1325,2075,1463,2661"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="2039,1489,1906,1562,1831,1609,1753,1664,1675,1725,1602,1793,1535,1867,1478,1947,1446,2009,1424,2076,1419,2074,1441,2007,1473,1944,1531,1863,1598,1789,1672,1721,1750,1660,1828,1605,1904,1557,2036,1485"/>
+<area shape="rect" id="Node000014" href="$classexample_stimulus.html" title=" " alt="" coords="1487,2235,1626,2501"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="2041,1515,1942,1594,1833,1696,1778,1753,1727,1815,1681,1879,1640,1947,1610,2017,1588,2092,1573,2166,1565,2236,1560,2235,1568,2166,1583,2091,1605,2015,1636,1944,1676,1876,1723,1811,1774,1750,1829,1692,1938,1590,2037,1510"/>
+<area shape="rect" id="Node000015" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="1650,2115,1815,2621"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="2044,1577,1989,1657,1931,1748,1877,1846,1830,1946,1800,2030,1777,2116,1772,2114,1795,2028,1825,1944,1872,1844,1927,1746,1984,1654,2039,1574"/>
+<area shape="rect" id="Node000016" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="1839,2025,2029,2711"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="2049,1875,2015,2026,2010,2025,2044,1874"/>
+<area shape="rect" id="Node000017" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="2053,1945,2242,2791"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="2150,1911,2150,1945,2145,1945,2145,1911"/>
+<area shape="rect" id="Node000018" href="$classimage_stimulus.html" title="Show images or directories full of images." alt="" coords="2266,2095,2413,2641"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="2249,1910,2257,1945,2287,2095,2282,2096,2251,1946,2244,1911"/>
+<area shape="rect" id="Node000019" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="2437,2075,2581,2661"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="2254,1597,2346,1761,2390,1852,2427,1944,2448,2008,2465,2074,2460,2076,2443,2010,2422,1946,2385,1854,2341,1764,2250,1599"/>
+<area shape="rect" id="Node000020" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="2605,2055,2743,2681"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="2257,1526,2342,1607,2434,1707,2522,1821,2561,1882,2595,1944,2618,1998,2636,2054,2631,2056,2613,2000,2590,1946,2557,1884,2518,1824,2430,1711,2338,1611,2253,1530"/>
+<area shape="rect" id="Node000021" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="2767,2125,2925,2611"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="2258,1494,2377,1570,2444,1618,2513,1673,2582,1733,2647,1798,2706,1869,2758,1944,2780,1986,2798,2031,2825,2124,2820,2126,2793,2033,2775,1989,2753,1947,2702,1872,2643,1802,2578,1737,2510,1677,2441,1623,2374,1575,2255,1498"/>
+<area shape="rect" id="Node000022" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="2949,2275,3063,2461"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="2259,1471,2415,1537,2507,1583,2602,1637,2697,1700,2787,1772,2869,1854,2906,1898,2939,1944,2961,1983,2978,2025,3001,2113,3012,2199,3014,2275,3009,2275,3007,2199,2996,2114,2973,2027,2956,1985,2934,1947,2902,1901,2865,1857,2784,1776,2694,1705,2599,1642,2505,1588,2413,1542,2257,1476"/>
+<area shape="rect" id="Node000023" href="$classpolar_board_stimulus.html" title="polar checkerboard stimulus, inherits from baseStimulus POLARBOARDSTIMULUS inherits from baseStimulus..." alt="" coords="3087,1945,3277,2791"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="2259,1462,2341,1488,2439,1523,2547,1567,2661,1621,2776,1685,2887,1760,2939,1801,2989,1846,3035,1893,3077,1944,3089,1960,3085,1963,3073,1947,3031,1897,2985,1850,2936,1805,2883,1764,2773,1689,2659,1625,2545,1572,2437,1528,2340,1493,2257,1468"/>
+<area shape="rect" id="Node000024" href="$classpolar_grating_stimulus.html" title="polar grating stimulus, inherits from baseStimulus POLARGRATINGSTIMULUS inherits from baseStimulus Th..." alt="" coords="3301,1975,3490,2761"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="2259,1450,2357,1469,2478,1498,2613,1538,2757,1589,2903,1654,2975,1692,3045,1734,3113,1780,3177,1830,3236,1885,3291,1944,3313,1973,3309,1976,3287,1947,3232,1888,3173,1834,3109,1784,3042,1738,2973,1697,2901,1659,2755,1594,2611,1543,2476,1503,2356,1475,2257,1455"/>
+<area shape="rect" id="Node000025" href="$classpupil_core_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="3515,2205,3660,2531"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="2259,1440,2373,1452,2517,1474,2680,1507,2855,1555,2944,1585,3034,1620,3121,1660,3207,1705,3289,1755,3366,1812,3438,1874,3504,1944,3525,1972,3543,2003,3569,2069,3585,2138,3593,2205,3588,2205,3580,2139,3564,2070,3538,2005,3521,1975,3500,1947,3435,1878,3363,1816,3286,1760,3204,1709,3119,1664,3031,1625,2943,1590,2854,1560,2679,1512,2516,1479,2373,1458,2258,1445"/>
+<area shape="rect" id="Node000026" href="$classrevcor_stimulus.html" title="revcorStimulus stimulus, inherits from baseStimulus" alt="" coords="3685,1995,3831,2741"/>
+<area shape="poly" id="edge25_Node000001_Node000026" title=" " alt="" coords="2259,1435,2385,1442,2546,1458,2731,1487,2829,1507,2930,1532,3032,1561,3134,1596,3235,1637,3333,1684,3427,1738,3516,1799,3599,1867,3675,1944,3710,1994,3705,1997,3671,1947,3596,1871,3513,1803,3424,1742,3330,1689,3232,1642,3132,1601,3030,1566,2929,1537,2828,1512,2730,1492,2545,1463,2385,1447,2258,1440"/>
+<area shape="rect" id="Node000027" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="3855,2125,4007,2611"/>
+<area shape="poly" id="edge26_Node000001_Node000027" title=" " alt="" coords="2259,1452,2619,1519,2852,1569,3097,1629,3335,1697,3447,1734,3551,1773,3645,1813,3727,1855,3794,1899,3845,1944,3876,1984,3899,2028,3916,2076,3928,2125,3923,2126,3911,2077,3894,2030,3871,1986,3841,1947,3791,1903,3724,1860,3643,1818,3549,1778,3446,1739,3334,1702,3095,1634,2851,1574,2618,1524,2258,1457"/>
+<area shape="rect" id="Node000029" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="4031,1995,4221,2741"/>
+<area shape="poly" id="edge28_Node000001_Node000029" title=" " alt="" coords="2259,1449,2652,1512,2909,1560,3181,1619,3447,1687,3573,1725,3689,1764,3795,1806,3887,1850,3963,1896,4021,1943,4060,1994,4056,1997,4017,1947,3960,1900,3885,1855,3793,1811,3688,1769,3571,1730,3446,1692,3180,1624,2908,1565,2651,1517,2258,1454"/>
+<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="1980,119,2155,924"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2106,937,2109,972,2104,972,2101,938"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="2039,5,2095,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2070,84,2070,119,2065,119,2065,84"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="2179,489,2279,554"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2227,568,2191,972,2186,971,2222,567"/>
+<area shape="rect" id="Node000008" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="387,2839,524,3264"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="458,2645,458,2838,453,2838,453,2645"/>
+<area shape="rect" id="Node000028" href="$classcolour_test.html" title="colour test is a simple RGB colour blender for teaching" alt="" coords="3869,2979,3993,3124"/>
+<area shape="poly" id="edge27_Node000027_Node000028" title=" " alt="" coords="3934,2624,3934,2979,3929,2979,3929,2624"/>
 </map>

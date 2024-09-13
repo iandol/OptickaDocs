@@ -10,6 +10,7 @@ var hierarchy =
         [ "checkerboardStimulus", "classcheckerboard_stimulus.html", null ],
         [ "colourGratingStimulus", "classcolour_grating_stimulus.html", null ],
         [ "discStimulus", "classdisc_stimulus.html", null ],
+        [ "dotlineStimulus", "classdotline_stimulus.html", null ],
         [ "dotsStimulus", "classdots_stimulus.html", null ],
         [ "exampleStimulus", "classexample_stimulus.html", null ],
         [ "fixationCrossStimulus", "classfixation_cross_stimulus.html", null ],
@@ -20,6 +21,9 @@ var hierarchy =
         [ "movieStimulus", "classmovie_stimulus.html", null ],
         [ "ndotsStimulus", "classndots_stimulus.html", null ],
         [ "plaidStimulus", "classplaid_stimulus.html", null ],
+        [ "polarBoardStimulus", "classpolar_board_stimulus.html", null ],
+        [ "polarGratingStimulus", "classpolar_grating_stimulus.html", null ],
+        [ "pupilCoreStimulus", "classpupil_core_stimulus.html", null ],
         [ "revcorStimulus", "classrevcor_stimulus.html", null ],
         [ "spotStimulus", "classspot_stimulus.html", [
           [ "colourTest", "classcolour_test.html", null ]
@@ -36,6 +40,7 @@ var hierarchy =
       [ "dataConnection", "classdata_connection.html", null ],
       [ "eyetrackerSmooth", "classeyetracker_smooth.html", [
         [ "iRecManager", "classi_rec_manager.html", null ],
+        [ "pupilCoreManager", "classpupil_core_manager.html", null ],
         [ "tobiiManager", "classtobii_manager.html", null ]
       ] ],
       [ "labJack", "classlab_jack.html", null ],
@@ -45,6 +50,7 @@ var hierarchy =
           [ "LFPAnalysis", "class_l_f_p_analysis.html", null ],
           [ "LFPMeta", "class_l_f_p_meta.html", null ],
           [ "eyelinkAnalysis", "classeyelink_analysis.html", null ],
+          [ "iRecAnalysis", "classi_rec_analysis.html", null ],
           [ "spikeAnalysis", "classspike_analysis.html", null ],
           [ "tobiiAnalysis", "classtobii_analysis.html", null ]
         ] ],
@@ -58,11 +64,13 @@ var hierarchy =
         [ "eyetrackerCore", "classeyetracker_core.html", [
           [ "eyelinkManager", "classeyelink_manager.html", null ],
           [ "iRecManager", "classi_rec_manager.html", null ],
+          [ "pupilCoreManager", "classpupil_core_manager.html", null ],
           [ "tobiiManager", "classtobii_manager.html", null ]
         ] ],
         [ "ioManager", "classio_manager.html", null ],
         [ "magstimManager", "classmagstim_manager.html", null ],
         [ "metaStimulus", "classmeta_stimulus.html", null ],
+        [ "nirSmartManager", "classnir_smart_manager.html", null ],
         [ "opticka", "classopticka.html", null ],
         [ "plusplusManager", "classplusplus_manager.html", null ],
         [ "plxReader", "classplx_reader.html", null ],
@@ -75,7 +83,10 @@ var hierarchy =
       [ "opxOnline", "classopx_online.html", null ],
       [ "parseOpxSpikes", "classparse_opx_spikes.html", null ],
       [ "sendSerialIOPort", "classsend_serial_i_o_port.html", null ],
-      [ "tittaCalMovieStimulus", "classtitta_cal_movie_stimulus.html", null ],
+      [ "tempController", "classtemp_controller.html", null ],
+      [ "tittaAdvImageStimulus", "classtitta_adv_image_stimulus.html", null ],
+      [ "tittaAdvMovieStimulus", "classtitta_adv_movie_stimulus.html", null ],
+      [ "tittaCalStimulus", "classtitta_cal_stimulus.html", null ],
       [ "userFunctions", "classuser_functions.html", null ]
     ] ]
 ];

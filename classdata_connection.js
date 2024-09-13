@@ -6,6 +6,7 @@ var classdata_connection =
     [ "checkStatus", "classdata_connection.html#ac1da68d7c8fd939df87e72ecafdbc524", null ],
     [ "close", "classdata_connection.html#aaf364e25ac304879d1f22b262a9131cc", null ],
     [ "closeAll", "classdata_connection.html#a35cf29218e7c3b1bdcf50ca3c1283b05", null ],
+    [ "echoServer", "classdata_connection.html#ae0e197252e62913a111f96708fe91196", null ],
     [ "flush", "classdata_connection.html#af1f5df1c2f3cf304c401f855ecb990db", null ],
     [ "loadobj", "classdata_connection.html#a3373487b2f330ddbd2664ce6096f18f9", null ],
     [ "open", "classdata_connection.html#adfacbd8f1b151edd2c937a77265d21fe", null ],

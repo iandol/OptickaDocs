@@ -1,4 +1,5 @@
 <map id="dataConnection" name="dataConnection">
-<area shape="rect" id="node1" title="dataConnection Connects and manages a socket connection" alt="" coords="5,131,155,575"/>
-<area shape="rect" id="node2" title=" " alt="" coords="47,5,113,83"/>
+<area shape="rect" id="Node000001" title="dataConnection Connects and manages a socket connection" alt="" coords="5,119,136,684"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="43,5,99,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,84,73,119,68,119,68,84"/>
 </map>

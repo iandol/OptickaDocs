@@ -14,6 +14,7 @@ var classrf_mapper =
     [ "doubleBuffer", "classrf_mapper.html#a73f268d51157835b1ac05dae53a65cfd", null ],
     [ "dstMode", "classrf_mapper.html#a028c6d3f6dfd9c915c127acf2ed0c946", null ],
     [ "dummyMode", "classrf_mapper.html#a7fdd967f0e862bdc07ae40ffce991ce4", null ],
+    [ "eyeSettings", "classrf_mapper.html#a5ee0c4e90f2eaceca8ecf13d8e7c91d4", null ],
     [ "showGrid", "classrf_mapper.html#a3b1a0eb5b5c695b81e3d3015d4dc3c14", null ],
     [ "showText", "classrf_mapper.html#a999d5ab53de07c2e0ec969c581937ed1", null ],
     [ "srcMode", "classrf_mapper.html#ae1b39ff0120e8fdc12bf8198e1254bda", null ],

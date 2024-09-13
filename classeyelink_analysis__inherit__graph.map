@@ -1,6 +1,9 @@
 <map id="eyelinkAnalysis" name="eyelinkAnalysis">
-<area shape="rect" id="node1" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="5,1437,205,2043"/>
-<area shape="rect" id="node2" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="7,696,204,1389"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="11,131,200,648"/>
-<area shape="rect" id="node4" title=" " alt="" coords="72,5,139,83"/>
+<area shape="rect" id="Node000001" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="5,1925,184,2711"/>
+<area shape="rect" id="Node000002" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="6,972,183,1877"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,1891,97,1925,92,1925,92,1891"/>
+<area shape="rect" id="Node000003" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="7,119,182,924"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="97,938,97,972,92,972,92,938"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="67,5,123,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="97,84,97,119,92,119,92,84"/>
 </map>

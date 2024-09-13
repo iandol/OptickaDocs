@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ndotsstimulus_2em_1704',['ndotsStimulus.m',['../ndots_stimulus_8m.html',1,'']]]
+  ['ndotsstimulus_2em_0',['ndotsStimulus.m',['../ndots_stimulus_8m.html',1,'']]],
+  ['nirsmartmanager_2em_1',['nirSmartManager.m',['../nir_smart_manager_8m.html',1,'']]]
 ];

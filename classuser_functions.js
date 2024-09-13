@@ -1,7 +1,8 @@
 var classuser_functions =
 [
     [ "userFunctions", "classuser_functions.html#a438155975319ac2a8bd7c455bd313f0e", null ],
-    [ "myText", "classuser_functions.html#a39503dfee8187084632a286e0302b46c", null ],
+    [ "resetDelayTime", "classuser_functions.html#adc23ab2cda06f666927a5ad419d235c7", null ],
+    [ "setDelayTimeWithStaircase", "classuser_functions.html#abbe4a1a76bf6d9be979b428f62353d6f", null ],
     [ "testFunction", "classuser_functions.html#a4a3209631e81f42ed63b06327d7b5761", null ],
     [ "eT", "classuser_functions.html#a1368d2a3f4430630f18120090beafc2a", null ],
     [ "io", "classuser_functions.html#af82da4b4f4ae253af66dd91b5eb9a296", null ],

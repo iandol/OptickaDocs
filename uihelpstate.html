@@ -189,37 +189,43 @@
 <h2 id="toc-title">Contents</h2>
 
 </nav>
-<h1 id="statemachine-info-files">StateMachine Info Files</h1>
-<p>Any experiment can be thought of as a series of states (delay,
-fixating, stimulation, reward) and transitions between them. State
+<h1 id="controlling-behavioural-tasks-using-state-machines">Controlling
+Behavioural Tasks using State Machines</h1>
+<p>Any experiment can be thought of as a series of states (delay period,
+initiate fixation, present stimulus, give subject feedback, post-trial
+timeout, etc.) and conditions for switching between these states. State
 Machines are a widely used control system for these types of scenarios.
-The important definition is:</p>
+The important definition of a state machine is:</p>
 <ol type="1">
-<li>a state machine can be in exactly one of a finite number of states
-at any given time.</li>
-<li>The state machine can change from one state to another in response
-to some inputs; the change from one state to another is called a
-<strong>transition</strong>. A MATLAB function controls the transition,
-where it can return a state name that forces a transition to that
-state.</li>
-<li>MATLAB functions can run when we <strong>enter</strong>, are
-<strong>within</strong>, or <strong>exit</strong> a state.</li>
-<li>An FSM is defined by a <em>table</em> of its states, its initial
-state, and the inputs that trigger each transition</li>
+<li>The state machine must be in exactly one of a finite number of
+states at any given time. States run for a defined amount of time by
+default before switching to a <code>next</code> state.</li>
+<li>The state machine cal also change from one state to another based on
+rules; the conditional change from one state to another is called a
+<strong>transition</strong>. A function controls the transition
+(<code>transitionFcn</code>), returning a different state name that
+forces a transition to this new state.</li>
+<li>Functions can run when we <strong>enter</strong>
+(<code>enterFcn</code>), are <strong>within</strong>
+(<code>withinFcn</code>), or <strong>exit</strong>
+(<code>exitFcn</code>) a state.</li>
 </ol>
-<p>Opticka uses a state-machine specified by <code>StateInfo.m</code>
-files that controls <em>which</em> functions run when we
-<strong>enter</strong>, are <strong>within</strong>, when we
-<strong>exit</strong>, and <strong>transition</strong> experiment
-states. See below for the core functions that can run at any point; you
-can write your own functions and store data in a <a
-href="uihelpfunctions.html">userFunctions.m</a> file.</p>
-<p>For example the <code>DefaultStateInfo.m</code> file defines several
-experimental states (<em>prefix</em>, <em>fixate</em>,
+<p>Opticka defines all of this in a <code>StateInfo.m</code> file that
+specifies function arrays and assigns them to a state list. The Opticka
+GUI visualises the state table and lists out each function array.</p>
+<p>For example this cell array identifies two functions which draw and
+animate our <code>stims</code> stimulus object. The <code>@()</code>
+identifies these as MATLAB function handles:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode matlab"><code class="sourceCode matlab"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{ <span class="op">@</span>()<span class="va">draw</span>(<span class="va">stims</span>)<span class="op">;</span> <span class="op">@</span>()<span class="va">animate</span>(<span class="va">stims</span>)<span class="op">;</span> }</span></code></pre></div>
+<p>Opticka has many core functions that can run during state machine
+traversal. You can additionally write your own functions and store them
+in a <a href="uihelpfunctions.html">userFunctions.m</a> class file.</p>
+<p>As an example, the <code>DefaultStateInfo.m</code> file defines
+several experiment states (<em>prefix</em>, <em>fixate</em>,
 <em>stimulus</em>, <em>incorrect</em>, <em>breakfix</em>,
 <em>correct</em>, <em>timeout</em>) and how the task switches between
-them (either with a timer or transitioned using an eyetracker to check
-fixation):</p>
+them (either with a timer or transitioned using an eyetracker):</p>
 <pre class="smaller"><code>                                                       ┌───────────────────┐
                                                        │      prefix       │
   ┌──────────────────────────────────────────────────▶ │    hide(stims)    │ ◀┐
@@ -251,12 +257,7 @@ fixation):</p>
                                                        └───────────────────┘</code></pre>
 <p>State info files, being plain <code>.m</code> files, should be edited
 in the MATLAB editor (the GUI has an edit button that opens the file in
-the editor for you). You can use the class methods for the screen
-manager (<code>s</code>), state machine (<code>sM</code>), task sequence
-(<code>task</code>), stimulus list (<code>stims</code>), eyetracker
-(<code>eT</code>), digital I/O (<code>io</code>) etc. You can also add
-custom functions to a <a href="uihelpfunctions.html">userFunctions</a>
-file. The most important built-in methods are shown below…</p>
+the editor for you).</p>
 <hr />
 <!--
 digraph{

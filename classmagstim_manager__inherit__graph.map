@@ -1,5 +1,7 @@
 <map id="magstimManager" name="magstimManager">
-<area shape="rect" id="node1" title="magstimManager &#45; controls a MagStim Rapid TMS system using a LabJack" alt="" coords="19,696,181,935"/>
-<area shape="rect" id="node2" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,131,195,648"/>
-<area shape="rect" id="node3" title=" " alt="" coords="67,5,133,83"/>
+<area shape="rect" id="Node000001" title="magstimManager &#45; controls a MagStim Rapid TMS system using a LabJack" alt="" coords="21,972,164,1257"/>
+<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,924"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,937,95,971,90,971,90,937"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="65,5,121,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,84,95,119,90,119,90,84"/>
 </map>

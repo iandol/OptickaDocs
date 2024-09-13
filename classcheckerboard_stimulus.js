@@ -11,7 +11,7 @@ var classcheckerboard_stimulus =
     [ "calculatePhaseIncrement", "classcheckerboard_stimulus.html#ad27c855bc00c1edbc01f1763c1160e9e", null ],
     [ "calculateScale", "classcheckerboard_stimulus.html#a91214d661e3deec3268f2481572edf30", null ],
     [ "colour2", "classcheckerboard_stimulus.html#a5a1a0ba1d94420d0314d36107295eb34", null ],
-    [ "draw", "classcheckerboard_stimulus.html#a80cb8d16545f4c794b7a0c13283089ed", null ],
+    [ "draw", "classcheckerboard_stimulus.html#ae005b05577d572a728e9da19bb78a5e4", null ],
     [ "reset", "classcheckerboard_stimulus.html#ae5502f10808d727eb648ddb59489fdb5", null ],
     [ "set_reverseDirectionOut", "classcheckerboard_stimulus.html#a7d2ede5d84091aa619d0c1f1b515a55e", null ],
     [ "set_sfOut", "classcheckerboard_stimulus.html#a0d25f38444f2e2f75b858e690232a19d", null ],
@@ -46,6 +46,7 @@ var classcheckerboard_stimulus =
     [ "sfCache", "classcheckerboard_stimulus.html#ad6f583a1fa74e342cfeb37a4dae51943", null ],
     [ "sfRecurse", "classcheckerboard_stimulus.html#a03932d9d90b13c980ea13e3a063fdf1d", null ],
     [ "shader", "classcheckerboard_stimulus.html#a569c39d96b007f5c8b3159d65b5f1b84", null ],
+    [ "specialFlags", "classcheckerboard_stimulus.html#ac27d68ed790adc9fec3ad670cd97a906", null ],
     [ "tf", "classcheckerboard_stimulus.html#acbddc72b307d944fa968081793ee5a4f", null ],
     [ "type", "classcheckerboard_stimulus.html#aa1dbf11c380e34f018327f4cb94f422b", null ]
 ];

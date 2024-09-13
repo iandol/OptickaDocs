@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['todo_20list_3253',['Todo List',['../todo.html',1,'']]]
+  ['general_20public_20license_0',['GNU LESSER GENERAL PUBLIC LICENSE',['../md__l_i_c_e_n_c_e.html',1,'']]],
+  ['gnu_20lesser_20general_20public_20license_1',['GNU LESSER GENERAL PUBLIC LICENSE',['../md__l_i_c_e_n_c_e.html',1,'']]]
 ];

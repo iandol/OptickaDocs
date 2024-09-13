@@ -1,4 +1,5 @@
 <map id="userFunctions" name="userFunctions">
-<area shape="rect" id="node1" title="Customised user functions for a task run." alt="" coords="5,131,143,355"/>
-<area shape="rect" id="node2" title=" " alt="" coords="41,5,107,83"/>
+<area shape="rect" id="Node000001" title="Customised user functions for a task run." alt="" coords="5,119,205,404"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="77,5,133,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,84,108,119,103,119,103,84"/>
 </map>

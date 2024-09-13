@@ -1,8 +1,13 @@
 <map id="barStimulus" name="barStimulus">
-<area shape="rect" id="node1" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="101,1452,275,2013"/>
-<area shape="rect" id="node6" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="111,2061,265,2388"/>
-<area shape="rect" id="node2" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all opticka stimulus objects" alt="" coords="81,696,295,1404"/>
-<area shape="rect" id="node3" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,131,195,648"/>
-<area shape="rect" id="node4" title=" " alt="" coords="67,5,133,83"/>
-<area shape="rect" id="node5" title=" " alt="" coords="219,351,333,428"/>
+<area shape="rect" id="Node000001" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="93,1945,252,2471"/>
+<area shape="rect" id="Node000006" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="104,2519,241,2944"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="175,2484,175,2518,170,2518,170,2484"/>
+<area shape="rect" id="Node000002" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all stimulus objects" alt="" coords="75,972,270,1897"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,1911,175,1945,170,1945,170,1911"/>
+<area shape="rect" id="Node000003" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,924"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,937,135,972,129,972,126,938"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="65,5,121,71"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,84,95,119,90,119,90,84"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="204,489,304,554"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="253,568,217,972,211,971,247,567"/>
 </map>

@@ -27,6 +27,7 @@ var classanalysis_core =
     [ "parsecolor", "classanalysis_core.html#ab2023c7c27b1019d1bc8113a01443293", null ],
     [ "phase", "classanalysis_core.html#a506f34c92051ee4513b5a50d908705f9", null ],
     [ "phaseDifference", "classanalysis_core.html#aa1e10a60c39ddc127482a7bc8f91b11f", null ],
+    [ "pupilConversion", "classanalysis_core.html#ae00f85e633ba0b6da0cfe1e7a5fd4ecf", null ],
     [ "rad2ang", "classanalysis_core.html#a1629207adbcfdbadbf39da6bc0ad2de0", null ],
     [ "roc", "classanalysis_core.html#acb33651aec12c8cb5d6aabfb29116d32", null ],
     [ "setSelection", "classanalysis_core.html#a08cd91ab6045e36f6b043058ee2829bc", null ],
