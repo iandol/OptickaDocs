@@ -23,6 +23,7 @@ var classbase_stimulus =
     [ "hide", "classbase_stimulus.html#ad2fce67f16908ba56fc709699a1b3442", null ],
     [ "hidePanel", "classbase_stimulus.html#a1b2f9521a45c9d403b0aee26dd500c92", null ],
     [ "makePanel", "classbase_stimulus.html#a88fb5dd6787947325f09e7a3a12abad0", null ],
+    [ "mixColour", "classbase_stimulus.html#a9c372f70eb8aaafdbc2c2d958aac334f", null ],
     [ "r2d", "classbase_stimulus.html#a90fffd20efca11a13eefa5e494a2861a", null ],
     [ "readPanel", "classbase_stimulus.html#a877bc856067acf494c495e46f9f18e81", null ],
     [ "removeTmpProperties", "classbase_stimulus.html#ac6aec5bce09903c781c988a590a6eb08", null ],

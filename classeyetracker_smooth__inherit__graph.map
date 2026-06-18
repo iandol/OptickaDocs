@@ -4,8 +4,8 @@
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="180,277,158,313,141,353,136,351,154,311,175,274"/>
 <area shape="rect" id="Node000004" href="$classpupil_core_manager.html" title="Manages the Pupil Labs Core." alt="" coords="168,312,317,857"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="245,278,245,312,240,312,240,278"/>
-<area shape="rect" id="Node000005" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="341,342,483,827"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="310,274,332,311,346,341,341,343,327,313,306,277"/>
+<area shape="rect" id="Node000005" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="341,322,483,847"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="310,274,332,311,344,336,339,339,327,313,306,277"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="215,5,271,71"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,84,245,118,240,118,240,84"/>
 </map>

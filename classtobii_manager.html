@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -108,7 +108,7 @@ $(document).ready(function(){initNavTree('classtobii_manager.html',''); initResi
 <p><a class="el" href="classtobii_manager.html" title="Manages the Tobii eyetrackers.">tobiiManager</a> wraps around the Titta toolbox functions offering a interface consistent with <a class="el" href="classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods...">eyelinkManager</a>, offering methods to check and change fixation windows gaze contingent tasks easily.</p>
 <p>The core methods enable the user to test for common behavioural eye tracking tasks with single commands. For example, to initiate a task we normally place a fixation cross on the screen and ask the subject to saccade to the cross and maintain fixation for a particular duration. This is achieved using testSearchHoldFixation('yes','no'), using the properties: fixation.initTime to time how long the subject has to saccade into the window, fixation.time for how long they must maintain fixation, fixation.radius for the radius around fixation.X and fixation.Y position. The method returns the 'yes' string if the rules are matched, and 'no' if they are not, thus enabling experiment code to simply define what happened. Other methods include <a class="el" href="classeyetracker_core.html#ae54dad6a472746ccfaa92a00a2304eb1" title="isFixated tests for fixation and updates the fixLength time">isFixated()</a>, <a class="el" href="classeyetracker_core.html#a2f5cf109be899e0c3174ac5d25a7a385" title="Checks if we&#39;ve maintained fixation for correct time, if true return yesString, if not return noStrin...">testFixationTime()</a>, <a class="el" href="classeyetracker_core.html#a4ebba51168a3b75b53df6f6f71ad321c" title="Checks if we&#39;re still within fix window. Input is 2 strings, either one is returned depending on succ...">testHoldFixation()</a>.</p>
 <p>Multiple fixation windows can be assigned, and in addition exclusion windows can ensure a subject doesn't saccade to particular parts of the screen. fixInit allows you to define a minimum time with which the subject must initiate a saccade away from a position (which stops a subject cheating).</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>handle new eye-openness signals in new SDK <a href="https://developer.tobiipro.com/commonconcepts/eyeopenness.html">https://developer.tobiipro.com/commonconcepts/eyeopenness.html</a></dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>handle new eye-openness signals in new SDK <a href="https://developer.tobiipro.com/commonconcepts/eyeopenness.html">https://developer.tobiipro.com/commonconcepts/eyeopenness.html</a></dd></dl>
 <p>Copyright ©2014-2023 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for tobiiManager:</div>
@@ -158,9 +158,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4c685b27862a7fc955534f3469764f7f" id="r_a4c685b27862a7fc955534f3469764f7f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a4c685b27862a7fc955534f3469764f7f">runTimingTest</a> (in me, in sRate, in interval)</td></tr>
 <tr class="memdesc:a4c685b27862a7fc955534f3469764f7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Train to use tracker.  <br /></td></tr>
 <tr class="separator:a4c685b27862a7fc955534f3469764f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a290b75d4960ee9720c1e2caf4ec0137c" id="r_a290b75d4960ee9720c1e2caf4ec0137c"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a290b75d4960ee9720c1e2caf4ec0137c">runDemo</a> (in me, in forcescreen)</td></tr>
-<tr class="memdesc:a290b75d4960ee9720c1e2caf4ec0137c"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs a demo of the tobii workflow, testing this class  <br /></td></tr>
-<tr class="separator:a290b75d4960ee9720c1e2caf4ec0137c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8c167c99df02a42a617c60c9503f90" id="r_a4d8c167c99df02a42a617c60c9503f90"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a4d8c167c99df02a42a617c60c9503f90">demo</a> (in me, in forcescreen)</td></tr>
+<tr class="memdesc:a4d8c167c99df02a42a617c60c9503f90"><td class="mdescLeft">&#160;</td><td class="mdescRight">runs a demo of the tobii workflow, testing this class  <br /></td></tr>
+<tr class="separator:a4d8c167c99df02a42a617c60c9503f90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e709c41f37ee49375a5db3f1dba950c" id="r_a2e709c41f37ee49375a5db3f1dba950c"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a2e709c41f37ee49375a5db3f1dba950c">checkRecording</a> (in me)</td></tr>
 <tr class="separator:a2e709c41f37ee49375a5db3f1dba950c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a5340dc251c633d723778d678d6efc7" id="r_a4a5340dc251c633d723778d678d6efc7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a4a5340dc251c633d723778d678d6efc7">checkEye</a> (in me)</td></tr>
@@ -209,8 +209,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a249bcf11d340a9f977c9ae99a6d939e1 inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d53bccb38b44be20a4aa51e8b100c48 inherit pub_methods_classeyetracker_core" id="r_a5d53bccb38b44be20a4aa51e8b100c48"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a5d53bccb38b44be20a4aa51e8b100c48">statusMessage</a> (in in)</td></tr>
 <tr class="separator:a5d53bccb38b44be20a4aa51e8b100c48 inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9acf06fccd36ad5edd8ac18867c86d5d inherit pub_methods_classeyetracker_core" id="r_a9acf06fccd36ad5edd8ac18867c86d5d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a9acf06fccd36ad5edd8ac18867c86d5d">runDemo</a> (in in)</td></tr>
-<tr class="separator:a9acf06fccd36ad5edd8ac18867c86d5d inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12b407af08ae4d6aaa92fb16ccbdfec8 inherit pub_methods_classeyetracker_core" id="r_a12b407af08ae4d6aaa92fb16ccbdfec8"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a12b407af08ae4d6aaa92fb16ccbdfec8">demo</a> (in in)</td></tr>
+<tr class="separator:a12b407af08ae4d6aaa92fb16ccbdfec8 inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d4b60dd820caa7bc14e00146f524a73 inherit pub_methods_classeyetracker_core" id="r_a3d4b60dd820caa7bc14e00146f524a73"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a3d4b60dd820caa7bc14e00146f524a73">eyetrackerCore</a> (in varargin)</td></tr>
 <tr class="memdesc:a3d4b60dd820caa7bc14e00146f524a73 inherit pub_methods_classeyetracker_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the constructor for this class.  <br /></td></tr>
 <tr class="separator:a3d4b60dd820caa7bc14e00146f524a73 inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -306,6 +306,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a49f0da532d335c26e712f23506a6e525 inherit pub_methods_classeyetracker_core" id="r_a49f0da532d335c26e712f23506a6e525"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a49f0da532d335c26e712f23506a6e525">trackerDrawText</a> (in me, in textIn)</td></tr>
 <tr class="memdesc:a49f0da532d335c26e712f23506a6e525 inherit pub_methods_classeyetracker_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the fixation box on the tracker display  <br /></td></tr>
 <tr class="separator:a49f0da532d335c26e712f23506a6e525 inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4cb915250dd9565be337aed8057472 inherit pub_methods_classeyetracker_core" id="r_a5b4cb915250dd9565be337aed8057472"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a5b4cb915250dd9565be337aed8057472">trackerDrawCross</a> (in me, in size)</td></tr>
+<tr class="memdesc:a5b4cb915250dd9565be337aed8057472 inherit pub_methods_classeyetracker_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the fixation box on the tracker display  <br /></td></tr>
+<tr class="separator:a5b4cb915250dd9565be337aed8057472 inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8d9da031af69fe37f1694994f9946b6 inherit pub_methods_classeyetracker_core" id="r_ae8d9da031af69fe37f1694994f9946b6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#ae8d9da031af69fe37f1694994f9946b6">doFlip</a> (in me)</td></tr>
 <tr class="separator:ae8d9da031af69fe37f1694994f9946b6 inherit pub_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a280691243008d3f897c518b538f3b1cd inherit pub_methods_classeyetracker_core" id="r_a280691243008d3f897c518b538f3b1cd"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a280691243008d3f897c518b538f3b1cd">edfMessage</a> (in me, in message)</td></tr>
@@ -323,15 +326,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01e82ac778e9c8bc8b2472bd849a9732 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core" id="r_a5a9f759bbb480b804cc3eca324945a4b"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a5a9f759bbb480b804cc3eca324945a4b">fullName</a> (in me)</td></tr>
 <tr class="separator:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core" id="r_a521a2549e5f7c6ac03b31558540cbafe"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a521a2549e5f7c6ac03b31558540cbafe">getALF</a> (in me, in subject, in sessionPrefix, in lab, in create)</td></tr>
-<tr class="separator:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core" id="r_a9e089236a86d59f25135f6dfffa3991f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a9e089236a86d59f25135f6dfffa3991f">getALF</a> (in me, in subject, in lab, in create)</td></tr>
+<tr class="memdesc:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the ALF path  <br /></td></tr>
+<tr class="separator:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core" id="r_af3d48dae6d0c49cbdff5fcb41aee6a68"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af3d48dae6d0c49cbdff5fcb41aee6a68">makeReport</a> (in me, in rpt)</td></tr>
+<tr class="memdesc:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a detailed report for the opticka object.  <br /></td></tr>
+<tr class="separator:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core" id="r_ab7b80b71593278646425b4a212d62634"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#ab7b80b71593278646425b4a212d62634">findAttributes</a> (in me, in attrName, in attrValue)</td></tr>
 <tr class="separator:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core" id="r_aa41fe6ebd09d4c58ae5dc496683f3f65"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aa41fe6ebd09d4c58ae5dc496683f3f65">findAttributesandType</a> (in me, in attrName, in attrValue, in type)</td></tr>
 <tr class="memdesc:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">find properties of object with specific attributes, for example all properties whose GetAcccess attribute is public and type is logical.  <br /></td></tr>
 <tr class="separator:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core" id="r_a3138d91ed7233e89f9a6a9a3983cc0fa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a3138d91ed7233e89f9a6a9a3983cc0fa">findPropertyDefault</a> (in me, in propName)</td></tr>
-<tr class="separator:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core" id="r_afde4f926a400e1a4e3432a2de7b9dafa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afde4f926a400e1a4e3432a2de7b9dafa">findPropertyDefault</a> (in me, in propName)</td></tr>
+<tr class="memdesc:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the declared default value for a class property.  <br /></td></tr>
+<tr class="separator:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core" id="r_aee04cdaafcaa4e034cb616154b8eebec"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aee04cdaafcaa4e034cb616154b8eebec">clone</a> (in me)</td></tr>
 <tr class="memdesc:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this syntax to make a deep copy of the object, i.e. OBJ_OUT has the same field values, but will not behave as a handle-copy of me anymore.  <br /></td></tr>
 <tr class="separator:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -343,11 +351,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core" id="r_a66542a3ceb15109df805509be4edeee2"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a66542a3ceb15109df805509be4edeee2">setProp</a> (in me, in property, in value)</td></tr>
 <tr class="memdesc:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to fast change a particular value. This is useful for use in anonymous functions, like in the state machine.  <br /></td></tr>
 <tr class="separator:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core" id="r_a84eb445bf35cf3657371a5f11b0487ea"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a84eb445bf35cf3657371a5f11b0487ea">initialiseGlobals</a> (in me, in doReset, in doOpen)</td></tr>
-<tr class="separator:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core" id="r_a4904dd912a926e5fd27eceeb63ed2fb7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4904dd912a926e5fd27eceeb63ed2fb7">initialiseSaveFile</a> (in me)</td></tr>
-<tr class="memdesc:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise Save prefix.  <br /></td></tr>
-<tr class="separator:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core" id="r_a18784556a7f8559dd1f2b7e91ab53ef6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a18784556a7f8559dd1f2b7e91ab53ef6">initialiseSaveFile</a> (in me, in varargin)</td></tr>
+<tr class="memdesc:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">just get date fragment for backwards compatibility  <br /></td></tr>
+<tr class="separator:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core" id="r_a1e85b40b4fa3e081382da601f6475d05"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a1e85b40b4fa3e081382da601f6475d05">checkPaths</a> (in me)</td></tr>
 <tr class="memdesc:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks the paths are valid  <br /></td></tr>
 <tr class="separator:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -552,6 +558,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core" id="r_af9655eed8c87376ad6116864684a7f69"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af9655eed8c87376ad6116864684a7f69">verbose</a></td></tr>
 <tr class="memdesc:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">verbose logging, subclasses must assign this. This is normally logical true/false  <br /></td></tr>
 <tr class="separator:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core" id="r_a7f7e05813940d071866ac15fed79f130"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a7f7e05813940d071866ac15fed79f130">optickaVersion</a></td></tr>
+<tr class="memdesc:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">version number  <br /></td></tr>
+<tr class="separator:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core" id="r_a17a7a3b54bf96571566c72b9151648a7"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7">dateStamp</a></td></tr>
 <tr class="memdesc:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">clock() dateStamp set on construction  <br /></td></tr>
 <tr class="separator:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -574,6 +583,12 @@ Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a807a7b5d68ffaf2dc21fd0ea54a44a26" id="r_a807a7b5d68ffaf2dc21fd0ea54a44a26"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a807a7b5d68ffaf2dc21fd0ea54a44a26">rewardProvider</a></td></tr>
+<tr class="memdesc:a807a7b5d68ffaf2dc21fd0ea54a44a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">reward provider for Titta  <br /></td></tr>
+<tr class="separator:a807a7b5d68ffaf2dc21fd0ea54a44a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d94155070060abe4498245417c90f2b" id="r_a2d94155070060abe4498245417c90f2b"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a2d94155070060abe4498245417c90f2b">calController</a></td></tr>
+<tr class="memdesc:a2d94155070060abe4498245417c90f2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">advanced calibration controller  <br /></td></tr>
+<tr class="separator:a2d94155070060abe4498245417c90f2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a807b6705823d00cd12b86655794c68c1" id="r_a807b6705823d00cd12b86655794c68c1"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classtobii_manager.html#a807b6705823d00cd12b86655794c68c1">systemTime</a></td></tr>
 <tr class="memdesc:a807b6705823d00cd12b86655794c68c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">tracker time stamp  <br /></td></tr>
 <tr class="separator:a807b6705823d00cd12b86655794c68c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -612,11 +627,13 @@ Protected Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_methods_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
+<tr class="memitem:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core" id="r_a278fcf94c60a10e1938b5712a34a0a4b"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a278fcf94c60a10e1938b5712a34a0a4b">initialiseGlobals</a> (in doReset, in doOpen)</td></tr>
+<tr class="separator:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core" id="r_a4da9ae0cfd621acae8b76f5e1704e00c"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4da9ae0cfd621acae8b76f5e1704e00c">makeArgs</a> (in args)</td></tr>
 <tr class="memdesc:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts cell args to structure array.  <br /></td></tr>
 <tr class="separator:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core" id="r_acde8df0104b96e6558eecae094f49754"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#acde8df0104b96e6558eecae094f49754">addDefaults</a> (in args, in defs)</td></tr>
-<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">add default options to arg input  <br /></td></tr>
+<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">regularises and adds default options to arg input  <br /></td></tr>
 <tr class="separator:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core" id="r_a4e58c362b03faaa9c7ec9627e4e0c25f"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4e58c362b03faaa9c7ec9627e4e0c25f">hasKey</a> (in in, in key)</td></tr>
 <tr class="memdesc:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a struct / object has a propery / field  <br /></td></tr>
@@ -631,6 +648,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classeyetracker_core"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classeyetracker_core')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classeyetracker_core.html">eyetrackerCore</a></td></tr>
 <tr class="memitem:ac94a1639064dc77382d7ca0a0bf5542e inherit pro_methods_classeyetracker_core" id="r_ac94a1639064dc77382d7ca0a0bf5542e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#ac94a1639064dc77382d7ca0a0bf5542e">drawValidationResults</a> (in me, in n)</td></tr>
 <tr class="separator:ac94a1639064dc77382d7ca0a0bf5542e inherit pro_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a581b215bda80f5784068ceacdeffe2a1 inherit pro_methods_classeyetracker_core" id="r_a581b215bda80f5784068ceacdeffe2a1"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a581b215bda80f5784068ceacdeffe2a1">drawDriftOffset</a> (in me)</td></tr>
+<tr class="memdesc:a581b215bda80f5784068ceacdeffe2a1 inherit pro_methods_classeyetracker_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">to visual degrees from pixels  <br /></td></tr>
+<tr class="separator:a581b215bda80f5784068ceacdeffe2a1 inherit pro_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8238b26f631fd342d09f3ac0684752bb inherit pro_methods_classeyetracker_core" id="r_a8238b26f631fd342d09f3ac0684752bb"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classeyetracker_core.html#a8238b26f631fd342d09f3ac0684752bb">toDegrees</a> (in me, in in, in axis, in inputtype)</td></tr>
 <tr class="memdesc:a8238b26f631fd342d09f3ac0684752bb inherit pro_methods_classeyetracker_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">to visual degrees from pixels  <br /></td></tr>
 <tr class="separator:a8238b26f631fd342d09f3ac0684752bb inherit pro_methods_classeyetracker_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -804,6 +824,36 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>check what mode the tobii is in </p>
+
+</div>
+</div>
+<a id="a4d8c167c99df02a42a617c60c9503f90" name="a4d8c167c99df02a42a617c60c9503f90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8c167c99df02a42a617c60c9503f90">&#9670;&#160;</a></span>demo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function tobiiManager::demo </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>forcescreen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>runs a demo of the tobii workflow, testing this class </p>
 
 </div>
 </div>
@@ -1017,36 +1067,6 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a290b75d4960ee9720c1e2caf4ec0137c" name="a290b75d4960ee9720c1e2caf4ec0137c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a290b75d4960ee9720c1e2caf4ec0137c">&#9670;&#160;</a></span>runDemo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">function tobiiManager::runDemo </td>
-          <td>(</td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>me</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>forcescreen</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>runs a demo of the tobii workflow, testing this class </p>
 
 </div>
 </div>
@@ -1431,6 +1451,30 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a2d94155070060abe4498245417c90f2b" name="a2d94155070060abe4498245417c90f2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d94155070060abe4498245417c90f2b">&#9670;&#160;</a></span>calController</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property tobiiManager::calController</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>advanced calibration controller </p>
+
+</div>
+</div>
 <a id="a05aca6865ae45a8dc88415a084816814" name="a05aca6865ae45a8dc88415a084816814"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a05aca6865ae45a8dc88415a084816814">&#9670;&#160;</a></span>calib</h2>
 
@@ -1529,6 +1573,30 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a807a7b5d68ffaf2dc21fd0ea54a44a26" name="a807a7b5d68ffaf2dc21fd0ea54a44a26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807a7b5d68ffaf2dc21fd0ea54a44a26">&#9670;&#160;</a></span>rewardProvider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property tobiiManager::rewardProvider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>reward provider for Titta </p>
+
+</div>
+</div>
 <a id="a5556525e476a4f0bc19f76d8806fd30e" name="a5556525e476a4f0bc19f76d8806fd30e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5556525e476a4f0bc19f76d8806fd30e">&#9670;&#160;</a></span>sampletime</h2>
 
@@ -1624,7 +1692,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classtobii_manager.html">tobiiManager</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

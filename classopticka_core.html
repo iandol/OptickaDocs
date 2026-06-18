@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -109,8 +109,16 @@ $(document).ready(function(){initNavTree('classopticka_core.html',''); initResiz
 <div class="textblock"><p><a class="el" href="classopticka_core.html" title="optickaCore base class inherited by other opticka classes.">optickaCore</a> base class inherited by other opticka classes. </p>
 <h1><a class="anchor" id="intro"></a>
 Introduction</h1>
-<p><a class="el" href="classopticka_core.html" title="optickaCore base class inherited by other opticka classes.">optickaCore</a> is itself derived from handle. It provides methods to find attributes with specific parameters (used in autogenerating UI panels), clone the object, parse arguments safely on construction and add default properties such as paths, dateStamp, uuid and name/comment management.</p>
-<p>Copyright ©2014-2024 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
+<p><a class="el" href="classopticka_core.html" title="optickaCore base class inherited by other opticka classes.">optickaCore</a> is derived from <code>handle</code> and provides shared infrastructure for Opticka classes.</p>
+<p>Main methods:</p><ul>
+<li><code><a class="el" href="classopticka_core.html" title="optickaCore base class inherited by other opticka classes.">optickaCore(varargin)</a></code>: class constructor; parses name-value inputs, sets defaults, creates <code>dateStamp</code>/<code>uuid</code>, and initialises paths/fonts.</li>
+<li><code>parseArgs(args, allowedProperties)</code>: safely applies allowed construction properties from a struct or name-value pairs.</li>
+<li><code>findAttributes(attrName, attrValue)</code>: queries class properties by metadata attributes (used for UI auto-generation and inspection).</li>
+<li><code><a class="el" href="classopticka_core.html#aee04cdaafcaa4e034cb616154b8eebec" title="Use this syntax to make a deep copy of the object, i.e. OBJ_OUT has the same field values,...">clone()</a></code>: creates a deep copy of the object and nested Opticka objects.</li>
+<li><code>getALF(subject, lab, create)</code>: builds or resolves ALF-style save paths and session identifiers.</li>
+<li><code>makeReport(rpt)</code>: generates or appends an HTML report with object state and related manager summaries.</li>
+</ul>
+<p>Copyright ©2014-2026 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for optickaCore:</div>
 <div class="dyncontent">
@@ -124,15 +132,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01e82ac778e9c8bc8b2472bd849a9732"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9f759bbb480b804cc3eca324945a4b" id="r_a5a9f759bbb480b804cc3eca324945a4b"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a5a9f759bbb480b804cc3eca324945a4b">fullName</a> (in me)</td></tr>
 <tr class="separator:a5a9f759bbb480b804cc3eca324945a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521a2549e5f7c6ac03b31558540cbafe" id="r_a521a2549e5f7c6ac03b31558540cbafe"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a521a2549e5f7c6ac03b31558540cbafe">getALF</a> (in me, in subject, in sessionPrefix, in lab, in create)</td></tr>
-<tr class="separator:a521a2549e5f7c6ac03b31558540cbafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e089236a86d59f25135f6dfffa3991f" id="r_a9e089236a86d59f25135f6dfffa3991f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a9e089236a86d59f25135f6dfffa3991f">getALF</a> (in me, in subject, in lab, in create)</td></tr>
+<tr class="memdesc:a9e089236a86d59f25135f6dfffa3991f"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the ALF path  <br /></td></tr>
+<tr class="separator:a9e089236a86d59f25135f6dfffa3991f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d48dae6d0c49cbdff5fcb41aee6a68" id="r_af3d48dae6d0c49cbdff5fcb41aee6a68"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af3d48dae6d0c49cbdff5fcb41aee6a68">makeReport</a> (in me, in rpt)</td></tr>
+<tr class="memdesc:af3d48dae6d0c49cbdff5fcb41aee6a68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a detailed report for the opticka object.  <br /></td></tr>
+<tr class="separator:af3d48dae6d0c49cbdff5fcb41aee6a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b80b71593278646425b4a212d62634" id="r_ab7b80b71593278646425b4a212d62634"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#ab7b80b71593278646425b4a212d62634">findAttributes</a> (in me, in attrName, in attrValue)</td></tr>
 <tr class="separator:ab7b80b71593278646425b4a212d62634"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa41fe6ebd09d4c58ae5dc496683f3f65" id="r_aa41fe6ebd09d4c58ae5dc496683f3f65"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aa41fe6ebd09d4c58ae5dc496683f3f65">findAttributesandType</a> (in me, in attrName, in attrValue, in type)</td></tr>
 <tr class="memdesc:aa41fe6ebd09d4c58ae5dc496683f3f65"><td class="mdescLeft">&#160;</td><td class="mdescRight">find properties of object with specific attributes, for example all properties whose GetAcccess attribute is public and type is logical.  <br /></td></tr>
 <tr class="separator:aa41fe6ebd09d4c58ae5dc496683f3f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3138d91ed7233e89f9a6a9a3983cc0fa" id="r_a3138d91ed7233e89f9a6a9a3983cc0fa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a3138d91ed7233e89f9a6a9a3983cc0fa">findPropertyDefault</a> (in me, in propName)</td></tr>
-<tr class="separator:a3138d91ed7233e89f9a6a9a3983cc0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde4f926a400e1a4e3432a2de7b9dafa" id="r_afde4f926a400e1a4e3432a2de7b9dafa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afde4f926a400e1a4e3432a2de7b9dafa">findPropertyDefault</a> (in me, in propName)</td></tr>
+<tr class="memdesc:afde4f926a400e1a4e3432a2de7b9dafa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the declared default value for a class property.  <br /></td></tr>
+<tr class="separator:afde4f926a400e1a4e3432a2de7b9dafa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee04cdaafcaa4e034cb616154b8eebec" id="r_aee04cdaafcaa4e034cb616154b8eebec"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aee04cdaafcaa4e034cb616154b8eebec">clone</a> (in me)</td></tr>
 <tr class="memdesc:aee04cdaafcaa4e034cb616154b8eebec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this syntax to make a deep copy of the object, i.e. OBJ_OUT has the same field values, but will not behave as a handle-copy of me anymore.  <br /></td></tr>
 <tr class="separator:aee04cdaafcaa4e034cb616154b8eebec"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,22 +157,22 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66542a3ceb15109df805509be4edeee2" id="r_a66542a3ceb15109df805509be4edeee2"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a66542a3ceb15109df805509be4edeee2">setProp</a> (in me, in property, in value)</td></tr>
 <tr class="memdesc:a66542a3ceb15109df805509be4edeee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to fast change a particular value. This is useful for use in anonymous functions, like in the state machine.  <br /></td></tr>
 <tr class="separator:a66542a3ceb15109df805509be4edeee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84eb445bf35cf3657371a5f11b0487ea" id="r_a84eb445bf35cf3657371a5f11b0487ea"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a84eb445bf35cf3657371a5f11b0487ea">initialiseGlobals</a> (in me, in doReset, in doOpen)</td></tr>
-<tr class="separator:a84eb445bf35cf3657371a5f11b0487ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4904dd912a926e5fd27eceeb63ed2fb7" id="r_a4904dd912a926e5fd27eceeb63ed2fb7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4904dd912a926e5fd27eceeb63ed2fb7">initialiseSaveFile</a> (in me)</td></tr>
-<tr class="memdesc:a4904dd912a926e5fd27eceeb63ed2fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise Save prefix.  <br /></td></tr>
-<tr class="separator:a4904dd912a926e5fd27eceeb63ed2fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18784556a7f8559dd1f2b7e91ab53ef6" id="r_a18784556a7f8559dd1f2b7e91ab53ef6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a18784556a7f8559dd1f2b7e91ab53ef6">initialiseSaveFile</a> (in me, in varargin)</td></tr>
+<tr class="memdesc:a18784556a7f8559dd1f2b7e91ab53ef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">just get date fragment for backwards compatibility  <br /></td></tr>
+<tr class="separator:a18784556a7f8559dd1f2b7e91ab53ef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e85b40b4fa3e081382da601f6475d05" id="r_a1e85b40b4fa3e081382da601f6475d05"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a1e85b40b4fa3e081382da601f6475d05">checkPaths</a> (in me)</td></tr>
 <tr class="memdesc:a1e85b40b4fa3e081382da601f6475d05"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks the paths are valid  <br /></td></tr>
 <tr class="separator:a1e85b40b4fa3e081382da601f6475d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a278fcf94c60a10e1938b5712a34a0a4b" id="r_a278fcf94c60a10e1938b5712a34a0a4b"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a278fcf94c60a10e1938b5712a34a0a4b">initialiseGlobals</a> (in doReset, in doOpen)</td></tr>
+<tr class="separator:a278fcf94c60a10e1938b5712a34a0a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da9ae0cfd621acae8b76f5e1704e00c" id="r_a4da9ae0cfd621acae8b76f5e1704e00c"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4da9ae0cfd621acae8b76f5e1704e00c">makeArgs</a> (in args)</td></tr>
 <tr class="memdesc:a4da9ae0cfd621acae8b76f5e1704e00c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts cell args to structure array.  <br /></td></tr>
 <tr class="separator:a4da9ae0cfd621acae8b76f5e1704e00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde8df0104b96e6558eecae094f49754" id="r_acde8df0104b96e6558eecae094f49754"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#acde8df0104b96e6558eecae094f49754">addDefaults</a> (in args, in defs)</td></tr>
-<tr class="memdesc:acde8df0104b96e6558eecae094f49754"><td class="mdescLeft">&#160;</td><td class="mdescRight">add default options to arg input  <br /></td></tr>
+<tr class="memdesc:acde8df0104b96e6558eecae094f49754"><td class="mdescLeft">&#160;</td><td class="mdescRight">regularises and adds default options to arg input  <br /></td></tr>
 <tr class="separator:acde8df0104b96e6558eecae094f49754"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e58c362b03faaa9c7ec9627e4e0c25f" id="r_a4e58c362b03faaa9c7ec9627e4e0c25f"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4e58c362b03faaa9c7ec9627e4e0c25f">hasKey</a> (in in, in key)</td></tr>
 <tr class="memdesc:a4e58c362b03faaa9c7ec9627e4e0c25f"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a struct / object has a propery / field  <br /></td></tr>
@@ -179,6 +192,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af9655eed8c87376ad6116864684a7f69" id="r_af9655eed8c87376ad6116864684a7f69"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af9655eed8c87376ad6116864684a7f69">verbose</a></td></tr>
 <tr class="memdesc:af9655eed8c87376ad6116864684a7f69"><td class="mdescLeft">&#160;</td><td class="mdescRight">verbose logging, subclasses must assign this. This is normally logical true/false  <br /></td></tr>
 <tr class="separator:af9655eed8c87376ad6116864684a7f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7e05813940d071866ac15fed79f130" id="r_a7f7e05813940d071866ac15fed79f130"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a7f7e05813940d071866ac15fed79f130">optickaVersion</a></td></tr>
+<tr class="memdesc:a7f7e05813940d071866ac15fed79f130"><td class="mdescLeft">&#160;</td><td class="mdescRight">version number  <br /></td></tr>
+<tr class="separator:a7f7e05813940d071866ac15fed79f130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a7a3b54bf96571566c72b9151648a7" id="r_a17a7a3b54bf96571566c72b9151648a7"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7">dateStamp</a></td></tr>
 <tr class="memdesc:a17a7a3b54bf96571566c72b9151648a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">clock() dateStamp set on construction  <br /></td></tr>
 <tr class="separator:a17a7a3b54bf96571566c72b9151648a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -341,7 +357,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>add default options to arg input </p>
+<p>regularises and adds default options to arg input </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">args</td><td>input structure from varargin </td></tr>
@@ -533,14 +549,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3138d91ed7233e89f9a6a9a3983cc0fa" name="a3138d91ed7233e89f9a6a9a3983cc0fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3138d91ed7233e89f9a6a9a3983cc0fa">&#9670;&#160;</a></span>findPropertyDefault()</h2>
+<a id="afde4f926a400e1a4e3432a2de7b9dafa" name="afde4f926a400e1a4e3432a2de7b9dafa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afde4f926a400e1a4e3432a2de7b9dafa">&#9670;&#160;</a></span>findPropertyDefault()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">function optickaCore::findPropertyDefault </td>
+          <td class="memname">value optickaCore::findPropertyDefault </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>me</em>, </td>
@@ -558,6 +574,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Return the declared default value for a class property. </p>
+<p>Accepts either an object instance or a class name in <code>me</code>, then inspects MATLAB metaclass information to locate <code>propName</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">me</td><td>object instance or class name to inspect. </td></tr>
+    <tr><td class="paramname">propName</td><td>property name whose default value is requested.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>value default value declared for the property, or empty if the property is not found. </dd></dl>
 
 </div>
 </div>
@@ -579,14 +606,14 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a521a2549e5f7c6ac03b31558540cbafe" name="a521a2549e5f7c6ac03b31558540cbafe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a521a2549e5f7c6ac03b31558540cbafe">&#9670;&#160;</a></span>getALF()</h2>
+<a id="a9e089236a86d59f25135f6dfffa3991f" name="a9e089236a86d59f25135f6dfffa3991f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e089236a86d59f25135f6dfffa3991f">&#9670;&#160;</a></span>getALF()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">function optickaCore::getALF </td>
+          <td class="memname">optickaCore::getALF </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>me</em>, </td>
@@ -596,12 +623,6 @@ Protected Attributes</h2></td></tr>
           <td></td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>subject</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>sessionPrefix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -622,6 +643,17 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>get the ALF path </p>
+<dl class="section return"><dt>Returns</dt><dd>path - the path to use </dd>
+<dd>
+sessionID - session number </dd>
+<dd>
+dateID - YYYY-MM-DD-HH-MM-SS, </dd>
+<dd>
+name - [date]-[id]-[subject] </dd>
+<dd>
+key - [lab]/subjects/[subject]/[date]/[sessionID]/ </dd></dl>
 
 </div>
 </div>
@@ -768,21 +800,18 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a84eb445bf35cf3657371a5f11b0487ea" name="a84eb445bf35cf3657371a5f11b0487ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84eb445bf35cf3657371a5f11b0487ea">&#9670;&#160;</a></span>initialiseGlobals()</h2>
+<a id="a278fcf94c60a10e1938b5712a34a0a4b" name="a278fcf94c60a10e1938b5712a34a0a4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278fcf94c60a10e1938b5712a34a0a4b">&#9670;&#160;</a></span>initialiseGlobals()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">function optickaCore::initialiseGlobals </td>
+          <td class="memname">static function optickaCore::initialiseGlobals </td>
           <td>(</td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>me</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>doReset</em>, </td>
         </tr>
@@ -798,12 +827,17 @@ Protected Attributes</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a4904dd912a926e5fd27eceeb63ed2fb7" name="a4904dd912a926e5fd27eceeb63ed2fb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4904dd912a926e5fd27eceeb63ed2fb7">&#9670;&#160;</a></span>initialiseSaveFile()</h2>
+<a id="a18784556a7f8559dd1f2b7e91ab53ef6" name="a18784556a7f8559dd1f2b7e91ab53ef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18784556a7f8559dd1f2b7e91ab53ef6">&#9670;&#160;</a></span>initialiseSaveFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -812,17 +846,23 @@ Protected Attributes</h2></td></tr>
           <td class="memname">optickaCore::initialiseSaveFile </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>me</em></td><td>)</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>varargin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initialise Save prefix. </p>
-<p>just get date fragment</p>
-<dl class="section return"><dt>Returns</dt><dd>path - the path to use </dd>
-<dd>
-dateid - YYYY-MM-DD-HH-MM-SS </dd></dl>
+<p>just get date fragment for backwards compatibility </p>
 
 </div>
 </div>
@@ -916,6 +956,55 @@ dateid - YYYY-MM-DD-HH-MM-SS </dd></dl>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>args as a structure </dd></dl>
+
+</div>
+</div>
+<a id="af3d48dae6d0c49cbdff5fcb41aee6a68" name="af3d48dae6d0c49cbdff5fcb41aee6a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d48dae6d0c49cbdff5fcb41aee6a68">&#9670;&#160;</a></span>makeReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rpt optickaCore::makeReport </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>rpt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a detailed report for the opticka object. </p>
+<p>Creates an HTML report using MATLAB's Report Generator toolbox. The report includes detailed information about the object and its components.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">me</td><td>this instance object </td></tr>
+    <tr><td class="paramname">rpt</td><td>optional existing Report object to append to (creates new if empty) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rpt generated Report object</dd></dl>
+<p>Handles different object types including:</p><ul>
+<li>opticka core objects</li>
+<li><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> objects</li>
+<li><a class="el" href="classtime_logger.html">timeLogger</a> objects</li>
+<li><a class="el" href="classtask_sequence.html" title="Block-based variable randomisation manager.">taskSequence</a> objects</li>
+<li><a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a> objects</li>
+<li><a class="el" href="classbehavioural_record.html" title="Create a GUI and update performance plots for a behavioural task.">behaviouralRecord</a> objects</li>
+<li>eye tracker analysis objects</li>
+</ul>
+<p>Requires MATLAB Report Generator toolbox. </p>
 
 </div>
 </div>
@@ -1323,6 +1412,22 @@ dateid - YYYY-MM-DD-HH-MM-SS </dd></dl>
 
 </div>
 </div>
+<a id="a7f7e05813940d071866ac15fed79f130" name="a7f7e05813940d071866ac15fed79f130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f7e05813940d071866ac15fed79f130">&#9670;&#160;</a></span>optickaVersion</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property optickaCore::optickaVersion</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>version number </p>
+
+</div>
+</div>
 <a id="ad9489ce2da58865a8df65de63db239cf" name="ad9489ce2da58865a8df65de63db239cf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad9489ce2da58865a8df65de63db239cf">&#9670;&#160;</a></span>paths</h2>
 
@@ -1420,7 +1525,7 @@ dateid - YYYY-MM-DD-HH-MM-SS </dd></dl>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="opticka_core_8m.html">optickaCore.m</a></li>
+<li>core/<a class="el" href="opticka_core_8m.html">optickaCore.m</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1428,7 +1533,7 @@ dateid - YYYY-MM-DD-HH-MM-SS </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classopticka_core.html">optickaCore</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

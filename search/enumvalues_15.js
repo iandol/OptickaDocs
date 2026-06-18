@@ -1,0 +1,25 @@
+var searchData=
+[
+  ['valid_0',['Valid',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010abbbada3a1355ce452028c6efd43c9214',1,'HEDTags']]],
+  ['varying_1',['Varying',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a0ae2d32dbebb6bce8534ccdd4c9c869e',1,'HEDTags']]],
+  ['vegetative_2',['Vegetative',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a3efecac209b07fa162c3ba322913ab63',1,'HEDTags']]],
+  ['vehicle_3',['Vehicle',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a33dfbeab13d1e13fd880d3cd0c295938',1,'HEDTags']]],
+  ['version_5fidentifier_4',['Version_identifier',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a77508a224687c2091a1e34e9f7b929b1',1,'HEDTags']]],
+  ['version_5fidentifier_5fvalue_5',['Version_identifier_value',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a2de471be3d6fb3305d80fa3b81f12c66',1,'HEDTags']]],
+  ['vertical_5feye_5fmovement_5fartifact_6',['Vertical_eye_movement_artifact',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a4ad8576c442ed82019a894fc0c8e3382',1,'HEDTags']]],
+  ['vertically_5foriented_7',['Vertically_oriented',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010adfc8412fe5b4a4460a2cd90e91fecfd7',1,'HEDTags']]],
+  ['vestibular_5fattribute_8',['Vestibular_attribute',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a94398c91c3ace9ecce38d3d65f616935',1,'HEDTags']]],
+  ['vestibular_5fpresentation_9',['Vestibular_presentation',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a235af5d537dce4bd10a7d5037e5d9141',1,'HEDTags']]],
+  ['video_5fclip_10',['Video_clip',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a4e57500b945e0db4c6d676865ffbdd31',1,'HEDTags']]],
+  ['violet_11',['Violet',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010ae7b5e41094be9e03319f47fc5602a80f',1,'HEDTags']]],
+  ['virtual_5fworld_12',['Virtual_world',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010ae0314413772005bc305d6ae231fe1c56',1,'HEDTags']]],
+  ['viscera_13',['Viscera',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a7b12f9e812801470238eaf6658e55ff3',1,'HEDTags']]],
+  ['visual_5fattribute_14',['Visual_attribute',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a5e2f8548d1975d117c6db7c9519b29a5',1,'HEDTags']]],
+  ['visual_5fpresentation_15',['Visual_presentation',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a2adbbacb754a9e0c7e6510c9513dca27',1,'HEDTags']]],
+  ['visualization_16',['Visualization',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010aea4e71eff69996ab2865b18c95e40319',1,'HEDTags']]],
+  ['vocalize_17',['Vocalize',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010aad51924a9e30945542391608946a8ff3',1,'HEDTags']]],
+  ['vocalized_5fsound_18',['Vocalized_sound',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a17818f024fb95f2f683046aeaea33eb5',1,'HEDTags']]],
+  ['volume_19',['Volume',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a373595d40c8dfd594dcb4171f2d8d541',1,'HEDTags']]],
+  ['volume_5fvalue_20',['Volume_value',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010af62ea648b0290aa298a7ae9ad812ca81',1,'HEDTags']]],
+  ['voluntary_21',['Voluntary',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a94be85d194c90ae10b65e8a096d0a883',1,'HEDTags']]]
+];

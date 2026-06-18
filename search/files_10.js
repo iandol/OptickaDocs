@@ -1,16 +1,13 @@
 var searchData=
 [
-  ['targetinducerstimulus_2em_0',['targetInducerStimulus.m',['../target_inducer_stimulus_8m.html',1,'']]],
-  ['tasksequence_2em_1',['taskSequence.m',['../task_sequence_8m.html',1,'']]],
-  ['tempcontroller_2em_2',['tempController.m',['../temp_controller_8m.html',1,'']]],
-  ['timetest_2em_3',['timeTest.m',['../time_test_8m.html',1,'']]],
-  ['tittaadvimagestimulus_2em_4',['tittaAdvImageStimulus.m',['../titta_adv_image_stimulus_8m.html',1,'']]],
-  ['tittaadvmoviestimulus_2em_5',['tittaAdvMovieStimulus.m',['../titta_adv_movie_stimulus_8m.html',1,'']]],
-  ['tittacalcallback_2em_6',['tittaCalCallback.m',['../titta_cal_callback_8m.html',1,'']]],
-  ['tittacalstimulus_2em_7',['tittaCalStimulus.m',['../titta_cal_stimulus_8m.html',1,'']]],
-  ['tobiianalysis_2em_8',['tobiiAnalysis.m',['../tobii_analysis_8m.html',1,'']]],
-  ['tobiimanager_2em_9',['tobiiManager.m',['../tobii_manager_8m.html',1,'']]],
-  ['touchmanager_2em_10',['touchManager.m',['../touch_manager_8m.html',1,'']]],
-  ['two_5fimages_2em_11',['Two_Images.m',['../_two___images_8m.html',1,'']]],
-  ['twofiguregroundstateinfo_2em_12',['TwoFigureGroundStateInfo.m',['../_two_figure_ground_state_info_8m.html',1,'']]]
+  ['readme_2emd_0',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
+  ['revcor_2em_1',['revCor.m',['../rev_cor_8m.html',1,'']]],
+  ['revcorstateinfo_2em_2',['RevCorStateInfo.m',['../_rev_cor_state_info_8m.html',1,'']]],
+  ['revcorstimulus_2em_3',['revcorStimulus.m',['../revcor_stimulus_8m.html',1,'']]],
+  ['rewardmanager_2em_4',['rewardManager.m',['../reward_manager_8m.html',1,'']]],
+  ['rflocaliserstateinfo_2em_5',['RFLocaliserStateInfo.m',['../_r_f_localiser_state_info_8m.html',1,'']]],
+  ['rfmapper_2em_6',['rfMapper.m',['../rf_mapper_8m.html',1,'']]],
+  ['runexperiment_2em_7',['runExperiment.m',['../run_experiment_8m.html',1,'']]],
+  ['runopticka_2em_8',['runOpticka.m',['../run_opticka_8m.html',1,'']]],
+  ['runserver_2em_9',['runServer.m',['../run_server_8m.html',1,'']]]
 ];

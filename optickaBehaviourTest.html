@@ -7,9 +7,9 @@ This HTML was auto-generated from MATLAB code.
 To make changes, update the MATLAB code and republish this document.
       -->
 <title>Demo of a state-machine-driven Opticka Behavioural Experiment.</title>
-<meta name="generator" content="MATLAB 24.1">
+<meta name="generator" content="MATLAB 26.1">
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-<meta name="DC.date" content="2024-09-13">
+<meta name="DC.date" content="2026-06-18">
 <meta name="DC.source" content="optickaBehaviourTest.m">
 <style type="text/css">
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
@@ -161,6 +161,7 @@ sca <span class="comment">%PTB screen clear all</span>
 <p>The taskSequence class defines a stimulus sequence (task) which is composed of randomised stimulus parameter changes (called variables) repeated over a set of blocks. A trial is an individual stimulus presentation. This</p>
 <p>For behavioural tasks, several of the parameters like myTask.trialTime are not used as the state machine takes over the job of task timing, but the stimulus randomisation is still useful for such tasks. In this case the state info file can use taskSequence to deterimine the next stimulus value. There are functions to handle what happens if the subject responds incorrectly, where we can re-randomise the next value within the block.</p>
 <pre class="codeinput">myTask					= taskSequence(); <span class="comment">%new taskSequence object instance</span>
+myTask.realTime			= true; <span class="comment">% do we use system clock, rather than fixed FPS ticks</span>
 </pre>
 <p>Our variable is xyPosition, applied to stimulus 1 only. 3 different position values so 3 trials per block...</p>
 <pre class="codeinput">myTask.nVar(1).name		= <span class="string">'xyPosition'</span>;
@@ -171,7 +172,7 @@ myTask.nVar(1).values	= {[-10 -10], [0 0], [10 10]};
 <pre class="codeinput">myTask.nBlocks			= 3;
 randomiseTask(myTask);
 </pre>
-<pre class="codeoutput">---&gt; taskSequence&lt;taskSequence#1594B8760&gt;: Took 61.1 ms | randomiseTask
+<pre class="codeoutput">≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Took 60.9 ms | randomiseTask
 </pre>
 <h2 id="8">Setup screenManager Object</h2>
 <p>screenManager controls the PTB Screen(). We initialise the object with parameters to open the PTB screen with. Note distance and pixels per cm define the resultant geometry &gt; pixel mappings. You can set several screen parameters, windowing, blending etc.</p>
@@ -184,7 +185,7 @@ randomiseTask(myTask);
 <span class="comment">% use retina mode for macOS</span>
 <span class="keyword">if</span> ismac; myScreen.useRetina = true; <span class="keyword">end</span>
 </pre>
-<pre class="codeoutput">PsychVulkanCore-INFO: Vulkan instance (version 1.3.290) created.
+<pre class="codeoutput">PsychVulkanCore-INFO: Vulkan instance (version 1.4.313) created.
 </pre>
 <h2 id="9">Setup runExperiment Object</h2>
 <p>We now pass our stimulus, screen and task objects to the runExperiment class. runExperiment contains the runTask() method that actually runs the behavioural task.</p>
@@ -193,196 +194,736 @@ randomiseTask(myTask);
 	<span class="string">'screen'</span>, myScreen,<span class="keyword">...</span><span class="comment"> %screen manager object</span>
 	<span class="string">'task'</span>, myTask,<span class="keyword">...</span><span class="comment"> % task randomised stimulus sequence</span>
 	<span class="string">'stateInfoFile'</span>, <span class="string">'DefaultStateInfo.m'</span>, <span class="keyword">...</span><span class="comment"> % use the default state info file</span>
+	<span class="string">'verbose'</span>, true, <span class="keyword">...</span><span class="comment"> % more logging to the command window</span>
 	<span class="string">'debug'</span>, false,<span class="keyword">...</span><span class="comment"> % debug mode for testing?</span>
-	<span class="string">'logStateTimers'</span>,true,<span class="keyword">...</span>
-	<span class="string">'subjectName'</span>, <span class="string">'Simulcra'</span>, <span class="keyword">...</span>
-	<span class="string">'researcherName'</span>, <span class="string">'Automated Test'</span>);
-myExp.eyetracker.device = <span class="string">'eyelink'</span>;
-myExp.eyetracker.dummy = true;
+	<span class="string">'logStateTimers'</span>,true);
+myExp.eyetracker.device = <span class="string">'irec'</span>; <span class="comment">% iRecHS2 eyetracker</span>
+myExp.eyetracker.dummy = true; <span class="comment">% dummy mode, so mouse replaces eye position</span>
+myexp.sessionData.subjectName = <span class="string">'Simulcra'</span>;
+myexp.sessionData.researcherName = <span class="string">'Automated-Test'</span>;
+myexp.comment = <span class="string">"This is a test run"</span>;
+</pre>
+<pre class="codeoutput">≣≣≣≣⊱ Run Experiment&lt;runExperiment#1F2C39BC8&gt;: Cascaded Verbose = 1 to all objects...
 </pre>
 <h2 id="10">Run the full behavioural task</h2>
 <pre class="codeinput">runTask(myExp);
 </pre>
-<pre class="codeoutput">---&gt;arduinoManager: Ports available: /dev/ttyS15
----&gt;arduinoManager: Ports available: /dev/ttyS6
----&gt;arduinoManager: Ports available: /dev/ttyS23
----&gt;arduinoManager: Ports available: /dev/ttyS13
----&gt;arduinoManager: Ports available: /dev/ttyS31
----&gt;arduinoManager: Ports available: /dev/ttyS4
----&gt;arduinoManager: Ports available: /dev/ttyS21
----&gt;arduinoManager: Ports available: /dev/ttyS11
----&gt;arduinoManager: Ports available: /dev/ttyS2
----&gt;arduinoManager: Ports available: /dev/ttyS28
----&gt;arduinoManager: Ports available: /dev/ttyS0
----&gt;arduinoManager: Ports available: /dev/ttyS18
----&gt;arduinoManager: Ports available: /dev/ttyS9
----&gt;arduinoManager: Ports available: /dev/ttyS26
----&gt;arduinoManager: Ports available: /dev/ttyS16
----&gt;arduinoManager: Ports available: /dev/ttyACM0
----&gt;arduinoManager: Ports available: /dev/ttyS7
----&gt;arduinoManager: Ports available: /dev/ttyS24
----&gt;arduinoManager: Ports available: /dev/ttyS14
----&gt;arduinoManager: Ports available: /dev/ttyS5
----&gt;arduinoManager: Ports available: /dev/ttyS22
----&gt;arduinoManager: Ports available: /dev/ttyS12
----&gt;arduinoManager: Ports available: /dev/ttyS30
----&gt;arduinoManager: Ports available: /dev/ttyS3
----&gt;arduinoManager: Ports available: /dev/ttyS20
----&gt;arduinoManager: Ports available: /dev/ttyS10
----&gt;arduinoManager: Ports available: /dev/ttyS29
----&gt;arduinoManager: Ports available: /dev/ttyS1
----&gt;arduinoManager: Ports available: /dev/ttyS19
----&gt;arduinoManager: Ports available: /dev/ttyS27
----&gt;arduinoManager: Ports available: /dev/ttyS17
----&gt;arduinoManager: Ports available: /dev/ttyS8
----&gt;arduinoManager: Ports available: /dev/ttyS25
+<pre class="codeoutput">---&gt;arduinoManager: Ports available:
+	/dev/ttyS0 /dev/ttyS1 /dev/ttyS10 /dev/ttyS11 /dev/ttyS12 
+	/dev/ttyS13 /dev/ttyS14 /dev/ttyS15 /dev/ttyS16 /dev/ttyS17 
+	/dev/ttyS18 /dev/ttyS19 /dev/ttyS2 /dev/ttyS20 /dev/ttyS21 
+	/dev/ttyS22 /dev/ttyS23 /dev/ttyS24 /dev/ttyS25 /dev/ttyS26 
+	/dev/ttyS27 /dev/ttyS28 /dev/ttyS29 /dev/ttyS3 /dev/ttyS30 
+	/dev/ttyS31 /dev/ttyS4 /dev/ttyS5 /dev/ttyS6 /dev/ttyS7 
+	/dev/ttyS8 /dev/ttyS9 
 PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
 PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
----&gt; audio-manager&lt;audioManager#1594CDB34&gt;: Audio Manager initialisation complete | constructor
 PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
 PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
+Using selected device  with DeviceIndex = :
 PTB-INFO: Using PortAudio V19.7.0-devel, revision 147dd722548358763a8b649b3e4b41dfffbcfbb6
 PTB-INFO: Choosing deviceIndex 0 [HDA Intel PCH: ALC3234 Analog (hw:0,0)] as default output audio device.
 PTB-INFO: New audio device -1 with handle 0 opened as PortAudio stream:
 PTB-INFO: For 2 channels Playback: Audio subsystem is ALSA, Audio device name is HDA Intel PCH: ALC3234 Analog (hw:0,0)
 PTB-INFO: Real samplerate 44100.000000 Hz. Input latency 0.000000 msecs, Output latency 9.977324 msecs.
----&gt; audio-manager&lt;audioManager#1594CDB34&gt;: Beep | beep
----&gt; taskSequence&lt;taskSequence#1594B8760&gt;: Took 23.6 ms | randomiseTask
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Took 24.2 ms | randomiseTask
 ---&gt; taskSequence.initialise: Initialised!
+Warning: Calling STRUCT on an object prevents the object from hiding its
+implementation details and should thus be avoided. Use DISP or DISPLAY to see
+the visible public details of an object. See 'help struct' for more
+information. 
 
 ---&gt; screenManager: Normal Screen Preferences used.
-BitsPlusPlus: Could not find a Bits# config file under [/home/cog5/.Psychtoolbox/BitsSharpConfig.txt]. Assuming a Bits+ device instead of a Bits# is connected.
+---&gt; screenManager: Probing for a Display++...BitsPlusPlus: Could not find a Bits# config file under [/home/cog5/.Psychtoolbox/BitsSharpConfig.txt]. Assuming a Bits+ device instead of a Bits# is connected.
 BitsPlusPlus: Please create a config file under this name if you have a Bits# and want to use it as Bits# instead of as a Bits+.
 BitsPlusPlus: The most simple way is to create an empty file. A more robust way is to store the name of the Bits# serial port
 BitsPlusPlus: in the first line of the text file, e.g., COM5 [Windows], or /dev/ttyACM0 [Linux] or similar.
----&gt; screenManager: Probing for a Display++...	NO Display++
+	NO Display++
 ---&gt; screenManager: Internal processing set to: 8 bits
 
 
-PTB-INFO: This is Psychtoolbox-3 for GNU/Linux X11, under Matlab 64-Bit (Version 3.0.19 - Build date: Jun 22 2024).
-PTB-INFO: OS support status: Linux 6.8.0-44-lowlatency Supported.
-PTB-INFO: Type 'PsychtoolboxVersion' for more detailed version information.
-PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT License, with
-PTB-INFO: some restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
-
-PTB-INFO: For information about paid support, support memberships and other commercial services, please type
-PTB-INFO: 'PsychPaidSupportAndServices'.
-
+PTB-INFO: This is Psychtoolbox-3 for GNU/Linux X11, under Matlab 64-Bit Intel (Version 3.0.22 - Build date: Apr 10 2026).
+PTB-INFO: OS support status: Linux 7.0.0-14-generic Supported.
+PTB-INFO: For information about paid support and other commercial services, please type 'PsychPaidSupportAndServices'.
+PTB-INFO: Most parts of the Psychtoolbox distribution are licensed to you under terms of the MIT license, with some
+PTB-INFO: restrictions. See file 'License.txt' in the Psychtoolbox root folder for the exact licensing conditions.
+PTB-INFO: Psychtoolbox and its prebuilt mex files are distributed in the hope that they will be useful, but WITHOUT
+PTB-INFO: ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 
-PTB-INFO: OpenGL-Renderer is AMD :: AMD Radeon RX 6800 (radeonsi, navi21, LLVM 17.0.6, DRM 3.57, 6.8.0-44-lowlatency) :: 4.6 (Compatibility Profile) Mesa 24.0.9-0ubuntu0.1
-PTB-INFO: VBL startline = 1080 , VBL Endline = -1
-PTB-INFO: Measured monitor refresh interval from VBLsync = 16.666679 ms [59.999954 Hz]. (50 valid samples taken, stddev=0.000591 ms.)
-PTB-INFO: Reported monitor refresh interval from operating system = 16.666667 ms [60.000000 Hz].
-PTB-INFO: Small deviations between reported values are normal and no reason to worry.
+
+PTB-INFO: OpenGL-Renderer is AMD :: AMD Radeon RX 6800 (radeonsi, navi21, LLVM 20.1.2, DRM 3.64, 7.0.0-14-generic) :: 4.6 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2
+PTB-INFO: Screen 1 : Window 10 : VBL startline = 1200 : VBL Endline = -1
+PTB-INFO: Will try to use OS-Builtin OpenML sync control support for accurate Flip timestamping.
+PTB-INFO: Measured monitor refresh interval from VBLsync = 16.680536 ms [59.950111 Hz]. (50 valid samples taken, stddev=0.000516 ms.)
+PTB-INFO: Reported monitor refresh interval from operating system = 16.680845 ms [59.949001 Hz].
 PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 1025 ...
 PTB-INFO: Will use 8 bits per color component framebuffer for stimulus drawing.
-PTB-INFO: Will use 8 bits per color component framebuffer for stimulus post-processing (if any).
+PTB-INFO: Will use 8 bits per color component framebuffer for any stimulus post-processing.
+===&gt;&gt;&gt; screenManager: opened win: 10 kind: 1
 
 ---&gt; screenManager: Previous OpenGL blending: GL_ONE | GL_ZERO
 ---&gt; screenManager: OpenGL blending now: GL_SRC_ALPHA | GL_ONE_MINUS_SRC_ALPHA
 Compiling all shaders matching SmoothedDiscShader * into a GLSL program.
 Building a fragment shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.frag.txt ...
 Building a vertex shader:Reading shader from file /home/cog5/Code/Psychtoolbox-3/Psychtoolbox/PsychOpenGL/PsychGLSLShaders/SmoothedDiscShader.vert.txt ...
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
 
-===&gt;&gt;&gt; No strobe output I/O...
+≣≣≣≣ No strobe output I/O...
+--&gt;arduinoManager: In silent mode, reset() &amp; open() to connect!
 ===&gt; No reward TTLs will be sent...
-Eyelink: Opening Eyelink in DUMMY mode
----&gt; Eyelink&lt;eyelinkManager#15951D0EF&gt;: Running on a Dummy Eyelink @  0 (time offset:  0) | Initialise Method
+≣≣≣≣⊱ iRec&lt;iRecManager#1F2CA19FF&gt;: Running iRec in Dummy Mode | Initialise
+===&gt;&gt;&gt; screenManager.open(): Screen already open!
+---&gt; screenManager: Skipping Sync Tests etc. - ONLY FOR DEVELOPMENT!
+---&gt; screenManager: Probing for a Display++...BitsPlusPlus: Could not find a Bits# config file under [/home/cog5/.Psychtoolbox/BitsSharpConfig.txt]. Assuming a Bits+ device instead of a Bits# is connected.
+BitsPlusPlus: Please create a config file under this name if you have a Bits# and want to use it as Bits# instead of as a Bits+.
+BitsPlusPlus: The most simple way is to create an empty file. A more robust way is to store the name of the Bits# serial port
+BitsPlusPlus: in the first line of the text file, e.g., COM5 [Windows], or /dev/ttyACM0 [Linux] or similar.
+	NO Display++
+---&gt; screenManager: Internal processing set to: 8 bits
+PTB-INFO: Proper timing and timestamping of visual stimulus onset is not reliably supported at all on this desktop GUI
+PTB-INFO: when running in windowed mode (non-fullscreen), or for transparent windows. If PTB aborts with
+PTB-INFO: 'Synchronization failure' you can disable the sync test via a call to Screen('Preference', 'SkipSyncTests', 2).
+PTB-INFO: You won't get proper stimulus onset timestamps in any case though, so windowed mode is of limited use.
+PTB-INFO: Using a desktop GUI like GNOME-3 or Ubuntu desktop, which uses the Mutter compositor, may give better timing if
+PTB-INFO: you opt-in into our new experimental(!) support: Call setenv('PSYCH_EXPERIMENTAL_NETWMTS', '1') at start of your script.
+
+
+PTB-INFO: OpenGL-Renderer is AMD :: AMD Radeon RX 6800 (radeonsi, navi21, LLVM 20.1.2, DRM 3.64, 7.0.0-14-generic) :: 4.6 (Compatibility Profile) Mesa 25.2.8-0ubuntu0.24.04.2
+PTB-INFO: Screen 0 : Window 12 : VBL startline = 2160 : VBL Endline = -1
+PTB-INFO: Will try to use OS-Builtin OpenML sync control support for accurate Flip timestamping.
+PTB-INFO: Reported monitor refresh interval from operating system = 16.667778 ms [59.995998 Hz].
+PTB-INFO: All startup display tests and calibrations disabled. Assuming a refresh interval of 59.995998 Hz. Timing will be inaccurate!
+PTB-INFO: Psychtoolbox imaging pipeline starting up for window with requested imagingmode 1025 ...
+PTB-INFO: Will use 8 bits per color component framebuffer for stimulus drawing.
+PTB-INFO: Will use 8 bits per color component framebuffer for any stimulus post-processing.
+
+---&gt; screenManager: Previous OpenGL blending: GL_ONE | GL_ZERO
+---&gt; screenManager: OpenGL blending now: GL_SRC_ALPHA | GL_ONE_MINUS_SRC_ALPHA
+
+===&gt;&gt;&gt; CALIBRATING IREC... &lt;&lt;&lt;===
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+===&gt;&gt;&gt; CALIBRATING IREC FINISHED... &lt;&lt;&lt;===
+≣Close⊱ Close Touch Manager...
+≣reset⊱ Touch data reset: softReset = 0 | lastPressed = 0
+≣≣≣≣⊱touchManager: Dummy Mode Active
 
 
 ===&gt;&gt;&gt; User Functions instantiated&hellip;
 
-======&gt;&gt;&gt; Loading State File: DefaultStateInfo.m
+===≣≣≣≣⊱ Loading State File: DefaultStateInfo.m
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.32 | R=2.00 | Strict=1
 =================&gt;&gt; Built state info file &lt;&lt;==================
   Columns 1 through 4
     {'name'     }    {'next'     }    {'time'             }    {'entryFcn'}
-    {'pause'    }    {'prefix'   }    {[              Inf]}    {11x1 cell }
-    {'prefix'   }    {'fixate'   }    {[0.750000000000000]}    { 8x1 cell }
-    {'fixate'   }    {'breakfix' }    {[               10]}    { 1x1 cell }
-    {'stimulus' }    {'incorrect'}    {[               10]}    { 2x1 cell }
-    {'correct'  }    {'prefix'   }    {[0.100000000000000]}    { 3x1 cell }
-    {'incorrect'}    {'timeout'  }    {[0.100000000000000]}    { 3x1 cell }
-    {'breakfix' }    {'timeout'  }    {[0.100000000000000]}    { 3x1 cell }
-    {'timeout'  }    {'prefix'   }    {[                2]}    { 0x0 cell }
-    {'calibrate'}    {'pause'    }    {[0.500000000000000]}    { 4x1 cell }
-    {'drift'    }    {'pause'    }    {[0.500000000000000]}    { 4x1 cell }
-    {'offset'   }    {'pause'    }    {[0.500000000000000]}    { 4x1 cell }
-    {'override' }    {'pause'    }    {[0.500000000000000]}    { 1x1 cell }
-    {'flash'    }    {'pause'    }    {[0.500000000000000]}    { 1x1 cell }
-    {'showgrid' }    {'pause'    }    {[               10]}    { 0x0 cell }
+    {'pause'    }    {'prefix'   }    {[              Inf]}    {11&times;1 cell }
+    {'prefix'   }    {'fixate'   }    {[0.750000000000000]}    { 8&times;1 cell }
+    {'fixate'   }    {'breakfix' }    {[               10]}    { 1&times;1 cell }
+    {'stimulus' }    {'incorrect'}    {[               10]}    { 2&times;1 cell }
+    {'correct'  }    {'prefix'   }    {[0.100000000000000]}    { 3&times;1 cell }
+    {'incorrect'}    {'timeout'  }    {[0.100000000000000]}    { 3&times;1 cell }
+    {'breakfix' }    {'timeout'  }    {[0.100000000000000]}    { 3&times;1 cell }
+    {'timeout'  }    {'prefix'   }    {[                2]}    { 0&times;0 cell }
+    {'calibrate'}    {'pause'    }    {[0.500000000000000]}    { 4&times;1 cell }
+    {'drift'    }    {'pause'    }    {[0.500000000000000]}    { 4&times;1 cell }
+    {'offset'   }    {'pause'    }    {[0.500000000000000]}    { 4&times;1 cell }
+    {'override' }    {'pause'    }    {[0.500000000000000]}    { 1&times;1 cell }
+    {'flash'    }    {'pause'    }    {[0.500000000000000]}    { 1&times;1 cell }
+    {'showgrid' }    {'pause'    }    {[               10]}    { 0&times;0 cell }
   Columns 5 through 7
     {'withinFcn'}    {'transitionFcn'}    {'exitFcn'}
-    {0x0 cell   }    {0x0 cell       }    { 1x1 cell}
-    {1x1 cell   }    {0x0 cell       }    { 0x0 cell}
-    {3x1 cell   }    {1x1 cell       }    { 3x1 cell}
-    {3x1 cell   }    {1x1 cell       }    { 2x1 cell}
-    {1x1 cell   }    {0x0 cell       }    {11x1 cell}
-    {1x1 cell   }    {0x0 cell       }    {11x1 cell}
-    {1x1 cell   }    {0x0 cell       }    {11x1 cell}
-    {1x1 cell   }    {0x0 cell       }    { 0x0 cell}
-    {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
-    {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
-    {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
-    {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
-    {0x0 cell   }    {0x0 cell       }    { 0x0 cell}
-    {1x1 cell   }    {0x0 cell       }    { 0x0 cell}
+    {0&times;0 cell   }    {0&times;0 cell       }    { 1&times;1 cell}
+    {1&times;1 cell   }    {0&times;0 cell       }    { 3&times;1 cell}
+    {3&times;1 cell   }    {1&times;1 cell       }    { 3&times;1 cell}
+    {3&times;1 cell   }    {1&times;1 cell       }    { 2&times;1 cell}
+    {1&times;1 cell   }    {0&times;0 cell       }    {10&times;1 cell}
+    {1&times;1 cell   }    {0&times;0 cell       }    {11&times;1 cell}
+    {1&times;1 cell   }    {0&times;0 cell       }    {11&times;1 cell}
+    {1&times;1 cell   }    {0&times;0 cell       }    { 0&times;0 cell}
+    {0&times;0 cell   }    {0&times;0 cell       }    { 0&times;0 cell}
+    {0&times;0 cell   }    {0&times;0 cell       }    { 0&times;0 cell}
+    {0&times;0 cell   }    {0&times;0 cell       }    { 0&times;0 cell}
+    {0&times;0 cell   }    {0&times;0 cell       }    { 0&times;0 cell}
+    {0&times;0 cell   }    {0&times;0 cell       }    { 0&times;0 cell}
+    {1&times;1 cell   }    {0&times;0 cell       }    { 0&times;0 cell}
 =================&gt;&gt; Built state info file &lt;&lt;=================
----&gt; Path: /home/cog5/OptickaFiles/SavedData/Simulcra/2024-09-13/session001/ created...
+≣≣≣≣⊱ Path: /home/cog5/OptickaFiles/SavedData/lab/subjects/Simulcra/2026-06-18/004 created...
 
 
 
-===&gt;&gt;&gt;&gt;&gt;&gt; START BEHAVIOURAL TASK: Simulcra-session001-2024-9-13-13-54-16 &lt;&lt;&lt;&lt;&lt;&lt;===	Initial Path: /home/cog5/OptickaFiles/SavedData/Simulcra/2024-09-13/session001/
+≣≣≣≣&gt;&gt;&gt; START BEHAVIOURAL TASK: 2026-06-18-20-05-07_004_Simulcra &lt;&lt;&lt;≣≣≣≣
+	Initial Path: /home/cog5/OptickaFiles/SavedData/lab/subjects/Simulcra/2026-06-18/004
 	Initial Comments: 
 
 
-===&gt;&gt;&gt; Creating Behavioural Record Plot Window...
-===&gt;&gt;&gt; Increasing Priority...
+≣≣≣≣⊱ Creating Behavioural Record Plot Window...
+≣≣≣≣⊱ Increasing Priority...
 PTB-INFO: Gamemode optimizations enable requested. Current/Old status: Disabled
 PTB-INFO: New status: Active
 
-===&gt;&gt;&gt; Warming up the GPU, Eyetracker and I/O systems... &lt;&lt;&lt;===
+≣≣≣≣ Warming up the GPU, Eyetracker and I/O systems... &lt;&lt;&lt;===
 begin state: stateMachine warmup... ...exit
 middle state: stateMachine warmup... ...exit
 surprise state: stateMachine warmup... ...exit
 end state: stateMachine warmup... ...exit
 
----&gt;&gt;&gt; Total time to do state traversal: 0.311916 secs 
----&gt;&gt;&gt; Loops: 3001 thus ~0.103937 ms per loop
----&gt; state machine&lt;stateMachine#159580928&gt;: stateMachine not running... | finish method
+---&gt;&gt;&gt; Total time to do state traversal: 0.311918 secs 
+---&gt;&gt;&gt; Loops: 95265 thus ~0.00327422 ms per loop
+≣≣≣≣⊱ state machine&lt;stateMachine#1F2D85A96&gt;: stateMachine not running... | finish method
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt;IREC Message: 87
+-+-+-&gt;IREC Message: 65
+-+-+-&gt;IREC Message: 82
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 80
+-+-+-&gt;IREC Message: 95
+-+-+-&gt;IREC Message: 84
+-+-+-&gt;IREC Message: 69
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 84
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 51
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
 
-===&gt;&gt;&gt; Save initial state in case of crash: /tmp//TEMPSimulcra-session001-2024-9-13-13-54-16.mat ...
+≣≣≣≣ Save initial state in case of crash: /tmp/TEMP2026-06-18-20-05-07_004_Simulcra.mat ...
 	 ... Saved!
-
-
-===&gt;&gt;&gt; Igniting the State Machine... &lt;&lt;&lt;===
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 1230px | 270px | 0deg &lt;&gt; Y = 870px | 270px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱⊱⊱ Igniting the State Machine... ⊰⊰⊰≣≣≣≣
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
 PAUSED, press [p] to resume...
----&gt; audio-manager&lt;audioManager#1594CDB34&gt;: Beep | beep
-===&gt;&gt;&gt; CORRECT : correct:15966479A | B:1 R:1 [1/9] | V: 3 | Time: 6.433 (267) isFix:1 isExcl:0 isFixInit:0
-isBlink:0 fixLength: 1.01 &gt; xyPosition: 10.00 10.00 | updateVariables: B:1 R:1 T:1
-V:3&gt;S1:xyPositionOut=10 10 
----&gt; audio-manager&lt;audioManager#1594CDB34&gt;: Beep | beep
-===&gt;&gt;&gt; CORRECT : correct:1596E4F72 | B:1 R:2 [2/9] | V: 2 | Time: 10.983 (420) isFix:1 isExcl:0 isFixInit:0
-isBlink:0 fixLength: 1.02 &gt; xyPosition: 0.00 0.00 | updateVariables: B:1 R:2 T:2
-V:2&gt;S1:xyPositionOut=0 0 
----&gt; audio-manager&lt;audioManager#1594CDB34&gt;: Beep | beep
-===&gt;&gt;&gt; CORRECT : correct:15975C98A | B:1 R:3 [3/9] | V: 1 | Time: 15.217 (633) isFix:1 isExcl:0 isFixInit:0
-isBlink:0 fixLength: 1.02 &gt; xyPosition: -10.00 -10.00 | updateVariables: B:1 R:3 T:3
+-+-+-&gt;IREC Message: -100
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: pause @ 0.00s - 0 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: pause @ 1.31s | state time: 1.31s | 78/78 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.31 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 3
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 50
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 1.33s - 78 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:2 | B:1 R:1 [1/9] | V: 3 | Time: 2.085 (44) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: 10.00 10.00 | updateVariables: B:1 R:1 T:1 V:3&gt;S1:xyPositionOut=10 10 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 2.08s | state time: 0.75s | 44/122 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 2.11s - 122 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.32 0.00 0.32] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 2.44s | state time: 0.34s | 20/142 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 2.45s - 142 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.01 0.00 1.01] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 3.48s | state time: 1.03s | 62/204 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 3.48s - 204 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:5 | B:1 R:1 [1/9] | V: 3 | Time: 3.603 (133) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.01 &gt; xyPosition: 10.00 10.00 | updateVariables: B:1 R:1 T:1 V:3&gt;S1:xyPositionOut=10 10 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 1 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 3.60s | state time: 0.11s | 7/211 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.43 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 2
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 54
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 6.01s - 211 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:6 | B:1 R:2 [2/9] | V: 2 | Time: 6.772 (177) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: 0.00 0.00 | updateVariables: B:1 R:2 T:2 V:2&gt;S1:xyPositionOut=0 0 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 6.76s | state time: 0.75s | 44/255 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 6.80s - 255 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.43 0.00 0.43] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 7.25s | state time: 0.45s | 27/282 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 7.26s - 282 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.01 0.00 1.01] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 8.28s | state time: 1.03s | 62/344 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 8.28s - 344 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:9 | B:1 R:2 [2/9] | V: 2 | Time: 8.407 (273) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.01 &gt; xyPosition: 0.00 0.00 | updateVariables: B:1 R:2 T:2 V:2&gt;S1:xyPositionOut=0 0 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 2 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 690px | -270px | 0deg &lt;&gt; Y = 330px | -270px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 8.40s | state time: 0.11s | 7/351 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.37 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 1
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 65
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 9.34s - 351 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:A | B:1 R:3 [3/9] | V: 1 | Time: 10.108 (319) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: -10.00 -10.00 | updateVariables: B:1 R:3 T:3
 V:1&gt;S1:xyPositionOut=-10 -10 
----&gt; audio-manager&lt;audioManager#1594CDB34&gt;: Beep | beep
-===&gt;&gt;&gt; CORRECT : correct:1597CB453 | B:2 R:1 [4/9] | V: 3 | Time: 19.133 (836) isFix:1 isExcl:0 isFixInit:0
-isBlink:0 fixLength: 1.02 &gt; xyPosition: 10.00 10.00 | updateVariables: B:2 R:1 T:4
-V:3&gt;S1:xyPositionOut=10 10 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 10.10s | state time: 0.76s | 46/397 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 10.12s - 397 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.37 0.00 0.37] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 10.50s | state time: 0.38s | 23/420 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 10.50s - 420 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.01 0.00 1.01] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 11.54s | state time: 1.03s | 62/482 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 11.54s - 482 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:D | B:1 R:3 [3/9] | V: 1 | Time: 11.660 (411) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.01 &gt; xyPosition: -10.00 -10.00 | updateVariables: B:1 R:3 T:3
+V:1&gt;S1:xyPositionOut=-10 -10 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 3 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 690px | -270px | 0deg &lt;&gt; Y = 330px | -270px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 11.65s | state time: 0.12s | 7/489 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.56 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 1
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 69
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 12.31s - 489 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:E | B:2 R:1 [4/9] | V: 1 | Time: 13.078 (456) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: -10.00 -10.00 | updateVariables: B:2 R:1 T:4
+V:1&gt;S1:xyPositionOut=-10 -10 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 13.07s | state time: 0.76s | 45/534 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 13.07s - 534 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.57 0.00 0.57] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 13.65s | state time: 0.58s | 35/569 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 13.66s - 569 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.02 0.00 1.02] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 14.69s | state time: 1.03s | 62/631 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 14.69s - 631 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:11 | B:2 R:1 [4/9] | V: 1 | Time: 14.812 (560) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.02 &gt; xyPosition: -10.00 -10.00 | updateVariables: B:2 R:1 T:4
+V:1&gt;S1:xyPositionOut=-10 -10 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 4 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 1230px | 270px | 0deg &lt;&gt; Y = 870px | 270px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 14.80s | state time: 0.11s | 7/638 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.30 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 3
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 49
+-+-+-&gt;IREC Message: 50
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 15.36s - 638 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:12 | B:2 R:2 [5/9] | V: 3 | Time: 16.130 (606) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: 10.00 10.00 | updateVariables: B:2 R:2 T:5 V:3&gt;S1:xyPositionOut=10 10 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 16.12s | state time: 0.76s | 46/684 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 16.13s - 684 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.30 0.00 0.30] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 16.44s | state time: 0.31s | 19/703 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 16.44s - 703 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.01 0.00 1.01] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 17.47s | state time: 1.03s | 62/765 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 17.48s - 765 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:15 | B:2 R:2 [5/9] | V: 3 | Time: 17.598 (694) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.01 &gt; xyPosition: 10.00 10.00 | updateVariables: B:2 R:2 T:5 V:3&gt;S1:xyPositionOut=10 10 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 5 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 17.59s | state time: 0.11s | 7/772 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.67 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 2
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 49
+-+-+-&gt;IREC Message: 54
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 18.32s - 772 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:16 | B:2 R:3 [6/9] | V: 2 | Time: 19.083 (740) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: 0.00 0.00 | updateVariables: B:2 R:3 T:6 V:2&gt;S1:xyPositionOut=0 0 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 19.07s | state time: 0.76s | 46/818 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 19.08s - 818 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.67 0.00 0.67] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 19.76s | state time: 0.68s | 41/859 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 19.76s - 859 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.02 0.00 1.02] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 20.79s | state time: 1.03s | 62/921 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 20.79s - 921 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:19 | B:2 R:3 [6/9] | V: 2 | Time: 20.917 (850) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.02 &gt; xyPosition: 0.00 0.00 | updateVariables: B:2 R:3 T:6 V:2&gt;S1:xyPositionOut=0 0 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 6 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 20.91s | state time: 0.12s | 7/928 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.25 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 2
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 49
+-+-+-&gt;IREC Message: 65
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 21.36s - 928 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:1A | B:3 R:1 [7/9] | V: 2 | Time: 22.135 (896) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: 0.00 0.00 | updateVariables: B:3 R:1 T:7 V:2&gt;S1:xyPositionOut=0 0 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 22.13s | state time: 0.77s | 46/974 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 22.13s - 974 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.25 0.00 0.25] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 22.39s | state time: 0.26s | 16/990 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 22.39s - 990 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.02 0.00 1.02] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 23.43s | state time: 1.03s | 62/1052 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 23.43s - 1052 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:1D | B:3 R:1 [7/9] | V: 2 | Time: 23.553 (981) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.02 &gt; xyPosition: 0.00 0.00 | updateVariables: B:3 R:1 T:7 V:2&gt;S1:xyPositionOut=0 0 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 7 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 1230px | 270px | 0deg &lt;&gt; Y = 870px | 270px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 23.54s | state time: 0.12s | 7/1059 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.28 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 3
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 49
+-+-+-&gt;IREC Message: 69
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 24.00s - 1059 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:1E | B:3 R:2 [8/9] | V: 3 | Time: 24.754 (1026) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: 10.00 10.00 | updateVariables: B:3 R:2 T:8 V:3&gt;S1:xyPositionOut=10 10 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 24.75s | state time: 0.75s | 45/1104 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 24.75s - 1104 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.28 0.00 0.28] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 25.05s | state time: 0.30s | 18/1122 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 25.05s - 1122 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.02 0.00 1.02] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 26.08s | state time: 1.03s | 62/1184 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 26.08s - 1184 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:21 | B:3 R:2 [8/9] | V: 3 | Time: 26.205 (1113) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.02 &gt; xyPosition: 10.00 10.00 | updateVariables: B:3 R:2 T:8 V:3&gt;S1:xyPositionOut=10 10 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 8 Response = 1 @ 1.8e+09 secs
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 690px | -270px | 0deg &lt;&gt; Y = 330px | -270px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 26.20s | state time: 0.12s | 7/1191 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.25 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 1
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 50
+-+-+-&gt;IREC Message: 50
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 26.68s - 1191 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ INITFIX : prefix:22 | B:3 R:3 [9/9] | V: 1 | Time: 27.456 (1159) isFix:0 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 0.00 &gt; xyPosition: -10.00 -10.00 | updateVariables: B:3 R:3 T:9
+V:1&gt;S1:xyPositionOut=-10 -10 
+-+-+-&gt;IREC Message: 77
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 71
+-+-+-&gt;IREC Message: 58
+-+-+-&gt;IREC Message: 83
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 97
+-+-+-&gt;IREC Message: 114
+-+-+-&gt;IREC Message: 116
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 70
+-+-+-&gt;IREC Message: 105
+-+-+-&gt;IREC Message: 120
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: prefix @ 27.45s | state time: 0.76s | 46/1237 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: fixate @ 27.45s - 1237 ticks
+-+-+-&gt; EyeTracker:testSearchHoldFixation FIXATION SUCCESSFUL!: stimulus time:[0.27 0.00 0.27] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=1.00 | R=2.00 | Strict=1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
+-+-+-&gt;IREC Message: -1500
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: fixate @ 27.73s | state time: 0.28s | 17/1254 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: stimulus @ 27.73s - 1254 ticks
+-+-+-&gt;IREC Message: -1499
+-+-+-&gt; EyeTracker:testHoldFixation FIXATION SUCCESSFUL!: correct time:[1.02 0.00 1.02] f:1 ft:1 s:0 e:0 fi:0
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: stimulus @ 28.77s | state time: 1.03s | 62/1316 ticks
+-+-+-&gt;IREC Message: -1501
+-+-+-&gt;IREC Message: 1
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: correct @ 28.77s - 1316 ticks
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: Triggered! | transitionToStateWithName method
+≣≣≣≣⊱ CORRECT : correct:25 | B:3 R:3 [9/9] | V: 1 | Time: 28.891 (1245) isFix:1 isExcl:0 isFixInit:0 isBlink:0
+fixLength: 1.02 &gt; xyPosition: -10.00 -10.00 | updateVariables: B:3 R:3 T:9
+V:1&gt;S1:xyPositionOut=-10 -10 
+≣≣≣≣⊱ taskSequence&lt;taskSequence#1F2C2B111&gt;: Trial = 9 Response = 1 @ 1.8e+09 secs
+---&gt; taskSequence.updateTask: Task FINISHED, no more updates allowed
+---&gt; computePosition: Disc&lt;discStimulus#1F2C25520&gt; X = 690px | -270px | 0deg &lt;&gt; Y = 330px | -270px | 0deg
+---&gt; computePosition: fix&lt;fixationCrossStimulus#1F2C282FB&gt; X = 960px | 0px | 0deg &lt;&gt; Y = 600px | 0px | 0deg
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: EXIT: correct @ 28.88s | state time: 0.12s | 7/1323 ticks
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Hide stimuli: 1 2 | Hide
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+-+-+-&gt; EyeTracker:updateFixationValues: X=0 | Y=0 | IT=3.00 | FT=0.44 | R=2.00 | Strict=1
+-+-+-&gt;IREC Message: -1500
+-+-+-&gt;IREC Message: 1
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 85
+-+-+-&gt;IREC Message: 73
+-+-+-&gt;IREC Message: 68
+-+-+-&gt;IREC Message: 32
+-+-+-&gt;IREC Message: 50
+-+-+-&gt;IREC Message: 54
+≣≣≣≣⊱ Run Experiment&lt;stateMachine#1F2D2C946&gt;: ENTER: prefix @ 29.33s - 1323 ticks
 
----&gt;&gt;&gt; Total time to do state traversal: 20.2832 secs 
----&gt;&gt;&gt; Loops: 992 thus ~20.4468 ms per loop
+---&gt;&gt;&gt; Total time to do state traversal: 29.3351 secs 
+---&gt;&gt;&gt; Loops: 1323 thus ~22.1732 ms per loop
+≣≣≣≣⊱ metaStimulus&lt;metaStimulus#1F2C18B01&gt;: Show stimuli: 1 2 | Show
 
 
----&gt; screenManager 1594BED38: Closing screen = 1, Win = 10, Kind = 1
+---&gt; screenManager 1F2C32F09: Closing screen = 1, Win = 10, Kind = 1
 
 
 INFO: PTB's Screen('Flip', 10) command seems to have missed the requested stimulus presentation deadline
-INFO: a total of 5 times out of a total of 949 flips during this session.
+INFO: a total of 12 times out of a total of 1532 flips during this session.
 
 INFO: This number is fairly accurate (and indicative of real timing problems in your own code or your system)
 INFO: if you provided requested stimulus onset times with the 'when' argument of Screen('Flip', window [, when]);
@@ -391,15 +932,37 @@ INFO: of timing behaviour than a hard reliable measurement. Large numbers may in
 INFO: deserve your closer attention. Cfe. 'help SyncTrouble', the FAQ section at www.psychtoolbox.org and the
 INFO: examples in the PDF presentation in PsychDocumentation/Psychtoolbox3-Slides.pdf for more info and timing tips.
 
-PsychEyelinkDispatchCallback: Unknown eyelink command (-1)
 
 
-======&gt;&gt;&gt; Total ticks: 880 | stateMachine ticks: 992
-======&gt;&gt;&gt; Tracker Time: 0 | PTB time: 20.2834 | Drift Offset: 0
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 2).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+-+-+-&gt; EyeTracker:RESET Fixation: fix length=0 fix total=0 fix #0
+
+
+---&gt; screenManager 1F2CA237F: Closing screen = 0, Win = 12, Kind = 1
+
+
+WARNING: This session of your experiment was run by you with the setting Screen('Preference', 'SkipSyncTests', 2).
+WARNING: This means that some internal self-tests and calibrations were skipped. Your stimulus presentation timing
+WARNING: may have been wrong. This is fine for development and debugging of your experiment, but for running the real
+WARNING: study, please make sure to set Screen('Preference', 'SkipSyncTests', 0) for maximum accuracy and reliability.
+≣Close⊱ Close Touch Manager...
+
+
+===≣≣≣≣⊱ Total ticks: 1247 | stateMachine ticks: 1323
+===≣≣≣≣⊱ Tracker Time: 0 | PTB time: 29.3411 | Drift Offset: 0
 
 
 #####################
-===&gt;&gt;&gt; &lt;strong&gt;SAVED DATA to: /home/cog5/OptickaFiles/SavedData/Simulcra/2024-09-13/session001//opticka.raw.Simulcra-session001-2024-9-13-13-54-16.mat&lt;/strong&gt;
+≣≣≣≣ &lt;strong&gt;SAVED RAW DATA to: /home/cog5/OptickaFiles/SavedData/lab/subjects/Simulcra/2026-06-18/004/opticka.raw.2026-06-18-20-05-07_004_Simulcra.mat&lt;/strong&gt;
+#####################
+#####################
+≣≣≣≣ &lt;strong&gt;SAVED JSON DATA to: /home/cog5/OptickaFiles/SavedData/lab/subjects/Simulcra/2026-06-18/004/opticka.details.2026-06-18-20-05-07_004_Simulcra.json&lt;/strong&gt;
+#####################
+#####################
+≣≣≣≣ &lt;strong&gt;SAVED TIMED EVENT DATA to: /home/cog5/OptickaFiles/SavedData/lab/subjects/Simulcra/2026-06-18/004/events.table.2026-06-18-20-05-07_004_Simulcra.tsv&lt;/strong&gt;
 #####################
 
 </pre>
@@ -416,7 +979,7 @@ PsychEyelinkDispatchCallback: Unknown eyelink command (-1)
 </pre>
 <img vspace="5" hspace="5" src="optickaBehaviourTest_05.png" alt=""> <p class="footer">
 <br>
-<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2024a</a>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2026a</a>
 <br>
 </p>
 </div>
@@ -518,6 +1081,7 @@ myStims{2}		= fixationCrossStimulus('size', 0.8);
 % value. There are functions to handle what happens if the subject responds
 % incorrectly, where we can re-randomise the next value within the block.
 myTask					= taskSequence(); %new taskSequence object instance
+myTask.realTime			= true; % do we use system clock, rather than fixed FPS ticks
 
 %%
 % Our variable is xyPosition, applied to stimulus 1 only. 3 different
@@ -567,12 +1131,14 @@ myExp = runExperiment('stimuli', myStims,... %stimulus objects
 	'screen', myScreen,... %screen manager object
 	'task', myTask,... % task randomised stimulus sequence
 	'stateInfoFile', 'DefaultStateInfo.m', ... % use the default state info file
+	'verbose', true, ... % more logging to the command window
 	'debug', false,... % debug mode for testing?
-	'logStateTimers',true,...
-	'subjectName', 'Simulcra', ...
-	'researcherName', 'Automated Test');
-myExp.eyetracker.device = 'eyelink';
-myExp.eyetracker.dummy = true;
+	'logStateTimers',true);
+myExp.eyetracker.device = 'irec'; % iRecHS2 eyetracker
+myExp.eyetracker.dummy = true; % dummy mode, so mouse replaces eye position
+myexp.sessionData.subjectName = 'Simulcra';
+myexp.sessionData.researcherName = 'Automated-Test';
+myexp.comment = "This is a test run";
 
 %% Run the full behavioural task
 % 

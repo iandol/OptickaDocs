@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['opticka_2em_0',['opticka.m',['../opticka_8m.html',1,'']]],
-  ['optickabehaviourtest_2em_1',['optickaBehaviourTest.m',['../opticka_behaviour_test_8m.html',1,'']]],
-  ['optickacore_2em_2',['optickaCore.m',['../opticka_core_8m.html',1,'']]],
-  ['optickaroot_2em_3',['optickaRoot.m',['../opticka_root_8m.html',1,'']]],
-  ['optickatest_2em_4',['optickaTest.m',['../opticka_test_8m.html',1,'']]],
-  ['opx_5fopt_5fui_2em_5',['opx_opt_ui.m',['../opx__opt__ui_8m.html',1,'']]],
-  ['opx_5fui_2em_6',['opx_ui.m',['../opx__ui_8m.html',1,'']]],
-  ['opxonline_2em_7',['opxOnline.m',['../opx_online_8m.html',1,'']]],
-  ['opxrunmaster_2em_8',['opxRunMaster.m',['../opx_run_master_8m.html',1,'']]],
-  ['opxrunslave_2em_9',['opxRunSlave.m',['../opx_run_slave_8m.html',1,'']]],
-  ['orientationtuningstateinfo_2em_10',['OrientationTuningStateInfo.m',['../_orientation_tuning_state_info_8m.html',1,'']]]
+  ['magstimmanager_2em_0',['magstimManager.m',['../magstim_manager_8m.html',1,'']]],
+  ['mentalabmanager_2em_1',['mentalabManager.m',['../mentalab_manager_8m.html',1,'']]],
+  ['metastimulus_2em_2',['metaStimulus.m',['../meta_stimulus_8m.html',1,'']]],
+  ['methods_2emd_3',['METHODS.md',['../_m_e_t_h_o_d_s_8md.html',1,'']]],
+  ['miniomanager_2em_4',['minioManager.m',['../minio_manager_8m.html',1,'']]],
+  ['moviestimulus_2em_5',['movieStimulus.m',['../movie_stimulus_8m.html',1,'']]],
+  ['myuserfunctions_2em_6',['myUserFunctions.m',['../my_user_functions_8m.html',1,'']]]
 ];

@@ -1,11 +1,11 @@
 <map id="imageStimulus" name="imageStimulus">
-<area shape="rect" id="Node000001" title="Show images or directories full of images." alt="" coords="99,1945,246,2491"/>
-<area shape="rect" id="Node000002" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all stimulus objects" alt="" coords="75,972,270,1897"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,1911,175,1945,170,1945,170,1911"/>
-<area shape="rect" id="Node000003" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,924"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,937,135,972,129,972,126,938"/>
+<area shape="rect" id="Node000001" title="Show images or directories full of images." alt="" coords="97,2005,248,2631"/>
+<area shape="rect" id="Node000002" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all stimulus objects" alt="" coords="75,1012,270,1957"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,1971,175,2005,170,2005,170,1971"/>
+<area shape="rect" id="Node000003" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,964"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="132,977,135,1012,130,1012,127,978"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="65,5,121,71"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,84,95,119,90,119,90,84"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="204,489,304,554"/>
-<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="253,568,217,972,211,971,247,567"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="95,85,95,119,90,119,90,85"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="204,509,304,574"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="253,588,216,1012,211,1012,247,588"/>
 </map>

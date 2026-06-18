@@ -1,7 +1,10 @@
 <map id="arduinoManager" name="arduinoManager">
-<area shape="rect" id="Node000001" title="Arduino Manager &gt; Connects and manages arduino communication. By default it connects using arduinoIOP..." alt="" coords="24,972,161,1417"/>
-<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,924"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,938,95,972,90,972,90,938"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="65,5,121,71"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,84,95,119,90,119,90,84"/>
+<area shape="rect" id="Node000001" title="Arduino Manager &gt; Connects and manages arduino communication. By default it connects using arduinoIOP..." alt="" coords="112,1012,249,1457"/>
+<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,964"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,978,155,1012,150,1012,145,978"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="153,5,209,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="175,85,169,119,164,118,170,84"/>
+<area shape="rect" id="Node000004" href="$classreward_manager.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="204,509,336,574"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="191,84,267,508,262,509,186,85"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="267,588,212,1012,207,1011,262,587"/>
 </map>

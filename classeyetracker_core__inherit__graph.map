@@ -1,15 +1,15 @@
 <map id="eyetrackerCore" name="eyetrackerCore">
-<area shape="rect" id="Node000001" title=" " alt="" coords="237,972,405,1497"/>
-<area shape="rect" id="Node000004" href="$classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods..." alt="" coords="5,1575,144,2061"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="233,1392,194,1468,158,1546,147,1577,142,1575,154,1544,189,1466,228,1390"/>
-<area shape="rect" id="Node000005" href="$classi_rec_manager.html" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="168,1585,307,2051"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="284,1511,273,1585,268,1585,279,1510"/>
-<area shape="rect" id="Node000006" href="$classpupil_core_manager.html" title="Manages the Pupil Labs Core." alt="" coords="331,1545,480,2091"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="364,1510,369,1545,363,1545,358,1511"/>
-<area shape="rect" id="Node000007" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="504,1575,645,2061"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="414,1384,456,1463,494,1544,507,1574,502,1576,490,1546,452,1465,410,1387"/>
-<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="234,119,409,924"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,938,324,972,319,972,319,938"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="237,1012,405,1557"/>
+<area shape="rect" id="Node000004" href="$classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods..." alt="" coords="5,1635,144,2121"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="233,1447,194,1526,158,1606,147,1637,142,1635,154,1604,189,1524,229,1445"/>
+<area shape="rect" id="Node000005" href="$classi_rec_manager.html" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="168,1645,307,2111"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="283,1571,273,1645,268,1645,278,1571"/>
+<area shape="rect" id="Node000006" href="$classpupil_core_manager.html" title="Manages the Pupil Labs Core." alt="" coords="331,1605,480,2151"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="364,1570,369,1605,364,1605,359,1571"/>
+<area shape="rect" id="Node000007" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="504,1615,645,2141"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="414,1440,456,1521,494,1604,506,1635,502,1637,490,1606,452,1523,410,1442"/>
+<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="234,119,409,964"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,978,324,1012,319,1012,319,978"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="293,5,349,71"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,84,324,119,319,119,319,84"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,85,324,119,319,119,319,85"/>
 </map>

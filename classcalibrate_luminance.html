@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -111,7 +111,15 @@ $(document).ready(function(){initNavTree('classcalibrate_luminance.html',''); in
 </blockquote>
 </blockquote>
 <p><a class="el" href="classcalibrate_luminance.html" title="calibrateLuminance: automatic luminance calibration">calibrateLuminance</a> will ask if you need to zero calibrate (e.g. ColorCal2, you only need to do this after first plugging in the ColorCal). Then simply place the meter in front of the monitor and follow instructions. After doing nMeasures of luminance steps, it will fit the raw luminance values using a variety of methods and then plot these out to a figure (it will ask you for comments to enter for the calibration, you should enter monitor type, lighting conditions etc). You can then save mycal to disk for later use by your programs.</p>
-<p>Copyright ©2014-2022 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
+<p>Copyright ©2014-2022 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a></p>
+<p><a class="el" href="classcalibrate_luminance.html" title="calibrateLuminance: automatic luminance calibration">calibrateLuminance</a> automatic luminance calibration: To enter settings:</p>
+<blockquote class="doxtable">
+<blockquote class="doxtable">
+<p>&zwj;c = <a class="el" href="classcalibrate_luminance.html" title="calibrateLuminance: automatic luminance calibration">calibrateLuminance()</a> c.nMeasures = 40 c.useSpectroCal2 = true c.run(); collect uncalibrated data c.analyse(); fit models to the raw data c.test() test the fitted model for linearity c.plot() % plot the final result c.save() % save the data c.finalCAL % this holds the corrected table you can pass to PTB Screen('LoadNormalizedGammaTable') </p>
+</blockquote>
+</blockquote>
+<p><a class="el" href="classcalibrate_luminance.html" title="calibrateLuminance: automatic luminance calibration">calibrateLuminance</a> will ask if you need to zero calibrate (e.g. ColorCal2, you only need to do this after first plugging in the ColorCal). Then simply place the meter in front of the monitor and follow instructions. After doing nMeasures of luminance steps, it will fit the raw luminance values using a variety of methods and then plot these out to a figure (it will ask you for comments to enter for the calibration, you should enter monitor type, lighting conditions etc). You can then save mycal to disk for later use by your programs.</p>
+<p>Copyright ©2014-2026 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for calibrateLuminance:</div>
 <div class="dyncontent">
@@ -120,6 +128,61 @@ Inheritance diagram for calibrateLuminance:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9219cae06202362b863f211624f47b28" id="r_a9219cae06202362b863f211624f47b28"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a9219cae06202362b863f211624f47b28">calibrateLuminance</a> (in args)</td></tr>
+<tr class="memdesc:a9219cae06202362b863f211624f47b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor.  <br /></td></tr>
+<tr class="separator:a9219cae06202362b863f211624f47b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5daa1cf1883eaa58bf8f856c8e9bfa3d" id="r_a5daa1cf1883eaa58bf8f856c8e9bfa3d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a5daa1cf1883eaa58bf8f856c8e9bfa3d">calibrate</a> (in me)</td></tr>
+<tr class="memdesc:a5daa1cf1883eaa58bf8f856c8e9bfa3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">calibrate run the calibration loop, uses the max # screen by default  <br /></td></tr>
+<tr class="separator:a5daa1cf1883eaa58bf8f856c8e9bfa3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad419fe1ea57fb7850338402c8b4a63db" id="r_ad419fe1ea57fb7850338402c8b4a63db"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#ad419fe1ea57fb7850338402c8b4a63db">maxLuminances</a> (in me)</td></tr>
+<tr class="memdesc:ad419fe1ea57fb7850338402c8b4a63db"><td class="mdescLeft">&#160;</td><td class="mdescRight">get max luminance values for each channel  <br /></td></tr>
+<tr class="separator:ad419fe1ea57fb7850338402c8b4a63db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a560f556b6242bba834bfa45c0170a74d" id="r_a560f556b6242bba834bfa45c0170a74d"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a560f556b6242bba834bfa45c0170a74d">displayBaseline</a> (in me)</td></tr>
+<tr class="memdesc:a560f556b6242bba834bfa45c0170a74d"><td class="mdescLeft">&#160;</td><td class="mdescRight">get max luminance values for each channel  <br /></td></tr>
+<tr class="separator:a560f556b6242bba834bfa45c0170a74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa21000a62587ac01c0611c51bd69f647" id="r_aa21000a62587ac01c0611c51bd69f647"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#aa21000a62587ac01c0611c51bd69f647">displayRange</a> (in me)</td></tr>
+<tr class="memdesc:aa21000a62587ac01c0611c51bd69f647"><td class="mdescLeft">&#160;</td><td class="mdescRight">get max luminance values for each channel  <br /></td></tr>
+<tr class="separator:aa21000a62587ac01c0611c51bd69f647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a115c4cc7083b092a482cc9a6e7725b9a" id="r_a115c4cc7083b092a482cc9a6e7725b9a"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a115c4cc7083b092a482cc9a6e7725b9a">runAll</a> (in me)</td></tr>
+<tr class="memdesc:a115c4cc7083b092a482cc9a6e7725b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">run all options runs, analyzes (fits) and tests the monitor  <br /></td></tr>
+<tr class="separator:a115c4cc7083b092a482cc9a6e7725b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5130088ab0eda5f9d22fc27500782162" id="r_a5130088ab0eda5f9d22fc27500782162"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a5130088ab0eda5f9d22fc27500782162">run</a> (in me)</td></tr>
+<tr class="memdesc:a5130088ab0eda5f9d22fc27500782162"><td class="mdescLeft">&#160;</td><td class="mdescRight">run run the main calibration loop, uses the max # screen by default  <br /></td></tr>
+<tr class="separator:a5130088ab0eda5f9d22fc27500782162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0518194844a0450cc798d59a8f0e7f" id="r_aed0518194844a0450cc798d59a8f0e7f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#aed0518194844a0450cc798d59a8f0e7f">test</a> (in me)</td></tr>
+<tr class="memdesc:aed0518194844a0450cc798d59a8f0e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">test once the models are analyzed, lets test the corrected luminance  <br /></td></tr>
+<tr class="separator:aed0518194844a0450cc798d59a8f0e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fc7f8f7451560c59c748265e84f63be" id="r_a4fc7f8f7451560c59c748265e84f63be"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a4fc7f8f7451560c59c748265e84f63be">analyze</a> (in me)</td></tr>
+<tr class="memdesc:a4fc7f8f7451560c59c748265e84f63be"><td class="mdescLeft">&#160;</td><td class="mdescRight">analyze once the raw data is collected, this analyzes (fits) the data  <br /></td></tr>
+<tr class="separator:a4fc7f8f7451560c59c748265e84f63be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae14bc2ab37b35d4fb51d05e973edad27" id="r_ae14bc2ab37b35d4fb51d05e973edad27"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#ae14bc2ab37b35d4fb51d05e973edad27">plot</a> (in me, in full)</td></tr>
+<tr class="memdesc:ae14bc2ab37b35d4fb51d05e973edad27"><td class="mdescLeft">&#160;</td><td class="mdescRight">plot This plots the calibration results  <br /></td></tr>
+<tr class="separator:ae14bc2ab37b35d4fb51d05e973edad27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c03a636a8d5067d5a54be51f582caac" id="r_a4c03a636a8d5067d5a54be51f582caac"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a4c03a636a8d5067d5a54be51f582caac">cloneAxes</a> (in src, in ignoredArg)</td></tr>
+<tr class="separator:a4c03a636a8d5067d5a54be51f582caac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd27a49c7aa892467aa870ed982266f9" id="r_abd27a49c7aa892467aa870ed982266f9"><td class="memItemLeft" align="right" valign="top">function set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#abd27a49c7aa892467aa870ed982266f9">choice</a> (in me, in in)</td></tr>
+<tr class="memdesc:abd27a49c7aa892467aa870ed982266f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the model choice  <br /></td></tr>
+<tr class="separator:abd27a49c7aa892467aa870ed982266f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f6f4220366dee7408849839f474e38" id="r_a03f6f4220366dee7408849839f474e38"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a03f6f4220366dee7408849839f474e38">getCCalxyY</a> (in me)</td></tr>
+<tr class="memdesc:a03f6f4220366dee7408849839f474e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">getCCalxyY Uses the ColorCalII to return the current xyY values  <br /></td></tr>
+<tr class="separator:a03f6f4220366dee7408849839f474e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec3d012f5295a400c188569ac8165af4" id="r_aec3d012f5295a400c188569ac8165af4"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#aec3d012f5295a400c188569ac8165af4">getSpectroCALValues</a> (in me)</td></tr>
+<tr class="memdesc:aec3d012f5295a400c188569ac8165af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">getSpectroCALValues Uses the SpectroCAL2 to return the current xyY values  <br /></td></tr>
+<tr class="separator:aec3d012f5295a400c188569ac8165af4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f82414aa04636322acb62c5bd3d3c17" id="r_a1f82414aa04636322acb62c5bd3d3c17"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a1f82414aa04636322acb62c5bd3d3c17">spectroCalLaser</a> (in me, in state)</td></tr>
+<tr class="separator:a1f82414aa04636322acb62c5bd3d3c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6514d908a0eafdc5e898b4102bb922f7" id="r_a6514d908a0eafdc5e898b4102bb922f7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a6514d908a0eafdc5e898b4102bb922f7">makeSPD</a> (in me)</td></tr>
+<tr class="separator:a6514d908a0eafdc5e898b4102bb922f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a958bb427bf293f2107e5b239616be044" id="r_a958bb427bf293f2107e5b239616be044"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a958bb427bf293f2107e5b239616be044">fullCalibration</a> (in me)</td></tr>
+<tr class="separator:a958bb427bf293f2107e5b239616be044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad33fe3f9feed7d99609c3f7e6a24799b" id="r_ad33fe3f9feed7d99609c3f7e6a24799b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#ad33fe3f9feed7d99609c3f7e6a24799b">save</a> (in me)</td></tr>
+<tr class="separator:ad33fe3f9feed7d99609c3f7e6a24799b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a995d605fc7d8c965ab234ea96752e2" id="r_a1a995d605fc7d8c965ab234ea96752e2"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a1a995d605fc7d8c965ab234ea96752e2">close</a> (in me)</td></tr>
+<tr class="separator:a1a995d605fc7d8c965ab234ea96752e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc8a03be99ce5ab305237ba7bc849c37" id="r_afc8a03be99ce5ab305237ba7bc849c37"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#afc8a03be99ce5ab305237ba7bc849c37">openSpectroCAL</a> (in me)</td></tr>
+<tr class="separator:afc8a03be99ce5ab305237ba7bc849c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5113aefe65dbed3b5a2c217e722cb320" id="r_a5113aefe65dbed3b5a2c217e722cb320"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a5113aefe65dbed3b5a2c217e722cb320">closeSpectroCAL</a> (in me)</td></tr>
+<tr class="separator:a5113aefe65dbed3b5a2c217e722cb320"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9219cae06202362b863f211624f47b28" id="r_a9219cae06202362b863f211624f47b28"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a9219cae06202362b863f211624f47b28">calibrateLuminance</a> (in args)</td></tr>
 <tr class="memdesc:a9219cae06202362b863f211624f47b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor.  <br /></td></tr>
 <tr class="separator:a9219cae06202362b863f211624f47b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -309,11 +372,40 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a2ccf9d453c9ee179101399e37e7456ee" id="r_a2ccf9d453c9ee179101399e37e7456ee"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a2ccf9d453c9ee179101399e37e7456ee">SPD</a></td></tr>
 <tr class="separator:a2ccf9d453c9ee179101399e37e7456ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8dad960f17b52ce181847ac5a3beadd1" id="r_a8dad960f17b52ce181847ac5a3beadd1"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcalibrate_luminance.html#a8dad960f17b52ce181847ac5a3beadd1">spCAL</a></td></tr>
+<tr class="memdesc:a8dad960f17b52ce181847ac5a3beadd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">spectroCAL serialport object  <br /></td></tr>
 <tr class="separator:a8dad960f17b52ce181847ac5a3beadd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9219cae06202362b863f211624f47b28" name="a9219cae06202362b863f211624f47b28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9219cae06202362b863f211624f47b28">&#9670;&#160;</a></span>calibrateLuminance()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9219cae06202362b863f211624f47b28">&#9670;&#160;</a></span>calibrateLuminance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::calibrateLuminance </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Class constructor. </p>
+<p>More detailed description of what the constructor does.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">args</td><td>are passed as a structure of properties which is parsed. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>instance of class. </dd></dl>
+
+</div>
+</div>
+<a id="a9219cae06202362b863f211624f47b28" name="a9219cae06202362b863f211624f47b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9219cae06202362b863f211624f47b28">&#9670;&#160;</a></span>calibrateLuminance() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -342,7 +434,27 @@ Public Attributes</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4fc7f8f7451560c59c748265e84f63be" name="a4fc7f8f7451560c59c748265e84f63be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fc7f8f7451560c59c748265e84f63be">&#9670;&#160;</a></span>analyze()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc7f8f7451560c59c748265e84f63be">&#9670;&#160;</a></span>analyze() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::analyze </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>analyze once the raw data is collected, this analyzes (fits) the data </p>
+
+</div>
+</div>
+<a id="a4fc7f8f7451560c59c748265e84f63be" name="a4fc7f8f7451560c59c748265e84f63be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4fc7f8f7451560c59c748265e84f63be">&#9670;&#160;</a></span>analyze() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +474,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a5daa1cf1883eaa58bf8f856c8e9bfa3d" name="a5daa1cf1883eaa58bf8f856c8e9bfa3d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5daa1cf1883eaa58bf8f856c8e9bfa3d">&#9670;&#160;</a></span>calibrate()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5daa1cf1883eaa58bf8f856c8e9bfa3d">&#9670;&#160;</a></span>calibrate() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::calibrate </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>calibrate run the calibration loop, uses the max # screen by default </p>
+
+</div>
+</div>
+<a id="a5daa1cf1883eaa58bf8f856c8e9bfa3d" name="a5daa1cf1883eaa58bf8f856c8e9bfa3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5daa1cf1883eaa58bf8f856c8e9bfa3d">&#9670;&#160;</a></span>calibrate() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -382,7 +514,37 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="abd27a49c7aa892467aa870ed982266f9" name="abd27a49c7aa892467aa870ed982266f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abd27a49c7aa892467aa870ed982266f9">&#9670;&#160;</a></span>choice()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#abd27a49c7aa892467aa870ed982266f9">&#9670;&#160;</a></span>choice() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function set calibrateLuminance::choice </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>in</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the model choice </p>
+
+</div>
+</div>
+<a id="abd27a49c7aa892467aa870ed982266f9" name="abd27a49c7aa892467aa870ed982266f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd27a49c7aa892467aa870ed982266f9">&#9670;&#160;</a></span>choice() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -412,7 +574,35 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a4c03a636a8d5067d5a54be51f582caac" name="a4c03a636a8d5067d5a54be51f582caac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c03a636a8d5067d5a54be51f582caac">&#9670;&#160;</a></span>cloneAxes()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c03a636a8d5067d5a54be51f582caac">&#9670;&#160;</a></span>cloneAxes() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::cloneAxes </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>ignoredArg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c03a636a8d5067d5a54be51f582caac" name="a4c03a636a8d5067d5a54be51f582caac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c03a636a8d5067d5a54be51f582caac">&#9670;&#160;</a></span>cloneAxes() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,7 +630,25 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a1a995d605fc7d8c965ab234ea96752e2" name="a1a995d605fc7d8c965ab234ea96752e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a995d605fc7d8c965ab234ea96752e2">&#9670;&#160;</a></span>close()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a995d605fc7d8c965ab234ea96752e2">&#9670;&#160;</a></span>close() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::close </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a995d605fc7d8c965ab234ea96752e2" name="a1a995d605fc7d8c965ab234ea96752e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a995d605fc7d8c965ab234ea96752e2">&#9670;&#160;</a></span>close() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -458,7 +666,25 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a5113aefe65dbed3b5a2c217e722cb320" name="a5113aefe65dbed3b5a2c217e722cb320"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5113aefe65dbed3b5a2c217e722cb320">&#9670;&#160;</a></span>closeSpectroCAL()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5113aefe65dbed3b5a2c217e722cb320">&#9670;&#160;</a></span>closeSpectroCAL() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::closeSpectroCAL </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5113aefe65dbed3b5a2c217e722cb320" name="a5113aefe65dbed3b5a2c217e722cb320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5113aefe65dbed3b5a2c217e722cb320">&#9670;&#160;</a></span>closeSpectroCAL() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,7 +702,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a560f556b6242bba834bfa45c0170a74d" name="a560f556b6242bba834bfa45c0170a74d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a560f556b6242bba834bfa45c0170a74d">&#9670;&#160;</a></span>displayBaseline()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a560f556b6242bba834bfa45c0170a74d">&#9670;&#160;</a></span>displayBaseline() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function get calibrateLuminance::displayBaseline </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get max luminance values for each channel </p>
+
+</div>
+</div>
+<a id="a560f556b6242bba834bfa45c0170a74d" name="a560f556b6242bba834bfa45c0170a74d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a560f556b6242bba834bfa45c0170a74d">&#9670;&#160;</a></span>displayBaseline() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -496,7 +742,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="aa21000a62587ac01c0611c51bd69f647" name="aa21000a62587ac01c0611c51bd69f647"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa21000a62587ac01c0611c51bd69f647">&#9670;&#160;</a></span>displayRange()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21000a62587ac01c0611c51bd69f647">&#9670;&#160;</a></span>displayRange() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function get calibrateLuminance::displayRange </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get max luminance values for each channel </p>
+
+</div>
+</div>
+<a id="aa21000a62587ac01c0611c51bd69f647" name="aa21000a62587ac01c0611c51bd69f647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21000a62587ac01c0611c51bd69f647">&#9670;&#160;</a></span>displayRange() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -516,7 +782,25 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a958bb427bf293f2107e5b239616be044" name="a958bb427bf293f2107e5b239616be044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a958bb427bf293f2107e5b239616be044">&#9670;&#160;</a></span>fullCalibration()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a958bb427bf293f2107e5b239616be044">&#9670;&#160;</a></span>fullCalibration() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::fullCalibration </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a958bb427bf293f2107e5b239616be044" name="a958bb427bf293f2107e5b239616be044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958bb427bf293f2107e5b239616be044">&#9670;&#160;</a></span>fullCalibration() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -534,7 +818,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a03f6f4220366dee7408849839f474e38" name="a03f6f4220366dee7408849839f474e38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03f6f4220366dee7408849839f474e38">&#9670;&#160;</a></span>getCCalxyY()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f6f4220366dee7408849839f474e38">&#9670;&#160;</a></span>getCCalxyY() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::getCCalxyY </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getCCalxyY Uses the ColorCalII to return the current xyY values </p>
+
+</div>
+</div>
+<a id="a03f6f4220366dee7408849839f474e38" name="a03f6f4220366dee7408849839f474e38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f6f4220366dee7408849839f474e38">&#9670;&#160;</a></span>getCCalxyY() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -554,7 +858,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="aec3d012f5295a400c188569ac8165af4" name="aec3d012f5295a400c188569ac8165af4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec3d012f5295a400c188569ac8165af4">&#9670;&#160;</a></span>getSpectroCALValues()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aec3d012f5295a400c188569ac8165af4">&#9670;&#160;</a></span>getSpectroCALValues() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::getSpectroCALValues </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getSpectroCALValues Uses the SpectroCAL2 to return the current xyY values </p>
+
+</div>
+</div>
+<a id="aec3d012f5295a400c188569ac8165af4" name="aec3d012f5295a400c188569ac8165af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec3d012f5295a400c188569ac8165af4">&#9670;&#160;</a></span>getSpectroCALValues() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -574,7 +898,25 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a6514d908a0eafdc5e898b4102bb922f7" name="a6514d908a0eafdc5e898b4102bb922f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6514d908a0eafdc5e898b4102bb922f7">&#9670;&#160;</a></span>makeSPD()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6514d908a0eafdc5e898b4102bb922f7">&#9670;&#160;</a></span>makeSPD() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::makeSPD </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6514d908a0eafdc5e898b4102bb922f7" name="a6514d908a0eafdc5e898b4102bb922f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6514d908a0eafdc5e898b4102bb922f7">&#9670;&#160;</a></span>makeSPD() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -592,7 +934,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ad419fe1ea57fb7850338402c8b4a63db" name="ad419fe1ea57fb7850338402c8b4a63db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad419fe1ea57fb7850338402c8b4a63db">&#9670;&#160;</a></span>maxLuminances()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad419fe1ea57fb7850338402c8b4a63db">&#9670;&#160;</a></span>maxLuminances() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function get calibrateLuminance::maxLuminances </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get max luminance values for each channel </p>
+
+</div>
+</div>
+<a id="ad419fe1ea57fb7850338402c8b4a63db" name="ad419fe1ea57fb7850338402c8b4a63db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad419fe1ea57fb7850338402c8b4a63db">&#9670;&#160;</a></span>maxLuminances() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -612,7 +974,25 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="afc8a03be99ce5ab305237ba7bc849c37" name="afc8a03be99ce5ab305237ba7bc849c37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc8a03be99ce5ab305237ba7bc849c37">&#9670;&#160;</a></span>openSpectroCAL()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8a03be99ce5ab305237ba7bc849c37">&#9670;&#160;</a></span>openSpectroCAL() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::openSpectroCAL </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc8a03be99ce5ab305237ba7bc849c37" name="afc8a03be99ce5ab305237ba7bc849c37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8a03be99ce5ab305237ba7bc849c37">&#9670;&#160;</a></span>openSpectroCAL() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -630,7 +1010,37 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ae14bc2ab37b35d4fb51d05e973edad27" name="ae14bc2ab37b35d4fb51d05e973edad27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae14bc2ab37b35d4fb51d05e973edad27">&#9670;&#160;</a></span>plot()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14bc2ab37b35d4fb51d05e973edad27">&#9670;&#160;</a></span>plot() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::plot </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>full</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>plot This plots the calibration results </p>
+
+</div>
+</div>
+<a id="ae14bc2ab37b35d4fb51d05e973edad27" name="ae14bc2ab37b35d4fb51d05e973edad27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae14bc2ab37b35d4fb51d05e973edad27">&#9670;&#160;</a></span>plot() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -660,7 +1070,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a5130088ab0eda5f9d22fc27500782162" name="a5130088ab0eda5f9d22fc27500782162"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5130088ab0eda5f9d22fc27500782162">&#9670;&#160;</a></span>run()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a5130088ab0eda5f9d22fc27500782162">&#9670;&#160;</a></span>run() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::run </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>run run the main calibration loop, uses the max # screen by default </p>
+
+</div>
+</div>
+<a id="a5130088ab0eda5f9d22fc27500782162" name="a5130088ab0eda5f9d22fc27500782162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5130088ab0eda5f9d22fc27500782162">&#9670;&#160;</a></span>run() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -680,7 +1110,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a115c4cc7083b092a482cc9a6e7725b9a" name="a115c4cc7083b092a482cc9a6e7725b9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a115c4cc7083b092a482cc9a6e7725b9a">&#9670;&#160;</a></span>runAll()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a115c4cc7083b092a482cc9a6e7725b9a">&#9670;&#160;</a></span>runAll() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::runAll </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>run all options runs, analyzes (fits) and tests the monitor </p>
+
+</div>
+</div>
+<a id="a115c4cc7083b092a482cc9a6e7725b9a" name="a115c4cc7083b092a482cc9a6e7725b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a115c4cc7083b092a482cc9a6e7725b9a">&#9670;&#160;</a></span>runAll() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -700,7 +1150,25 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ad33fe3f9feed7d99609c3f7e6a24799b" name="ad33fe3f9feed7d99609c3f7e6a24799b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad33fe3f9feed7d99609c3f7e6a24799b">&#9670;&#160;</a></span>save()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad33fe3f9feed7d99609c3f7e6a24799b">&#9670;&#160;</a></span>save() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::save </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad33fe3f9feed7d99609c3f7e6a24799b" name="ad33fe3f9feed7d99609c3f7e6a24799b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad33fe3f9feed7d99609c3f7e6a24799b">&#9670;&#160;</a></span>save() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -718,7 +1186,35 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a1f82414aa04636322acb62c5bd3d3c17" name="a1f82414aa04636322acb62c5bd3d3c17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f82414aa04636322acb62c5bd3d3c17">&#9670;&#160;</a></span>spectroCalLaser()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f82414aa04636322acb62c5bd3d3c17">&#9670;&#160;</a></span>spectroCalLaser() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::spectroCalLaser </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f82414aa04636322acb62c5bd3d3c17" name="a1f82414aa04636322acb62c5bd3d3c17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f82414aa04636322acb62c5bd3d3c17">&#9670;&#160;</a></span>spectroCalLaser() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -746,7 +1242,27 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="aed0518194844a0450cc798d59a8f0e7f" name="aed0518194844a0450cc798d59a8f0e7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed0518194844a0450cc798d59a8f0e7f">&#9670;&#160;</a></span>test()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0518194844a0450cc798d59a8f0e7f">&#9670;&#160;</a></span>test() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function calibrateLuminance::test </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>test once the models are analyzed, lets test the corrected luminance </p>
+
+</div>
+</div>
+<a id="aed0518194844a0450cc798d59a8f0e7f" name="aed0518194844a0450cc798d59a8f0e7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0518194844a0450cc798d59a8f0e7f">&#9670;&#160;</a></span>test() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -870,6 +1386,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>correct R G B seperately (true) or overall luminance (false) </p>
+<p>correct R G B separately (true) or overall luminance (false) </p>
 
 </div>
 </div>
@@ -1325,6 +1842,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>spectroCAL serialport object </p>
+
 </div>
 </div>
 <a id="a2ccf9d453c9ee179101399e37e7456ee" name="a2ccf9d453c9ee179101399e37e7456ee"></a>
@@ -1414,6 +1933,7 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>test Lum, R, G and B as seperate curves? </p>
+<p>test Lum, R, G and B as separate curves? </p>
 
 </div>
 </div>
@@ -1583,8 +2103,9 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>calibration/<a class="el" href="calibrate_luminance_8m.html">calibrateLuminance.m</a></li>
+<li>calibration/<a class="el" href="calibrate_luminance_new_8m.html">calibrateLuminanceNew.m</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1592,7 +2113,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classcalibrate_luminance.html">calibrateLuminance</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

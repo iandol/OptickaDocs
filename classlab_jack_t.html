@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -105,10 +105,12 @@ $(document).ready(function(){initNavTree('classlab_jack_t.html',''); initResizab
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>LABJACKT Connects and manages a LabJack T4 / T7 This class handles digital I/O and analog I/O and analog streaming. Connection can be USB or network. Network is slightly lower latency than USB. </p>
 <p>Example:</p>
-<div class="fragment"><div class="line">l = <a class="code hl_class" href="classlab_jack_t.html">labJackT</a>(<span class="stringliteral">&#39;openNow&#39;</span>, <span class="keyword">true</span>);</div>
-<div class="line">l.sendStrobe(128); % sends 128 via EIO 8 bits</div>
+<div class="fragment"><div class="line">l = labJackT(&#39;openNow&#39;, true);</div>
+<div class="line">l.sendStrobe(128); % sends value 128 : 0-2047 controls EIO0-8 &amp; CIO0-3 11bit word - 2048 TTLs CIO-4 for 10ms</div>
+<div class="line">v = l.getAIN(1); % get a voltage</div>
+<div class="line">l.startStream() % start data streaming mode</div>
+<div class="line">l.stopStream(); % stop data streaming mode</div>
 <div class="line">l.close;</div>
-<div class="ttc" id="aclasslab_jack_t_html"><div class="ttname"><a href="classlab_jack_t.html">labJackT</a></div><div class="ttdoc">LABJACKT Connects and manages a LabJack T4 / T7 This class handles digital I/O and analog I/O and ana...</div><div class="ttdef"><b>Definition</b> labJackT.m:17</div></div>
 </div><!-- fragment --><p>Copyright ©2014-2022 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for labJackT:</div>
@@ -139,6 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a214fa7c59f396d9a61061e59e34172d0" id="r_a214fa7c59f396d9a61061e59e34172d0"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#a214fa7c59f396d9a61061e59e34172d0">sendStrobe</a> (in me, in value)</td></tr>
 <tr class="memdesc:a214fa7c59f396d9a61061e59e34172d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">sends a value to RAMAddress, requires the Lua server to be running, 0-2047 controls EIO0-8 &amp; CIO0-3 - 2048 TTLs CIO-4  <br /></td></tr>
 <tr class="separator:a214fa7c59f396d9a61061e59e34172d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116cf2ffe543492785c7e7489342409b" id="r_a116cf2ffe543492785c7e7489342409b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#a116cf2ffe543492785c7e7489342409b">setStrobeValue</a> (in me, in value)</td></tr>
+<tr class="separator:a116cf2ffe543492785c7e7489342409b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b396581a378a9d1921bf3fd0fa35361" id="r_a7b396581a378a9d1921bf3fd0fa35361"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#a7b396581a378a9d1921bf3fd0fa35361">sendStrobedEIO</a> (in me, in value)</td></tr>
 <tr class="separator:a7b396581a378a9d1921bf3fd0fa35361"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7ac4c70833644ddb4989e225e7a6406" id="r_ab7ac4c70833644ddb4989e225e7a6406"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#ab7ac4c70833644ddb4989e225e7a6406">sendStrobedCIO</a> (in me, in value)</td></tr>
@@ -148,7 +152,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:add8cf92979d77d87e1c781725d33f267" id="r_add8cf92979d77d87e1c781725d33f267"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#add8cf92979d77d87e1c781725d33f267">sendTTL</a> (in me, in fio, in value)</td></tr>
 <tr class="separator:add8cf92979d77d87e1c781725d33f267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a236e8e222bd168abc6069de6d64eadf5" id="r_a236e8e222bd168abc6069de6d64eadf5"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#a236e8e222bd168abc6069de6d64eadf5">getAIN</a> (in me, in channels)</td></tr>
-<tr class="memdesc:a236e8e222bd168abc6069de6d64eadf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">setAIO setAIO sets the value for FIO,  <br /></td></tr>
+<tr class="memdesc:a236e8e222bd168abc6069de6d64eadf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">getAIN getAIN gets the value from FIO,  <br /></td></tr>
 <tr class="separator:a236e8e222bd168abc6069de6d64eadf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a272e470fe99ff4a800c8400703bf86d9" id="r_a272e470fe99ff4a800c8400703bf86d9"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#a272e470fe99ff4a800c8400703bf86d9">startStream</a> (in me)</td></tr>
 <tr class="memdesc:a272e470fe99ff4a800c8400703bf86d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">startStream  <br /></td></tr>
@@ -209,7 +213,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a69019de24c469dab85b20fcee98a939e" id="r_a69019de24c469dab85b20fcee98a939e"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#a69019de24c469dab85b20fcee98a939e">name</a></td></tr>
-<tr class="memdesc:a69019de24c469dab85b20fcee98a939e"><td class="mdescLeft">&#160;</td><td class="mdescRight">friendly object name, setting this to 'null' will force silentMode=1  <br /></td></tr>
+<tr class="memdesc:a69019de24c469dab85b20fcee98a939e"><td class="mdescLeft">&#160;</td><td class="mdescRight">friendly object name, setting this to 'null' will force silentMode = true  <br /></td></tr>
 <tr class="separator:a69019de24c469dab85b20fcee98a939e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3ddb799a0370a3f3e30659141420048" id="r_ac3ddb799a0370a3f3e30659141420048"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classlab_jack_t.html#ac3ddb799a0370a3f3e30659141420048">deviceID</a></td></tr>
 <tr class="memdesc:ac3ddb799a0370a3f3e30659141420048"><td class="mdescLeft">&#160;</td><td class="mdescRight">what LabJack device to use; 4 = T4, 7 = T7  <br /></td></tr>
@@ -467,7 +471,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>setAIO setAIO sets the value for FIO, </p>
+<p>getAIN getAIN gets the value from FIO, </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">channels</td><td>AIN channels 0-3 </td></tr>
@@ -1002,6 +1006,34 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a116cf2ffe543492785c7e7489342409b" name="a116cf2ffe543492785c7e7489342409b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116cf2ffe543492785c7e7489342409b">&#9670;&#160;</a></span>setStrobeValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function labJackT::setStrobeValue </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2296f94802be2ce6ad781748be253032" name="a2296f94802be2ce6ad781748be253032"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2296f94802be2ce6ad781748be253032">&#9670;&#160;</a></span>startFixation()</h2>
 
@@ -1385,7 +1417,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>friendly object name, setting this to 'null' will force silentMode=1 </p>
+<p>friendly object name, setting this to 'null' will force silentMode = true </p>
 
 </div>
 </div>
@@ -1570,7 +1602,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classlab_jack_t.html">labJackT</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

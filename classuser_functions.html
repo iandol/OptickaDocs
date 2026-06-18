@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -104,30 +104,37 @@ $(document).ready(function(){initNavTree('classuser_functions.html',''); initRes
  <a href="classuser_functions.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Customised user functions for a task run. </p>
-<p>The state machine's job is to run a set of functions when entering and exiting states. Most required functions (methods in classes) are found in the core opticka classes like <a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a>, <a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a> etc. BUT if a user wants to customise their own functions then we need to have a generic class we can load and use where they can add their own methods. This class serves this purpose.</p>
-<p>The user should make a copy of this file and save it somewhere alongside their protocols (you can rename the file, but keep the class name the same). They can add their own methods. The class will be added as a uF object and these methods can be used via the state info file.</p>
-<p>Copyright ©2014-2023 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
+<p>The state machine's job is to run a set of functions when entering and exiting states. Most required functions (methods in classes) are found in the core opticka classes like <a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a>, <a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a> etc. BUT if a user wants to customise their own functions then we need to have a generic class we can load and use where you can add your own methods. This class serves this purpose.</p>
+<p>The user should subclass it (or you can make a copy keeping name the same) and add functions there and then save it as a new class somewhere alongside their protocols (if you copy this you can rename the file, but keep the class name the same; if you subclass it then the file and class name should be the same). The user can add their own methods. The class will be added as a uF object and these methods can be used via the state info file, like:</p>
+<p><code>@()myCustomFunction(uF)</code></p>
+<p>IMPORTANT: as these are stored as anonymous function handles in the state machine, any variables passed are set at instantiation time, not at <code>run-time</code>. If you need to get a run-time (changing) variable, make a function. So if you need to get a value X that changes as the experiment runs, make a function like X = getCurrentX() that returns the current value. Now when the state machine calls the function the correct value is returned.</p>
+<p>Copyright ©2014-2026 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for userFunctions:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="classuser_functions__inherit__graph.svg" width="211" height="410"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classuser_functions__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a3afcd0898de946cbd2a89a8840b52f53" id="r_a3afcd0898de946cbd2a89a8840b52f53"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a3afcd0898de946cbd2a89a8840b52f53">initialSetup</a> (in me)</td></tr>
+<tr class="separator:a3afcd0898de946cbd2a89a8840b52f53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a438155975319ac2a8bd7c455bd313f0e" id="r_a438155975319ac2a8bd7c455bd313f0e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a438155975319ac2a8bd7c455bd313f0e">userFunctions</a> ()</td></tr>
 <tr class="separator:a438155975319ac2a8bd7c455bd313f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbe4a1a76bf6d9be979b428f62353d6f" id="r_abbe4a1a76bf6d9be979b428f62353d6f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#abbe4a1a76bf6d9be979b428f62353d6f">setDelayTimeWithStaircase</a> (in me, in stim, in duration)</td></tr>
+<tr class="memdesc:abbe4a1a76bf6d9be979b428f62353d6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct an instance of this class.  <br /></td></tr>
 <tr class="separator:abbe4a1a76bf6d9be979b428f62353d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc23ab2cda06f666927a5ad419d235c7" id="r_adc23ab2cda06f666927a5ad419d235c7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#adc23ab2cda06f666927a5ad419d235c7">resetDelayTime</a> (in me, in stim, in value)</td></tr>
+<tr class="memdesc:adc23ab2cda06f666927a5ad419d235c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use the staircase to set stimulus delay/off time.  <br /></td></tr>
 <tr class="separator:adc23ab2cda06f666927a5ad419d235c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a3209631e81f42ed63b06327d7b5761" id="r_a4a3209631e81f42ed63b06327d7b5761"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a4a3209631e81f42ed63b06327d7b5761">testFunction</a> (in me)</td></tr>
+<tr class="memdesc:a4a3209631e81f42ed63b06327d7b5761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset stimulus delay time to a specific value.  <br /></td></tr>
 <tr class="separator:a4a3209631e81f42ed63b06327d7b5761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a89dff31c95b21e80bd731232c94669c8" id="r_a89dff31c95b21e80bd731232c94669c8"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a89dff31c95b21e80bd731232c94669c8">rE</a></td></tr>
-<tr class="memdesc:a89dff31c95b21e80bd731232c94669c8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a>  <br /></td></tr>
+<tr class="memdesc:a89dff31c95b21e80bd731232c94669c8"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a>  <br /></td></tr>
 <tr class="separator:a89dff31c95b21e80bd731232c94669c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59d62e58487cf0696fc8698552e4c11d" id="r_a59d62e58487cf0696fc8698552e4c11d"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a59d62e58487cf0696fc8698552e4c11d">sM</a></td></tr>
 <tr class="memdesc:a59d62e58487cf0696fc8698552e4c11d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a>  <br /></td></tr>
@@ -150,6 +157,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1368d2a3f4430630f18120090beafc2a" id="r_a1368d2a3f4430630f18120090beafc2a"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a1368d2a3f4430630f18120090beafc2a">eT</a></td></tr>
 <tr class="memdesc:a1368d2a3f4430630f18120090beafc2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">eyetracker manager  <br /></td></tr>
 <tr class="separator:a1368d2a3f4430630f18120090beafc2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b20eb97f6f6637ad4e6c0caf6967913" id="r_a1b20eb97f6f6637ad4e6c0caf6967913"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a1b20eb97f6f6637ad4e6c0caf6967913">tM</a></td></tr>
+<tr class="memdesc:a1b20eb97f6f6637ad4e6c0caf6967913"><td class="mdescLeft">&#160;</td><td class="mdescRight">touch manager  <br /></td></tr>
+<tr class="separator:a1b20eb97f6f6637ad4e6c0caf6967913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a09e57f506a394565840ffc10404891" id="r_a8a09e57f506a394565840ffc10404891"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a8a09e57f506a394565840ffc10404891">tL</a></td></tr>
+<tr class="memdesc:a8a09e57f506a394565840ffc10404891"><td class="mdescLeft">&#160;</td><td class="mdescRight">time logger (saves timestamped messages  <br /></td></tr>
+<tr class="separator:a8a09e57f506a394565840ffc10404891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06dbf4d617f0ea751309b1fc4cf32827" id="r_a06dbf4d617f0ea751309b1fc4cf32827"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#a06dbf4d617f0ea751309b1fc4cf32827">alyx</a></td></tr>
+<tr class="memdesc:a06dbf4d617f0ea751309b1fc4cf32827"><td class="mdescLeft">&#160;</td><td class="mdescRight">alyx manager  <br /></td></tr>
+<tr class="separator:a06dbf4d617f0ea751309b1fc4cf32827"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf53fe91347643d2a84075bbf05d037e" id="r_adf53fe91347643d2a84075bbf05d037e"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classuser_functions.html#adf53fe91347643d2a84075bbf05d037e">verbose</a></td></tr>
 <tr class="memdesc:adf53fe91347643d2a84075bbf05d037e"><td class="mdescLeft">&#160;</td><td class="mdescRight">toggle to send messages to the command window  <br /></td></tr>
 <tr class="separator:adf53fe91347643d2a84075bbf05d037e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +189,35 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3afcd0898de946cbd2a89a8840b52f53" name="a3afcd0898de946cbd2a89a8840b52f53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3afcd0898de946cbd2a89a8840b52f53">&#9670;&#160;</a></span>initialSetup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual userFunctions::initialSetup </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>initial setup to run BEFORE the task starts; this will be called by <a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> before the state machine starts, and before the first runExperiment.update(stims) call, so you can set up any variables or stimuli here that you want to use in the task. You can also call other functions from here to set things up. </p>
+
+<p>Reimplemented in <a class="el" href="class_d_m_t_s_functions.html#a4e5ad7bce292efe311e706e4b92b6697">DMTSFunctions</a>, and <a class="el" href="classmy_user_functions.html#ac08bf570a2eac6a30c06ccfa9bd1151b">myUserFunctions</a>.</p>
+
+</div>
+</div>
 <a id="adc23ab2cda06f666927a5ad419d235c7" name="adc23ab2cda06f666927a5ad419d235c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc23ab2cda06f666927a5ad419d235c7">&#9670;&#160;</a></span>resetDelayTime()</h2>
 
@@ -204,7 +249,15 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>uses a staircase to set the off time for a specific stimulus </p>
+
+<p>Use the staircase to set stimulus delay/off time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stim</td><td>Index of stimulus in <code>stims</code>. </td></tr>
+    <tr><td class="paramname">duration</td><td>Optional extra duration added to off time. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -239,7 +292,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classuser_functions.html" title="Customised user functions for a task run.">userFunctions</a> CONSTRUCT an instance of this class Rename to the name of the class </p>
+
+<p>Construct an instance of this class. </p>
 
 </div>
 </div>
@@ -258,11 +312,35 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>reset stimulus delay on time </p>
+
+<p>Reset stimulus delay time to a specific value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">stim</td><td>Index of stimulus in <code>stims</code>. </td></tr>
+    <tr><td class="paramname">value</td><td>Delay time value to apply. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a06dbf4d617f0ea751309b1fc4cf32827" name="a06dbf4d617f0ea751309b1fc4cf32827"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06dbf4d617f0ea751309b1fc4cf32827">&#9670;&#160;</a></span>alyx</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property userFunctions::alyx</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>alyx manager </p>
+
+</div>
+</div>
 <a id="a1368d2a3f4430630f18120090beafc2a" name="a1368d2a3f4430630f18120090beafc2a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1368d2a3f4430630f18120090beafc2a">&#9670;&#160;</a></span>eT</h2>
 
@@ -307,7 +385,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> </p>
+<p><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> </p>
 
 </div>
 </div>
@@ -391,6 +469,38 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8a09e57f506a394565840ffc10404891" name="a8a09e57f506a394565840ffc10404891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a09e57f506a394565840ffc10404891">&#9670;&#160;</a></span>tL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property userFunctions::tL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>time logger (saves timestamped messages </p>
+
+</div>
+</div>
+<a id="a1b20eb97f6f6637ad4e6c0caf6967913" name="a1b20eb97f6f6637ad4e6c0caf6967913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b20eb97f6f6637ad4e6c0caf6967913">&#9670;&#160;</a></span>tM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property userFunctions::tM</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>touch manager </p>
+
+</div>
+</div>
 <a id="adf53fe91347643d2a84075bbf05d037e" name="adf53fe91347643d2a84075bbf05d037e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf53fe91347643d2a84075bbf05d037e">&#9670;&#160;</a></span>verbose</h2>
 
@@ -408,7 +518,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="user_functions_8m.html">userFunctions.m</a></li>
+<li>core/<a class="el" href="user_functions_8m.html">userFunctions.m</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -416,7 +526,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classuser_functions.html">userFunctions</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

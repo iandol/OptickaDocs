@@ -1,7 +1,7 @@
 <map id="stateMachine" name="stateMachine">
-<area shape="rect" id="Node000001" title="run a task via a series of states." alt="" coords="5,972,208,1717"/>
-<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="19,119,194,924"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,938,109,971,104,971,104,938"/>
+<area shape="rect" id="Node000001" title="run a task via a series of states." alt="" coords="5,1012,208,1797"/>
+<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="19,119,194,964"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,978,109,1011,104,1011,104,978"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="79,5,135,71"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,84,109,119,104,119,104,84"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="109,85,109,119,104,119,104,85"/>
 </map>

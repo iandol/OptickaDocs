@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -105,8 +105,9 @@ $(document).ready(function(){initNavTree('classscreen_manager.html',''); initRes
  <a href="classscreen_manager.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a> — manage opening and configuring the PTB screen </p>
-<p><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a> manages the (many!) PTB screen settings. You can set many properties of this class to control PTB screens, and use it to open and close the screen based on those properties. This class controls the transformation from degrees into pixels, and it can offset the screen co-ordinates (i.e. you can set a global X and Y position offset, to a screen position and then all other positions will be relative to this global screen center). By setting <code>bitDepth</code> you can enable Display++, DataPixx, HDR and high bit-depth display modes. This class also manages movie recording of the screen buffer. Finally it wraps some generic drawing commands like grids, text, spots or other basic things that would be overkill for aa dedicated stimulus class.</p>
-<p>Copyright ©2014-2024 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
+<p><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a> manages the (MANY!) PTB screen settings. It ensures screen coordinates are based on visual degrees, with conversions to and from pixels as needed. Setting class properties controls most PTB advanced features. You can provide a calibrateGamma object for gamma correction. It can offset the screen co-ordinates (i.e. you can set a global X and Y position offset, to a screen position and then all other positions will be relative to this global screen center). By setting <code>bitDepth</code> you can enable Display++, DataPixx, HDR and high bit-depth display modes. This class also manages movie recording of the screen buffer for stimulus samples. It finally wraps some generic drawing commands like grids, text, spots or other basic things that would be overkill for a dedicated stimulus class. This class is used by other opticka classes, for example you pass it to stimuli or eyetracker objects and they can access the properties of the PTB window automatically.</p>
+<dl class="section author"><dt>Author</dt><dd>Ian Max Andolina</dd></dl>
+<p>Copyright ©2014-2026 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for screenManager:</div>
 <div class="dyncontent">
@@ -119,16 +120,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8a0cc445906f634c101d1e83b19a7f79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58594eb1b8fd0a3d7836f0eb458b7a55" id="r_a58594eb1b8fd0a3d7836f0eb458b7a55"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a58594eb1b8fd0a3d7836f0eb458b7a55">prepareScreen</a> (in me)</td></tr>
 <tr class="separator:a58594eb1b8fd0a3d7836f0eb458b7a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1486044927ae1608b05645e5da75f470" id="r_a1486044927ae1608b05645e5da75f470"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a1486044927ae1608b05645e5da75f470">open</a> (in me, in <a class="el" href="classscreen_manager.html#aedd0b8414bdabefad8c8bec3a5246889">debug</a>, in tL, in forceScreen)</td></tr>
-<tr class="memdesc:a1486044927ae1608b05645e5da75f470"><td class="mdescLeft">&#160;</td><td class="mdescRight">open a screen with object defined settings  <br /></td></tr>
-<tr class="separator:a1486044927ae1608b05645e5da75f470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab751b6feb2c1149d252e7052e88c8caa" id="r_ab751b6feb2c1149d252e7052e88c8caa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#ab751b6feb2c1149d252e7052e88c8caa">open</a> (in me, in <a class="el" href="classscreen_manager.html#aedd0b8414bdabefad8c8bec3a5246889">debug</a>, in timeLog, in forceScreen)</td></tr>
+<tr class="memdesc:ab751b6feb2c1149d252e7052e88c8caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">open a screen with object defined settings  <br /></td></tr>
+<tr class="separator:ab751b6feb2c1149d252e7052e88c8caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ba1816b9837aaac9b6758f1a23bb518" id="r_a2ba1816b9837aaac9b6758f1a23bb518"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a2ba1816b9837aaac9b6758f1a23bb518">switchChannel</a> (in me, in channel)</td></tr>
 <tr class="separator:a2ba1816b9837aaac9b6758f1a23bb518"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80fe847811305e076f1f3841acb32b9b" id="r_a80fe847811305e076f1f3841acb32b9b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a80fe847811305e076f1f3841acb32b9b">demo</a> (in me)</td></tr>
 <tr class="memdesc:a80fe847811305e076f1f3841acb32b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Small demo of screen opening, drawing, closing.  <br /></td></tr>
 <tr class="separator:a80fe847811305e076f1f3841acb32b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d5d2824ea7cb05fd033ad7721c939c" id="r_ae2d5d2824ea7cb05fd033ad7721c939c"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#ae2d5d2824ea7cb05fd033ad7721c939c">flip</a> (in me, in varargin)</td></tr>
-<tr class="memdesc:ae2d5d2824ea7cb05fd033ad7721c939c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip the screen.  <br /></td></tr>
+<tr class="memdesc:ae2d5d2824ea7cb05fd033ad7721c939c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip the screen and optionally return timing information.  <br /></td></tr>
 <tr class="separator:ae2d5d2824ea7cb05fd033ad7721c939c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bc79137f027192473951a52b2b54531" id="r_a9bc79137f027192473951a52b2b54531"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a9bc79137f027192473951a52b2b54531">asyncFlip</a> (in me, in when, in varargin)</td></tr>
 <tr class="memdesc:a9bc79137f027192473951a52b2b54531"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip the screen asynchrounously.  <br /></td></tr>
@@ -170,16 +171,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1f1e991f040633ab6b379a7d2aef227c" id="r_a1f1e991f040633ab6b379a7d2aef227c"><td class="memItemLeft" align="right" valign="top">function set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a1f1e991f040633ab6b379a7d2aef227c">windowed</a> (in me, in value)</td></tr>
 <tr class="separator:a1f1e991f040633ab6b379a7d2aef227c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af214b334085c234aa4a5a71b3c60e224" id="r_af214b334085c234aa4a5a71b3c60e224"><td class="memItemLeft" align="right" valign="top">function set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#af214b334085c234aa4a5a71b3c60e224">screenXOffset</a> (in me, in value)</td></tr>
-<tr class="memdesc:af214b334085c234aa4a5a71b3c60e224"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set method for screenXOffset.  <br /></td></tr>
 <tr class="separator:af214b334085c234aa4a5a71b3c60e224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc20bdef2e6b4985a6db84fd85cb733" id="r_adbc20bdef2e6b4985a6db84fd85cb733"><td class="memItemLeft" align="right" valign="top">function set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#adbc20bdef2e6b4985a6db84fd85cb733">screenYOffset</a> (in me, in value)</td></tr>
-<tr class="memdesc:adbc20bdef2e6b4985a6db84fd85cb733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set method for screenYOffset.  <br /></td></tr>
+<tr class="memdesc:adbc20bdef2e6b4985a6db84fd85cb733"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set method for screenXOffset.  <br /></td></tr>
 <tr class="separator:adbc20bdef2e6b4985a6db84fd85cb733"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfa782010a0ad8e34195828c7e919c37" id="r_abfa782010a0ad8e34195828c7e919c37"><td class="memItemLeft" align="right" valign="top">function set&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#abfa782010a0ad8e34195828c7e919c37">verbosityLevel</a> (in me, in value)</td></tr>
-<tr class="memdesc:abfa782010a0ad8e34195828c7e919c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set method for verbosityLevel.  <br /></td></tr>
+<tr class="memdesc:abfa782010a0ad8e34195828c7e919c37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set method for screenYOffset.  <br /></td></tr>
 <tr class="separator:abfa782010a0ad8e34195828c7e919c37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c33dc9ac24d8eeed0c2402cf841cd99" id="r_a3c33dc9ac24d8eeed0c2402cf841cd99"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a3c33dc9ac24d8eeed0c2402cf841cd99">finishDrawing</a> (in me)</td></tr>
-<tr class="memdesc:a3c33dc9ac24d8eeed0c2402cf841cd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Screen('DrawingFinished')  <br /></td></tr>
+<tr class="memdesc:a3c33dc9ac24d8eeed0c2402cf841cd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set method for verbosityLevel.  <br /></td></tr>
 <tr class="separator:a3c33dc9ac24d8eeed0c2402cf841cd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb5ea2075fdcb7b6c76339b1dbb27995" id="r_aeb5ea2075fdcb7b6c76339b1dbb27995"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#aeb5ea2075fdcb7b6c76339b1dbb27995">testWindowOpen</a> (in me)</td></tr>
 <tr class="memdesc:aeb5ea2075fdcb7b6c76339b1dbb27995"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if window is actully open.  <br /></td></tr>
@@ -272,15 +272,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4b8e6b28de2120e5e5b04c8fc83f9ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">play back the recorded stimulus  <br /></td></tr>
 <tr class="separator:a4b8e6b28de2120e5e5b04c8fc83f9ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a206744859ad0b277193cd8a8f3be0173" id="r_a206744859ad0b277193cd8a8f3be0173"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a206744859ad0b277193cd8a8f3be0173">toDegrees</a> (in me, in in, in axis)</td></tr>
-<tr class="memdesc:a206744859ad0b277193cd8a8f3be0173"><td class="mdescLeft">&#160;</td><td class="mdescRight">toDegrees - convert from pixels to degrees  <br /></td></tr>
 <tr class="separator:a206744859ad0b277193cd8a8f3be0173"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37d4fdadad0915c7bb808259cded8fc0" id="r_a37d4fdadad0915c7bb808259cded8fc0"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a37d4fdadad0915c7bb808259cded8fc0">toPixels</a> (in me, in in, in axis)</td></tr>
-<tr class="memdesc:a37d4fdadad0915c7bb808259cded8fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">toPixels - convert from degrees to pixels  <br /></td></tr>
+<tr class="memdesc:a37d4fdadad0915c7bb808259cded8fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">toDegrees - convert from pixels to degrees  <br /></td></tr>
 <tr class="separator:a37d4fdadad0915c7bb808259cded8fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a369005c15823afe2033804be166c7416" id="r_a369005c15823afe2033804be166c7416"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a369005c15823afe2033804be166c7416">delete</a> (in me)</td></tr>
-<tr class="memdesc:a369005c15823afe2033804be166c7416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete method.  <br /></td></tr>
 <tr class="separator:a369005c15823afe2033804be166c7416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11390e8c8f2fe2896ac12d6e0ebbd511" id="r_a11390e8c8f2fe2896ac12d6e0ebbd511"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a11390e8c8f2fe2896ac12d6e0ebbd511">drawPhotoDiode</a> (in me, in colour)</td></tr>
+<tr class="memdesc:a11390e8c8f2fe2896ac12d6e0ebbd511"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete method.  <br /></td></tr>
 <tr class="separator:a11390e8c8f2fe2896ac12d6e0ebbd511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
 <tr class="memitem:a01e82ac778e9c8bc8b2472bd849a9732 inherit pub_methods_classopticka_core" id="r_a01e82ac778e9c8bc8b2472bd849a9732"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a01e82ac778e9c8bc8b2472bd849a9732">optickaCore</a> (in varargin)</td></tr>
@@ -288,15 +287,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01e82ac778e9c8bc8b2472bd849a9732 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core" id="r_a5a9f759bbb480b804cc3eca324945a4b"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a5a9f759bbb480b804cc3eca324945a4b">fullName</a> (in me)</td></tr>
 <tr class="separator:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core" id="r_a521a2549e5f7c6ac03b31558540cbafe"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a521a2549e5f7c6ac03b31558540cbafe">getALF</a> (in me, in subject, in sessionPrefix, in lab, in create)</td></tr>
-<tr class="separator:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core" id="r_a9e089236a86d59f25135f6dfffa3991f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a9e089236a86d59f25135f6dfffa3991f">getALF</a> (in me, in subject, in lab, in create)</td></tr>
+<tr class="memdesc:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the ALF path  <br /></td></tr>
+<tr class="separator:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core" id="r_af3d48dae6d0c49cbdff5fcb41aee6a68"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af3d48dae6d0c49cbdff5fcb41aee6a68">makeReport</a> (in me, in rpt)</td></tr>
+<tr class="memdesc:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a detailed report for the opticka object.  <br /></td></tr>
+<tr class="separator:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core" id="r_ab7b80b71593278646425b4a212d62634"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#ab7b80b71593278646425b4a212d62634">findAttributes</a> (in me, in attrName, in attrValue)</td></tr>
 <tr class="separator:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core" id="r_aa41fe6ebd09d4c58ae5dc496683f3f65"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aa41fe6ebd09d4c58ae5dc496683f3f65">findAttributesandType</a> (in me, in attrName, in attrValue, in type)</td></tr>
 <tr class="memdesc:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">find properties of object with specific attributes, for example all properties whose GetAcccess attribute is public and type is logical.  <br /></td></tr>
 <tr class="separator:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core" id="r_a3138d91ed7233e89f9a6a9a3983cc0fa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a3138d91ed7233e89f9a6a9a3983cc0fa">findPropertyDefault</a> (in me, in propName)</td></tr>
-<tr class="separator:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core" id="r_afde4f926a400e1a4e3432a2de7b9dafa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afde4f926a400e1a4e3432a2de7b9dafa">findPropertyDefault</a> (in me, in propName)</td></tr>
+<tr class="memdesc:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the declared default value for a class property.  <br /></td></tr>
+<tr class="separator:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core" id="r_aee04cdaafcaa4e034cb616154b8eebec"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aee04cdaafcaa4e034cb616154b8eebec">clone</a> (in me)</td></tr>
 <tr class="memdesc:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this syntax to make a deep copy of the object, i.e. OBJ_OUT has the same field values, but will not behave as a handle-copy of me anymore.  <br /></td></tr>
 <tr class="separator:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -308,11 +312,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core" id="r_a66542a3ceb15109df805509be4edeee2"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a66542a3ceb15109df805509be4edeee2">setProp</a> (in me, in property, in value)</td></tr>
 <tr class="memdesc:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to fast change a particular value. This is useful for use in anonymous functions, like in the state machine.  <br /></td></tr>
 <tr class="separator:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core" id="r_a84eb445bf35cf3657371a5f11b0487ea"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a84eb445bf35cf3657371a5f11b0487ea">initialiseGlobals</a> (in me, in doReset, in doOpen)</td></tr>
-<tr class="separator:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core" id="r_a4904dd912a926e5fd27eceeb63ed2fb7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4904dd912a926e5fd27eceeb63ed2fb7">initialiseSaveFile</a> (in me)</td></tr>
-<tr class="memdesc:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise Save prefix.  <br /></td></tr>
-<tr class="separator:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core" id="r_a18784556a7f8559dd1f2b7e91ab53ef6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a18784556a7f8559dd1f2b7e91ab53ef6">initialiseSaveFile</a> (in me, in varargin)</td></tr>
+<tr class="memdesc:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">just get date fragment for backwards compatibility  <br /></td></tr>
+<tr class="separator:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core" id="r_a1e85b40b4fa3e081382da601f6475d05"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a1e85b40b4fa3e081382da601f6475d05">checkPaths</a> (in me)</td></tr>
 <tr class="memdesc:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks the paths are valid  <br /></td></tr>
 <tr class="separator:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -321,6 +323,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a97dfb6ee7bdb6ea5798d31983f34484c" id="r_a97dfb6ee7bdb6ea5798d31983f34484c"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a97dfb6ee7bdb6ea5798d31983f34484c">equidistantPoints</a> (in n, in <a class="el" href="classscreen_manager.html#acce11157c7610547f931c5775c61fd3a">distance</a>, in phase)</td></tr>
 <tr class="separator:a97dfb6ee7bdb6ea5798d31983f34484c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a562895a87893e9ccb04a8a6aaad7d800" id="r_a562895a87893e9ccb04a8a6aaad7d800"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a562895a87893e9ccb04a8a6aaad7d800">polarToCartesianPoints</a> (in x, in y, in angle, in <a class="el" href="classscreen_manager.html#acce11157c7610547f931c5775c61fd3a">distance</a>)</td></tr>
+<tr class="separator:a562895a87893e9ccb04a8a6aaad7d800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9f5e0e0a71c0597758881e78eb6c18" id="r_a5a9f5e0e0a71c0597758881e78eb6c18"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a5a9f5e0e0a71c0597758881e78eb6c18">rectToPos</a> (in rect)</td></tr>
 <tr class="separator:a5a9f5e0e0a71c0597758881e78eb6c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb753c57be958899ea83e95ebc8d56d" id="r_aafb753c57be958899ea83e95ebc8d56d"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#aafb753c57be958899ea83e95ebc8d56d">posToRect</a> (in pos)</td></tr>
@@ -344,11 +348,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:aaaa90f09f09a31334e3814797a81be5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flip the screen.  <br /></td></tr>
 <tr class="separator:aaaa90f09f09a31334e3814797a81be5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
+<tr class="memitem:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core" id="r_a278fcf94c60a10e1938b5712a34a0a4b"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a278fcf94c60a10e1938b5712a34a0a4b">initialiseGlobals</a> (in doReset, in doOpen)</td></tr>
+<tr class="separator:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core" id="r_a4da9ae0cfd621acae8b76f5e1704e00c"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4da9ae0cfd621acae8b76f5e1704e00c">makeArgs</a> (in args)</td></tr>
 <tr class="memdesc:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts cell args to structure array.  <br /></td></tr>
 <tr class="separator:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core" id="r_acde8df0104b96e6558eecae094f49754"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#acde8df0104b96e6558eecae094f49754">addDefaults</a> (in args, in defs)</td></tr>
-<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">add default options to arg input  <br /></td></tr>
+<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">regularises and adds default options to arg input  <br /></td></tr>
 <tr class="separator:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core" id="r_a4e58c362b03faaa9c7ec9627e4e0c25f"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4e58c362b03faaa9c7ec9627e4e0c25f">hasKey</a> (in in, in key)</td></tr>
 <tr class="memdesc:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a struct / object has a propery / field  <br /></td></tr>
@@ -425,8 +431,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afb826d4b1c5eeda416a9aecd5146586c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8141c4b63123d573bbb39a8574b10606" id="r_a8141c4b63123d573bbb39a8574b10606"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a8141c4b63123d573bbb39a8574b10606">hideFlash</a></td></tr>
 <tr class="separator:a8141c4b63123d573bbb39a8574b10606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22f88e3df142c969ef3e6e3253779400" id="r_a22f88e3df142c969ef3e6e3253779400"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a22f88e3df142c969ef3e6e3253779400">font</a></td></tr>
-<tr class="separator:a22f88e3df142c969ef3e6e3253779400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2537339097cbbb26b0af5180c4074d46" id="r_a2537339097cbbb26b0af5180c4074d46"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#a2537339097cbbb26b0af5180c4074d46">font</a></td></tr>
+<tr class="memdesc:a2537339097cbbb26b0af5180c4074d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set method for font.  <br /></td></tr>
+<tr class="separator:a2537339097cbbb26b0af5180c4074d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefaae3a15d3ac9091eabefa558605b9d" id="r_aefaae3a15d3ac9091eabefa558605b9d"><td class="memItemLeft" align="right" valign="top">Constant Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classscreen_manager.html#aefaae3a15d3ac9091eabefa558605b9d">bitDepths</a></td></tr>
 <tr class="memdesc:aefaae3a15d3ac9091eabefa558605b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">possible bitDepth or display modes  <br /></td></tr>
 <tr class="separator:aefaae3a15d3ac9091eabefa558605b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -464,6 +471,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core" id="r_af9655eed8c87376ad6116864684a7f69"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af9655eed8c87376ad6116864684a7f69">verbose</a></td></tr>
 <tr class="memdesc:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">verbose logging, subclasses must assign this. This is normally logical true/false  <br /></td></tr>
 <tr class="separator:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core" id="r_a7f7e05813940d071866ac15fed79f130"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a7f7e05813940d071866ac15fed79f130">optickaVersion</a></td></tr>
+<tr class="memdesc:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">version number  <br /></td></tr>
+<tr class="separator:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core" id="r_a17a7a3b54bf96571566c72b9151648a7"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7">dateStamp</a></td></tr>
 <tr class="memdesc:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">clock() dateStamp set on construction  <br /></td></tr>
 <tr class="separator:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -899,8 +909,6 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Delete method. </p>
 
 </div>
 </div>
@@ -1455,6 +1463,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Delete method. </p>
 
 </div>
 </div>
@@ -2106,7 +2116,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Screen('DrawingFinished') </p>
+<p>Set method for verbosityLevel. </p>
+<p>Screen('DrawingFinished')</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Verbosity level </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2139,7 +2156,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Flash the screen until keypress. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">interval</td><td></td></tr>
+    <tr><td class="paramname">interval</td><td>interval in seconds </td></tr>
   </table>
   </dd>
 </dl>
@@ -2172,15 +2189,30 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Flip the screen. </p>
-<p>[VBLTimestamp StimulusOnsetTime FlipTimestamp Missed Beampos] = Screen('Flip', me.win [, when] [, dontclear] [, dontsync] [, multiflip]);</p>
+<p>Flip the screen and optionally return timing information. </p>
+<p>This method wraps PTB's Screen('Flip') command to swap the front and back buffers, displaying the rendered content on screen. It provides precise timing information about the vertical blank (VBL) and stimulus onset.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">varargin</td><td>- pass other options to screen flip </td></tr>
+    <tr><td class="paramname">me</td><td>The <a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a> object instance </td></tr>
+    <tr><td class="paramname">varargin</td><td>Optional arguments passed directly to Screen('Flip'):<ul>
+<li>when: Target time for flip (defaults to immediate)</li>
+<li>dontclear: If non-zero, don't clear buffer after flip (default: 0)</li>
+<li>dontsync: If non-zero, don't sync to VBL (default: 0)</li>
+<li>multiflip: Multi-flip mode parameter</li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>vbl - a vbl from this flip </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>vbl VBL (Vertical Blank) timestamp - time when flip occurred </dd>
+<dd>
+when Stimulus onset time - best estimate of when stimulus became visible </dd>
+<dd>
+flipTime Flip completion timestamp </dd>
+<dd>
+missed Number of frames missed (0 = no miss, &gt;0 = frames dropped)</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Accurate timing requires proper screen synchronization configuration </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>Screen('Flip') in Psychtoolbox documentation </dd></dl>
 
 </div>
 </div>
@@ -2346,8 +2378,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a1486044927ae1608b05645e5da75f470" name="a1486044927ae1608b05645e5da75f470"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1486044927ae1608b05645e5da75f470">&#9670;&#160;</a></span>open()</h2>
+<a id="ab751b6feb2c1149d252e7052e88c8caa" name="ab751b6feb2c1149d252e7052e88c8caa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab751b6feb2c1149d252e7052e88c8caa">&#9670;&#160;</a></span>open()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2368,7 +2400,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>tL</em>, </td>
+          <td class="paramname"><em>timeLog</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2387,7 +2419,7 @@ Additional Inherited Members</h2></td></tr>
 <p>open a screen with object defined settings </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">debug,whether</td><td>we show debug status, called from <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> </td></tr>
+    <tr><td class="paramname">debug,whether</td><td>we show debug status, called from <a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> </td></tr>
     <tr><td class="paramname">tL</td><td>timeLog object to add timing info on screen construction </td></tr>
     <tr><td class="paramname">forceScreen</td><td>force a particular screen number to open </td></tr>
   </table>
@@ -2449,6 +2481,54 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 <p>return </p>
+
+</div>
+</div>
+<a id="a562895a87893e9ccb04a8a6aaad7d800" name="a562895a87893e9ccb04a8a6aaad7d800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a562895a87893e9ccb04a8a6aaad7d800">&#9670;&#160;</a></span>polarToCartesianPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static function screenManager::polarToCartesianPoints </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>angle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>distance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -2637,14 +2717,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set method for screenXOffset. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <a id="adbc20bdef2e6b4985a6db84fd85cb733" name="adbc20bdef2e6b4985a6db84fd85cb733"></a>
@@ -2673,10 +2745,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set method for screenYOffset. </p>
+<p>Set method for screenXOffset. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">value</td><td>Screen X offset value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2869,9 +2941,6 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>toDegrees - convert from pixels to degrees </p>
-<p>expects col1 = x, col2 = y for 'xy' </p>
-
 </div>
 </div>
 <a id="a37d4fdadad0915c7bb808259cded8fc0" name="a37d4fdadad0915c7bb808259cded8fc0"></a>
@@ -2906,6 +2975,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>toDegrees - convert from pixels to degrees </p>
+<p>expects col1 = x, col2 = y for 'xy'</p>
 <p>toPixels - convert from degrees to pixels </p>
 
 </div>
@@ -2974,10 +3045,10 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set method for verbosityLevel. </p>
+<p>Set method for screenYOffset. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"></td><td></td></tr>
+    <tr><td class="paramname">value</td><td>Screen Y offset value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3071,7 +3142,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>background RGBA of display during stimulus presentation </p>
-<p>Set method for backgroundColour. </p>
+<p>Set method for backgroundColour.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>RGBA values in 1, 3 or 4 element format. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3088,7 +3165,13 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set method for bitDepth. </p>
-<p>float precision and bitDepth of framebuffer/output: '8bit' is best for old GPUs, but choose 'FloatingPoint32BitIfPossible' for newer GPUs. Native high bitdepths (assumes FloatingPoint32Bit internal processing): 'PseudoGray', 'HDR', 'Native10Bit', 'Native11Bit', 'Native16Bit', 'Native16BitFloat' Options to enable Display++ or VPixx modes: 'EnableBits++Bits++Output', 'EnableBits++Mono++Output', 'EnableBits++Mono++OutputWithOverlay' or 'EnableBits++Color++Output' 'EnableDataPixxM16Output', 'EnableDataPixxC48Output' </p>
+<p>float precision and bitDepth of framebuffer/output: '8bit' is best for old GPUs, but choose 'FloatingPoint32BitIfPossible' for newer GPUs. Native high bitdepths (assumes FloatingPoint32Bit internal processing): 'PseudoGray', 'HDR', 'Native10Bit', 'Native11Bit', 'Native16Bit', 'Native16BitFloat' Options to enable Display++ or VPixx modes: 'EnableBits++Bits++Output', 'EnableBits++Mono++Output', 'EnableBits++Mono++OutputWithOverlay' or 'EnableBits++Color++Output' 'EnableDataPixxM16Output', 'EnableDataPixxC48Output'</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>bitDepth string </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3262,18 +3345,26 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a22f88e3df142c969ef3e6e3253779400" name="a22f88e3df142c969ef3e6e3253779400"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22f88e3df142c969ef3e6e3253779400">&#9670;&#160;</a></span>font</h2>
+<a id="a2537339097cbbb26b0af5180c4074d46" name="a2537339097cbbb26b0af5180c4074d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2537339097cbbb26b0af5180c4074d46">&#9670;&#160;</a></span>font</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Property screenManager::font</td>
+          <td class="memname">set screenManager::font</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Details for drawing fonts, either sets defaults if window is closed or or updates values if window open... </p>
+
+<p>Set method for font. </p>
+<p>Details for drawing fonts, either sets defaults if window is closed or or updates values if window open...</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">varargin</td><td>font struct </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -3625,7 +3716,7 @@ Additional Inherited Members</h2></td></tr>
 <p>windowed: when FALSE use fullscreen; set to TRUE and it is windowed 800x600pixels or you can add in a window width and height i.e. [800 600] to specify windowed size. Remember that windowed presentation should <em>never</em> be used for real experimental presentation due to poor timing…</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td></td></tr>
+    <tr><td class="paramname">value</td><td>Windowed mode value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3633,7 +3724,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="screen_manager_8m.html">screenManager.m</a></li>
+<li>core/<a class="el" href="screen_manager_8m.html">screenManager.m</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -3641,7 +3732,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classscreen_manager.html">screenManager</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

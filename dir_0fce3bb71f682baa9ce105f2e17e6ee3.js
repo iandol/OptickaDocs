@@ -1,21 +1,30 @@
 var dir_0fce3bb71f682baa9ce105f2e17e6ee3 =
 [
+    [ "omniplex", "dir_5bcf9c9c99129e9973b92c6021f7b352.html", "dir_5bcf9c9c99129e9973b92c6021f7b352" ],
+    [ "alyxManager.m", "alyx_manager_8m.html", "alyx_manager_8m" ],
     [ "arduinoIOPort.m", "arduino_i_o_port_8m.html", "arduino_i_o_port_8m" ],
     [ "arduinoManager.m", "arduino_manager_8m.html", "arduino_manager_8m" ],
     [ "arduinoSerial.m", "arduino_serial_8m.html", "arduino_serial_8m" ],
     [ "arduinoSerialPort.m", "arduino_serial_port_8m.html", "arduino_serial_port_8m" ],
+    [ "awsManager.m", "aws_manager_8m.html", "aws_manager_8m" ],
     [ "dataConnection.m", "data_connection_8m.html", "data_connection_8m" ],
     [ "dPixxManager.m", "d_pixx_manager_8m.html", "d_pixx_manager_8m" ],
     [ "dumpmsgpack.m", "dumpmsgpack_8m.html", "dumpmsgpack_8m" ],
     [ "eyeOccluder.m", "eye_occluder_8m.html", "eye_occluder_8m" ],
     [ "ioManager.m", "io_manager_8m.html", "io_manager_8m" ],
+    [ "joystickManager.m", "joystick_manager_8m.html", "joystick_manager_8m" ],
+    [ "jzmqConnection.m", "jzmq_connection_8m.html", "jzmq_connection_8m" ],
     [ "labJack.m", "lab_jack_8m.html", "lab_jack_8m" ],
     [ "labJackT.m", "lab_jack_t_8m.html", "lab_jack_t_8m" ],
     [ "magstimManager.m", "magstim_manager_8m.html", "magstim_manager_8m" ],
+    [ "mentalabManager.m", "mentalab_manager_8m.html", "mentalab_manager_8m" ],
+    [ "minioManager.m", "minio_manager_8m.html", "minio_manager_8m" ],
     [ "nirSmartManager.m", "nir_smart_manager_8m.html", "nir_smart_manager_8m" ],
     [ "parsemsgpack.m", "parsemsgpack_8m.html", "parsemsgpack_8m" ],
     [ "plusplusManager.m", "plusplus_manager_8m.html", "plusplus_manager_8m" ],
+    [ "rewardManager.m", "reward_manager_8m.html", "reward_manager_8m" ],
     [ "runServer.m", "run_server_8m.html", null ],
     [ "sendSerialIOPort.m", "send_serial_i_o_port_8m.html", "send_serial_i_o_port_8m" ],
-    [ "touchManager.m", "touch_manager_8m.html", "touch_manager_8m" ]
+    [ "touchManager.m", "touch_manager_8m.html", "touch_manager_8m" ],
+    [ "zmqConnection.m", "zmq_connection_8m.html", "zmq_connection_8m" ]
 ];

@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -96,9 +96,11 @@ $(document).ready(function(){initNavTree('functions_vars_d.html',''); initResiza
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
 <li>dacBits&#160;:&#160;<a class="el" href="classcalibrate_luminance.html#a402a2f32461b4bea338c401231d41e04">calibrateLuminance</a></li>
-<li>data&#160;:&#160;<a class="el" href="classeyetracker_core.html#a0842d41e32b45fa790e8512c0774bc64">eyetrackerCore</a></li>
+<li>data&#160;:&#160;<a class="el" href="classeyetracker_core.html#a0842d41e32b45fa790e8512c0774bc64">eyetrackerCore</a>, <a class="el" href="classtouch_data.html#ad72ab8ddbc53f1210919ef67f42dc05d">touchData</a></li>
 <li>dataOut&#160;:&#160;<a class="el" href="classdata_connection.html#a4576f50c44d95b70c65b5b87a72b1ccf">dataConnection</a></li>
+<li>dataTemplate&#160;:&#160;<a class="el" href="classtouch_data.html#ad5b23a163b7983346f653bdd8359e8a3">touchData</a></li>
 <li>dataType&#160;:&#160;<a class="el" href="classdata_connection.html#a32b5f39b5c996f788701680c2a7abdd3">dataConnection</a></li>
+<li>date&#160;:&#160;<a class="el" href="classbehavioural_record.html#a928e02ac6bdb456eeb51aceeb879ec2e">behaviouralRecord</a></li>
 <li>dateStamp&#160;:&#160;<a class="el" href="classcalibrate_luminance.html#a26893ea54a79d6392bc82077289d9535">calibrateLuminance</a>, <a class="el" href="classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7">optickaCore</a></li>
 <li>debug&#160;:&#160;<a class="el" href="classeyetracker_core.html#af015c0df4683b94920723c0fac80e8c3">eyetrackerCore</a>, <a class="el" href="classrun_experiment.html#ad88c91e63cf8fb1acda515afec4adb44">runExperiment</a>, <a class="el" href="classscreen_manager.html#aedd0b8414bdabefad8c8bec3a5246889">screenManager</a></li>
 <li>defaults&#160;:&#160;<a class="el" href="classeyelink_manager.html#af205add0ba656757de15bf3db2c262a7">eyelinkManager</a></li>
@@ -111,14 +113,18 @@ $(document).ready(function(){initNavTree('functions_vars_d.html',''); initResiza
 <li>deltaR&#160;:&#160;<a class="el" href="classndots_stimulus.html#a41afae4c9edd9338ba168f8a6cea95b3">ndotsStimulus</a></li>
 <li>demeanLFP&#160;:&#160;<a class="el" href="class_l_f_p_analysis.html#a3aa6c112e234c46b470bd9d888569331">LFPAnalysis</a></li>
 <li>density&#160;:&#160;<a class="el" href="classdots_stimulus.html#a862dc18c75aaaec63e18a70db853e57d">dotsStimulus</a>, <a class="el" href="classndots_stimulus.html#ac838fa777e176547a52a4679fcd77083">ndotsStimulus</a></li>
-<li>densityFunction&#160;:&#160;<a class="el" href="classspike_analysis.html#a5309ec1191581bba7bb2e32f08768db6">spikeAnalysis</a></li>
+<li>densityBounds&#160;:&#160;<a class="el" href="classget_density.html#af3eb80bc2f49366b9bdff0cb6ee6194b">getDensity</a></li>
+<li>densityFunction&#160;:&#160;<a class="el" href="classget_density.html#a49c6deb1dadf3b769f2a9f1ef2d1adbf">getDensity</a>, <a class="el" href="classspike_analysis.html#a5309ec1191581bba7bb2e32f08768db6">spikeAnalysis</a></li>
+<li>densityKernel&#160;:&#160;<a class="el" href="classget_density.html#a36b0e47d3d2490c289f349cdae5d7c4d">getDensity</a></li>
 <li>densityWindow&#160;:&#160;<a class="el" href="classspike_analysis.html#af79aa3e927aa03c62f23291d4815a3a6">spikeAnalysis</a></li>
+<li>description&#160;:&#160;<a class="el" href="class_h_e_d_tags.html#ae68ca5930114b7cfa3dd2e9b16747846">HEDTags</a></li>
 <li>device&#160;:&#160;<a class="el" href="classarduino_manager.html#a53697a4862ef3dc00f85357bddd3225c">arduinoManager</a>, <a class="el" href="classaudio_manager.html#a20d504aa521f326ddd3e0dd833678ea1">audioManager</a>, <a class="el" href="classlab_jack.html#abda576fca30a8ed3f1f3327c40facae7">labJack</a>, <a class="el" href="classlab_jack_t.html#a59a2bed23f78754979761bf811a452dd">labJackT</a>, <a class="el" href="classtouch_manager.html#af505ca342d0afb8a36ab38c5a6d8565a">touchManager</a></li>
 <li>deviceID&#160;:&#160;<a class="el" href="classlab_jack.html#af805342e9ec099615f6b3c70a7870299">labJack</a>, <a class="el" href="classlab_jack_t.html#ac3ddb799a0370a3f3e30659141420048">labJackT</a></li>
+<li>deviceName&#160;:&#160;<a class="el" href="classmentalab_manager.html#a253675fa8ad6e31c595d024f11132e6f">mentalabManager</a>, <a class="el" href="classtouch_manager.html#af0094b6b399bdb651524f2b0197c1922">touchManager</a></li>
 <li>deviceSPD&#160;:&#160;<a class="el" href="classcolour_manager.html#a5cd52d25a496b86de68de538c17613f7">colourManager</a></li>
 <li>diaryMode&#160;:&#160;<a class="el" href="classrun_experiment.html#a6f10f4f89d255464634d1187965263a8">runExperiment</a></li>
 <li>dir&#160;:&#160;<a class="el" href="classeyelink_analysis.html#a7a9341aadd9613a1e643c81e6e6c69dc">eyelinkAnalysis</a>, <a class="el" href="class_l_f_p_analysis.html#ab5e42dda969e019c181f52c8f77802d1">LFPAnalysis</a>, <a class="el" href="classplx_reader.html#adfb61fef86ef33b13d47dcced7e31eab">plxReader</a>, <a class="el" href="classspike_analysis.html#af93ed1e4607a9b3f4b417df615f707c2">spikeAnalysis</a></li>
-<li>direction&#160;:&#160;<a class="el" href="classapparent_motion_stimulus.html#ad0c31e7a894ac4d234e6109b87cc72f8">apparentMotionStimulus</a>, <a class="el" href="classcheckerboard_stimulus.html#a3ae16b371b75329452c17215daf2f8de">checkerboardStimulus</a>, <a class="el" href="classcolour_grating_stimulus.html#ab425698de6ea0443151e5582da9a840d">colourGratingStimulus</a>, <a class="el" href="classdotline_stimulus.html#ac81c179ea1cbb8972dd01a3124e3a0bc">dotlineStimulus</a>, <a class="el" href="classgabor_stimulus.html#a9da0cdf6aefab281609ac028155708b9">gaborStimulus</a>, <a class="el" href="classgrating_stimulus.html#ad53ccb2d6c2ea8f01ed676ef3984d3f8">gratingStimulus</a>, <a class="el" href="classimage_stimulus.html#a3d021df7271116e49f320dff06a1931e">imageStimulus</a>, <a class="el" href="classlog_gabor_stimulus.html#aeb9818276a77e20859c35cf3fbef2edd">logGaborStimulus</a>, <a class="el" href="classmovie_stimulus.html#aba06b00537800ee522ab3f82ac4d9f37">movieStimulus</a>, <a class="el" href="classpolar_board_stimulus.html#a467d3ab55b7faad4b134a3770eededb1">polarBoardStimulus</a>, <a class="el" href="classpolar_grating_stimulus.html#a8b61d6d4b75848dd6aea8cc3a0f25a49">polarGratingStimulus</a>, <a class="el" href="classtarget_inducer_stimulus.html#ab3d152012496372ecaa89be0ac98c131">targetInducerStimulus</a></li>
+<li>direction&#160;:&#160;<a class="el" href="classapparent_motion_stimulus.html#ad0c31e7a894ac4d234e6109b87cc72f8">apparentMotionStimulus</a>, <a class="el" href="classapril_tag_stimulus.html#af585b20f79d1cb1bbe230b96d493bca3">aprilTagStimulus</a>, <a class="el" href="classcheckerboard_stimulus.html#a3ae16b371b75329452c17215daf2f8de">checkerboardStimulus</a>, <a class="el" href="classcolour_grating_stimulus.html#ab425698de6ea0443151e5582da9a840d">colourGratingStimulus</a>, <a class="el" href="classdotline_stimulus.html#ac81c179ea1cbb8972dd01a3124e3a0bc">dotlineStimulus</a>, <a class="el" href="classgabor_stimulus.html#a9da0cdf6aefab281609ac028155708b9">gaborStimulus</a>, <a class="el" href="classgrating_stimulus.html#ad53ccb2d6c2ea8f01ed676ef3984d3f8">gratingStimulus</a>, <a class="el" href="classimage_stimulus.html#a3d021df7271116e49f320dff06a1931e">imageStimulus</a>, <a class="el" href="classlog_gabor_stimulus.html#aeb9818276a77e20859c35cf3fbef2edd">logGaborStimulus</a>, <a class="el" href="classmovie_stimulus.html#aba06b00537800ee522ab3f82ac4d9f37">movieStimulus</a>, <a class="el" href="classpolar_board_stimulus.html#a467d3ab55b7faad4b134a3770eededb1">polarBoardStimulus</a>, <a class="el" href="classpolar_grating_stimulus.html#a8b61d6d4b75848dd6aea8cc3a0f25a49">polarGratingStimulus</a>, <a class="el" href="classtarget_inducer_stimulus.html#ab3d152012496372ecaa89be0ac98c131">targetInducerStimulus</a></li>
 <li>directionCDFInverse&#160;:&#160;<a class="el" href="classndots_stimulus.html#a90e1e75bcfbfec8c1c3b3c937d55f350">ndotsStimulus</a></li>
 <li>directionCDFSize&#160;:&#160;<a class="el" href="classndots_stimulus.html#a250a22b68fc5c8fd497d7661ddfe4c01">ndotsStimulus</a></li>
 <li>directionWeights&#160;:&#160;<a class="el" href="classndots_stimulus.html#a3fdc0647211faab8cc18ec02fb5d2133">ndotsStimulus</a></li>
@@ -129,8 +135,13 @@ $(document).ready(function(){initNavTree('functions_vars_d.html',''); initResiza
 <li>displayPPRefresh&#160;:&#160;<a class="el" href="classscreen_manager.html#afb826d4b1c5eeda416a9aecd5146586c">screenManager</a></li>
 <li>displayRange&#160;:&#160;<a class="el" href="classcalibrate_luminance.html#a0cfc0b1506259bb6ccb1829f711dd766">calibrateLuminance</a></li>
 <li>distance&#160;:&#160;<a class="el" href="classeyelink_analysis.html#ad6229f40dd3ccd32141c6eea47fd2b83">eyelinkAnalysis</a>, <a class="el" href="classi_rec_analysis.html#a349b275ab1f9114dc6d676fdae8f01bc">iRecAnalysis</a>, <a class="el" href="classscreen_manager.html#acce11157c7610547f931c5775c61fd3a">screenManager</a>, <a class="el" href="classtobii_analysis.html#a905b3728ecb7058626555d8dffd37382">tobiiAnalysis</a></li>
+<li>doDistribution&#160;:&#160;<a class="el" href="classget_density.html#a168c619d08966eb1aa1ecdcd40a3d169">getDensity</a></li>
+<li>dogauss&#160;:&#160;<a class="el" href="classget_density.html#a75ae31ff09ad416c651df9360584a709">getDensity</a></li>
+<li>doMask&#160;:&#160;<a class="el" href="classtitta_adv_movie_stimulus.html#acfb509a1794a0ecff503a25bae026878">tittaAdvMovieStimulus</a></li>
+<li>doMedianCI&#160;:&#160;<a class="el" href="classget_density.html#a21a61745d28282f4279b142a61acb312">getDensity</a></li>
 <li>doMove&#160;:&#160;<a class="el" href="classtitta_cal_stimulus.html#a7f8f64bc2f7e4d85b5b07e2591fe48b9">tittaCalStimulus</a></li>
 <li>doOscillate&#160;:&#160;<a class="el" href="classtitta_cal_stimulus.html#ab670af014e36fe3b0a23b02a7b0bae57">tittaCalStimulus</a></li>
+<li>dooutlier&#160;:&#160;<a class="el" href="classget_density.html#a306723e16b1b22b9b7c9dc3a04e036d2">getDensity</a></li>
 <li>doPlots&#160;:&#160;<a class="el" href="classanalysis_core.html#a42b5ffa2607e34b8ab66334e8a8fec6c">analysisCore</a></li>
 <li>doShrink&#160;:&#160;<a class="el" href="classtitta_cal_stimulus.html#aeb9546f8468bde9d322b2049ca8df5df">tittaCalStimulus</a></li>
 <li>dotLifetimes&#160;:&#160;<a class="el" href="classndots_stimulus.html#aec64c6ea4f83318eb5226f7ca366f9f3">ndotsStimulus</a></li>
@@ -148,8 +159,9 @@ $(document).ready(function(){initNavTree('functions_vars_d.html',''); initResiza
 <li>dst&#160;:&#160;<a class="el" href="classgrating_stimulus.html#a6f045af2c65211eaa5cb2b42dc7e2ac4">gratingStimulus</a></li>
 <li>dstMode&#160;:&#160;<a class="el" href="classrf_mapper.html#a028c6d3f6dfd9c915c127acf2ed0c946">rfMapper</a>, <a class="el" href="classscreen_manager.html#a4c5e07423041c17cbd6376aaf72b74aa">screenManager</a></li>
 <li>dstRect&#160;:&#160;<a class="el" href="classbase_stimulus.html#ad8d3c84078ee99d5823a5b0989e56301">baseStimulus</a></li>
-<li>dummyMode&#160;:&#160;<a class="el" href="classrf_mapper.html#a7fdd967f0e862bdc07ae40ffce991ce4">rfMapper</a></li>
+<li>dummyMode&#160;:&#160;<a class="el" href="classrf_mapper.html#a7fdd967f0e862bdc07ae40ffce991ce4">rfMapper</a>, <a class="el" href="classtitta_reward_provider.html#a206d998404557d3ecac61b5cabee148a">tittaRewardProvider</a></li>
 <li>duration&#160;:&#160;<a class="el" href="classmovie_stimulus.html#ad3c4c3956c7d7a7e821182398e9b92e1">movieStimulus</a></li>
+<li>dutyCycle&#160;:&#160;<a class="el" href="classtitta_reward_provider.html#a9790f1f48fdc9620cda360885a339ed4">tittaRewardProvider</a></li>
 <li>dX&#160;:&#160;<a class="el" href="classbase_stimulus.html#ae6b2f6edc6e2e86bb07251cf467a6098">baseStimulus</a></li>
 <li>dX_&#160;:&#160;<a class="el" href="classbase_stimulus.html#ace275f0950dc854b7a3d34948bfb4103">baseStimulus</a></li>
 <li>dxdy&#160;:&#160;<a class="el" href="classdots_stimulus.html#ab1d7b7a50f61c12e4e545068460e6cff">dotsStimulus</a></li>
@@ -161,7 +173,7 @@ $(document).ready(function(){initNavTree('functions_vars_d.html',''); initResiza
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

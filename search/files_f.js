@@ -1,13 +1,15 @@
 var searchData=
 [
-  ['saccade_5fantisaccadestateinfo_2em_0',['Saccade_AntiSaccadeStateInfo.m',['../_saccade___anti_saccade_state_info_8m.html',1,'']]],
-  ['saccadephosphenestateinfo_2em_1',['SaccadePhospheneStateInfo.m',['../_saccade_phosphene_state_info_8m.html',1,'']]],
-  ['saccadic_5fcountermanding_2em_2',['Saccadic_Countermanding.m',['../_saccadic___countermanding_8m.html',1,'']]],
-  ['saccadic_5fdoublestep_2em_3',['Saccadic_DoubleStep.m',['../_saccadic___double_step_8m.html',1,'']]],
-  ['screenmanager_2em_4',['screenManager.m',['../screen_manager_8m.html',1,'']]],
-  ['sendserialioport_2em_5',['sendSerialIOPort.m',['../send_serial_i_o_port_8m.html',1,'']]],
-  ['sftfstateinfo_2em_6',['SFTFStateInfo.m',['../_s_f_t_f_state_info_8m.html',1,'']]],
-  ['spikeanalysis_2em_7',['spikeAnalysis.m',['../spike_analysis_8m.html',1,'']]],
-  ['spotstimulus_2em_8',['spotStimulus.m',['../spot_stimulus_8m.html',1,'']]],
-  ['statemachine_2em_9',['stateMachine.m',['../state_machine_8m.html',1,'']]]
+  ['parsemsgpack_2em_0',['parsemsgpack.m',['../parsemsgpack_8m.html',1,'']]],
+  ['parseopxspikes_2em_1',['parseOpxSpikes.m',['../parse_opx_spikes_8m.html',1,'']]],
+  ['perlin_2em_2',['perlin.m',['../perlin_8m.html',1,'']]],
+  ['plaidstimulus_2em_3',['plaidStimulus.m',['../plaid_stimulus_8m.html',1,'']]],
+  ['plusplusmanager_2em_4',['plusplusManager.m',['../plusplus_manager_8m.html',1,'']]],
+  ['plxreader_2em_5',['plxReader.m',['../plx_reader_8m.html',1,'']]],
+  ['polarboardstimulus_2em_6',['polarBoardStimulus.m',['../polar_board_stimulus_8m.html',1,'']]],
+  ['polargratingstimulus_2em_7',['polarGratingStimulus.m',['../polar_grating_stimulus_8m.html',1,'']]],
+  ['proceduralpolargratingdemo_2em_8',['ProceduralPolarGratingDemo.m',['../_procedural_polar_grating_demo_8m.html',1,'']]],
+  ['pupilcoremanager_2em_9',['pupilCoreManager.m',['../pupil_core_manager_8m.html',1,'']]],
+  ['pupilcorestimulus_2em_10',['pupilCoreStimulus.m',['../pupil_core_stimulus_8m.html',1,'']]],
+  ['pupillaryreflex_2em_11',['PupillaryReflex.m',['../_pupillary_reflex_8m.html',1,'']]]
 ];

@@ -1,7 +1,7 @@
 <map id="metaStimulus" name="metaStimulus">
-<area shape="rect" id="Node000001" title="Manager for multiple stimuli." alt="" coords="24,972,161,1477"/>
-<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,924"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,938,95,972,90,972,90,938"/>
+<area shape="rect" id="Node000001" title="Manager for multiple stimuli." alt="" coords="24,1012,161,1517"/>
+<area shape="rect" id="Node000002" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="5,119,180,964"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,978,95,1012,90,1012,90,978"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="65,5,121,71"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,84,95,119,90,119,90,84"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="95,85,95,119,90,119,90,85"/>
 </map>

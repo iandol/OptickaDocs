@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -95,14 +95,173 @@ $(document).ready(function(){initNavTree('md__c_h_a_n_g_e_l_o_g.html',''); initR
   <div class="headertitle"><div class="title">Changelog</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md0"></a> Note only changes which may affect your use of Opticka will be detailed here, starting with V2.16.x</p>
-<h1><a class="anchor" id="autotoc_md1"></a>
+<div class="textblock"><p><a class="anchor" id="autotoc_md14"></a> </p><blockquote class="doxtable">
+<p>&zwj;[!NOTE] Changes which may affect your use of Opticka will be detailed here, starting with V2.16.x </p>
+</blockquote>
+<h1><a class="anchor" id="autotoc_md18"></a>
+V2.18.1</h1>
+<blockquote class="doxtable">
+<p>&zwj;[!IMPORTANT] <b>Major repository restructure</b> — Core classes have been moved into subdirectories for better organisation. Please run <code>addOptickaToPath</code> again to update your MATLAB path. If you use custom scripts that reference files by their old paths, you may need to update those references. <code><a class="el" href="classuser_functions.html" title="Customised user functions for a task run.">userFunctions</a></code> have be refactored, you should make a child class that inherits <code><a class="el" href="classuser_functions.html" title="Customised user functions for a task run.">userFunctions</a></code> as its superclass (see DMTS protocol for an example of this). </p>
+</blockquote>
+<h2><a class="anchor" id="autotoc_md19"></a>
+New Features</h2>
+<ul>
+<li><b>AprilTag Stimulus</b> (<code><a class="el" href="classapril_tag_stimulus.html" title="Texture-backed binary checkerboard / AprilTag-style stimulus.">aprilTagStimulus</a></code>) — New stimulus class generating binary checkerboard / AprilTag-style patterns directly from MATLAB pixel arrays rather than PNG textures. Supports user-defined pattern matrices or random generation, separate colours for 0/1 values, and crisp edge filtering (<code>filter=0</code>).</li>
+<li><b>Mentalab EEG Integration</b> (<code><a class="el" href="classmentalab_manager.html" title="mentaLab Sync Class">mentalabManager</a></code>) — New communication class sending strobes and triggers to Mentalab EEG recording systems directly from Opticka tasks.</li>
+<li><b>MinIO S3 Storage</b> (<code><a class="el" href="classminio_manager.html" title="use MinIO mc CLI command from MATLAB (mc alias-based auth)">minioManager</a></code>) — New S3-compatible file transfer interface using the MinIO <code>mc</code> CLI tool (alias-based authentication). Supports cross-platform install via <code>pixi global install minio-mc</code> or direct download. Provides <code>cp</code>, <code>ls</code>, <code>mv</code>, <code>sync</code> wrappers with <code>mc alias set</code>. The previous <code><a class="el" href="classaws_manager.html">awsManager</a></code> is deprecated.</li>
+<li><b>Editable Combo Box UI</b> (<code>CompactEditableComboBox</code>) — New custom App Designer UI widget combining text entry with dropdown list functionality. Entries persist across sessions, supports inline editing and new entry creation. Includes HTML renderer (<code>compactEditableComboBox.html</code>), event data class, and a demo script. Used in Opticka UI for saving and editing selection commands to send to Alyx database.</li>
+<li><b>DMTS Protocol</b> — Delayed Match to Sample behavioural task: subject fixates, a sample image appears, after a delay a choice array of images appears at peripheral locations. Subject must saccade to the matching image. Full state machine + functions + protocol <code>.mat</code> file.</li>
+<li><b>VEP Test Protocol</b> (<code>VEPTest</code>) — Visual Evoked Potential testing state machine with protocol file.</li>
+<li><b>Touch Saccade Tasks</b> — Touch-screen versions of saccade/antisaccade (<code>Saccade_AntiSaccade_touch</code>) and double-step (<code>Saccadic_DoubleStep_touch</code>) tasks added to <code>CoreProtocols/</code>.</li>
+<li><b>alyxUploader</b> (<code>tools/alyxUploader.m</code>) — Retroactive bulk upload tool for older ALF-format session data. Scans folder hierarchies, creates matching Alyx sessions with correct timestamps derived from filenames, and registers files with Alyx + S3/MinIO data repository.</li>
+<li><b>DataHash</b> (<code><a class="el" href="_data_hash_8m.html">data/DataHash.m</a></code>) — New utility for computing cryptographic hashes of MATLAB data structures (534 lines).</li>
+<li><b>Image Stretching</b> — <code><a class="el" href="classimage_stimulus.html" title="Show images or directories full of images.">imageStimulus</a></code> now supports &lsquo;crop = 'stretch&rsquo;<code>to stretch images to fill the screen dimensions.</code></li>
+<li><code>**Audio Ramp Duration** —</code><a class="el" href="classaudio_manager.html">audioManager</a><code>beeps now allow configurable</code>rampDuration<code>for onset/offset smoothing.</code></li>
+<li><code>**userFunctions Integration** —</code><a class="el" href="my_user_functions_8m.html">myUserFunctions.m</a><code>as a child class template provides user-extensible methods accessible via</code>uF.&lt;method&gt;` in state machines.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md20"></a>
+Major Refactors</h2>
+<ul>
+<li><b>Repository Restructure</b> — Major project reorganisation: core classes moved to <code>core/</code> (<code><a class="el" href="opticka_core_8m.html">optickaCore.m</a></code>, <code><a class="el" href="run_experiment_8m.html">runExperiment.m</a></code>, <code><a class="el" href="screen_manager_8m.html">screenManager.m</a></code>, <code><a class="el" href="state_machine_8m.html">stateMachine.m</a></code>, <code><a class="el" href="task_sequence_8m.html">taskSequence.m</a></code>, <code><a class="el" href="run_opticka_8m.html">runOpticka.m</a></code>, <code><a class="el" href="_default_state_info_8m.html">DefaultStateInfo.m</a></code>, <code><a class="el" href="user_functions_8m.html">userFunctions.m</a></code>), data utilities to <code>data/</code> (<code><a class="el" href="_h_e_d_tagger_8m.html">HEDTagger.m</a></code>, <code><a class="el" href="_h_e_d_tags_8m.html">HEDTags.m</a></code>, <code><a class="el" href="behavioural_record_8m.html">behaviouralRecord.m</a></code>, <code><a class="el" href="time_logger_8m.html">timeLogger.m</a></code>, <code><a class="el" href="_data_hash_8m.html">DataHash.m</a></code>, <code><a class="el" href="get_density_8m.html">getDensity.m</a></code>, <code>HED8.4.0_Tag.tsv</code>), GUI classes to <code>ui/</code> (<code>opticka.m</code>, <code>opticka_ui.mlapp</code>), and Omniplex/PLX reader to <code>communication/omniplex/</code>. <code>addOptickaToPath</code> updated accordingly.</li>
+<li><b><a class="el" href="classtouch_manager.html">touchManager</a></b> — Extensive refactor: support for multiple simultaneous touch windows, improved xinput device enabling logic, <code>syncTime()</code> method to reset touch event timing, <code>updateWindow()</code> for proper logging of touch window changes, enhanced <code><a class="el" href="classtouch_data.html">touchData</a></code> plotting with 3D scatter layout, dynamic figure naming, and improved axis labelling. Better handling of Type 1 touch events and device name validation (1034 lines changed).</li>
+<li><b><a class="el" href="classalyx_manager.html">alyxManager</a></b> — Comprehensive refactor: secure password handling via <code>getSecret</code>/<code>setSecret</code> with <code>setSecrets()</code> and <code>getSecrets()</code> methods; response caching using MATLAB <code>dictionary</code> for <code>hasEntry()</code> performance; transition to MinIO storage; QC PASS dataset support; improved login flow with automatic secret retrieval; better error handling and token refresh on 403 responses. Methods updated with <code>arguments()</code> blocks (1792 lines changed, major rewrite).</li>
+<li><b><a class="el" href="classtime_logger.html">timeLogger</a></b> — Refactored to use <code>arguments()</code> blocks. New explicit <code>HED</code> property in <code>addMessage()</code> for HED tag annotations. Preallocation support for timing and message arrays. More robust empty-value removal and legacy format migration. Improved <code>plot()</code> and <code>messageTable()</code> with HED columns.</li>
+<li><b><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a></b> — Major refactor with improved property validation, movie recording settings, compatibility updates (675 lines changed, moved to <code>core/</code>).</li>
+<li><b><a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a></b> — Performance refactor (#11). Table view (<code>showTable()</code>) now more robust with UI figure support. Better logging and compatibility. (273 lines changed, moved to <code>core/</code>).</li>
+<li><b><a class="el" href="classopticka_core.html" title="optickaCore base class inherited by other opticka classes.">optickaCore</a></b> — Version updated to <code>2.18.1</code>. New <code>makeReport()</code> method using MATLAB Report Generator toolbox for generating PDF/HTML reports of experiment parameters. <code>getALF()</code> updated with <code>arguments()</code> blocks. Improved <code>clone()</code> method for deep copies.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Eyetracking</h2>
+<ul>
+<li><b><a class="el" href="classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t...">eyelinkAnalysis</a></b> — Support for better saccade analysis toolbox integration (200 lines changed).</li>
+<li><b><a class="el" href="classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t...">tobiiAnalysis</a></b> — Improved gaze point calculations with proper centering on display area. Enhanced <code>plot()</code> and <code>plotMessages()</code> functions showing the event log overlay (213 lines changed).</li>
+<li><b>Polar↔Cartesian</b> — New static method for polar to cartesian coordinate conversion.</li>
+<li><b>Fixation Only protocol</b> — Updated for compatibility.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md22"></a>
+HED Tagging</h2>
+<ul>
+<li>Updated to HED schema V8.4 (new <code>data/HED8.4.0_Tag.tsv</code>, 1234 lines).</li>
+<li>HED tags now integrated into <code><a class="el" href="classtime_logger.html#af8c50d56ba93abb99c6537ce7c61af5e" title="Append a timestamped message to the event log.">timeLogger.addMessage()</a></code> for per-event HED annotations.</li>
+<li><code><a class="el" href="state_machine_8m.html">stateMachine.m</a></code> now includes a <code>HED</code> column so you can tag the states of your task.</li>
+<li>More comprehensive HED logging throughout <code><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a></code> task flow.</li>
+<li>Old <code>tools/HEDTags.m</code> removed; replaced with <code><a class="el" href="_h_e_d_tags_8m.html">data/HEDTags.m</a></code>.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md23"></a>
+Improvements</h2>
+<ul>
+<li><b><a class="el" href="classaudio_manager.html">audioManager</a></b> — Enhanced with volume control, beep vector caching for repeated sounds, <code>getDeviceIndex()</code> and <code>showDevices()</code> methods. Better device selection, silent mode handling, and error logging (231 lines changed).</li>
+<li><b><a class="el" href="classimage_stimulus.html" title="Show images or directories full of images.">imageStimulus</a></b> — Improved <code>ignoreProperties</code>, <code>sizeOut</code> calculation, file path handling, and image list clearing between trials.</li>
+<li><b><a class="el" href="classbase_stimulus.html" title="baseStimulus is the superclass for all stimulus objects">baseStimulus</a></b> — Circular mask optimisation: no longer remakes the mask texture for every stimulus update (105 lines changed).</li>
+<li><b>menuN</b> — Better font sizing on high DPI screens.</li>
+<li><b><a class="el" href="classjoystick_manager.html" title="Manages the Simia Joystick.">joystickManager</a></b> — Minor updates (2 lines).</li>
+<li><b><a class="el" href="classnir_smart_manager.html" title="nirSmart fNIRS Sync manager">nirSmartManager</a></b> — Minor improvements (4 lines).</li>
+<li><b>zmqConnection/jzmqConnection</b> — HTTP proxy URL fix, minor refinements.</li>
+<li><b>makeReport</b> — Refactored for better performance.</li>
+<li><b><a class="el" href="classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti...">analysisCore</a></b> — Minor fixes (14 lines).</li>
+<li><b>PupillaryReflex</b> — Minor protocol updates.</li>
+<li><b>Saccadic_DoubleStep</b> — Protocol updates (12 lines).</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md24"></a>
+Bug Fixes</h2>
+<ul>
+<li><b><a class="el" href="classtouch_manager.html">touchManager</a></b> — Fixed xinput not enabling touch panel; better event handling for multiple touch windows; fixed device name validation; improved flush and event logging; fixed doNegation on last window only.</li>
+<li><b><a class="el" href="classaudio_manager.html">audioManager</a></b> — Fixed crash on initialisation; improved device assignment and silent mode logic; better sample state validation before playback.</li>
+<li><b><a class="el" href="classalyx_manager.html">alyxManager</a></b> — Fixed password property naming; hardened login error handling; improved re-sync logic; better connection failure handling.</li>
+<li><b><a class="el" href="classimage_stimulus.html" title="Show images or directories full of images.">imageStimulus</a></b> — Fixed <code>updateXY()</code> stimulus argument validation (V2.17.13); fixed image list clearing between trials (V2.17.7).</li>
+<li><b><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a></b> — Fixed use of <code>win</code> not <code>screen</code> <code>WhiteIndex</code> on <code>open()</code>.</li>
+<li><b><a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a></b> — Fixed table view robustness.</li>
+<li><b><a class="el" href="classtime_logger.html">timeLogger</a></b> — More robust handling of edge cases.</li>
+<li><b>Windows paths</b> — Fixed compatibility issues.</li>
+<li><b><a class="el" href="classjzmq_connection.html">jzmqConnection</a></b> — Fixed HTTP proxy URL.</li>
+<li><b><a class="el" href="classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t...">tobiiAnalysis</a></b> — Fixed gaze point centering calculations.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md25"></a>
+Infrastructure</h2>
+<ul>
+<li><b><a class="el" href="_a_g_e_n_t_s_8md.html">AGENTS.md</a></b> — New comprehensive agent instructions file consolidating project conventions, architecture, and documentation for AI coding tools.</li>
+<li><b>Copilot Instructions</b> — New <code>.github/copilot-instructions.md</code> with developer guide.</li>
+<li>**<code>.gitignore</code>** — Updated with build directory and additional exclusions.</li>
+<li>**<code><a class="el" href="add_opticka_to_path_8m.html">addOptickaToPath.m</a></code>** — Updated for new directory structure (adds <code>core/</code>, <code>data/</code>, <code>ui/</code> subdirectories).</li>
+<li>**<code>functionSignatures.json</code>** — Removed as <code>properties</code> validation is better.</li>
+<li>**<code><a class="el" href="_r_e_a_d_m_e_8md.html">README.md</a></code>** — Minor updates (5 lines).</li>
+<li><b>Copyright</b> — Updated to 2026 throughout.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md26"></a>
+Summary</h2>
+<p>198 files changed, 13,803 insertions(+), 2,736 deletions(-) — 88 commits by 2 contributors.</p>
+<p>This major release focuses on repository restructuring, expanded behavioural task support (DMTS, VEP, touch tasks), new hardware integrations (Mentalab EEG, MinIO storage), comprehensive UI improvements (Editable Combo Box), and significant reliability enhancements across touch management, Alyx integration, and timing infrastructure.</p>
+<h1><a class="anchor" id="autotoc_md27"></a>
+V2.17.1</h1>
+<h2><a class="anchor" id="autotoc_md28"></a>
+New Features</h2>
+<ul>
+<li><b><a class="el" href="classalyx_manager.html">alyxManager</a></b> — Major refactor with comprehensive Doxygen-style documentation and MATLAB <code>arguments()</code> blocks for all methods. Improved error handling with specific error identifiers and better input validation. Added retry mechanism with exponential backoff for failed operations. New <code>downloadFiles()</code> method for retrieving data from S3 buckets.</li>
+<li><b><a class="el" href="classaws_manager.html">awsManager</a></b> — Enhanced with Doxygen-style documentation and <code>arguments()</code> blocks. Added retry functionality with exponential backoff for <code>copyFiles()</code> operations. Improved reliability with better status reporting and error messages. Added <code>downloadFiles()</code> method for S3 downloads with automatic directory creation.</li>
+<li><b><a class="el" href="classjzmq_connection.html">jzmqConnection</a></b> — Added comprehensive <code>arguments()</code> blocks to all methods (except constructor) for better type checking and validation. Improved documentation following Doxygen style guidelines. Enhanced error handling and message logging throughout.</li>
+<li><b><a class="el" href="_data_hash_8m.html">DataHash.m</a></b> — New utility added for computing cryptographic hashes of MATLAB data structures (534 lines).</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md29"></a>
+Improvements</h2>
+<ul>
+<li><b><a class="el" href="classtouch_manager.html">touchManager</a></b> — Significant refactor (585 lines changed) improving touch event handling and integration with physics animations. Better mouse dummy mode support.</li>
+<li><b><a class="el" href="classopticka_core.html" title="optickaCore base class inherited by other opticka classes.">optickaCore</a></b> — Enhanced with improved argument parsing and validation (206 lines changed). Better error handling and logging capabilities.</li>
+<li><b><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a></b> — Refined logging system and experiment flow (250 lines changed). Better integration with Alyx/HED metadata systems.</li>
+<li><b><a class="el" href="classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t...">tobiiAnalysis</a></b> — Improved data analysis capabilities (213 lines changed) with better integration of Nyström &amp; Holmqvist 2010 cleaning algorithms.</li>
+<li><b><a class="el" href="classmeta_stimulus.html" title="Manager for multiple stimuli.">metaStimulus</a></b> — Code cleanup and improvements (54 lines changed).</li>
+<li><b><a class="el" href="classaudio_manager.html">audioManager</a></b> — Enhanced reliability and error handling (69 lines changed).</li>
+<li><b><a class="el" href="classtouch_data.html">touchData</a></b> — Better data handling and validation (91 lines changed).</li>
+<li><b>menuN</b> — UI improvements (22 lines changed).</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md30"></a>
+Bug Fixes</h2>
+<ul>
+<li><b><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a></b> — Minor fixes (10 lines changed).</li>
+<li><b><a class="el" href="classimage_stimulus.html" title="Show images or directories full of images.">imageStimulus</a></b> — Bug fixes (4 lines changed).</li>
+<li><b><a class="el" href="classjoystick_manager.html" title="Manages the Simia Joystick.">joystickManager</a></b> — Minor updates (2 lines).</li>
+<li><b><a class="el" href="classzmq_connection.html">zmqConnection</a></b> — Code refinements (55 lines changed).</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md31"></a>
+Documentation</h2>
+<ul>
+<li>All communication classes now follow consistent Doxygen-style documentation</li>
+<li>Added comprehensive inline comments explaining complex operations</li>
+<li>Improved method signatures with MATLAB <code>arguments()</code> blocks for better IDE support</li>
+<li>Updated <b><a class="el" href="class_h_e_d_tagger.html">HEDTagger</a></b> documentation (2 lines changed)</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md32"></a>
+Infrastructure</h2>
+<ul>
+<li>Updated <code>.gitignore</code> with additional exclusions</li>
+<li>Updated <code><a class="el" href="add_opticka_to_path_8m.html">addOptickaToPath.m</a></code> for better path management</li>
+<li><b>opticka_ui.mlapp</b> — UI updates (binary file, 7KB increase)</li>
+<li>Minor updates to core protocols: <code><a class="el" href="_pupillary_reflex_8m.html">PupillaryReflex.m</a></code>, <code><a class="el" href="_saccadic___double_step_8m.html">Saccadic_DoubleStep.m</a></code></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md33"></a>
+Summary</h2>
+<p>24 files changed, 2240 insertions(+), 1091 deletions(-) <br  />
+ Major focus on code quality, reliability, and documentation improvements across communication and core infrastructure.</p>
+<h1><a class="anchor" id="autotoc_md34"></a>
+V2.17.0</h1>
+<ul>
+<li>Add support for ØMQ for communication messages (command + serialised MATLAB data packet) across networked PTB instances using the <code><a class="el" href="classjzmq_connection.html">jzmqConnection</a></code> class. This is <em>much more robust</em> than raw TCP/UDP used by <code>pnet</code> &amp; <code><a class="el" href="classdata_connection.html" title="dataConnection Connects and manages a socket connection">dataConnection</a></code> and we are using it for communication across <a href="https://github.com/cogplatform/CageLab">CageLab devices</a>. This adds a dependency on <a href="https://github.com/cogplatform/matlab-jzmq">https://github.com/cogplatform/matlab-jzmq</a>, a MATLAB wrapper for <a href="https://github.com/zeromq/jeromq">JeroMQ</a>. The class explicitly supports a new neuroscience-targetted middleware called <a href="https://github.com/Ccccraz/cogmoteGO">cogmoteGO</a> with an API designed to manage multiple remote PTB instances and broadcast behavioural data and results back to clients.</li>
+<li>Major update to the opticka UI for Alyx integration. There is an Alyx panel where you can connect to your Alyx instance to retrieve data from the server. Opticka can create a new Alyx session, and will upload the task data as a copy to the Alyx server. The data is sent to an AWS compatible data store linked to the Alyx session. The data is stored in a folder structure that matches the <a href="https://int-brain-lab.github.io/ONE/alf_intro.html">International Brain Lab ONE Protocol</a> (see "A modular architecture for organizing, processing and sharing neurophysiology data," The International Brain Laboratory et al., 2023 Nat. Methods, <a href="https://doi.org/10.1038/s41592-022-01742-6">DOI</a>).</li>
+<li>Add <b><a class="el" href="classaws_manager.html">awsManager</a></b> to support Alyx's AWS S3 storage. This is used to upload the task data to the AWS compatible data store linked to the Alyx session. This relies on the awscli command line tool to upload the data. You will need to install the AWS CLI and configure it with your AWS credentials. See <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html">AWS CLI</a> for more information. We use the cross-platform pixi package manager to install AWS CLI, using <code>pixi global install awscli</code> to install it.</li>
+<li><b>HED Tagging</b> &ndash; we now support HED tagging of the session data. This is used to tag parameters with metadata that can be used for search / analysis. The tags are stored in a TSV file in the same folder as the raw session data. See <code>tools/HEDTags.m</code> and <code>tools/HEDTagger.m</code>. The HED tags are generated from the task sequence and the task parameters. We want to support better data sharing and Alyx / ONE protocol do not have any task metadata so we chose HED from the EEGLab / BIDS projects. See <a href="https://www.hedtags.org">https://www.hedtags.org</a> for details.</li>
+<li><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> &ndash; big improvements to the logging system. Previously task events were stored in several places, but for Alyx / HED we need to centralise the event data. This is used to generate the HED tags and the Alyx session data.</li>
+<li>Add <b><a class="el" href="classjoystick_manager.html" title="Manages the Simia Joystick.">joystickManager</a></b> — we have built our own HID compatible joystick hardware and this manager interfaces with this hardware.</li>
+<li><a class="el" href="classlab_jack_t.html" title="LABJACKT Connects and manages a LabJack T4 / T7 This class handles digital I/O and analog I/O and ana...">labJackT</a> — we now send an 11bit strobed word rather than 8bit word. In theory this is backwards compatible, but you need to update the Lua server code running on the LabJack to use the 11bit word (<code>t = <a class="el" href="classlab_jack_t.html" title="LABJACKT Connects and manages a LabJack T4 / T7 This class handles digital I/O and analog I/O and ana...">labJackT</a>; t.initialiseServer</code>). 0-2047 controls EIO0-8 &amp; CIO0-3.</li>
+<li>Tobii eyetrackers — update Titta interface to support the new adaptive monkey calibration. See Niehorster, D. C., Whitham, W., Lake, B. R., Schapiro, S. J., Andolina, I. M., &amp; Yorzinski, J. L. (2024). Enhancing eye tracking for nonhuman primates and other subjects unable to follow instructions: Adaptive calibration and validation of Tobii eye trackers with the Titta toolbox. Behavior Research Methods, 57(1), 0. <a href="https://doi.org/10.3758/s13428-024-02540-y">https://doi.org/10.3758/s13428-024-02540-y</a> for details.</li>
+<li><b>makeReport</b> — a new method in <a class="el" href="classopticka_core.html" title="optickaCore base class inherited by other opticka classes.">optickaCore</a> thus available to all opticka objects. Uses the MATLAB report generator to make a PDF report of the data and property values contained in the core opticka classes (<a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a>, <a class="el" href="classtask_sequence.html" title="Block-based variable randomisation manager.">taskSequence</a>, <a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a>, <a class="el" href="classbehavioural_record.html" title="Create a GUI and update performance plots for a behavioural task.">behaviouralRecord</a>, tobii/eyelink/irec). Useful when analysing an experiment to get an overview of all experiment parameters for that session.</li>
+<li><b>circularMask Shader</b> — add a simple texture shader that provides a circular mask for any texture stimulus (like an image). This is better than using a separate disc shader. Used in <a class="el" href="classimage_stimulus.html" title="Show images or directories full of images.">imageStimulus</a> and <a class="el" href="classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects">movieStimulus</a> so you can alpha blend a masked image/movie against a complex background.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md35"></a>
 V2.16.1 – 106 files changed</h1>
 <blockquote class="doxtable">
 <p>&zwj;[!TIP] Please double-check changes in <code><a class="el" href="_default_state_info_8m.html">DefaultStateInfo.m</a></code> to see the changes for state machine files, this may inform changes you could add to your own state machine files... </p>
 </blockquote>
 <ul>
-<li><b>BREAKING CHANGE</b>: we want to support the <a href="https://int-brain-lab.github.io/ONE/alf_intro.html">International Brain Lab ONE Protocol</a> (see "A modular architecture for organizing, processing and sharing neurophysiology data," The International Brain Laboratory et al., 2023 Nat. Methods, <a href="https://doi.org/10.1038/s41592-022-01742-6">DOI</a>), and we are now follwoing ALF filenaming for saved files. the root folder is still <code>OptickaFiles/savedData/</code> but now we use a folder hierarchy: <code>subjectName / YYYY-MM-DD / SessionID /</code> &ndash; the opticka <code>MAT</code> file will <b>not</b> change structure or content, but we will add extra metadata files to help data sharing in future releases.</li>
+<li><b>BREAKING CHANGE</b>: we want to support the <a href="https://int-brain-lab.github.io/ONE/alf_intro.html">International Brain Lab ONE Protocol</a> (see "A modular architecture for organizing, processing and sharing neurophysiology data," The International Brain Laboratory et al., 2023 Nat. Methods, <a href="https://doi.org/10.1038/s41592-022-01742-6">DOI</a>), and we are now follwoing ALF filenaming for saved files. the root folder is still <code>OptickaFiles/savedData/</code> but now we use a folder hierarchy: if the <code>labName</code> field is empty we use the shorter <code>/ subjectName / YYYY-MM-DD / SessionID-namedetails.mat</code> otherwise we use <code>/ labName / subjects / subjectName / YYYY-MM-DD / SessionID-namedetails.mat</code> &ndash; the opticka <code>MAT</code> file will <b>not</b> change structure or content (it will remain backwards compatible), but we will add extra metadata files to help data sharing in future releases. We will add an ALYX API call to start a session in a future release.</li>
 <li><b>BREAKING CHANGE</b>: LabJack T4 &ndash; we increased the strobe word from 8 to 11 bits, now on EIO1:8 CIO1:3, this should in theory be backwards compatible as 8bits is still the same lines. Upgrade the LabJack T4 (connected over USB) like this: <div class="fragment"><div class="line">t = labJackT();</div>
 <div class="line">open(t);</div>
 <div class="line">initialiseServer(t);</div>
@@ -126,21 +285,21 @@ V2.16.1 – 106 files changed</h1>
 <div class="line">    step(aM); % step the simulation</div>
 <div class="line">end</div>
 </div><!-- fragment --></li>
-<li>Improve <a class="el" href="classtouch_manager.html" title="Manages touch screens (wraps the PTB TouchQueue* functions), and provides touch area management metho...">touchManager</a> to better use the rigid body animations with touch events. You can now finger-drag and "fling" physical objects around the screen.</li>
+<li>Improve <a class="el" href="classtouch_manager.html">touchManager</a> to better use the rigid body animations with touch events. You can now finger-drag and "fling" physical objects around the screen.</li>
 <li>add Procedurally generated polar checkerboards: <code><a class="el" href="classpolar_board_stimulus.html" title="polar checkerboard stimulus, inherits from baseStimulus POLARBOARDSTIMULUS inherits from baseStimulus...">polarBoardStimulus</a></code>, and improved polar gratings to mask with arc segments: <code><a class="el" href="classpolar_grating_stimulus.html" title="polar grating stimulus, inherits from baseStimulus POLARGRATINGSTIMULUS inherits from baseStimulus Th...">polarGratingStimulus</a></code>.</li>
 <li>added new stimulus: <code><a class="el" href="classdotline_stimulus.html" title="Show lines made of dots.">dotlineStimulus</a></code> - a line made of dots.</li>
 <li><code><a class="el" href="classpupil_core_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,...">pupilCoreStimulus</a></code> &ndash; a calibration stimulus for pupil core eyetrackers.</li>
 <li>all stimuli: <code>updateXY()</code> method quickly updates the X and Y position without a full stimulus <code>update()</code>, used by the update <code><a class="el" href="classanimation_manager.html" title="ANIMATIONMANAGER Provides per frame paths for stimuli We integrate dyn4j java physics engine for rigi...">animationManager</a></code>.</li>
 <li>all stimuli: added <code>szPx</code> <code>szD</code> <code>xfinalD</code> and <code>yFinalD</code> properties so we have both pixels and degrees values available.</li>
 <li>all stimuli: <code>szIsPx</code> property tells us whether the dynamically generated size at each trial is in pixels or degrees.</li>
-<li>add <code><a class="el" href="classnir_smart_manager.html" title="Input Output manager, currently just a dummy class.">nirSmartManager</a></code> to support nirSmart FNIRS recording system.</li>
-<li>improved the mouse dummy mode for the touchscreen <code><a class="el" href="classtouch_manager.html" title="Manages touch screens (wraps the PTB TouchQueue* functions), and provides touch area management metho...">touchManager</a></code>.</li>
+<li>add <code><a class="el" href="classnir_smart_manager.html" title="nirSmart fNIRS Sync manager">nirSmartManager</a></code> to support nirSmart FNIRS recording system.</li>
+<li>improved the mouse dummy mode for the touchscreen <code><a class="el" href="classtouch_manager.html">touchManager</a></code>.</li>
 <li><code><a class="el" href="classarduino_manager.html" title="Arduino Manager &gt; Connects and manages arduino communication. By default it connects using arduinoIOP...">arduinoManager</a></code> can now use a raspberry pi GPIO if no arduino is present.</li>
 <li>Update image and movie stimuli to better handle mutliple images.</li>
 <li>Add a <code>Test Hardware</code> menu to opticka GUI. You can use this to test that the reward system / eyetracker / recording markers are working before you do any data collection each day.</li>
 <li>Updates to support the latest Titta toolbox for Tobii eyetrackers.</li>
 <li><code>optickaCore.geyKeys()</code> &ndash; support shift key.</li>
-<li><code><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a></code> &ndash; better handling when no eyetracker is selected for a task that may have eyetracker functions.</li>
+<li><code><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a></code> &ndash; better handling when no eyetracker is selected for a task that may have eyetracker functions.</li>
 <li><code><a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a></code> &ndash; update movieRecording settings. You pass <code>screenManager.movieSettings.record = true</code> to enable screen recording. Note that the movie is handled automatically, so: <div class="fragment"><div class="line">s = screenManager();</div>
 <div class="line">s.movieSettings.record = true;</div>
 <div class="line">s.open(); % this also initialises the video file</div>
@@ -153,7 +312,7 @@ V2.16.1 – 106 files changed</h1>
 <li>lots of improvements for analysing Tobii and iRec data (see <code><a class="el" href="classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t...">tobiiAnalysis</a></code> and <code><a class="el" href="classi_rec_analysis.html" title="iRecAnalysis offers a set of methods to load, parse &amp; plot raw CSV files. It understands opticka tria...">iRecAnalysis</a></code>), in particular we integrate <a href="https://github.com/dcnieho/NystromHolmqvist2010">Nyström, M. &amp; Holmqvist, K. 2010</a> toolbox to improve data cleaning.</li>
 <li>switch to using string arrays for comment property fields.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md36"></a>
 State Machine Changes:</h2>
 <ul>
 <li><code>@()needFlip(me, false, 0);</code> &ndash; add a 3rd parameter to control the flip of the eyetracker window. NOTE: the number 0=no-flip, 1=dontclear+dontforce, 2=clear+dontforce, 3=clear+force, 4=clear+force first frame then switch to 1 &ndash; dontclear=leave previous frame onscreen, useful to show eyetrack, dontforce=don't force flip, faster as flip for the tracker is throttled</li>
@@ -165,7 +324,7 @@ State Machine Changes:</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

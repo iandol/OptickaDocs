@@ -11,7 +11,7 @@ var classarduino_manager =
     [ "giveReward", "classarduino_manager.html#a95a994f92718158b6e40ed60e6e0b5cb", null ],
     [ "open", "classarduino_manager.html#a58597dc347802185047862e4c233a199", null ],
     [ "pinMode", "classarduino_manager.html#af227b9bcb62578bbe6e1403b7b10eaab", null ],
-    [ "reset", "classarduino_manager.html#aab22bcb27a0ac48d2bdcc5613ae19626", null ],
+    [ "reset", "classarduino_manager.html#a36184e1921f9bcce168b39f0f5c1385f", null ],
     [ "rwdByDCmotor", "classarduino_manager.html#a5d44e969e63a4a6f346256a49acd02c8", null ],
     [ "sendTTL", "classarduino_manager.html#a337fe7010afa7410af8f81d1f45d0296", null ],
     [ "stepper", "classarduino_manager.html#aca37df0013885defe49cc770861d0393", null ],

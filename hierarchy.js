@@ -4,6 +4,7 @@ var hierarchy =
       [ "baseStimulus", "classbase_stimulus.html", [
         [ "annulusStimulus", "classannulus_stimulus.html", null ],
         [ "apparentMotionStimulus", "classapparent_motion_stimulus.html", null ],
+        [ "aprilTagStimulus", "classapril_tag_stimulus.html", null ],
         [ "barStimulus", "classbar_stimulus.html", [
           [ "rfMapper", "classrf_mapper.html", null ]
         ] ],
@@ -33,9 +34,12 @@ var hierarchy =
       [ "taskSequence", "classtask_sequence.html", null ]
     ] ],
     [ "handle", null, [
+      [ "HEDTagger", "class_h_e_d_tagger.html", null ],
       [ "arduinoIOPort", "classarduino_i_o_port.html", null ],
       [ "arduinoSerial", "classarduino_serial.html", null ],
       [ "arduinoSerialPort", "classarduino_serial_port.html", null ],
+      [ "awsManager", "classaws_manager.html", null ],
+      [ "calibrateLuminance", "classcalibrate_luminance.html", null ],
       [ "calibrateLuminance", "classcalibrate_luminance.html", null ],
       [ "dataConnection", "classdata_connection.html", null ],
       [ "eyetrackerSmooth", "classeyetracker_smooth.html", [
@@ -43,9 +47,12 @@ var hierarchy =
         [ "pupilCoreManager", "classpupil_core_manager.html", null ],
         [ "tobiiManager", "classtobii_manager.html", null ]
       ] ],
+      [ "getDensity", "classget_density.html", null ],
       [ "labJack", "classlab_jack.html", null ],
       [ "labJackT", "classlab_jack_t.html", null ],
+      [ "minioManager", "classminio_manager.html", null ],
       [ "optickaCore", "classopticka_core.html", [
+        [ "alyxManager", "classalyx_manager.html", null ],
         [ "analysisCore", "classanalysis_core.html", [
           [ "LFPAnalysis", "class_l_f_p_analysis.html", null ],
           [ "LFPMeta", "class_l_f_p_meta.html", null ],
@@ -58,6 +65,7 @@ var hierarchy =
         [ "arduinoManager", "classarduino_manager.html", null ],
         [ "audioManager", "classaudio_manager.html", null ],
         [ "baseStimulus", "classbase_stimulus.html", null ],
+        [ "behaviouralRecord", "classbehavioural_record.html", null ],
         [ "colourManager", "classcolour_manager.html", null ],
         [ "dPixxManager", "classd_pixx_manager.html", null ],
         [ "eyeOccluder", "classeye_occluder.html", null ],
@@ -68,25 +76,38 @@ var hierarchy =
           [ "tobiiManager", "classtobii_manager.html", null ]
         ] ],
         [ "ioManager", "classio_manager.html", null ],
+        [ "joystickManager", "classjoystick_manager.html", null ],
+        [ "jzmqConnection", "classjzmq_connection.html", null ],
         [ "magstimManager", "classmagstim_manager.html", null ],
+        [ "mentalabManager", "classmentalab_manager.html", null ],
         [ "metaStimulus", "classmeta_stimulus.html", null ],
         [ "nirSmartManager", "classnir_smart_manager.html", null ],
-        [ "opticka", "classopticka.html", null ],
         [ "plusplusManager", "classplusplus_manager.html", null ],
         [ "plxReader", "classplx_reader.html", null ],
         [ "runExperiment", "classrun_experiment.html", null ],
         [ "screenManager", "classscreen_manager.html", null ],
         [ "stateMachine", "classstate_machine.html", null ],
         [ "taskSequence", "classtask_sequence.html", null ],
-        [ "touchManager", "classtouch_manager.html", null ]
+        [ "timeLogger", "classtime_logger.html", null ],
+        [ "touchData", "classtouch_data.html", null ],
+        [ "touchManager", "classtouch_manager.html", null ],
+        [ "zmqConnection", "classzmq_connection.html", null ]
       ] ],
       [ "opxOnline", "classopx_online.html", null ],
       [ "parseOpxSpikes", "classparse_opx_spikes.html", null ],
+      [ "rewardManager", "classreward_manager.html", [
+        [ "arduinoManager", "classarduino_manager.html", null ]
+      ] ],
       [ "sendSerialIOPort", "classsend_serial_i_o_port.html", null ],
-      [ "tempController", "classtemp_controller.html", null ],
       [ "tittaAdvImageStimulus", "classtitta_adv_image_stimulus.html", null ],
       [ "tittaAdvMovieStimulus", "classtitta_adv_movie_stimulus.html", null ],
+      [ "tittaAdvancedController", "classtitta_advanced_controller.html", null ],
       [ "tittaCalStimulus", "classtitta_cal_stimulus.html", null ],
-      [ "userFunctions", "classuser_functions.html", null ]
-    ] ]
+      [ "tittaRewardProvider", "classtitta_reward_provider.html", null ],
+      [ "userFunctions", "classuser_functions.html", [
+        [ "DMTSFunctions", "class_d_m_t_s_functions.html", null ],
+        [ "myUserFunctions", "classmy_user_functions.html", null ]
+      ] ]
+    ] ],
+    [ "HEDTags", "class_h_e_d_tags.html", null ]
 ];

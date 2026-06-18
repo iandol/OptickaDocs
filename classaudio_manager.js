@@ -5,13 +5,18 @@ var classaudio_manager =
     [ "checkFiles", "classaudio_manager.html#ada930d736916c67ebc0451b9399abd2e", null ],
     [ "close", "classaudio_manager.html#a3b91cf9d328477bad3baed0c161d5305", null ],
     [ "delete", "classaudio_manager.html#a19c4ad14bd6845cfa9d213745d947be4", null ],
+    [ "demo", "classaudio_manager.html#ad4acba6fe7facdad7cbc3987dad84f1a", null ],
     [ "findFiles", "classaudio_manager.html#a817bff31c38745aa745234df222f0b9f", null ],
+    [ "getDeviceIndex", "classaudio_manager.html#a6b42e2ab8b70684bd6a5415c10bdf304", null ],
     [ "loadSamples", "classaudio_manager.html#a9f74335bcaf79cac3e1b78394750e95f", null ],
     [ "open", "classaudio_manager.html#a13dad8d83a1d0fbd7912a60359182fcc", null ],
     [ "play", "classaudio_manager.html#ad75381527a3429e4b684d0ba2b7396f0", null ],
     [ "reset", "classaudio_manager.html#af8df70536b3b06d95c8d9707cf413488", null ],
     [ "run", "classaudio_manager.html#a7c397e88a2482181ee0ded0317535135", null ],
     [ "setup", "classaudio_manager.html#a670ba5fa4ca97be2d05508cee710c545", null ],
+    [ "showDevices", "classaudio_manager.html#ae5f051a0536f099601ee8a6d8fd8cf43", null ],
+    [ "stop", "classaudio_manager.html#aaeac78bcae2af58f5ac2aa1c1d43135e", null ],
+    [ "volume", "classaudio_manager.html#a6426ad33024d1ede931847a6266037b8", null ],
     [ "waitUntilStopped", "classaudio_manager.html#a3b227ccb8c88e457abd0ee05f43cf365", null ],
     [ "chainSnd", "classaudio_manager.html#a4417b2eea35be23c4d2768e28c45f332", null ],
     [ "device", "classaudio_manager.html#a20d504aa521f326ddd3e0dd833678ea1", null ],
@@ -20,6 +25,8 @@ var classaudio_manager =
     [ "latencyLevel", "classaudio_manager.html#ae8612c9b6bbcb37f263547a671ccc7bd", null ],
     [ "lowLatency", "classaudio_manager.html#a76aa8f0899aa13865068b6d5eeeb8d07", null ],
     [ "numChannels", "classaudio_manager.html#a7d5d21cc9705847d4f9b83087124d43c", null ],
+    [ "rampDuration", "classaudio_manager.html#a04ff75014c99a7e5a385cc3455fc1b9d", null ],
     [ "silentMode", "classaudio_manager.html#a125f22fce23c581c304965c43c7405e0", null ],
-    [ "verbose", "classaudio_manager.html#a7f243af589bf0cae0d8a2878b730bb4e", null ]
+    [ "verbose", "classaudio_manager.html#a7f243af589bf0cae0d8a2878b730bb4e", null ],
+    [ "volumeLevel", "classaudio_manager.html#adb8af3fcf121cfe02261859929b181f8", null ]
 ];

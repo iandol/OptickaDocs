@@ -26,6 +26,7 @@ var classlab_jack_t =
     [ "sendStrobedEIO", "classlab_jack_t.html#a7b396581a378a9d1921bf3fd0fa35361", null ],
     [ "sendTTL", "classlab_jack_t.html#add8cf92979d77d87e1c781725d33f267", null ],
     [ "setFIO", "classlab_jack_t.html#ac9ac2fb982accc35bab5ec52da9b5409", null ],
+    [ "setStrobeValue", "classlab_jack_t.html#a116cf2ffe543492785c7e7489342409b", null ],
     [ "startFixation", "classlab_jack_t.html#a2296f94802be2ce6ad781748be253032", null ],
     [ "startRecording", "classlab_jack_t.html#a5458fdb957280da144b8867249d7003a", null ],
     [ "startStream", "classlab_jack_t.html#a272e470fe99ff4a800c8400703bf86d9", null ],

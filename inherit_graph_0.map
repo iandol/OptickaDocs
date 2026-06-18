@@ -1,155 +1,188 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" title=" " alt="" coords="145,573,253,599"/>
-<area shape="rect" id="Node000001" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all stimulus objects" alt="" coords="346,597,449,623"/>
-<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="267,591,346,601,346,607,266,597"/>
-<area shape="rect" id="Node000073" href="$classtask_sequence.html" title="Block&#45;based variable randomisation manager." alt="" coords="343,548,451,573"/>
-<area shape="poly" id="edge27_Node000000_Node000073" title=" " alt="" coords="266,575,343,565,344,570,267,580"/>
-<area shape="rect" id="Node000002" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="541,351,663,376"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="458,589,465,583,481,558,488,534,489,510,487,485,485,461,487,436,495,410,513,385,539,369,542,373,516,389,499,413,492,437,490,460,492,485,494,510,493,535,486,561,469,586,462,593"/>
-<area shape="rect" id="Node000003" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="515,400,689,425"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="459,588,465,583,478,565,485,547,487,510,490,472,498,453,513,435,529,423,532,428,516,439,503,456,495,474,493,510,490,548,483,567,469,586,462,592"/>
-<area shape="rect" id="Node000004" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="555,449,649,475"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="458,588,465,583,475,571,482,559,488,534,494,509,501,496,513,484,532,472,554,465,555,470,535,477,516,488,505,499,499,511,493,535,487,561,480,574,468,587,461,593"/>
-<area shape="rect" id="Node000006" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="523,499,681,524"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="453,589,465,582,479,570,488,558,498,545,513,533,538,522,540,527,516,538,502,549,493,561,483,574,468,587,456,594"/>
-<area shape="rect" id="Node000007" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="523,548,681,573"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="462,592,548,571,549,576,463,597"/>
-<area shape="rect" id="Node000008" href="$classdisc_stimulus.html" title="single disc stimulus, inherits from baseStimulus DISCSTIMULUS single disc stimulus,..." alt="" coords="553,597,651,623"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="463,607,553,607,553,613,463,613"/>
-<area shape="rect" id="Node000009" href="$classdotline_stimulus.html" title="Show lines made of dots." alt="" coords="543,647,661,672"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="463,623,549,644,548,649,462,628"/>
-<area shape="rect" id="Node000010" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="551,696,653,721"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="428,628,468,655,516,681,552,694,550,699,514,686,466,660,425,633"/>
-<area shape="rect" id="Node000011" href="$classexample_stimulus.html" title=" " alt="" coords="539,745,665,771"/>
-<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="417,632,459,682,486,708,516,730,543,743,541,748,513,735,482,712,455,686,413,636"/>
-<area shape="rect" id="Node000012" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="525,795,679,820"/>
-<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="412,635,428,668,451,707,480,746,516,780,539,792,537,797,513,784,476,750,446,710,423,670,407,637"/>
-<area shape="rect" id="Node000013" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="547,844,657,869"/>
-<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="408,635,421,678,443,730,475,784,494,808,516,829,548,845,545,850,513,834,490,812,470,787,438,732,416,679,402,637"/>
-<area shape="rect" id="Node000014" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="543,893,661,919"/>
-<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="405,636,416,687,436,753,469,821,491,852,516,879,544,894,541,899,513,883,487,855,464,823,431,755,411,688,400,637"/>
-<area shape="rect" id="Node000015" href="$classimage_stimulus.html" title="Show images or directories full of images." alt="" coords="546,943,658,968"/>
-<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="403,636,411,696,430,775,444,817,463,857,487,895,516,928,530,938,547,945,545,950,528,943,513,932,483,898,459,860,440,819,425,777,406,697,398,637"/>
-<area shape="rect" id="Node000016" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="536,992,668,1017"/>
-<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="402,636,407,705,423,796,438,845,458,893,484,938,516,977,537,991,534,995,513,981,479,941,453,896,433,847,418,798,401,705,396,637"/>
-<area shape="rect" id="Node000017" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="546,1041,658,1067"/>
-<area shape="poly" id="edge17_Node000001_Node000017" title=" " alt="" coords="400,636,403,712,417,817,431,874,452,929,480,981,517,1027,530,1037,547,1044,545,1049,528,1042,513,1031,476,984,447,931,426,875,412,818,397,713,395,636"/>
-<area shape="rect" id="Node000018" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="547,1091,657,1116"/>
-<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="404,636,418,734,442,866,457,933,475,993,495,1043,517,1076,531,1087,548,1094,546,1099,528,1092,513,1080,490,1045,470,995,452,934,436,867,413,734,399,637"/>
-<area shape="rect" id="Node000019" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="551,5,653,31"/>
-<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="458,590,465,583,476,563,484,537,492,472,491,395,487,312,482,229,482,152,491,87,500,61,513,40,529,27,549,19,551,24,532,31,517,44,505,64,496,89,488,153,487,229,492,312,496,395,497,472,489,538,481,565,469,586,462,593"/>
-<area shape="rect" id="Node000020" href="$classpolar_board_stimulus.html" title="polar checkerboard stimulus, inherits from baseStimulus POLARBOARDSTIMULUS inherits from baseStimulus..." alt="" coords="531,55,673,80"/>
-<area shape="poly" id="edge20_Node000001_Node000020" title=" " alt="" coords="458,590,465,583,475,565,483,541,490,482,490,413,487,337,483,262,484,192,492,133,501,109,513,90,529,77,532,81,517,93,506,111,498,134,489,192,489,261,492,337,495,412,495,483,488,542,480,567,469,586,462,593"/>
-<area shape="rect" id="Node000021" href="$classpolar_grating_stimulus.html" title="polar grating stimulus, inherits from baseStimulus POLARGRATINGSTIMULUS inherits from baseStimulus Th..." alt="" coords="526,104,678,129"/>
-<area shape="poly" id="edge21_Node000001_Node000021" title=" " alt="" coords="458,590,465,583,484,554,496,526,503,498,505,471,499,416,486,361,473,307,467,252,470,224,478,196,492,168,513,139,526,127,530,132,517,142,497,170,483,198,476,225,473,252,478,306,491,360,504,415,510,470,508,499,501,528,488,557,469,586,462,593"/>
-<area shape="rect" id="Node000022" href="$classpupil_core_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="535,153,669,179"/>
-<area shape="poly" id="edge22_Node000001_Node000022" title=" " alt="" coords="458,589,465,583,482,558,493,532,499,508,501,483,497,435,486,386,475,338,471,289,474,264,482,239,494,214,513,188,534,173,537,177,517,192,499,216,487,241,479,265,477,289,480,337,491,385,502,434,507,483,504,509,498,534,486,560,469,586,462,593"/>
-<area shape="rect" id="Node000023" href="$classrevcor_stimulus.html" title="revcorStimulus stimulus, inherits from baseStimulus" alt="" coords="545,203,659,228"/>
-<area shape="poly" id="edge23_Node000001_Node000023" title=" " alt="" coords="458,589,465,583,480,561,490,539,498,496,495,453,486,411,478,368,475,325,485,282,496,260,513,237,527,226,544,218,546,223,530,230,517,241,501,263,490,284,480,326,483,368,491,410,500,453,503,496,495,541,484,563,469,586,462,593"/>
-<area shape="rect" id="Node000024" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="551,252,653,277"/>
-<area shape="poly" id="edge24_Node000001_Node000024" title=" " alt="" coords="458,589,465,583,487,545,495,509,493,472,486,436,480,399,479,362,488,325,513,287,530,274,550,266,552,271,533,278,517,290,493,327,484,363,485,399,492,435,498,472,500,509,492,547,469,586,462,593"/>
-<area shape="rect" id="Node000026" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="521,301,683,327"/>
-<area shape="poly" id="edge26_Node000001_Node000026" title=" " alt="" coords="459,589,465,583,484,552,491,521,491,491,487,461,483,430,483,399,491,368,513,336,528,325,531,329,517,340,496,370,488,400,488,429,492,460,496,491,497,522,489,554,469,586,463,592"/>
-<area shape="rect" id="Node000005" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="739,449,822,475"/>
-<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="663,459,739,459,739,465,663,465"/>
-<area shape="rect" id="Node000025" href="$classcolour_test.html" title="colour test is a simple RGB colour blender for teaching" alt="" coords="737,252,824,277"/>
-<area shape="poly" id="edge25_Node000024_Node000025" title=" " alt="" coords="666,262,737,262,737,267,666,267"/>
-<area shape="rect" id="Node000047" title=" " alt="" coords="5,1831,69,1856"/>
-<area shape="rect" id="Node000048" href="$classarduino_i_o_port.html" title="arduinoIOPort &#45; modified legacy ardino interface using PTB IOPort interface for serial communication ..." alt="" coords="143,1683,254,1708"/>
-<area shape="poly" id="edge28_Node000047_Node000048" title=" " alt="" coords="46,1817,73,1767,92,1741,116,1719,142,1704,144,1709,119,1723,96,1744,77,1770,51,1819"/>
-<area shape="rect" id="Node000049" href="$classarduino_serial.html" title=" " alt="" coords="147,1732,250,1757"/>
-<area shape="poly" id="edge29_Node000047_Node000049" title=" " alt="" coords="56,1819,83,1792,116,1768,146,1754,148,1759,119,1772,86,1796,60,1822"/>
-<area shape="rect" id="Node000050" href="$classarduino_serial_port.html" title=" " alt="" coords="133,1781,264,1807"/>
-<area shape="poly" id="edge30_Node000047_Node000050" title=" " alt="" coords="82,1827,155,1804,157,1809,83,1832"/>
-<area shape="rect" id="Node000051" href="$classcalibrate_luminance.html" title="calibrateLuminance: automatic luminance calibration" alt="" coords="128,1831,269,1856"/>
-<area shape="poly" id="edge31_Node000047_Node000051" title=" " alt="" coords="83,1841,128,1841,128,1846,83,1846"/>
-<area shape="rect" id="Node000052" href="$classdata_connection.html" title="dataConnection Connects and manages a socket connection" alt="" coords="139,1880,258,1905"/>
-<area shape="poly" id="edge32_Node000047_Node000052" title=" " alt="" coords="83,1855,118,1866,155,1877,154,1883,117,1871,82,1860"/>
-<area shape="rect" id="Node000044" href="$classeyetracker_smooth.html" title="Smoothes incoming eye sample data." alt="" coords="329,1263,465,1288"/>
-<area shape="poly" id="edge33_Node000047_Node000044" title=" " alt="" coords="38,1816,44,1774,58,1721,80,1667,96,1642,116,1620,137,1605,158,1597,200,1595,241,1592,259,1584,278,1568,299,1535,308,1502,307,1469,302,1436,297,1403,296,1369,304,1334,326,1299,342,1286,346,1290,330,1302,309,1336,302,1370,302,1403,307,1436,312,1469,313,1503,304,1537,282,1572,262,1589,242,1597,201,1600,159,1602,139,1609,119,1624,101,1645,85,1670,63,1723,50,1775,43,1817"/>
-<area shape="rect" id="Node000053" href="$classlab_jack.html" title="LABJACK Connects and manages a LabJack U3 / U6." alt="" coords="167,1929,231,1955"/>
-<area shape="poly" id="edge37_Node000047_Node000053" title=" " alt="" coords="60,1865,86,1892,119,1916,143,1927,167,1934,166,1939,141,1932,116,1920,83,1896,56,1869"/>
-<area shape="rect" id="Node000054" href="$classlab_jack_t.html" title="LABJACKT Connects and manages a LabJack T4 / T7 This class handles digital I/O and analog I/O and ana..." alt="" coords="163,1979,234,2004"/>
-<area shape="poly" id="edge38_Node000047_Node000054" title=" " alt="" coords="51,1868,77,1918,96,1943,119,1965,140,1977,164,1984,162,1989,138,1982,116,1969,92,1947,73,1921,46,1870"/>
-<area shape="rect" id="Node000027" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="151,1633,246,1659"/>
-<area shape="poly" id="edge39_Node000047_Node000027" title=" " alt="" coords="41,1817,50,1783,65,1744,86,1704,116,1669,132,1658,150,1651,152,1656,135,1663,119,1673,91,1707,69,1746,55,1785,46,1818"/>
-<area shape="rect" id="Node000055" href="$classopx_online.html" title="opxOnline Provides an interface between Opticka and the Plexon for online data display" alt="" coords="156,2028,241,2053"/>
-<area shape="poly" id="edge71_Node000047_Node000055" title=" " alt="" coords="46,1869,55,1902,69,1942,90,1981,119,2015,137,2026,157,2033,155,2038,134,2031,116,2019,86,1984,64,1944,50,1904,41,1870"/>
-<area shape="rect" id="Node000056" href="$classparse_opx_spikes.html" title=" " alt="" coords="138,2077,259,2103"/>
-<area shape="poly" id="edge72_Node000047_Node000056" title=" " alt="" coords="43,1869,49,1912,62,1964,85,2018,100,2042,119,2064,139,2077,136,2081,116,2068,96,2046,80,2020,57,1966,44,1913,38,1870"/>
-<area shape="rect" id="Node000057" href="$classsend_serial_i_o_port.html" title=" " alt="" coords="135,2127,263,2152"/>
-<area shape="poly" id="edge73_Node000047_Node000057" title=" " alt="" coords="41,1870,44,1921,55,1986,65,2021,79,2054,97,2086,119,2113,136,2125,133,2130,116,2117,92,2089,74,2057,60,2023,50,1988,39,1922,36,1870"/>
-<area shape="rect" id="Node000058" href="$classtemp_controller.html" title=" " alt="" coords="140,2176,257,2201"/>
-<area shape="poly" id="edge74_Node000047_Node000058" title=" " alt="" coords="44,1869,54,1938,70,2026,92,2109,105,2141,119,2163,141,2177,138,2182,115,2167,100,2144,87,2111,65,2027,49,1939,39,1870"/>
-<area shape="rect" id="Node000059" href="$classtitta_adv_image_stimulus.html" title=" " alt="" coords="117,2225,280,2251"/>
-<area shape="poly" id="edge75_Node000047_Node000059" title=" " alt="" coords="43,1870,52,1948,67,2051,89,2149,103,2187,119,2212,134,2223,130,2227,115,2216,98,2189,84,2150,61,2052,46,1949,38,1870"/>
-<area shape="rect" id="Node000060" href="$classtitta_adv_movie_stimulus.html" title=" " alt="" coords="118,1433,279,1459"/>
-<area shape="poly" id="edge76_Node000047_Node000060" title=" " alt="" coords="38,1816,46,1737,62,1634,84,1535,99,1497,115,1470,132,1457,136,1461,119,1473,103,1499,89,1537,67,1635,52,1738,44,1817"/>
-<area shape="rect" id="Node000061" href="$classtitta_cal_stimulus.html" title=" " alt="" coords="140,1483,257,1508"/>
-<area shape="poly" id="edge77_Node000047_Node000061" title=" " alt="" coords="39,1817,49,1747,65,1659,87,1575,100,1542,115,1519,138,1503,141,1508,119,1523,105,1544,92,1576,70,1660,54,1748,44,1817"/>
-<area shape="rect" id="Node000062" href="$classuser_functions.html" title="Customised user functions for a task run." alt="" coords="144,1532,253,1557"/>
-<area shape="poly" id="edge78_Node000047_Node000062" title=" " alt="" coords="36,1817,41,1767,53,1702,76,1635,94,1603,115,1575,144,1555,147,1560,119,1579,98,1606,81,1637,58,1704,46,1767,42,1817"/>
-<area shape="rect" id="Node000043" href="$classi_rec_manager.html" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="551,1492,653,1517"/>
-<area shape="poly" id="edge34_Node000044_Node000043" title=" " alt="" coords="462,1293,469,1299,482,1314,490,1330,497,1359,502,1390,517,1423,550,1461,584,1490,581,1494,547,1465,512,1426,497,1391,491,1360,485,1332,477,1317,465,1303,459,1297"/>
-<area shape="rect" id="Node000045" href="$classpupil_core_manager.html" title="Manages the Pupil Labs Core." alt="" coords="533,1652,671,1677"/>
-<area shape="poly" id="edge35_Node000044_Node000045" title=" " alt="" coords="464,1294,469,1299,489,1328,500,1356,504,1382,504,1409,503,1464,507,1495,517,1529,535,1565,555,1599,592,1650,588,1653,551,1602,530,1568,512,1531,501,1496,497,1465,499,1409,499,1383,495,1357,484,1330,465,1302,460,1298"/>
-<area shape="rect" id="Node000046" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="549,1923,655,1948"/>
-<area shape="poly" id="edge36_Node000044_Node000046" title=" " alt="" coords="465,1294,469,1299,486,1333,497,1378,503,1431,506,1489,509,1603,512,1651,517,1689,537,1759,560,1826,597,1921,593,1923,555,1828,532,1761,512,1691,506,1652,504,1603,501,1489,498,1432,492,1379,481,1334,464,1302,461,1298"/>
-<area shape="poly" id="edge50_Node000027_Node000001" title=" " alt="" coords="229,1623,256,1599,278,1569,332,1134,392,622,397,623,337,1135,282,1571,260,1603,233,1627"/>
-<area shape="poly" id="edge69_Node000027_Node000073" title=" " alt="" coords="230,1623,257,1599,278,1569,285,1543,290,1502,295,1386,294,1073,293,909,297,762,306,648,315,608,326,583,341,570,344,574,330,586,320,610,312,649,302,762,299,909,299,1073,300,1386,295,1503,290,1544,282,1571,261,1603,233,1627"/>
-<area shape="rect" id="Node000028" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="348,1213,447,1239"/>
-<area shape="poly" id="edge40_Node000027_Node000028" title=" " alt="" coords="229,1623,255,1599,278,1569,295,1524,300,1482,298,1443,292,1405,288,1368,289,1330,300,1291,326,1250,346,1234,349,1239,330,1253,305,1293,294,1331,293,1367,298,1404,303,1442,305,1482,300,1525,282,1571,259,1603,232,1627"/>
-<area shape="rect" id="Node000035" href="$classanimation_manager.html" title="ANIMATIONMANAGER Provides per frame paths for stimuli We integrate dyn4j java physics engine for rigi..." alt="" coords="328,1756,467,1781"/>
-<area shape="poly" id="edge47_Node000027_Node000035" title=" " alt="" coords="260,1657,282,1669,299,1688,307,1707,314,1725,330,1743,348,1754,346,1758,326,1747,310,1728,302,1709,294,1691,278,1673,258,1662"/>
-<area shape="rect" id="Node000036" href="$classarduino_manager.html" title="Arduino Manager &gt; Connects and manages arduino communication. By default it connects using arduinoIOP..." alt="" coords="335,1805,460,1831"/>
-<area shape="poly" id="edge48_Node000027_Node000036" title=" " alt="" coords="260,1655,282,1669,295,1685,302,1701,307,1732,311,1763,318,1777,330,1792,346,1803,343,1807,326,1796,313,1780,306,1764,302,1733,297,1702,290,1688,278,1673,257,1660"/>
-<area shape="rect" id="Node000037" href="$classaudio_manager.html" title=" " alt="" coords="341,1855,453,1880"/>
-<area shape="poly" id="edge49_Node000027_Node000037" title=" " alt="" coords="260,1655,282,1669,298,1691,306,1714,307,1757,308,1800,315,1820,330,1841,345,1852,341,1857,326,1845,310,1823,303,1800,302,1757,301,1715,293,1694,278,1673,257,1659"/>
-<area shape="rect" id="Node000038" href="$classcolour_manager.html" title="colourManager manages colours wrapping the CRS Color Toolbox" alt="" coords="339,1904,456,1929"/>
-<area shape="poly" id="edge51_Node000027_Node000038" title=" " alt="" coords="260,1654,282,1669,301,1698,309,1726,310,1754,307,1782,304,1809,305,1836,312,1863,330,1891,344,1902,341,1906,326,1894,307,1866,299,1837,299,1809,302,1781,305,1754,304,1727,296,1700,278,1673,257,1659"/>
-<area shape="rect" id="Node000039" href="$classd_pixx_manager.html" title="DataPixx Communication Class." alt="" coords="342,1953,453,1979"/>
-<area shape="poly" id="edge52_Node000027_Node000039" title=" " alt="" coords="261,1654,282,1669,304,1704,313,1739,312,1773,307,1807,302,1840,301,1873,309,1906,330,1940,344,1951,340,1955,326,1944,304,1908,296,1874,297,1839,302,1806,307,1773,308,1740,299,1707,278,1673,258,1659"/>
-<area shape="rect" id="Node000040" href="$classeye_occluder.html" title=" " alt="" coords="348,2003,447,2028"/>
-<area shape="poly" id="edge53_Node000027_Node000040" title=" " alt="" coords="261,1654,282,1669,297,1690,308,1711,317,1752,315,1792,307,1831,300,1871,298,1910,306,1949,316,1969,330,1989,349,2004,346,2008,326,1993,311,1972,301,1951,292,1910,295,1870,302,1830,309,1791,311,1752,303,1713,293,1693,278,1673,257,1658"/>
-<area shape="rect" id="Node000041" href="$classeyetracker_core.html" title=" " alt="" coords="339,2052,456,2077"/>
-<area shape="poly" id="edge54_Node000027_Node000041" title=" " alt="" coords="261,1654,282,1669,299,1694,311,1717,318,1741,320,1764,317,1810,307,1856,298,1901,294,1946,297,1969,303,1992,314,2015,330,2039,343,2050,339,2054,326,2042,309,2018,298,1994,291,1970,289,1947,292,1900,302,1855,312,1810,315,1765,312,1742,306,1719,295,1696,278,1673,258,1658"/>
-<area shape="rect" id="Node000063" href="$classio_manager.html" title="Input Output manager, currently just a dummy class." alt="" coords="353,2101,442,2127"/>
-<area shape="poly" id="edge59_Node000027_Node000063" title=" " alt="" coords="261,1654,282,1669,301,1697,314,1724,321,1751,324,1777,319,1829,307,1881,296,1932,291,1983,293,2009,300,2035,312,2061,330,2088,341,2098,354,2104,351,2109,338,2102,326,2092,307,2064,295,2037,288,2010,285,1983,290,1931,302,1879,314,1828,319,1777,316,1752,309,1726,297,1700,278,1673,258,1658"/>
-<area shape="rect" id="Node000064" href="$classmagstim_manager.html" title="magstimManager &#45; controls a MagStim Rapid TMS system using a LabJack" alt="" coords="332,2151,463,2176"/>
-<area shape="poly" id="edge60_Node000027_Node000064" title=" " alt="" coords="261,1654,282,1669,303,1700,317,1730,325,1760,328,1790,322,1848,308,1905,293,1962,287,2020,289,2049,297,2078,310,2107,330,2138,343,2148,339,2153,326,2141,305,2110,292,2080,284,2049,282,2020,288,1961,302,1904,316,1847,322,1790,320,1761,312,1732,299,1703,278,1673,257,1658"/>
-<area shape="rect" id="Node000065" href="$classmeta_stimulus.html" title="Manager for multiple stimuli." alt="" coords="344,1312,451,1337"/>
-<area shape="poly" id="edge61_Node000027_Node000065" title=" " alt="" coords="257,1629,278,1612,298,1579,306,1546,306,1514,301,1482,296,1450,296,1417,305,1383,326,1348,342,1335,346,1339,330,1352,310,1385,301,1417,302,1449,306,1481,311,1514,311,1547,303,1581,282,1616,260,1633"/>
-<area shape="rect" id="Node000066" href="$classnir_smart_manager.html" title="Input Output manager, currently just a dummy class." alt="" coords="331,1361,463,1387"/>
-<area shape="poly" id="edge62_Node000027_Node000066" title=" " alt="" coords="257,1628,278,1612,295,1585,303,1559,303,1533,301,1507,299,1480,300,1453,308,1426,326,1398,343,1385,346,1389,330,1401,313,1428,305,1454,304,1480,306,1506,309,1533,308,1560,300,1588,282,1616,260,1633"/>
-<area shape="rect" id="Node000067" href="$classopticka.html" title="GUI Manager for runExperiment() class." alt="" coords="364,1411,431,1436"/>
-<area shape="poly" id="edge63_Node000027_Node000067" title=" " alt="" coords="257,1628,278,1612,292,1592,299,1572,301,1531,303,1490,311,1468,326,1447,343,1434,363,1426,365,1431,346,1439,330,1451,315,1471,308,1491,306,1531,304,1573,297,1594,282,1616,261,1632"/>
-<area shape="rect" id="Node000068" href="$classplusplus_manager.html" title="Display++ Communication Class." alt="" coords="333,1460,461,1485"/>
-<area shape="poly" id="edge64_Node000027_Node000068" title=" " alt="" coords="257,1627,278,1612,290,1598,296,1584,301,1555,307,1526,314,1511,326,1496,345,1483,348,1488,330,1500,318,1514,312,1528,306,1556,301,1586,294,1601,282,1616,260,1631"/>
-<area shape="rect" id="Node000069" href="$classplx_reader.html" title=" " alt="" coords="355,1509,440,1535"/>
-<area shape="poly" id="edge65_Node000027_Node000069" title=" " alt="" coords="256,1625,278,1612,293,1596,302,1579,310,1562,326,1545,353,1531,356,1535,330,1549,314,1565,306,1582,298,1599,282,1616,259,1630"/>
-<area shape="rect" id="Node000070" href="$classrun_experiment.html" title="The main experiment manager." alt="" coords="339,1559,455,1584"/>
-<area shape="poly" id="edge66_Node000027_Node000070" title=" " alt="" coords="244,1626,327,1594,361,1582,363,1587,329,1599,246,1631"/>
-<area shape="rect" id="Node000071" href="$classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen" alt="" coords="338,1608,457,1633"/>
-<area shape="poly" id="edge67_Node000027_Node000071" title=" " alt="" coords="259,1636,338,1626,338,1631,260,1641"/>
-<area shape="rect" id="Node000072" href="$classstate_machine.html" title="run a task via a series of states." alt="" coords="345,1657,450,1683"/>
-<area shape="poly" id="edge68_Node000027_Node000072" title=" " alt="" coords="260,1651,345,1661,344,1666,259,1656"/>
-<area shape="rect" id="Node000074" href="$classtouch_manager.html" title="Manages touch screens (wraps the PTB TouchQueue* functions), and provides touch area management metho..." alt="" coords="341,1707,454,1732"/>
-<area shape="poly" id="edge70_Node000027_Node000074" title=" " alt="" coords="258,1660,281,1669,329,1693,358,1704,356,1709,327,1698,279,1674,256,1665"/>
-<area shape="rect" id="Node000029" href="$class_l_f_p_analysis.html" title=" " alt="" coords="556,1288,648,1313"/>
-<area shape="poly" id="edge41_Node000028_Node000029" title=" " alt="" coords="449,1241,468,1249,516,1274,557,1288,555,1293,514,1279,466,1254,447,1246"/>
-<area shape="rect" id="Node000030" href="$class_l_f_p_meta.html" title=" " alt="" coords="564,1337,640,1363"/>
-<area shape="poly" id="edge42_Node000028_Node000030" title=" " alt="" coords="459,1243,468,1249,485,1269,493,1288,500,1306,516,1324,539,1336,564,1343,563,1348,537,1341,513,1328,496,1309,488,1290,480,1272,465,1253,456,1247"/>
-<area shape="rect" id="Node000031" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="545,1387,659,1412"/>
-<area shape="poly" id="edge43_Node000028_Node000031" title=" " alt="" coords="460,1243,469,1249,481,1266,488,1282,493,1314,497,1344,504,1359,516,1373,546,1389,543,1394,513,1377,500,1362,492,1346,487,1314,483,1283,477,1268,465,1253,457,1247"/>
-<area shape="rect" id="Node000032" href="$classi_rec_analysis.html" title="iRecAnalysis offers a set of methods to load, parse &amp; plot raw CSV files. It understands opticka tria..." alt="" coords="554,1140,650,1165"/>
-<area shape="poly" id="edge44_Node000028_Node000032" title=" " alt="" coords="437,1205,514,1174,553,1162,555,1167,516,1179,439,1210"/>
-<area shape="rect" id="Node000033" href="$classspike_analysis.html" title=" " alt="" coords="551,1189,653,1215"/>
-<area shape="poly" id="edge45_Node000028_Node000033" title=" " alt="" coords="460,1216,550,1205,551,1211,461,1221"/>
-<area shape="rect" id="Node000034" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="553,1239,651,1264"/>
-<area shape="poly" id="edge46_Node000028_Node000034" title=" " alt="" coords="461,1231,553,1243,552,1248,460,1236"/>
-<area shape="poly" id="edge56_Node000041_Node000043" title=" " alt="" coords="462,2042,464,2039,481,2006,491,1960,496,1905,498,1846,500,1729,504,1679,512,1640,529,1602,550,1568,588,1516,592,1519,554,1571,534,1605,517,1641,509,1680,505,1729,503,1846,501,1906,496,1961,486,2008,469,2042,466,2045"/>
-<area shape="poly" id="edge57_Node000041_Node000045" title=" " alt="" coords="460,2043,464,2039,594,1677,599,1678,469,2042,464,2047"/>
-<area shape="poly" id="edge58_Node000041_Node000046" title=" " alt="" coords="453,2044,465,2038,501,2016,535,1990,586,1946,589,1950,539,1994,504,2020,468,2043,455,2049"/>
-<area shape="rect" id="Node000042" href="$classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods..." alt="" coords="541,2052,663,2077"/>
-<area shape="poly" id="edge55_Node000041_Node000042" title=" " alt="" coords="469,2062,541,2062,541,2067,469,2067"/>
+<area shape="rect" id="Node000000" title=" " alt="" coords="149,572,257,597"/>
+<area shape="rect" id="Node000001" href="$classbase_stimulus.html" title="baseStimulus is the superclass for all stimulus objects" alt="" coords="354,572,457,597"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="270,582,354,582,354,587,270,587"/>
+<area shape="rect" id="Node000086" href="$classtask_sequence.html" title="Block&#45;based variable randomisation manager." alt="" coords="351,523,459,548"/>
+<area shape="poly" id="edge28_Node000000_Node000086" title=" " alt="" coords="268,566,352,545,353,551,269,571"/>
+<area shape="rect" id="Node000002" href="$classannulus_stimulus.html" title="annulusStimulus TODO" alt="" coords="549,301,671,327"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="467,564,473,559,491,531,498,504,498,476,495,449,492,421,493,393,501,364,521,336,547,319,550,324,525,340,506,367,498,394,497,421,500,448,504,476,503,505,496,533,477,562,470,568"/>
+<area shape="rect" id="Node000003" href="$classapparent_motion_stimulus.html" title="apparentMotionStimulus, inherits from baseStimulus" alt="" coords="523,351,697,376"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="467,564,473,559,488,538,495,516,495,473,496,430,504,407,521,385,537,374,540,378,525,389,509,410,502,431,501,473,500,517,492,540,477,562,470,568"/>
+<area shape="rect" id="Node000004" href="$classapril_tag_stimulus.html" title="Texture&#45;backed binary checkerboard / AprilTag&#45;style stimulus." alt="" coords="549,400,671,425"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="467,564,473,559,485,544,491,529,496,498,500,466,508,450,521,435,547,419,550,424,524,439,512,453,505,468,501,498,496,530,489,547,477,563,470,568"/>
+<area shape="rect" id="Node000005" href="$classbar_stimulus.html" title="barStimulus single bar stimulus, inherits from baseStimulus" alt="" coords="563,449,657,475"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="466,563,473,559,488,541,496,522,504,503,521,484,541,473,562,466,563,471,543,478,524,488,508,506,501,524,493,543,476,563,469,568"/>
+<area shape="rect" id="Node000007" href="$classcheckerboard_stimulus.html" title="checkerBoardStimulus – using a GLSL shader to make the checkerboard" alt="" coords="531,499,689,524"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="458,565,474,558,522,533,555,522,557,527,524,538,476,563,460,570"/>
+<area shape="rect" id="Node000008" href="$classcolour_grating_stimulus.html" title="colour grating stimulus, inherits from baseStimulus COLOURGRATINGSTIMULUS colour grating stimulus,..." alt="" coords="531,548,689,573"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="470,574,530,567,531,573,471,580"/>
+<area shape="rect" id="Node000009" href="$classdisc_stimulus.html" title="procedural disc stimulus, inherits from baseStimulus DISCSTIMULUS procedural disc stimulus,..." alt="" coords="561,597,659,623"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="471,590,562,601,561,607,470,595"/>
+<area shape="rect" id="Node000010" href="$classdotline_stimulus.html" title="Show lines made of dots." alt="" coords="551,647,669,672"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="457,600,476,608,524,633,557,644,555,649,522,638,474,612,455,605"/>
+<area shape="rect" id="Node000011" href="$classdots_stimulus.html" title="dotsStimulus simple variable coherence dots stimulus, inherits from baseStimulus" alt="" coords="559,696,661,721"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="467,601,476,608,493,627,501,647,508,665,524,683,541,692,560,699,558,704,539,697,521,687,504,668,496,649,488,630,473,612,464,606"/>
+<area shape="rect" id="Node000012" href="$classexample_stimulus.html" title=" " alt="" coords="547,745,673,771"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="470,603,477,608,489,624,496,641,501,672,505,703,512,718,524,732,548,746,545,750,521,736,508,720,500,704,495,673,491,642,485,627,473,612,467,607"/>
+<area shape="rect" id="Node000013" href="$classfixation_cross_stimulus.html" title="draw fixation cross from Thaler L, Schütz AC, Goodale MA, &amp; Gegenfurtner KR (2013) &quot;What is the best ..." alt="" coords="533,795,687,820"/>
+<area shape="poly" id="edge13_Node000001_Node000013" title=" " alt="" coords="470,602,477,608,492,631,500,654,500,697,502,740,509,761,525,781,540,792,537,797,521,785,504,763,496,741,495,698,494,654,488,633,473,612,467,606"/>
+<area shape="rect" id="Node000014" href="$classgabor_stimulus.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="555,844,665,869"/>
+<area shape="poly" id="edge14_Node000001_Node000014" title=" " alt="" coords="470,602,477,608,495,637,503,666,503,695,500,723,497,750,498,777,506,804,525,831,539,841,555,848,553,853,536,846,521,835,501,806,493,778,492,750,495,722,498,695,498,667,490,640,473,612,466,606"/>
+<area shape="rect" id="Node000015" href="$classgrating_stimulus.html" title="single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,..." alt="" coords="551,893,669,919"/>
+<area shape="poly" id="edge15_Node000001_Node000015" title=" " alt="" coords="470,602,477,608,498,644,506,679,505,714,500,748,495,781,494,814,503,847,525,880,537,890,552,897,549,902,534,895,521,884,498,849,489,815,489,781,495,747,500,713,501,680,493,646,473,612,466,605"/>
+<area shape="rect" id="Node000016" href="$classimage_stimulus.html" title="Show images or directories full of images." alt="" coords="554,943,666,968"/>
+<area shape="poly" id="edge16_Node000001_Node000016" title=" " alt="" coords="470,602,477,608,491,630,501,651,510,692,507,733,500,773,492,812,490,851,499,890,510,910,525,929,538,940,555,947,553,952,536,945,521,933,505,913,494,892,485,851,487,811,494,772,502,732,504,692,496,652,487,632,473,612,466,605"/>
+<area shape="rect" id="Node000017" href="$classlog_gabor_stimulus.html" title="logGaborStimulus: orientation &amp; SF band&#45;pass limited filter" alt="" coords="544,992,676,1017"/>
+<area shape="poly" id="edge17_Node000001_Node000017" title=" " alt="" coords="470,602,477,608,493,633,504,657,511,681,513,705,509,752,499,798,490,843,486,888,489,910,496,933,508,956,525,979,545,993,542,998,521,983,503,959,491,935,484,912,481,888,484,842,494,796,504,751,508,705,506,682,499,659,489,636,473,612,466,605"/>
+<area shape="rect" id="Node000018" href="$classmovie_stimulus.html" title="movieStimulus is the class for movie based stimulus objects" alt="" coords="554,1041,666,1067"/>
+<area shape="poly" id="edge18_Node000001_Node000018" title=" " alt="" coords="470,601,477,608,495,636,507,664,514,691,517,718,511,771,499,822,487,874,483,925,485,950,493,976,506,1002,525,1028,538,1039,555,1046,553,1051,535,1044,521,1032,501,1005,488,978,480,951,477,925,482,873,494,821,506,770,511,718,509,692,502,666,491,639,473,612,466,605"/>
+<area shape="rect" id="Node000019" href="$classndots_stimulus.html" title="ndotsStimulus limited lifetime coherence dots stimulus" alt="" coords="555,1091,665,1116"/>
+<area shape="poly" id="edge19_Node000001_Node000019" title=" " alt="" coords="470,601,477,608,497,640,511,670,518,701,520,731,513,790,499,847,485,905,479,962,482,990,490,1019,504,1048,525,1078,539,1089,556,1096,554,1101,536,1094,521,1081,499,1051,485,1021,476,991,474,962,479,904,493,846,508,789,515,731,512,702,505,672,493,642,473,612,466,605"/>
+<area shape="rect" id="Node000020" href="$classplaid_stimulus.html" title="plaidStimulus TODO" alt="" coords="559,1140,661,1165"/>
+<area shape="poly" id="edge20_Node000001_Node000020" title=" " alt="" coords="470,601,477,608,488,629,496,654,504,717,504,791,500,871,496,950,496,1023,505,1084,513,1108,525,1127,540,1139,559,1146,557,1151,537,1144,521,1130,508,1110,500,1085,491,1023,491,950,495,870,499,791,499,717,491,656,484,631,473,612,466,605"/>
+<area shape="rect" id="Node000021" href="$classpolar_board_stimulus.html" title="polar checkerboard stimulus, inherits from baseStimulus POLARBOARDSTIMULUS inherits from baseStimulus..." alt="" coords="539,5,681,31"/>
+<area shape="poly" id="edge21_Node000001_Node000021" title=" " alt="" coords="466,565,473,559,484,540,492,515,499,453,499,380,495,301,491,221,491,148,500,85,508,60,521,40,537,27,540,31,525,44,513,63,505,87,497,148,496,221,500,300,504,380,504,454,497,516,489,542,477,562,470,569"/>
+<area shape="rect" id="Node000022" href="$classpolar_grating_stimulus.html" title="polar grating stimulus, inherits from baseStimulus POLARGRATINGSTIMULUS inherits from baseStimulus Th..." alt="" coords="534,55,686,80"/>
+<area shape="poly" id="edge22_Node000001_Node000022" title=" " alt="" coords="466,565,473,559,493,529,506,499,513,469,515,440,509,383,494,325,480,267,474,209,477,180,485,150,499,120,521,90,534,78,538,82,525,93,504,123,490,152,482,181,479,209,485,266,499,324,514,382,521,440,518,470,511,501,497,531,477,562,470,569"/>
+<area shape="rect" id="Node000023" href="$classpupil_core_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="543,104,677,129"/>
+<area shape="poly" id="edge23_Node000001_Node000023" title=" " alt="" coords="466,565,473,559,491,532,503,505,509,479,512,453,507,401,494,350,482,298,478,246,480,219,488,193,501,166,521,139,542,124,545,128,525,143,506,169,493,195,486,220,483,246,487,297,499,349,512,400,517,453,515,480,508,507,495,535,477,562,470,569"/>
+<area shape="rect" id="Node000024" href="$classrevcor_stimulus.html" title="revcorStimulus stimulus, inherits from baseStimulus" alt="" coords="553,153,667,179"/>
+<area shape="poly" id="edge24_Node000001_Node000024" title=" " alt="" coords="466,565,473,559,489,535,500,512,506,489,508,466,504,420,494,375,485,329,481,283,484,259,491,236,503,212,521,188,535,176,552,169,554,174,538,181,525,192,508,215,496,238,489,260,487,283,490,328,500,373,510,419,514,466,511,490,505,514,494,538,477,562,470,569"/>
+<area shape="rect" id="Node000025" href="$classspot_stimulus.html" title="single disc stimulus, inherits from baseStimulus SPOTSTIMULUS single spot stimulus,..." alt="" coords="559,203,661,228"/>
+<area shape="poly" id="edge25_Node000001_Node000025" title=" " alt="" coords="466,565,473,559,487,539,497,518,505,479,502,439,495,399,487,360,485,319,494,279,505,258,521,237,538,224,558,217,560,222,541,229,525,241,510,261,499,281,490,320,492,359,500,398,508,438,510,479,502,520,492,541,477,562,470,569"/>
+<area shape="rect" id="Node000027" href="$classtarget_inducer_stimulus.html" title="target inducer stimulus, inherits from baseStimulus" alt="" coords="529,252,691,277"/>
+<area shape="poly" id="edge27_Node000001_Node000027" title=" " alt="" coords="466,565,473,559,494,525,501,491,500,458,495,424,490,390,489,356,498,322,521,287,535,275,538,280,525,290,503,324,494,357,495,390,500,423,506,457,507,492,499,527,477,562,470,569"/>
+<area shape="rect" id="Node000006" href="$classrf_mapper.html" title="receptive field mapper rfMapper is a mouse driven receptive field mapper, using various keyboard comm..." alt="" coords="747,449,830,475"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="671,459,747,459,747,465,671,465"/>
+<area shape="rect" id="Node000026" href="$classcolour_test.html" title="colour test is a simple RGB colour blender for teaching" alt="" coords="745,203,832,228"/>
+<area shape="poly" id="edge26_Node000025_Node000026" title=" " alt="" coords="674,213,745,213,745,218,674,218"/>
+<area shape="rect" id="Node000040" title=" " alt="" coords="5,1460,69,1485"/>
+<area shape="rect" id="Node000041" href="$class_h_e_d_tagger.html" title=" " alt="" coords="157,1164,248,1189"/>
+<area shape="poly" id="edge29_Node000040_Node000041" title=" " alt="" coords="36,1446,39,1395,50,1329,60,1294,74,1260,92,1228,116,1200,135,1187,156,1179,158,1184,137,1191,119,1204,97,1231,79,1263,66,1296,56,1330,44,1395,41,1447"/>
+<area shape="rect" id="Node000042" href="$classarduino_i_o_port.html" title="arduinoIOPort &#45; modified legacy ardino interface using PTB IOPort interface for serial communication ..." alt="" coords="147,1213,258,1239"/>
+<area shape="poly" id="edge30_Node000040_Node000042" title=" " alt="" coords="38,1445,44,1403,57,1350,80,1296,96,1271,116,1249,130,1239,146,1232,148,1237,133,1244,119,1253,100,1275,85,1299,62,1352,49,1404,43,1446"/>
+<area shape="rect" id="Node000043" href="$classarduino_serial.html" title=" " alt="" coords="151,1263,254,1288"/>
+<area shape="poly" id="edge31_Node000040_Node000043" title=" " alt="" coords="41,1446,50,1412,64,1373,86,1333,116,1299,132,1288,150,1281,152,1285,135,1292,119,1303,90,1336,69,1375,55,1414,46,1447"/>
+<area shape="rect" id="Node000044" href="$classarduino_serial_port.html" title=" " alt="" coords="137,1312,268,1337"/>
+<area shape="poly" id="edge32_Node000040_Node000044" title=" " alt="" coords="46,1446,73,1396,92,1370,116,1348,139,1335,141,1340,119,1352,96,1374,77,1399,51,1448"/>
+<area shape="rect" id="Node000045" href="$classaws_manager.html" title=" " alt="" coords="152,1361,253,1387"/>
+<area shape="poly" id="edge33_Node000040_Node000045" title=" " alt="" coords="56,1448,83,1421,116,1397,151,1382,153,1387,119,1402,86,1425,60,1452"/>
+<area shape="rect" id="Node000046" href="$classcalibrate_luminance.html" title="calibrateLuminance: automatic luminance calibration" alt="" coords="132,1411,273,1436"/>
+<area shape="poly" id="edge34_Node000040_Node000046" title=" " alt="" coords="82,1457,117,1446,158,1434,160,1439,118,1451,83,1462"/>
+<area shape="rect" id="Node000047" href="$classdata_connection.html" title="dataConnection Connects and manages a socket connection" alt="" coords="143,1460,262,1485"/>
+<area shape="poly" id="edge35_Node000040_Node000047" title=" " alt="" coords="83,1470,143,1470,143,1475,83,1475"/>
+<area shape="rect" id="Node000048" href="$classeyetracker_smooth.html" title="Smoothes incoming eye sample data." alt="" coords="337,1904,473,1929"/>
+<area shape="poly" id="edge36_Node000040_Node000048" title=" " alt="" coords="83,1484,118,1495,169,1505,212,1508,232,1511,251,1517,271,1529,290,1548,306,1570,317,1593,327,1636,324,1679,316,1721,307,1763,304,1805,313,1848,323,1869,338,1891,351,1902,347,1906,334,1894,318,1872,308,1849,299,1806,302,1762,310,1720,319,1678,321,1636,312,1594,302,1573,286,1552,267,1534,249,1522,231,1516,211,1513,168,1510,117,1501,82,1489"/>
+<area shape="rect" id="Node000054" href="$classget_density.html" title=" " alt="" coords="157,1561,248,1587"/>
+<area shape="poly" id="edge40_Node000040_Node000054" title=" " alt="" coords="62,1493,88,1517,119,1540,160,1559,158,1564,116,1544,85,1521,58,1497"/>
+<area shape="rect" id="Node000055" href="$classlab_jack.html" title="LABJACK Connects and manages a LabJack U3 / U6." alt="" coords="171,1611,235,1636"/>
+<area shape="poly" id="edge41_Node000040_Node000055" title=" " alt="" coords="50,1497,76,1548,96,1575,119,1597,144,1610,171,1617,170,1623,142,1615,116,1602,92,1578,72,1551,46,1499"/>
+<area shape="rect" id="Node000056" href="$classlab_jack_t.html" title="LABJACKT Connects and manages a LabJack T4 / T7 This class handles digital I/O and analog I/O and ana..." alt="" coords="167,1660,238,1685"/>
+<area shape="poly" id="edge42_Node000040_Node000056" title=" " alt="" coords="46,1498,54,1532,69,1572,90,1612,119,1647,142,1660,168,1667,166,1672,140,1665,116,1651,85,1615,64,1574,49,1534,41,1500"/>
+<area shape="rect" id="Node000057" href="$classminio_manager.html" title="use MinIO mc CLI command from MATLAB (mc alias&#45;based auth)" alt="" coords="147,1709,259,1735"/>
+<area shape="poly" id="edge43_Node000040_Node000057" title=" " alt="" coords="43,1499,49,1542,62,1595,84,1650,100,1674,119,1696,148,1712,145,1717,116,1700,96,1678,79,1652,56,1597,43,1543,38,1500"/>
+<area shape="rect" id="Node000028" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="155,1115,250,1140"/>
+<area shape="poly" id="edge44_Node000040_Node000028" title=" " alt="" coords="39,1446,49,1377,65,1289,87,1206,100,1173,115,1151,134,1138,154,1130,156,1135,136,1142,119,1155,105,1176,92,1208,70,1290,54,1378,44,1446"/>
+<area shape="rect" id="Node000058" href="$classopx_online.html" title="opxOnline Provides an interface between Opticka and the Plexon for online data display" alt="" coords="160,1759,245,1784"/>
+<area shape="poly" id="edge83_Node000040_Node000058" title=" " alt="" coords="41,1499,44,1551,55,1617,65,1652,78,1686,96,1718,119,1745,138,1758,161,1765,159,1770,136,1763,116,1749,92,1721,74,1688,60,1654,50,1618,39,1551,36,1499"/>
+<area shape="rect" id="Node000059" href="$classparse_opx_spikes.html" title=" " alt="" coords="142,1808,263,1833"/>
+<area shape="poly" id="edge84_Node000040_Node000059" title=" " alt="" coords="44,1499,54,1568,70,1657,92,1741,105,1773,119,1795,143,1810,140,1814,115,1799,100,1776,87,1743,64,1658,49,1569,39,1499"/>
+<area shape="rect" id="Node000039" href="$classreward_manager.html" title="Copyright ©2014&#45;2022 Ian Max Andolina — released: LGPL3, see LICENCE.md." alt="" coords="143,843,263,868"/>
+<area shape="poly" id="edge85_Node000040_Node000039" title=" " alt="" coords="41,1446,69,1299,115,1103,159,964,194,867,199,869,164,966,120,1104,74,1300,46,1447"/>
+<area shape="rect" id="Node000060" href="$classsend_serial_i_o_port.html" title=" " alt="" coords="139,1857,267,1883"/>
+<area shape="poly" id="edge87_Node000040_Node000060" title=" " alt="" coords="43,1499,51,1578,66,1682,89,1780,103,1818,119,1844,140,1858,137,1863,115,1848,98,1821,84,1782,61,1683,46,1579,38,1499"/>
+<area shape="rect" id="Node000061" href="$classtitta_adv_image_stimulus.html" title=" " alt="" coords="121,1907,284,1932"/>
+<area shape="poly" id="edge88_Node000040_Node000061" title=" " alt="" coords="43,1499,49,1588,63,1706,86,1820,101,1864,119,1894,133,1904,130,1909,115,1897,96,1866,81,1821,58,1707,44,1588,37,1499"/>
+<area shape="rect" id="Node000062" href="$classtitta_adv_movie_stimulus.html" title=" " alt="" coords="122,1956,283,1981"/>
+<area shape="poly" id="edge89_Node000040_Node000062" title=" " alt="" coords="42,1499,47,1596,60,1730,70,1797,83,1859,99,1909,119,1943,133,1954,130,1958,115,1946,95,1911,78,1860,65,1798,55,1730,42,1597,37,1499"/>
+<area shape="rect" id="Node000063" href="$classtitta_advanced_controller.html" title=" " alt="" coords="117,2005,288,2031"/>
+<area shape="poly" id="edge90_Node000040_Node000063" title=" " alt="" coords="42,1499,45,1607,57,1754,67,1830,80,1898,98,1954,119,1992,133,2003,130,2007,115,1996,93,1956,75,1899,62,1830,52,1755,40,1607,36,1500"/>
+<area shape="rect" id="Node000064" href="$classtitta_cal_stimulus.html" title=" " alt="" coords="144,424,261,449"/>
+<area shape="poly" id="edge91_Node000040_Node000064" title=" " alt="" coords="36,1447,40,1240,52,926,62,767,76,626,93,519,103,482,115,459,128,448,143,441,145,445,131,452,119,462,108,484,98,520,81,627,67,768,57,927,46,1240,42,1447"/>
+<area shape="rect" id="Node000065" href="$classtitta_reward_provider.html" title=" " alt="" coords="130,473,275,499"/>
+<area shape="poly" id="edge92_Node000040_Node000065" title=" " alt="" coords="36,1446,41,1249,54,951,64,800,77,667,94,565,104,530,115,508,129,497,132,501,119,512,109,532,99,566,82,667,69,801,59,951,46,1249,42,1447"/>
+<area shape="rect" id="Node000066" href="$classuser_functions.html" title="Customised user functions for a task run." alt="" coords="148,523,257,548"/>
+<area shape="poly" id="edge93_Node000040_Node000066" title=" " alt="" coords="37,1446,42,1257,55,976,66,834,79,708,95,613,105,580,115,559,130,547,147,539,149,544,132,551,119,562,110,582,100,614,84,709,71,834,61,976,47,1258,42,1446"/>
+<area shape="rect" id="Node000049" href="$classi_rec_manager.html" title="Manages the iRec eyetrackers https://staff.aist.go.jp/k.matsuda/iRecHS2/index_e.html." alt="" coords="559,1891,661,1916"/>
+<area shape="poly" id="edge37_Node000048_Node000049" title=" " alt="" coords="487,1909,558,1904,558,1909,487,1914"/>
+<area shape="rect" id="Node000052" href="$classpupil_core_manager.html" title="Manages the Pupil Labs Core." alt="" coords="541,1719,679,1744"/>
+<area shape="poly" id="edge38_Node000048_Node000052" title=" " alt="" coords="468,1895,473,1891,484,1877,491,1864,497,1837,503,1809,510,1794,521,1779,547,1757,575,1742,577,1746,550,1762,525,1782,514,1797,508,1811,503,1839,496,1866,489,1880,477,1895,472,1899"/>
+<area shape="rect" id="Node000053" href="$classtobii_manager.html" title="Manages the Tobii eyetrackers." alt="" coords="557,1792,663,1817"/>
+<area shape="poly" id="edge39_Node000048_Node000053" title=" " alt="" coords="460,1897,473,1890,540,1851,591,1815,594,1820,542,1856,476,1895,462,1901"/>
+<area shape="poly" id="edge56_Node000028_Node000001" title=" " alt="" coords="212,1101,247,1004,285,880,293,839,295,802,291,736,292,705,297,675,310,642,334,608,352,594,356,598,338,612,315,645,302,676,297,706,297,736,300,802,298,839,291,881,252,1006,217,1103"/>
+<area shape="poly" id="edge78_Node000028_Node000086" title=" " alt="" coords="212,1101,248,1005,285,880,293,831,294,787,288,710,287,674,292,637,307,600,334,559,349,546,353,550,338,562,312,602,298,639,293,674,293,710,300,787,299,832,291,881,253,1006,217,1103"/>
+<area shape="rect" id="Node000029" href="$classalyx_manager.html" title=" " alt="" coords="354,1460,457,1485"/>
+<area shape="poly" id="edge45_Node000028_Node000029" title=" " alt="" coords="265,1134,290,1151,314,1189,323,1227,322,1264,316,1300,309,1337,307,1373,315,1410,338,1447,356,1460,352,1464,334,1450,311,1412,302,1374,304,1336,310,1299,317,1263,318,1227,309,1191,286,1155,262,1138"/>
+<area shape="rect" id="Node000030" href="$classanalysis_core.html" title="analysisCore base class inherited by other analysis classes. analysisCore is itself derived from opti..." alt="" coords="356,1509,455,1535"/>
+<area shape="poly" id="edge46_Node000028_Node000030" title=" " alt="" coords="265,1134,290,1151,306,1173,317,1195,327,1239,324,1282,316,1325,307,1367,304,1410,312,1453,323,1474,338,1496,357,1510,354,1515,334,1500,318,1477,307,1454,299,1410,302,1367,310,1324,319,1282,322,1240,312,1197,302,1176,286,1155,262,1138"/>
+<area shape="rect" id="Node000037" href="$classanimation_manager.html" title="ANIMATIONMANAGER Provides per frame paths for stimuli We integrate dyn4j java physics engine for rigi..." alt="" coords="336,1559,475,1584"/>
+<area shape="poly" id="edge53_Node000028_Node000037" title=" " alt="" coords="265,1133,278,1141,290,1151,308,1177,321,1202,328,1227,331,1252,327,1301,316,1350,305,1398,301,1447,303,1471,309,1495,321,1520,338,1546,351,1556,347,1560,334,1549,316,1523,304,1497,298,1472,295,1447,300,1397,311,1348,321,1300,325,1252,323,1228,316,1204,304,1179,286,1154,275,1145,262,1138"/>
+<area shape="rect" id="Node000038" href="$classarduino_manager.html" title="Arduino Manager &gt; Connects and manages arduino communication. By default it connects using arduinoIOP..." alt="" coords="343,621,468,647"/>
+<area shape="poly" id="edge54_Node000028_Node000038" title=" " alt="" coords="211,1101,246,1005,285,880,292,846,295,816,295,762,296,737,302,712,314,685,334,657,350,645,354,649,338,661,318,688,307,713,302,738,300,762,300,816,298,847,291,881,251,1006,216,1103"/>
+<area shape="rect" id="Node000069" href="$classaudio_manager.html" title=" " alt="" coords="349,1657,461,1683"/>
+<area shape="poly" id="edge55_Node000028_Node000069" title=" " alt="" coords="265,1133,278,1140,290,1151,312,1183,327,1215,335,1246,338,1277,331,1338,316,1399,301,1459,294,1520,296,1550,303,1581,317,1612,338,1644,351,1655,347,1659,334,1648,312,1615,298,1583,290,1551,288,1520,295,1458,311,1397,326,1337,333,1277,330,1247,322,1217,308,1186,286,1154,275,1145,262,1138"/>
+<area shape="rect" id="Node000070" href="$classbehavioural_record.html" title="Create a GUI and update performance plots for a behavioural task." alt="" coords="337,1707,474,1732"/>
+<area shape="poly" id="edge57_Node000028_Node000070" title=" " alt="" coords="265,1133,278,1140,290,1151,303,1172,312,1198,320,1263,320,1340,315,1423,311,1506,311,1583,318,1648,327,1673,338,1694,351,1705,347,1709,334,1697,322,1676,313,1649,305,1584,306,1506,310,1423,315,1340,315,1264,306,1200,298,1174,286,1154,275,1145,262,1138"/>
+<area shape="rect" id="Node000071" href="$classcolour_manager.html" title="colourManager manages colours wrapping the CRS Color Toolbox" alt="" coords="347,1756,464,1781"/>
+<area shape="poly" id="edge58_Node000028_Node000071" title=" " alt="" coords="265,1133,278,1140,290,1151,304,1174,313,1203,322,1274,321,1358,316,1448,310,1539,309,1622,317,1693,326,1721,338,1743,351,1754,347,1758,334,1746,321,1723,312,1694,304,1623,305,1538,310,1448,316,1357,316,1274,308,1204,299,1176,286,1154,275,1145,262,1138"/>
+<area shape="rect" id="Node000072" href="$classd_pixx_manager.html" title="DataPixx Communication Class." alt="" coords="350,1805,461,1831"/>
+<area shape="poly" id="edge59_Node000028_Node000072" title=" " alt="" coords="265,1133,278,1140,290,1151,305,1176,315,1207,324,1284,322,1375,316,1473,309,1571,307,1661,315,1738,325,1768,338,1792,351,1804,348,1808,334,1796,320,1770,310,1739,302,1662,304,1570,310,1472,317,1375,318,1284,310,1208,300,1178,286,1154,275,1145,262,1138"/>
+<area shape="rect" id="Node000073" href="$classeye_occluder.html" title=" " alt="" coords="356,1855,455,1880"/>
+<area shape="poly" id="edge60_Node000028_Node000073" title=" " alt="" coords="265,1133,278,1140,290,1151,306,1178,316,1211,323,1250,326,1294,323,1392,316,1497,308,1603,305,1701,308,1744,314,1783,324,1816,338,1842,357,1856,354,1860,334,1845,319,1818,309,1784,303,1745,300,1701,303,1603,310,1497,318,1392,320,1294,317,1251,311,1212,301,1180,286,1154,275,1145,262,1138"/>
+<area shape="rect" id="Node000050" href="$classeyetracker_core.html" title=" " alt="" coords="347,1608,464,1633"/>
+<area shape="poly" id="edge61_Node000028_Node000050" title=" " alt="" coords="264,1133,278,1140,290,1151,310,1180,324,1208,332,1237,334,1265,329,1320,316,1374,303,1429,297,1483,299,1511,306,1538,319,1566,338,1595,351,1606,347,1610,334,1598,314,1569,301,1540,294,1511,292,1483,297,1428,311,1373,324,1319,329,1265,326,1237,319,1210,306,1182,286,1154,275,1145,262,1138"/>
+<area shape="rect" id="Node000074" href="$classio_manager.html" title="Input Output manager, a dummy class to allow task to run without strobe hardware." alt="" coords="361,671,450,696"/>
+<area shape="poly" id="edge66_Node000028_Node000074" title=" " alt="" coords="211,1101,285,880,295,830,298,788,307,749,317,728,334,707,359,690,362,695,338,711,322,731,312,750,303,789,300,830,291,881,216,1103"/>
+<area shape="rect" id="Node000075" href="$classjoystick_manager.html" title="Manages the Simia Joystick." alt="" coords="344,720,467,745"/>
+<area shape="poly" id="edge67_Node000028_Node000075" title=" " alt="" coords="210,1101,280,900,334,756,353,743,356,748,338,760,285,902,215,1102"/>
+<area shape="rect" id="Node000076" href="$classjzmq_connection.html" title=" " alt="" coords="345,769,466,795"/>
+<area shape="poly" id="edge68_Node000028_Node000076" title=" " alt="" coords="209,1100,262,944,298,861,316,828,334,805,353,793,356,797,338,809,321,831,303,863,267,946,214,1102"/>
+<area shape="rect" id="Node000077" href="$classmagstim_manager.html" title="magstimManager &#45; controls a MagStim Rapid TMS system using a LabJack" alt="" coords="340,819,471,844"/>
+<area shape="poly" id="edge69_Node000028_Node000077" title=" " alt="" coords="207,1101,222,1050,247,984,284,915,307,883,334,855,354,842,357,846,338,859,311,887,288,918,252,986,227,1051,212,1102"/>
+<area shape="rect" id="Node000078" href="$classmentalab_manager.html" title="mentaLab Sync Class" alt="" coords="337,868,473,893"/>
+<area shape="poly" id="edge70_Node000028_Node000078" title=" " alt="" coords="210,1100,228,1058,254,1005,290,951,334,904,355,891,358,896,338,908,294,955,259,1008,233,1060,215,1102"/>
+<area shape="rect" id="Node000079" href="$classmeta_stimulus.html" title="Manager for multiple stimuli." alt="" coords="352,917,459,943"/>
+<area shape="poly" id="edge71_Node000028_Node000079" title=" " alt="" coords="215,1101,261,1029,295,988,334,953,358,940,360,945,338,958,299,992,266,1032,219,1104"/>
+<area shape="rect" id="Node000080" href="$classnir_smart_manager.html" title="nirSmart fNIRS Sync manager" alt="" coords="339,967,471,992"/>
+<area shape="poly" id="edge72_Node000028_Node000080" title=" " alt="" coords="222,1103,270,1053,301,1026,335,1002,361,990,363,995,337,1007,304,1030,274,1057,225,1106"/>
+<area shape="rect" id="Node000081" href="$classplusplus_manager.html" title="Display++ Communication Class." alt="" coords="341,1016,469,1041"/>
+<area shape="poly" id="edge73_Node000028_Node000081" title=" " alt="" coords="235,1105,335,1052,366,1039,368,1044,337,1056,237,1110"/>
+<area shape="rect" id="Node000082" href="$classplx_reader.html" title=" " alt="" coords="363,1065,448,1091"/>
+<area shape="poly" id="edge74_Node000028_Node000082" title=" " alt="" coords="263,1110,362,1086,363,1091,264,1115"/>
+<area shape="rect" id="Node000083" href="$classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner." alt="" coords="347,1115,463,1140"/>
+<area shape="poly" id="edge75_Node000028_Node000083" title=" " alt="" coords="264,1125,347,1125,347,1130,264,1130"/>
+<area shape="rect" id="Node000084" href="$classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen" alt="" coords="346,1164,465,1189"/>
+<area shape="poly" id="edge76_Node000028_Node000084" title=" " alt="" coords="264,1139,353,1161,352,1167,263,1145"/>
+<area shape="rect" id="Node000085" href="$classstate_machine.html" title="run a task via a series of states." alt="" coords="353,1213,458,1239"/>
+<area shape="poly" id="edge77_Node000028_Node000085" title=" " alt="" coords="264,1139,289,1150,305,1163,314,1176,323,1188,337,1200,360,1211,358,1216,335,1204,319,1191,310,1179,301,1167,287,1155,262,1143"/>
+<area shape="rect" id="Node000087" href="$classtime_logger.html" title=" " alt="" coords="358,1263,453,1288"/>
+<area shape="poly" id="edge79_Node000028_Node000087" title=" " alt="" coords="265,1136,290,1151,301,1163,309,1176,315,1201,321,1226,327,1238,338,1249,359,1262,356,1267,334,1253,323,1241,316,1228,310,1202,304,1178,297,1166,286,1155,262,1141"/>
+<area shape="rect" id="Node000088" href="$classtouch_data.html" title=" " alt="" coords="362,1312,449,1337"/>
+<area shape="poly" id="edge80_Node000028_Node000088" title=" " alt="" coords="264,1135,290,1151,305,1170,312,1189,315,1226,318,1263,324,1281,338,1299,363,1314,360,1319,334,1303,320,1283,312,1264,310,1226,307,1190,300,1172,286,1155,261,1139"/>
+<area shape="rect" id="Node000089" href="$classtouch_manager.html" title=" " alt="" coords="349,1361,462,1387"/>
+<area shape="poly" id="edge81_Node000028_Node000089" title=" " alt="" coords="264,1134,290,1151,308,1176,316,1201,317,1226,315,1251,313,1275,314,1300,322,1324,338,1348,352,1359,349,1363,334,1352,317,1326,309,1301,308,1275,310,1251,312,1226,311,1202,303,1178,286,1155,262,1139"/>
+<area shape="rect" id="Node000090" href="$classzmq_connection.html" title=" " alt="" coords="346,1411,465,1436"/>
+<area shape="poly" id="edge82_Node000028_Node000090" title=" " alt="" coords="265,1134,290,1151,311,1182,319,1214,320,1245,315,1276,311,1306,311,1336,319,1367,338,1398,352,1408,348,1413,334,1401,314,1369,306,1337,306,1306,310,1275,314,1245,314,1215,306,1185,286,1155,262,1138"/>
+<area shape="rect" id="Node000031" href="$class_l_f_p_analysis.html" title=" " alt="" coords="564,1361,656,1387"/>
+<area shape="poly" id="edge47_Node000030_Node000031" title=" " alt="" coords="466,1502,473,1496,483,1484,490,1472,496,1448,502,1422,509,1410,521,1397,541,1385,563,1377,565,1382,543,1390,524,1401,514,1413,507,1424,501,1449,495,1474,488,1487,476,1500,469,1506"/>
+<area shape="rect" id="Node000032" href="$class_l_f_p_meta.html" title=" " alt="" coords="572,1411,648,1436"/>
+<area shape="poly" id="edge48_Node000030_Node000032" title=" " alt="" coords="463,1501,473,1496,487,1484,496,1471,506,1459,521,1446,546,1435,571,1427,573,1432,548,1440,524,1451,510,1463,501,1475,491,1487,476,1500,466,1506"/>
+<area shape="rect" id="Node000033" href="$classeyelink_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="553,1460,667,1485"/>
+<area shape="poly" id="edge49_Node000030_Node000033" title=" " alt="" coords="467,1504,556,1483,557,1488,469,1510"/>
+<area shape="rect" id="Node000034" href="$classi_rec_analysis.html" title="iRecAnalysis offers a set of methods to load, parse &amp; plot raw CSV files. It understands opticka tria..." alt="" coords="562,1509,658,1535"/>
+<area shape="poly" id="edge50_Node000030_Node000034" title=" " alt="" coords="468,1519,562,1519,562,1525,468,1525"/>
+<area shape="rect" id="Node000035" href="$classspike_analysis.html" title=" " alt="" coords="559,1559,661,1584"/>
+<area shape="poly" id="edge51_Node000030_Node000035" title=" " alt="" coords="469,1534,559,1557,558,1562,468,1540"/>
+<area shape="rect" id="Node000036" href="$classtobii_analysis.html" title="eyelinkAnalysis offers a set of methods to load, parse &amp; plot raw EDF files. It understands opticka t..." alt="" coords="561,1608,659,1633"/>
+<area shape="poly" id="edge52_Node000030_Node000036" title=" " alt="" coords="464,1538,476,1545,491,1558,501,1571,510,1583,524,1594,561,1610,559,1614,521,1599,506,1587,496,1574,487,1562,473,1550,461,1543"/>
+<area shape="poly" id="edge63_Node000050_Node000049" title=" " alt="" coords="471,1639,477,1644,493,1668,502,1691,506,1735,507,1780,513,1803,525,1829,556,1863,589,1888,586,1893,552,1867,520,1831,508,1805,502,1780,500,1735,497,1692,489,1670,473,1648,468,1643"/>
+<area shape="poly" id="edge64_Node000050_Node000052" title=" " alt="" coords="464,1637,476,1644,491,1656,501,1669,510,1681,524,1693,570,1716,568,1721,521,1698,506,1685,497,1672,487,1660,473,1648,461,1641"/>
+<area shape="poly" id="edge65_Node000050_Node000053" title=" " alt="" coords="469,1638,477,1644,489,1658,496,1672,502,1700,508,1727,525,1755,549,1775,576,1790,573,1794,546,1779,521,1758,503,1729,497,1701,491,1674,484,1661,473,1648,466,1642"/>
+<area shape="rect" id="Node000051" href="$classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods..." alt="" coords="549,1657,671,1683"/>
+<area shape="poly" id="edge62_Node000050_Node000051" title=" " alt="" coords="472,1634,557,1655,556,1660,471,1639"/>
+<area shape="poly" id="edge86_Node000039_Node000038" title=" " alt="" coords="212,829,231,791,258,745,292,698,334,657,356,644,359,649,338,661,296,702,262,748,236,794,217,831"/>
+<area shape="rect" id="Node000067" href="$class_d_m_t_s_functions.html" title=" " alt="" coords="347,473,464,499"/>
+<area shape="poly" id="edge94_Node000066_Node000067" title=" " alt="" coords="268,517,352,496,353,501,269,522"/>
+<area shape="rect" id="Node000068" href="$classmy_user_functions.html" title="For DMTS task." alt="" coords="340,424,471,449"/>
+<area shape="poly" id="edge95_Node000066_Node000068" title=" " alt="" coords="269,516,287,508,301,496,310,484,319,471,335,458,358,447,360,452,337,463,323,475,314,487,305,500,289,512,272,521"/>
 </map>

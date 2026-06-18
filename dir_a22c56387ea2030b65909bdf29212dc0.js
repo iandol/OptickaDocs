@@ -4,6 +4,7 @@ var dir_a22c56387ea2030b65909bdf29212dc0 =
     [ "animationManager.m", "animation_manager_8m.html", "animation_manager_8m" ],
     [ "annulusStimulus.m", "annulus_stimulus_8m.html", "annulus_stimulus_8m" ],
     [ "apparentMotionStimulus.m", "apparent_motion_stimulus_8m.html", "apparent_motion_stimulus_8m" ],
+    [ "aprilTagStimulus.m", "april_tag_stimulus_8m.html", "april_tag_stimulus_8m" ],
     [ "audioManager.m", "audio_manager_8m.html", "audio_manager_8m" ],
     [ "barStimulus.m", "bar_stimulus_8m.html", "bar_stimulus_8m" ],
     [ "baseStimulus.m", "base_stimulus_8m.html", "base_stimulus_8m" ],

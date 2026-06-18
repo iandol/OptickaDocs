@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -107,23 +107,30 @@ $(document).ready(function(){initNavTree('classanimation_manager.html',''); init
  <a href="classanimation_manager.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ANIMATIONMANAGER Provides per frame paths for stimuli We integrate dyn4j java physics engine for rigid body. The plan is to also support sinusoidal, brownian, circular etc. </p>
-<div class="fragment"><div class="line">s = screenManager();</div>
-<div class="line">b = imageStimulus(&#39;size&#39;,4,&#39;filePath&#39;,&#39;moon.png&#39;,&#39;name&#39;,&#39;moon&#39;);</div>
-<div class="line">b.speed = 25; % will define velocity</div>
-<div class="line">b.angle = -45; % will define velocity</div>
-<div class="line">a = animationManager();</div>
-<div class="line">sv = open(s); % open screen</div>
-<div class="line">setup(b, s); % initialise stimulus with open screen</div>
-<div class="line">addScreenBoundaries(a, sv); % add floor, ceiling and walls based on the screen</div>
-<div class="line">addBody(a, b); % add stimulus as a rigidbody to animationManager</div>
-<div class="line">setup(a); % initialise the simulation.</div>
-<div class="line">for i = 1:60</div>
-<div class="line">    draw(b); % draw the stimulus</div>
-<div class="line">    flip(s); % flip the screen</div>
-<div class="line">    step(a); % step the simulation</div>
+<div class="fragment"><div class="line">screen = screenManager(); % create a screen object</div>
+<div class="line">ball = imageStimulus(&#39;size&#39;,4,&#39;filePath&#39;,&#39;moon.png&#39;,&#39;name&#39;,&#39;moon&#39;);</div>
+<div class="line">ball.speed = 25; % will define velocity</div>
+<div class="line">ball.angle = -45; % will define velocity</div>
+<div class="line">world = animationManager(&#39;timeDelta&#39;, 0.016);</div>
+<div class="line">screenParamaters = open(screen); % open screen</div>
+<div class="line">% initialise stimulus with PTB screen parameters</div>
+<div class="line">setup(ball, screen);</div>
+<div class="line">addScreenBoundaries(world, screenParamaters); % add floor,ceiling and walls based on the screen</div>
+<div class="line">addBody(world, ball); % add stimulus as a rigidbody to animationManager</div>
+<div class="line">% initialise the simulation and pass the PTB</div>
+<div class="line">% screen so that the world can be related </div>
+<div class="line">% to the PTB dimensions. </div>
+<div class="line">% The mapping is 1° visual angle = 1 meter.</div>
+<div class="line">setup(world, screen); </div>
+<div class="line">for i = 1:120 % run for 120 frames</div>
+<div class="line">    draw(ball); % draw the stimulus</div>
+<div class="line">    flip(screen); % flip the screen</div>
+<div class="line">    % step the simulation one step (0.016s) forwards</div>
+<div class="line">    % true flag will update the ball stimulus at the new position</div>
+<div class="line">    step(world, 1, true); </div>
 <div class="line">end</div>
-</div><!-- fragment --><p>@TODO build the code for the different types of motion</p>
-<p>Copyright ©2014-2024 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
+</div><!-- fragment --><p>@TODO build the code for the different types of motion paths apart from rigid body 2D physics. These could be static methods.</p>
+<p>Contributions: Heting Zhang Copyright ©2014-2025 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for animationManager:</div>
 <div class="dyncontent">
@@ -137,50 +144,69 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:addc270d3c728d9ee952ad1ea44eea919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad82ca368fb0f4eb6ff1157649c1dc07d" id="r_ad82ca368fb0f4eb6ff1157649c1dc07d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ad82ca368fb0f4eb6ff1157649c1dc07d">addBody</a> (in me, in stimulus, in shape, in <a class="el" href="classanimation_manager.html#a7338b2646d5136efde4ebd90508112b2">type</a>, in density, in friction, in elasticity, in av)</td></tr>
 <tr class="separator:ad82ca368fb0f4eb6ff1157649c1dc07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0664b553ac8b4a13f949e224d68aebe" id="r_aa0664b553ac8b4a13f949e224d68aebe"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#aa0664b553ac8b4a13f949e224d68aebe">editBody</a> (in me, in body, in x, in y, in vx, in vy, in av)</td></tr>
-<tr class="separator:aa0664b553ac8b4a13f949e224d68aebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8a543fb04439ee2d3ed521b22388a6b" id="r_ae8a543fb04439ee2d3ed521b22388a6b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ae8a543fb04439ee2d3ed521b22388a6b">getBody</a> (in me, in id, in bodyType)</td></tr>
+<tr class="memdesc:ae8a543fb04439ee2d3ed521b22388a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the first body matching name or hash  <br /></td></tr>
+<tr class="separator:ae8a543fb04439ee2d3ed521b22388a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7073636db2ff0584fbb89a44c3bbf8" id="r_acf7073636db2ff0584fbb89a44c3bbf8"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#acf7073636db2ff0584fbb89a44c3bbf8">editBody</a> (in me, in id, in x, in y, in vx, in vy, in av, in editStim)</td></tr>
+<tr class="memdesc:acf7073636db2ff0584fbb89a44c3bbf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOTE: input y and vy are in opticka coordinates (-y = up) whereas world has +y = up, make sure your Y input is in opticka format.  <br /></td></tr>
+<tr class="separator:acf7073636db2ff0584fbb89a44c3bbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6de7e0f9accd3646218c38a6ed88a2d8" id="r_a6de7e0f9accd3646218c38a6ed88a2d8"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a6de7e0f9accd3646218c38a6ed88a2d8">rmBody</a> (in me, in id)</td></tr>
 <tr class="separator:a6de7e0f9accd3646218c38a6ed88a2d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa36a883f140e0721e3351d24cd197d91" id="r_aa36a883f140e0721e3351d24cd197d91"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#aa36a883f140e0721e3351d24cd197d91">setEnabled</a> (in me, in id, in state)</td></tr>
+<tr class="separator:aa36a883f140e0721e3351d24cd197d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7f48365ad71b18765bde3f6c92b351e" id="r_ab7f48365ad71b18765bde3f6c92b351e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ab7f48365ad71b18765bde3f6c92b351e">show</a> (in me, in id)</td></tr>
+<tr class="memdesc:ab7f48365ad71b18765bde3f6c92b351e"><td class="mdescLeft">&#160;</td><td class="mdescRight">modifies the physics body and opticka stimulus  <br /></td></tr>
+<tr class="separator:ab7f48365ad71b18765bde3f6c92b351e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4467bc51d2d13527a2ca0fb239ba1f7e" id="r_a4467bc51d2d13527a2ca0fb239ba1f7e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a4467bc51d2d13527a2ca0fb239ba1f7e">hide</a> (in me, in id)</td></tr>
+<tr class="separator:a4467bc51d2d13527a2ca0fb239ba1f7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cb73a8975648a4a687cac58a739ae38" id="r_a0cb73a8975648a4a687cac58a739ae38"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a0cb73a8975648a4a687cac58a739ae38">isCollision</a> (in me, in body)</td></tr>
+<tr class="separator:a0cb73a8975648a4a687cac58a739ae38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc0f095996e40d826d0b65878ec1d55" id="r_a1bc0f095996e40d826d0b65878ec1d55"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a1bc0f095996e40d826d0b65878ec1d55">resetBodies</a> (in me)</td></tr>
 <tr class="separator:a1bc0f095996e40d826d0b65878ec1d55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40ac0b7371538defbed3ab9d6ab9b2a8" id="r_a40ac0b7371538defbed3ab9d6ab9b2a8"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a40ac0b7371538defbed3ab9d6ab9b2a8">update</a> (in me)</td></tr>
 <tr class="separator:a40ac0b7371538defbed3ab9d6ab9b2a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75e0843799b8597d39ff7a39809452af" id="r_a75e0843799b8597d39ff7a39809452af"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a75e0843799b8597d39ff7a39809452af">setup</a> (in me, in <a class="el" href="classanimation_manager.html#a8f3f33f864f2056cdaf2893bc417d74e">screen</a>, in <a class="el" href="classanimation_manager.html#a566e746e6e333191fadb94f439be0776">useBounds</a>)</td></tr>
 <tr class="separator:a75e0843799b8597d39ff7a39809452af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cb73a8975648a4a687cac58a739ae38" id="r_a0cb73a8975648a4a687cac58a739ae38"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a0cb73a8975648a4a687cac58a739ae38">isCollision</a> (in me, in body)</td></tr>
-<tr class="separator:a0cb73a8975648a4a687cac58a739ae38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9381e93056db946581c7cf513609fa5d" id="r_a9381e93056db946581c7cf513609fa5d"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a9381e93056db946581c7cf513609fa5d">addScreenBoundaries</a> (in me, in sv, in padding)</td></tr>
 <tr class="memdesc:a9381e93056db946581c7cf513609fa5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">addScreenBoundaries add physical walls at the screen edges  <br /></td></tr>
 <tr class="separator:a9381e93056db946581c7cf513609fa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad47d54c82be947149fd8d21cb54ef780" id="r_ad47d54c82be947149fd8d21cb54ef780"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ad47d54c82be947149fd8d21cb54ef780">step</a> (in me, in varargin)</td></tr>
 <tr class="separator:ad47d54c82be947149fd8d21cb54ef780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0294458ee995c364df0708116931b5f3" id="r_a0294458ee995c364df0708116931b5f3"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a0294458ee995c364df0708116931b5f3">updateBodyPositions</a> (in me)</td></tr>
+<tr class="separator:a0294458ee995c364df0708116931b5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2ccfb05787fdfedc0e4837b38b3c305" id="r_ac2ccfb05787fdfedc0e4837b38b3c305"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ac2ccfb05787fdfedc0e4837b38b3c305">reset</a> (in me)</td></tr>
 <tr class="memdesc:ac2ccfb05787fdfedc0e4837b38b3c305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an image.  <br /></td></tr>
 <tr class="separator:ac2ccfb05787fdfedc0e4837b38b3c305"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe5e1b7208e4c4cf64524af99f32eabc" id="r_afe5e1b7208e4c4cf64524af99f32eabc"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#afe5e1b7208e4c4cf64524af99f32eabc">getBody</a> (in me, in id)</td></tr>
-<tr class="memdesc:afe5e1b7208e4c4cf64524af99f32eabc"><td class="mdescLeft">&#160;</td><td class="mdescRight">return the first body matching name or hash  <br /></td></tr>
-<tr class="separator:afe5e1b7208e4c4cf64524af99f32eabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9cc67cb0d5666c0afebe2d8979e6e8a" id="r_ae9cc67cb0d5666c0afebe2d8979e6e8a"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ae9cc67cb0d5666c0afebe2d8979e6e8a">getFixture</a> (in me, in <a class="el" href="classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3">name</a>, in num)</td></tr>
 <tr class="separator:ae9cc67cb0d5666c0afebe2d8979e6e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb7fa4d9d850643fbf09749d3aee955e" id="r_adb7fa4d9d850643fbf09749d3aee955e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#adb7fa4d9d850643fbf09749d3aee955e">setSensorState</a> (in me, in <a class="el" href="classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3">name</a>, in state)</td></tr>
+<tr class="separator:adb7fa4d9d850643fbf09749d3aee955e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6ebedae5707415d29aff941ed092435" id="r_ae6ebedae5707415d29aff941ed092435"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ae6ebedae5707415d29aff941ed092435">getBodyName</a> (in me, in hash)</td></tr>
 <tr class="separator:ae6ebedae5707415d29aff941ed092435"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fbff4d16497a46bc31e6a71bbaa2508" id="r_a7fbff4d16497a46bc31e6a71bbaa2508"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a7fbff4d16497a46bc31e6a71bbaa2508">nBodies</a> (in me)</td></tr>
 <tr class="separator:a7fbff4d16497a46bc31e6a71bbaa2508"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7fdd7fc3789877fe644b533e4dfdf5" id="r_a2e7fdd7fc3789877fe644b533e4dfdf5"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a2e7fdd7fc3789877fe644b533e4dfdf5">nObstacles</a> (in me)</td></tr>
+<tr class="separator:a2e7fdd7fc3789877fe644b533e4dfdf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
 <tr class="memitem:a01e82ac778e9c8bc8b2472bd849a9732 inherit pub_methods_classopticka_core" id="r_a01e82ac778e9c8bc8b2472bd849a9732"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a01e82ac778e9c8bc8b2472bd849a9732">optickaCore</a> (in varargin)</td></tr>
 <tr class="memdesc:a01e82ac778e9c8bc8b2472bd849a9732 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Class constructor.  <br /></td></tr>
 <tr class="separator:a01e82ac778e9c8bc8b2472bd849a9732 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core" id="r_a5a9f759bbb480b804cc3eca324945a4b"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a5a9f759bbb480b804cc3eca324945a4b">fullName</a> (in me)</td></tr>
 <tr class="separator:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core" id="r_a521a2549e5f7c6ac03b31558540cbafe"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a521a2549e5f7c6ac03b31558540cbafe">getALF</a> (in me, in subject, in sessionPrefix, in lab, in create)</td></tr>
-<tr class="separator:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core" id="r_a9e089236a86d59f25135f6dfffa3991f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a9e089236a86d59f25135f6dfffa3991f">getALF</a> (in me, in subject, in lab, in create)</td></tr>
+<tr class="memdesc:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the ALF path  <br /></td></tr>
+<tr class="separator:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core" id="r_af3d48dae6d0c49cbdff5fcb41aee6a68"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af3d48dae6d0c49cbdff5fcb41aee6a68">makeReport</a> (in me, in rpt)</td></tr>
+<tr class="memdesc:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a detailed report for the opticka object.  <br /></td></tr>
+<tr class="separator:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core" id="r_ab7b80b71593278646425b4a212d62634"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#ab7b80b71593278646425b4a212d62634">findAttributes</a> (in me, in attrName, in attrValue)</td></tr>
 <tr class="separator:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core" id="r_aa41fe6ebd09d4c58ae5dc496683f3f65"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aa41fe6ebd09d4c58ae5dc496683f3f65">findAttributesandType</a> (in me, in attrName, in attrValue, in type)</td></tr>
 <tr class="memdesc:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">find properties of object with specific attributes, for example all properties whose GetAcccess attribute is public and type is logical.  <br /></td></tr>
 <tr class="separator:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core" id="r_a3138d91ed7233e89f9a6a9a3983cc0fa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a3138d91ed7233e89f9a6a9a3983cc0fa">findPropertyDefault</a> (in me, in propName)</td></tr>
-<tr class="separator:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core" id="r_afde4f926a400e1a4e3432a2de7b9dafa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afde4f926a400e1a4e3432a2de7b9dafa">findPropertyDefault</a> (in me, in propName)</td></tr>
+<tr class="memdesc:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the declared default value for a class property.  <br /></td></tr>
+<tr class="separator:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core" id="r_aee04cdaafcaa4e034cb616154b8eebec"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aee04cdaafcaa4e034cb616154b8eebec">clone</a> (in me)</td></tr>
 <tr class="memdesc:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this syntax to make a deep copy of the object, i.e. OBJ_OUT has the same field values, but will not behave as a handle-copy of me anymore.  <br /></td></tr>
 <tr class="separator:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,11 +218,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core" id="r_a66542a3ceb15109df805509be4edeee2"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a66542a3ceb15109df805509be4edeee2">setProp</a> (in me, in property, in value)</td></tr>
 <tr class="memdesc:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to fast change a particular value. This is useful for use in anonymous functions, like in the state machine.  <br /></td></tr>
 <tr class="separator:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core" id="r_a84eb445bf35cf3657371a5f11b0487ea"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a84eb445bf35cf3657371a5f11b0487ea">initialiseGlobals</a> (in me, in doReset, in doOpen)</td></tr>
-<tr class="separator:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core" id="r_a4904dd912a926e5fd27eceeb63ed2fb7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4904dd912a926e5fd27eceeb63ed2fb7">initialiseSaveFile</a> (in me)</td></tr>
-<tr class="memdesc:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise Save prefix.  <br /></td></tr>
-<tr class="separator:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core" id="r_a18784556a7f8559dd1f2b7e91ab53ef6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a18784556a7f8559dd1f2b7e91ab53ef6">initialiseSaveFile</a> (in me, in varargin)</td></tr>
+<tr class="memdesc:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">just get date fragment for backwards compatibility  <br /></td></tr>
+<tr class="separator:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core" id="r_a1e85b40b4fa3e081382da601f6475d05"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a1e85b40b4fa3e081382da601f6475d05">checkPaths</a> (in me)</td></tr>
 <tr class="memdesc:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks the paths are valid  <br /></td></tr>
 <tr class="separator:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -224,11 +248,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a647a2fe271b2b363d179fe6e6e946062"><td class="mdescLeft">&#160;</td><td class="mdescRight">bezier function  <br /></td></tr>
 <tr class="separator:a647a2fe271b2b363d179fe6e6e946062"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
+<tr class="memitem:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core" id="r_a278fcf94c60a10e1938b5712a34a0a4b"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a278fcf94c60a10e1938b5712a34a0a4b">initialiseGlobals</a> (in doReset, in doOpen)</td></tr>
+<tr class="separator:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core" id="r_a4da9ae0cfd621acae8b76f5e1704e00c"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4da9ae0cfd621acae8b76f5e1704e00c">makeArgs</a> (in args)</td></tr>
 <tr class="memdesc:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts cell args to structure array.  <br /></td></tr>
 <tr class="separator:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core" id="r_acde8df0104b96e6558eecae094f49754"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#acde8df0104b96e6558eecae094f49754">addDefaults</a> (in args, in defs)</td></tr>
-<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">add default options to arg input  <br /></td></tr>
+<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">regularises and adds default options to arg input  <br /></td></tr>
 <tr class="separator:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core" id="r_a4e58c362b03faaa9c7ec9627e4e0c25f"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4e58c362b03faaa9c7ec9627e4e0c25f">hasKey</a> (in in, in key)</td></tr>
 <tr class="memdesc:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a struct / object has a propery / field  <br /></td></tr>
@@ -266,6 +292,21 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a2d37dfad8b0a4c32d3dc9d463685dd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada4f3836bbbf2d979c94b637333e2d1d" id="r_ada4f3836bbbf2d979c94b637333e2d1d"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ada4f3836bbbf2d979c94b637333e2d1d">nObstacles</a></td></tr>
 <tr class="separator:ada4f3836bbbf2d979c94b637333e2d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e1c037d7e0b1e52b43be89ab497dec6" id="r_a8e1c037d7e0b1e52b43be89ab497dec6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a8e1c037d7e0b1e52b43be89ab497dec6">wallColour</a></td></tr>
+<tr class="separator:a8e1c037d7e0b1e52b43be89ab497dec6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea51a80e94f664c4f953d2f97600390" id="r_afea51a80e94f664c4f953d2f97600390"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#afea51a80e94f664c4f953d2f97600390">linearVelocity</a></td></tr>
+<tr class="separator:afea51a80e94f664c4f953d2f97600390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5db7006b785cb241dc9df31e373e14c4" id="r_a5db7006b785cb241dc9df31e373e14c4"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a5db7006b785cb241dc9df31e373e14c4">angularVelocity</a></td></tr>
+<tr class="separator:a5db7006b785cb241dc9df31e373e14c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f006b25108df78c5557b958f057f0de" id="r_a6f006b25108df78c5557b958f057f0de"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a6f006b25108df78c5557b958f057f0de">momentOfInertia</a></td></tr>
+<tr class="memdesc:a6f006b25108df78c5557b958f057f0de"><td class="mdescLeft">&#160;</td><td class="mdescRight">moment of inertia  <br /></td></tr>
+<tr class="separator:a6f006b25108df78c5557b958f057f0de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a616a07fff7b5dc142acb220a1bd8ff3f" id="r_a616a07fff7b5dc142acb220a1bd8ff3f"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a616a07fff7b5dc142acb220a1bd8ff3f">kineticEnergy</a></td></tr>
+<tr class="separator:a616a07fff7b5dc142acb220a1bd8ff3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dcfd15a00fdb031521f4199ba397045" id="r_a3dcfd15a00fdb031521f4199ba397045"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a3dcfd15a00fdb031521f4199ba397045">potentialEnergy</a></td></tr>
+<tr class="separator:a3dcfd15a00fdb031521f4199ba397045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14e3d86a47cd5e24bda905bc67b6ecd9" id="r_a14e3d86a47cd5e24bda905bc67b6ecd9"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a14e3d86a47cd5e24bda905bc67b6ecd9">torque</a></td></tr>
+<tr class="separator:a14e3d86a47cd5e24bda905bc67b6ecd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
 <tr class="memitem:afc4a23f508cc6df90a0e7de22512b9d3 inherit pub_attribs_classopticka_core" id="r_afc4a23f508cc6df90a0e7de22512b9d3"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afc4a23f508cc6df90a0e7de22512b9d3">name</a></td></tr>
 <tr class="memdesc:afc4a23f508cc6df90a0e7de22512b9d3 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">object name  <br /></td></tr>
@@ -276,6 +317,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core" id="r_af9655eed8c87376ad6116864684a7f69"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af9655eed8c87376ad6116864684a7f69">verbose</a></td></tr>
 <tr class="memdesc:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">verbose logging, subclasses must assign this. This is normally logical true/false  <br /></td></tr>
 <tr class="separator:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core" id="r_a7f7e05813940d071866ac15fed79f130"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a7f7e05813940d071866ac15fed79f130">optickaVersion</a></td></tr>
+<tr class="memdesc:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">version number  <br /></td></tr>
+<tr class="separator:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core" id="r_a17a7a3b54bf96571566c72b9151648a7"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7">dateStamp</a></td></tr>
 <tr class="memdesc:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">clock() dateStamp set on construction  <br /></td></tr>
 <tr class="separator:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,16 +340,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a427204c015c869d3c9d59870dca52aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e0a8ac53a68d0d534f124038130a297" id="r_a4e0a8ac53a68d0d534f124038130a297"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a4e0a8ac53a68d0d534f124038130a297">rigidStep</a> (in me, in tick, in updatePositions)</td></tr>
 <tr class="separator:a4e0a8ac53a68d0d534f124038130a297"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0294458ee995c364df0708116931b5f3" id="r_a0294458ee995c364df0708116931b5f3"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a0294458ee995c364df0708116931b5f3">updateBodyPositions</a> (in me)</td></tr>
-<tr class="separator:a0294458ee995c364df0708116931b5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c69661c46559b3b63120124cf31131f" id="r_a9c69661c46559b3b63120124cf31131f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a9c69661c46559b3b63120124cf31131f">setupWorld</a> (in me)</td></tr>
 <tr class="separator:a9c69661c46559b3b63120124cf31131f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2291fd1285d633ecfc91459283e4bc6f" id="r_a2291fd1285d633ecfc91459283e4bc6f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a2291fd1285d633ecfc91459283e4bc6f">setupBodies</a> (in me)</td></tr>
 <tr class="separator:a2291fd1285d633ecfc91459283e4bc6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fd23c50e04d4df159c9c79f48626aa6" id="r_a7fd23c50e04d4df159c9c79f48626aa6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a7fd23c50e04d4df159c9c79f48626aa6">setupBody</a> (in me, in thisBody)</td></tr>
 <tr class="separator:a7fd23c50e04d4df159c9c79f48626aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88409f2791412257661bce13fc79b715" id="r_a88409f2791412257661bce13fc79b715"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a88409f2791412257661bce13fc79b715">updateStimuli</a> (in me)</td></tr>
-<tr class="separator:a88409f2791412257661bce13fc79b715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad11cc1b318f7134fc0e6f0a25af86353" id="r_ad11cc1b318f7134fc0e6f0a25af86353"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#ad11cc1b318f7134fc0e6f0a25af86353">updateMassType</a> (in me, in thisBody, in <a class="el" href="classanimation_manager.html#a7338b2646d5136efde4ebd90508112b2">type</a>)</td></tr>
+<tr class="separator:ad11cc1b318f7134fc0e6f0a25af86353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6ed463e48a3e47bf921f17d16062e32" id="r_aa6ed463e48a3e47bf921f17d16062e32"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#aa6ed463e48a3e47bf921f17d16062e32">makeTrackIndex</a> (in me)</td></tr>
 <tr class="separator:aa6ed463e48a3e47bf921f17d16062e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a410019e34677e776e4668d4e219a342e" id="r_a410019e34677e776e4668d4e219a342e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a410019e34677e776e4668d4e219a342e">delete</a> (in me)</td></tr>
@@ -351,8 +393,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:abaa0bd272cf75bf97e11c5f0af3a3bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58b157735b610c1fed5da17f84928402" id="r_a58b157735b610c1fed5da17f84928402"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a58b157735b610c1fed5da17f84928402">isCeiling</a></td></tr>
 <tr class="separator:a58b157735b610c1fed5da17f84928402"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32598d7e74308a5afe215ac321d323e6" id="r_a32598d7e74308a5afe215ac321d323e6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a32598d7e74308a5afe215ac321d323e6">massType</a></td></tr>
-<tr class="separator:a32598d7e74308a5afe215ac321d323e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a645d86dac38224b4ab5bcfa8cab37e41" id="r_a645d86dac38224b4ab5bcfa8cab37e41"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a645d86dac38224b4ab5bcfa8cab37e41">bodyTemplate</a></td></tr>
 <tr class="separator:a645d86dac38224b4ab5bcfa8cab37e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fa580f287de318df3d39156881b900f" id="r_a4fa580f287de318df3d39156881b900f"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classanimation_manager.html#a4fa580f287de318df3d39156881b900f">allowedProperties</a></td></tr>
@@ -476,7 +516,7 @@ Protected Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">stimulus</td><td>&ndash; the stimulus object </td></tr>
     <tr><td class="paramname">shape</td><td>&ndash; what shape to give it in the physics simulation </td></tr>
-    <tr><td class="paramname">type</td><td>&ndash; normal (move &amp; collide) | infinite (non-moveable, collidable) | sensor (non-moveable, non-collidable) </td></tr>
+    <tr><td class="paramname">type</td><td>&ndash; normal|bullet (move &amp; collide) | infinite (non-moveable, collidable) | sensor (non-moveable, non-collidable) </td></tr>
     <tr><td class="paramname">density</td><td>&ndash; </td></tr>
     <tr><td class="paramname">friction</td><td>&ndash; </td></tr>
     <tr><td class="paramname">elasticity</td><td>&ndash; </td></tr>
@@ -649,8 +689,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aa0664b553ac8b4a13f949e224d68aebe" name="aa0664b553ac8b4a13f949e224d68aebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0664b553ac8b4a13f949e224d68aebe">&#9670;&#160;</a></span>editBody()</h2>
+<a id="acf7073636db2ff0584fbb89a44c3bbf8" name="acf7073636db2ff0584fbb89a44c3bbf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7073636db2ff0584fbb89a44c3bbf8">&#9670;&#160;</a></span>editBody()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -665,7 +705,7 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>body</em>, </td>
+          <td class="paramname"><em>id</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -695,7 +735,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>av</em>&#160;</td>
+          <td class="paramname"><em>av</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>editStim</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -704,6 +750,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>NOTE: input y and vy are in opticka coordinates (-y = up) whereas world has +y = up, make sure your Y input is in opticka format. </p>
 
 </div>
 </div>
@@ -757,8 +805,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afe5e1b7208e4c4cf64524af99f32eabc" name="afe5e1b7208e4c4cf64524af99f32eabc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe5e1b7208e4c4cf64524af99f32eabc">&#9670;&#160;</a></span>getBody()</h2>
+<a id="ae8a543fb04439ee2d3ed521b22388a6b" name="ae8a543fb04439ee2d3ed521b22388a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8a543fb04439ee2d3ed521b22388a6b">&#9670;&#160;</a></span>getBody()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -773,7 +821,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>id</em>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>bodyType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -887,6 +941,34 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4467bc51d2d13527a2ca0fb239ba1f7e" name="a4467bc51d2d13527a2ca0fb239ba1f7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4467bc51d2d13527a2ca0fb239ba1f7e">&#9670;&#160;</a></span>hide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function animationManager::hide </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0cb73a8975648a4a687cac58a739ae38" name="a0cb73a8975648a4a687cac58a739ae38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cb73a8975648a4a687cac58a739ae38">&#9670;&#160;</a></span>isCollision()</h2>
 
@@ -949,6 +1031,24 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">function get animationManager::nBodies </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e7fdd7fc3789877fe644b533e4dfdf5" name="a2e7fdd7fc3789877fe644b533e4dfdf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7fdd7fc3789877fe644b533e4dfdf5">&#9670;&#160;</a></span>nObstacles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function get animationManager::nObstacles </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>me</em></td><td>)</td>
@@ -1095,6 +1195,74 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aa36a883f140e0721e3351d24cd197d91" name="aa36a883f140e0721e3351d24cd197d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36a883f140e0721e3351d24cd197d91">&#9670;&#160;</a></span>setEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function animationManager::setEnabled </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adb7fa4d9d850643fbf09749d3aee955e" name="adb7fa4d9d850643fbf09749d3aee955e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb7fa4d9d850643fbf09749d3aee955e">&#9670;&#160;</a></span>setSensorState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function animationManager::setSensorState </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a75e0843799b8597d39ff7a39809452af" name="a75e0843799b8597d39ff7a39809452af"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a75e0843799b8597d39ff7a39809452af">&#9670;&#160;</a></span>setup()</h2>
 
@@ -1217,6 +1385,36 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab7f48365ad71b18765bde3f6c92b351e" name="ab7f48365ad71b18765bde3f6c92b351e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7f48365ad71b18765bde3f6c92b351e">&#9670;&#160;</a></span>show()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">function animationManager::show </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>modifies the physics body and opticka stimulus </p>
+
+</div>
+</div>
 <a id="ad47d54c82be947149fd8d21cb54ef780" name="ad47d54c82be947149fd8d21cb54ef780"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad47d54c82be947149fd8d21cb54ef780">&#9670;&#160;</a></span>step()</h2>
 
@@ -1268,9 +1466,6 @@ Protected Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">function animationManager::updateBodyPositions </td>
@@ -1278,6 +1473,43 @@ Protected Attributes</h2></td></tr>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>me</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad11cc1b318f7134fc0e6f0a25af86353" name="ad11cc1b318f7134fc0e6f0a25af86353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad11cc1b318f7134fc0e6f0a25af86353">&#9670;&#160;</a></span>updateMassType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">function animationManager::updateMassType </td>
+          <td>(</td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>me</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>thisBody</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -1324,32 +1556,6 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>updatePosition returns dX and dY given an angle and delta </p>
-
-</div>
-</div>
-<a id="a88409f2791412257661bce13fc79b715" name="a88409f2791412257661bce13fc79b715"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88409f2791412257661bce13fc79b715">&#9670;&#160;</a></span>updateStimuli()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">function animationManager::updateStimuli </td>
-          <td>(</td>
-          <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>me</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -1413,6 +1619,20 @@ Protected Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>what properties are allowed to be passed on construction </p>
+
+</div>
+</div>
+<a id="a5db7006b785cb241dc9df31e373e14c4" name="a5db7006b785cb241dc9df31e373e14c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5db7006b785cb241dc9df31e373e14c4">&#9670;&#160;</a></span>angularVelocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property animationManager::angularVelocity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1572,25 +1792,47 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a32598d7e74308a5afe215ac321d323e6" name="a32598d7e74308a5afe215ac321d323e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a32598d7e74308a5afe215ac321d323e6">&#9670;&#160;</a></span>massType</h2>
+<a id="a616a07fff7b5dc142acb220a1bd8ff3f" name="a616a07fff7b5dc142acb220a1bd8ff3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a616a07fff7b5dc142acb220a1bd8ff3f">&#9670;&#160;</a></span>kineticEnergy</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">Property animationManager::massType</td>
+          <td class="memname">Property animationManager::kineticEnergy</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="afea51a80e94f664c4f953d2f97600390" name="afea51a80e94f664c4f953d2f97600390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea51a80e94f664c4f953d2f97600390">&#9670;&#160;</a></span>linearVelocity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property animationManager::linearVelocity</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6f006b25108df78c5557b958f057f0de" name="a6f006b25108df78c5557b958f057f0de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f006b25108df78c5557b958f057f0de">&#9670;&#160;</a></span>momentOfInertia</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property animationManager::momentOfInertia</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>moment of inertia </p>
 
 </div>
 </div>
@@ -1616,6 +1858,20 @@ Protected Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">Property animationManager::nObstacles</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dcfd15a00fdb031521f4199ba397045" name="a3dcfd15a00fdb031521f4199ba397045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dcfd15a00fdb031521f4199ba397045">&#9670;&#160;</a></span>potentialEnergy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property animationManager::potentialEnergy</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1704,6 +1960,20 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a14e3d86a47cd5e24bda905bc67b6ecd9" name="a14e3d86a47cd5e24bda905bc67b6ecd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e3d86a47cd5e24bda905bc67b6ecd9">&#9670;&#160;</a></span>torque</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property animationManager::torque</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1d5452b6466b56f9d7e8df091da479a9" name="a1d5452b6466b56f9d7e8df091da479a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d5452b6466b56f9d7e8df091da479a9">&#9670;&#160;</a></span>trackIndex</h2>
 
@@ -1779,6 +2049,20 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a8e1c037d7e0b1e52b43be89ab497dec6" name="a8e1c037d7e0b1e52b43be89ab497dec6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1c037d7e0b1e52b43be89ab497dec6">&#9670;&#160;</a></span>wallColour</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Property animationManager::wallColour</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>stimuli/<a class="el" href="animation_manager_8m.html">animationManager.m</a></li>
 </ul>
@@ -1788,7 +2072,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classanimation_manager.html">animationManager</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

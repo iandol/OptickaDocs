@@ -1,11 +1,16 @@
 var searchData=
 [
-  ['y_0',['y',['../classeyetracker_core.html#ac6d925f4ede32a95d34b07edd0a6101c',1,'eyetrackerCore']]],
-  ['yall_1',['yAll',['../classeyetracker_core.html#aeedfab3b70bf7970c9ea7aecfaccc66e',1,'eyetrackerCore']]],
-  ['yallraw_2',['yAllRaw',['../classeyetracker_core.html#a2d69be0e1a5d1b886b89a3f478e82ef8',1,'eyetrackerCore']]],
-  ['ycenter_3',['ycenter',['../classeyelink_analysis.html#a8e514329588f2f5b67716a1965b06059',1,'eyelinkAnalysis::yCenter'],['../classi_rec_analysis.html#ac846eb7b47bdfee2de5deaf57231346b',1,'iRecAnalysis::yCenter'],['../classtobii_analysis.html#af1c7f76cfdfe7084cea98d7373eff056',1,'tobiiAnalysis::yCenter']]],
-  ['yfinal_4',['yFinal',['../classbase_stimulus.html#a8c8c547f317770de6243f276f5891b18',1,'baseStimulus']]],
-  ['yfinald_5',['yFinalD',['../classbase_stimulus.html#a1a3fe774a516571a3aec259fdcbbfeed',1,'baseStimulus']]],
-  ['yokedselection_6',['yokedSelection',['../classanalysis_core.html#a35d6af79e0baba8f69d8aec6c8641751',1,'analysisCore']]],
-  ['yposition_7',['yPosition',['../classbase_stimulus.html#a9fab9f6a10fd7d4ddb6d5b3821c359e6',1,'baseStimulus']]]
+  ['x_0',['x',['../classeyetracker_core.html#a1d0f466c6278efcb7effcc2ac619c13b',1,'eyetrackerCore::x'],['../classget_density.html#a583e7364b951ed56c106ca76b0dc53dc',1,'getDensity::x(in obj, in value)'],['../classget_density.html#ac71d98838e099ce424fdf10aa00f60b7',1,'getDensity::x']]],
+  ['x_5fposition_1',['X_position',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010a38dfbb644d43282815727479655d6d4d',1,'HEDTags']]],
+  ['x_5fposition_5fvalue_2',['X_position_value',['../class_h_e_d_tags.html#a32326bf857cb761929527927bbaad010ade867f280fcff526f4add66326889107',1,'HEDTags']]],
+  ['xall_3',['xall',['../classbehavioural_record.html#acbdab38aa3e048c0037b8ef0a926d9d8',1,'behaviouralRecord::xAll'],['../classeyetracker_core.html#a039e425dd4e58cd8724af0337d9a1ea4',1,'eyetrackerCore::xAll']]],
+  ['xallraw_4',['xAllRaw',['../classeyetracker_core.html#a0cb4799c6b2603b7e325f15a93f06f75',1,'eyetrackerCore']]],
+  ['xcenter_5',['xcenter',['../classi_rec_analysis.html#a0bc6a130ddf3bd110f31ae684741152f',1,'iRecAnalysis::xCenter'],['../classtobii_analysis.html#a71772c0a9cddccf3dc7d13c0eba731fa',1,'tobiiAnalysis::xCenter'],['../classeyelink_analysis.html#a08623d6e1d0ae6610cfeaff01fe0bdc2',1,'eyelinkAnalysis::xCenter']]],
+  ['xfinal_6',['xFinal',['../classbase_stimulus.html#a3b27664cde362f2d789e77942ae43871',1,'baseStimulus']]],
+  ['xfinald_7',['xFinalD',['../classbase_stimulus.html#a2f5f57853db68f4d8e71cc0a6263ed5c',1,'baseStimulus']]],
+  ['xposition_8',['xPosition',['../classbase_stimulus.html#aef65005060d8e0fcfeb292088484aca7',1,'baseStimulus']]],
+  ['xrownames_9',['xrownames',['../classget_density.html#a93ba404d568be06e21f0c7f6bd5e0af5',1,'getDensity']]],
+  ['xy_10',['xy',['../classdots_stimulus.html#ad4a0af4c1ccffb106854db098a0a4a68',1,'dotsStimulus']]],
+  ['xyposition_20tt_20magic_20variable_11',['The &lt;tt&gt;xyPosition&lt;/tt&gt; Magic Variable',['..//home/cog5/Code/opticka/help/uihelpstims.md#autotoc_md145',1,'']]],
+  ['xyytorgb_12',['xyYtoRGB',['../classcolour_manager.html#a257427db9f67ae39fabccec7ed08619b',1,'colourManager']]]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['revcorstimulus_0',['revcorStimulus',['../classrevcor_stimulus.html',1,'']]],
-  ['rfmapper_1',['rfMapper',['../classrf_mapper.html',1,'']]],
-  ['runexperiment_2',['runExperiment',['../classrun_experiment.html',1,'']]]
+  ['optickacore_0',['optickaCore',['../classopticka_core.html',1,'']]],
+  ['opxonline_1',['opxOnline',['../classopx_online.html',1,'']]]
 ];

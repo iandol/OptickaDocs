@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -95,26 +95,26 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
   <div class="headertitle"><div class="title">Opticka: Behavioural Experiment Manager </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a> <a href="https://doi.org/10.5281/zenodo.592253"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.592253.svg" alt="DOI" style="pointer-events: none;" class="inline"/></a> <a href="https://vscode.dev/github/iandol/opticka"><img src="https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&amp;logoColor=ffffff" alt="Open in Visual Studio Code" class="inline"/></a> <a href="https://gitHub.com/iandol/opticka/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance" style="pointer-events: none;" class="inline"/></a> <a href="http://perso.crans.org/besson/LICENSE.html"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPLv3 license" style="pointer-events: none;" class="inline"/></a></p>
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a> <a href="https://doi.org/10.5281/zenodo.592253"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.592253.svg" alt="DOI" style="pointer-events: none;" class="inline"/></a> <img src="https://img.shields.io/github/v/release/iandol/opticka" alt="GitHub Release" class="inline"/> <a href="https://github.com/iandol/opticka/commits/main"><img src="https://img.shields.io/github/commits-since/iandol/opticka/latest" alt="GitHub Commits Since" class="inline"/></a> <img src="https://img.shields.io/github/last-commit/iandol/opticka" alt="GitHub last commit" class="inline"/> <a href="https://deepwiki.com/iandol/opticka"><img src="https://img.shields.io/badge/DeepWiki%20Docs-007ACC?logo=docsify&amp;logoColor=ffffff" alt="DeepWiki Docs" class="inline"/></a> <a href="https://vscode.dev/github/iandol/opticka"><img src="https://img.shields.io/badge/Open%20in%20Visual%20Studio%20Code-007ACC?logo=visual%20studio%20code&amp;logoColor=ffffff" alt="Open in Visual Studio Code" class="inline"/></a> <a href="https://gitHub.com/iandol/opticka/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="Maintenance" style="pointer-events: none;" class="inline"/></a> <a href="http://perso.crans.org/besson/LICENSE.html"><img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="GPLv3 license" style="pointer-events: none;" class="inline"/></a></p>
 <p>Opticka is an object-oriented framework with optional GUI for the <a href="http://psychtoolbox.org/">Psychophysics toolbox (PTB)</a>, allowing full experimental presentation of complex visual or other stimuli. It is designed to work on Linux, macOS or Windows. It interfaces via strobed words and/or ethernet for recording neurophysiological and behavioural data. Full behavioural task control is available by use of a <a href="http://iandol.github.io/OptickaDocs/classstate_machine.html#details">Finite State-Machine</a> controller, in addition to simple method of constants (MOC) experiments. Opticka uses the TCP interface for Eyelink, Tobii Pro and iRecHS2 eyetrackers affording better control, reliability and data recording over depending on analog voltage output (we don't need a DAQ card for eye data). The base classes can be used <em>without</em> the need to run the GUI (see <a href="http://iandol.github.io/OptickaDocs/optickatest.html"><code>optickatest.m</code></a> for an example), and plug-n-play stimuli provide a unified interface (<code>setup</code>, <code>animate</code>, <code>draw</code>, <code>update</code>, <code>reset</code>) to integrate into other PTB routines. Opticka's methods take care of all the background geometry and normalisation, meaning stimuli are much easier to use than “raw” PTB commands alone. Analysis routines are also present, eye data can be parsed into trials for any supported eyetracker, and for taking e.g. Plexon files (<code>.PL2</code> or <code>.PLX</code>), Eyelink files (<code>.EDF</code>), and behavioural responses and parsing them into a consistent structure, interfacing directly with <a href="http://fieldtrip.fcdonders.nl/start">Fieldtrip</a> for further spike, LFP, and spike-LFP analysis. Opticka is more modular and affords much better stimulus control (most stimuli are optimised OpenGL with advanced control thanks to PTB) than e.g. <a href="http://www.brown.edu/Research/monkeylogic/">MonkeyLogic</a>. <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md58"></a>
+<h1><a class="anchor" id="autotoc_md187"></a>
 Sample hardware setup</h1>
 <p>The diagram below shows a sample Opticka configuration setup. <b>Note that the eyetracker, display, synchronisation and electrophysiology systems <em>can be swapped</em> for other hardware (see the list below).</b> While I prefer using a Display++ or a DataPixx/ViewPixx to guarantee temporal fidelity, you can use either a LabJack or Arduino/XIAO for synchronisation (where a photodiode becomes more important, which we integrate as an option): <br  />
 </p>
 <p><img src="https://github.com/iandol/opticka/raw/gh-pages/images/Opticka-Setup.png" alt="Example hardware setup to run Opticka" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md59"></a>
+<h1><a class="anchor" id="autotoc_md188"></a>
 GUI</h1>
 <p>A GUI can be used to control the hardware, stimuli and variables needed for both method of constant (MOC) and more complex behavioural tasks that use the state machine. GUI supports protocol files that are useful for cases where staff running an experiment are not themselves programmers, and when you need to change experiment or stimulus parameters quickly between runs: you make protocol files for each task, then load and run them as needed. The GUI is <b>not required</b> to utilise the underlying classes… <br  />
 </p>
 <div class="fragment"><div class="line">o = opticka; %==run the GUI, returns an object &#39;o&#39; for introspection from the command window...</div>
 </div><!-- fragment --><p><img src="https://github.com/iandol/opticka/raw/gh-pages/images/opticka.png" alt="Opticka Screenshot" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md60"></a>
+<h1><a class="anchor" id="autotoc_md189"></a>
 State machine control</h1>
 <p>For more complex behavioural tasks, a state machine is used. You can still edit visual stimuli and task variables in the GUI, and then edit a <code>StateInfo.m</code> file that specifies states (like <code>paused</code>, <code>prefixation</code>, <code>stimulus</code>, <code>correct</code>, <code>breakfix</code> etc.) to be run and for each state which methods/functions are executed (cell arrays of functions that run on <code>ENTER</code>, <code>WITHIN</code> &amp; <code>EXIT</code> of states). States can switch (<code>TRANSITION</code>) based on logic, for example a particular saccade or fixation or button responses to transition to a <code>correct</code> state… See an <a href="https://github.com/iandol/opticka/blob/master/DefaultStateInfo.m">example StateInfo.m file here</a>; and you can test a minimal generic state machine run using:</p>
 <div class="fragment"><div class="line">sM = stateMachine;</div>
-<div class="line">runDemo(sM);</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md61"></a>
+<div class="line">demo(sM);</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md190"></a>
 Hardware currently supported</h1>
 <ul>
 <li><b>Display &amp; Digital I/O</b>: high quality display (high bit depths, great colour management) and microsecond precise frame-locked digital I/O: <a href="https://www.crsltd.com/tools-for-vision-science/calibrated-displays/displaypp-lcd-monitor/">Display++ by CRS</a>. <br  />
@@ -126,7 +126,7 @@ Hardware currently supported</h1>
 <li><b>Digital I/O</b>: <a href="https://labjack.com/">LabJack</a> USB U3/U6 or T4/T7 DAQs, strobed words up to 12bits. The T4/T7 are preferred as the I/O is asynchronous and work on all platforms. <br  />
 </li>
 <li><b>Digital I/O</b>: [Arduino]() boards for simple TTL triggers for reward systems, MagStim etc. In particular, digitial TTLs are asynchronous so they do not block the experimental loop. The <a href="https://wiki.seeedstudio.com/Seeeduino-XIAO/">seeeduino Xiao</a> is small, cheap, fast and works well, as does the <a href="https://www.raspberrypi.com/products/raspberry-pi-pico/">Raspberry Pi Pico</a> (using the <a href="https://github.com/earlephilhower/arduino-pico">Arduino IDE interface</a>), but the <a href="https://docs.arduino.cc/hardware/uno-rev3">Uno</a> is also well supported.</li>
-<li><b>TouchScreen</b>: PTB can interface many kinds of touchscreen types and we have tested against many different brands. Our [<code><a class="el" href="classtouch_manager.html" title="Manages touch screens (wraps the PTB TouchQueue* functions), and provides touch area management metho...">touchManager</a></code>](<a href="http://iandol.github.io/OptickaDocs/classtouch_manager.html"><code>touchManager.m</code></a> add support for touch windows, exclusion zones and more...</li>
+<li><b>TouchScreen</b>: PTB can interface many kinds of touchscreen types and we have tested against many different brands. Our [<code><a class="el" href="classtouch_manager.html">touchManager</a></code>](<a href="http://iandol.github.io/OptickaDocs/classtouch_manager.html"><code>touchManager.m</code></a> add support for touch windows, exclusion zones and more...</li>
 <li><b>Eyetracking</b>: <a href="https://www.sr-research.com">Eyelink Eyetrackers</a> &ndash; uses the native ethernet link API. This enables much better two-way control, sending markers and stimulus data while drawing stimuli and experiment values onto the eyelink screen. EDF files are stored after each run and <a href="http://iandol.github.io/OptickaDocs/classeyelink_analysis.html"><code>eyelinkAnalysis.m</code></a> class uses native EDF loading (not ascii proxies) for full trial-by-trial analysis without conversion. See also [<a class="el" href="classeyelink_manager.html" title="eyelinkManager wraps around the eyelink toolbox functions offering a consistent interface and methods...">eyelinkManager</a>](). <br  />
 </li>
 <li><b>Eyetracking</b>: <a href="https://www.tobiipro.com">Tobii Pro Eyetrackers</a> &ndash; using the excellent <a href="https://github.com/dcnieho/Titta">Titta toolbox</a> to manage calibration, command-response and recording. Tobii Pro eyetrackers do not require head fixation. See [<a class="el" href="classtobii_manager.html" title="Manages the Tobii eyetrackers.">tobiiManager</a>]().</li>
@@ -138,17 +138,17 @@ Hardware currently supported</h1>
 <li><b>Photodiode boxes</b>: we use TSL251R light-to-voltage photodiodes, which can be recorded directy into your electrophysiology system or can generate digital triggers via an <a href="https://github.com/iandol/opticka/tree/master/tools/photodiode">Arduino interface</a>. <br  />
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md62"></a>
+<h1><a class="anchor" id="autotoc_md191"></a>
 Quick Documentation</h1>
 <p><code><a class="el" href="opticka_test_8m.html">optickatest.m</a></code> is a minimal example showing a simple script-based method of constants (MOC) experiment with 11 different animated stimuli varying across angle, contrast and orientation. Read the Matlab-generated documentation here: <a href="http://iandol.github.io/OptickaDocs/optickaTest.html"><code>optickatest.m</code> Report</a>. More complex behavioural control (gaze-contingent experiments with variable logic per trial) utilises a state machine, see <a href="http://iandol.github.io/OptickaDocs/optickaBehaviourTest.html"><code>optickaBehaviourTest.m</code> Report</a>. You can see examples of <a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a> control files in the [CoreProtocols](CoreProtocols) folder.</p>
 <p>There is auto-generated class documentation here: <a href="http://iandol.github.io/OptickaDocs/inherits.html">Opticka Class Docs</a>, that details the major classes and their methods and properties. This is generated from the comments in the code, which as always could be improved… <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md63"></a>
+<h1><a class="anchor" id="autotoc_md192"></a>
 Basic Install Instructions</h1>
 <p>Opticka prefers the latest Psychophysics Toolbox (V3.0.17+) and at least MATLAB 2017a (it uses object-oriented property validation introduced in that version). It has been tested on 64bit Ubuntu 20.04 &amp; macOS 12.x with <b>MATLAB 2021b</b> (newer versions are generally faster). You can simply download the <a href="https://github.com/iandol/opticka/archive/refs/heads/master.zip">GitHub ZIP File</a>, unzip and CD to the folder and run <code><a class="el" href="add_opticka_to_path_8m.html">addOptickaToPath.m</a></code>. Or to keep easily up-to-date if you have git installed, clone this Github repo, CD to the folder then run <code><a class="el" href="add_opticka_to_path_8m.html">addOptickaToPath.m</a></code>.</p>
 <p>Opticka currently works on Linux, macOS and Windows. The older LabJack U3/U6 interface currently only works under Linux and macOS; the LabJack T4/T7 does work cross-platform however. Linux is <b>by far</b> the best OS according the PTB developer Mario Kleiner, and receives the majority of development work from him, therefore it is <em>strongly advised</em> to use it for experiments. My experience is that Linux is much more robust and performant than macOS or Windows, and it is well worth the effort to use Linux for PTB experimental computers.</p>
 <p>See <a class="el" href="_i_n_s_t_a_l_l_8md.html">**Detailed instructions**</a> for full install details…</p>
-<h1><a class="anchor" id="autotoc_md64"></a>
+<h1><a class="anchor" id="autotoc_md193"></a>
 Features</h1>
 <ul>
 <li>Values are always specified in eye-relevant co-ordinates (degrees etc.) that are internally calculated based on screen geometry/distance.</li>
@@ -183,7 +183,7 @@ Features</h1>
 <li><b>Hand-mapping module</b> - use mouse controlled dynamic bar / texture / colour to handmap receptive fields; includes logging of clicked position and later printout / storage of hand maps. These maps are in screen co-ordinates for quick subsequent stimulus placement. <br  />
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md65"></a>
+<h1><a class="anchor" id="autotoc_md194"></a>
 Eye tracker control</h1>
 <p>Opticka supports both Eyelink and Tobii Pro eyetrackers. It does this by developing a unified API, so the <em>same commands</em> are used to manage either eyetracker, meaning you don't need to change code. The API offers a lot of useful features for behavioural control:</p>
 <ul>
@@ -194,7 +194,7 @@ Eye tracker control</h1>
 <li><b>Data markers</b> — Eyelink EDF file recording uses a specific set of recommended message markers to define trials and other data. We use the same markers for both eyelink and Tobii recording data, simplifying the subsequent analaysis.</li>
 <li><b>Drift correction</b> — Offer a manual single-point drift correction mode for both eye trackers, callable during any task.</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md66"></a>
+<h2><a class="anchor" id="autotoc_md195"></a>
 Licence</h2>
 <p>Opticka is licenced under the LGPL3 open source licence. </p>
 </div></div><!-- PageDoc -->
@@ -203,7 +203,7 @@ Licence</h2>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

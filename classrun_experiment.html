@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="opticka.png"/></td>
   <td id="projectalign">
-   <div id="projectname">Opticka<span id="projectnumber">&#160;2.16.1</span>
+   <div id="projectname">Opticka<span id="projectnumber">&#160;2.18.1</span>
    </div>
    <div id="projectbrief">Opticka is an experiment manager for behavioral research.</div>
   </td>
@@ -101,12 +101,12 @@ $(document).ready(function(){initNavTree('classrun_experiment.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p>The main experiment manager.  
+<p>Behavioural &amp; MOC Task experiment runner.  
  <a href="classrun_experiment.html#details">More...</a></p>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The main experiment manager. </p>
+<div class="textblock"><p>Behavioural &amp; MOC Task experiment runner. </p>
 <p>RUNEXPERIMENT accepts a variable sequence « <a class="el" href="classtask_sequence.html" title="Block-based variable randomisation manager.">taskSequence</a> », stimulus set « <a class="el" href="classmeta_stimulus.html" title="Manager for multiple stimuli.">metaStimulus</a> » and for behavioural tasks a « <a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a> » state machine file, and runs the stimuli based on the task objects passed. This class uses the fundamental configuration of the screen (calibration, size etc. via « <a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a> »), and manages communication to a DAQ systems using digital I/O and communication over a TCP/UDP client⇄server socket (via «dataConnection»). It also interfaces with hardware like eyetrackers</p>
-<p>There are 2 main experiment types: 1) MOC (method of constants) tasks &ndash; uses stimuli and task objects directly to run standard randomised variable tasks. See <a class="el" href="opticka_test_8m.html">optickatest.m</a> for an example. Does not use the «stateMachine». 2) Behavioural tasks that use state machines for control logic. These tasks still use stimuli and task objects to provide stimuli and variable lists, but use a state machine to control the task structure.</p>
+<p>There are 2 fundamental experiment types: 1) MOC (method of constants) tasks &ndash; uses stimuli and task objects directly to run standard randomised variable tasks. See <a class="el" href="opticka_test_8m.html">optickatest.m</a> for an example. Does not use the «stateMachine». 2) Behavioural tasks that use state machines for control logic. These tasks still use stimuli and task objects to provide stimuli and variable lists, but use a state machine to control the task structure.</p>
 <p>Stimuli should be «metaStimulus» class, so for example:</p>
 <div class="fragment"><div class="line">myStim = <a class="code hl_class" href="classmeta_stimulus.html">metaStimulus</a>;</div>
 <div class="line">myStim{1} = <a class="code hl_class" href="classgrating_stimulus.html">gratingStimulus</a>(<span class="stringliteral">&#39;mask&#39;</span>,<span class="keyword">true</span>,<span class="stringliteral">&#39;sf&#39;</span>,1);</div>
@@ -116,14 +116,14 @@ $(document).ready(function(){initNavTree('classrun_experiment.html',''); initRes
 <div class="line"><a class="code hl_function" href="classrun_experiment.html#a4e0577c606eb0f746fad2dc13b1d8ca2">runMOC</a>(myExp); % run method of constants type experiment</div>
 <div class="ttc" id="aclassgrating_stimulus_html"><div class="ttname"><a href="classgrating_stimulus.html">gratingStimulus</a></div><div class="ttdoc">single grating stimulus, inherits from baseStimulus GRATINGSTIMULUS single grating stimulus,...</div><div class="ttdef"><b>Definition</b> gratingStimulus.m:20</div></div>
 <div class="ttc" id="aclassmeta_stimulus_html"><div class="ttname"><a href="classmeta_stimulus.html">metaStimulus</a></div><div class="ttdoc">Manager for multiple stimuli.</div><div class="ttdef"><b>Definition</b> metaStimulus.m:3</div></div>
-<div class="ttc" id="aclassrun_experiment_html"><div class="ttname"><a href="classrun_experiment.html">runExperiment</a></div><div class="ttdoc">The main experiment manager.</div><div class="ttdef"><b>Definition</b> runExperiment.m:3</div></div>
+<div class="ttc" id="aclassrun_experiment_html"><div class="ttname"><a href="classrun_experiment.html">runExperiment</a></div><div class="ttdoc">Behavioural &amp; MOC Task experiment runner.</div><div class="ttdef"><b>Definition</b> runExperiment.m:3</div></div>
 <div class="ttc" id="aclassrun_experiment_html_a4e0577c606eb0f746fad2dc13b1d8ca2"><div class="ttname"><a href="classrun_experiment.html#a4e0577c606eb0f746fad2dc13b1d8ca2">runExperiment::runMOC</a></div><div class="ttdeci">function runMOC(in me, in tS)</div></div>
-<div class="ttc" id="aclassrun_experiment_html_a8f0ad5d3af089ace62c47aec53e64da7"><div class="ttname"><a href="classrun_experiment.html#a8f0ad5d3af089ace62c47aec53e64da7">runExperiment::task</a></div><div class="ttdeci">Property task</div><div class="ttdoc">a taskSequence class instance determining our stimulus variables</div><div class="ttdef"><b>Definition</b> runExperiment.m:53</div></div>
+<div class="ttc" id="aclassrun_experiment_html_a8f0ad5d3af089ace62c47aec53e64da7"><div class="ttname"><a href="classrun_experiment.html#a8f0ad5d3af089ace62c47aec53e64da7">runExperiment::task</a></div><div class="ttdeci">Property task</div><div class="ttdoc">a taskSequence class instance determining our stimulus variables</div><div class="ttdef"><b>Definition</b> runExperiment.m:59</div></div>
 <div class="ttc" id="aclasstask_sequence_html"><div class="ttname"><a href="classtask_sequence.html">taskSequence</a></div><div class="ttdoc">Block-based variable randomisation manager.</div><div class="ttdef"><b>Definition</b> taskSequence.m:3</div></div>
 <div class="ttc" id="aclasstask_sequence_html_a24cf03ae1d0753f33fcc2acf9e4e954e"><div class="ttname"><a href="classtask_sequence.html#a24cf03ae1d0753f33fcc2acf9e4e954e">taskSequence::nVar</a></div><div class="ttdeci">Property nVar</div><div class="ttdoc">set method for the nVar structure</div><div class="ttdef"><b>Definition</b> taskSequence.m:42</div></div>
 </div><!-- fragment --><p>will run a minimal experiment showing a 1c/d circularly masked grating.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd>refactor checkKey(): can we use a config for keyboard commands?</dd></dl>
-<p>Copyright ©2014-2022 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
+<p>@TODO refactor checkKey(): can we use a config for keyboard commands?</p>
+<p>Copyright ©2014-2026 Ian Max Andolina — released: LGPL3, see <a class="el" href="_l_i_c_e_n_c_e_8md.html">LICENCE.md</a> </p>
 </div><div class="dynheader">
 Inheritance diagram for runExperiment:</div>
 <div class="dyncontent">
@@ -176,9 +176,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a26892051a43a4ea25e23ad2a2bfdcba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ade3d05204a25f753a6b2b789ac83fa15" id="r_ade3d05204a25f753a6b2b789ac83fa15"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ade3d05204a25f753a6b2b789ac83fa15">getTaskIndex</a> (in me, in index)</td></tr>
 <tr class="separator:ade3d05204a25f753a6b2b789ac83fa15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a075eeb2b8fb43e68fac6e84942a7f1c1" id="r_a075eeb2b8fb43e68fac6e84942a7f1c1"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a075eeb2b8fb43e68fac6e84942a7f1c1">logRun</a> (in me, in tag)</td></tr>
-<tr class="memdesc:a075eeb2b8fb43e68fac6e84942a7f1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">print run info to command window  <br /></td></tr>
-<tr class="separator:a075eeb2b8fb43e68fac6e84942a7f1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa7045f011ea36f9a9cf054a3a0f232" id="r_acaa7045f011ea36f9a9cf054a3a0f232"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#acaa7045f011ea36f9a9cf054a3a0f232">logRun</a> (in me, in tag, in HED)</td></tr>
+<tr class="memdesc:acaa7045f011ea36f9a9cf054a3a0f232"><td class="mdescLeft">&#160;</td><td class="mdescRight">print run info to command window  <br /></td></tr>
+<tr class="separator:acaa7045f011ea36f9a9cf054a3a0f232"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41bfc3b08421768f4fad6f95ac1ee21a" id="r_a41bfc3b08421768f4fad6f95ac1ee21a"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a41bfc3b08421768f4fad6f95ac1ee21a">updateTask</a> (in me, in result)</td></tr>
 <tr class="separator:a41bfc3b08421768f4fad6f95ac1ee21a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d2a4d1ddda7191ba1a2dd7d89dc639e" id="r_a7d2a4d1ddda7191ba1a2dd7d89dc639e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a7d2a4d1ddda7191ba1a2dd7d89dc639e">updateStaircaseAfterState</a> (in me, in result, in state)</td></tr>
@@ -201,8 +201,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9e6c87ce4628c7e1358e54d61a923551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a304f49d0b19043275a78dc6e59451c4e" id="r_a304f49d0b19043275a78dc6e59451c4e"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a304f49d0b19043275a78dc6e59451c4e">noop</a> (in me)</td></tr>
 <tr class="separator:a304f49d0b19043275a78dc6e59451c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0da717903993a93238249b0f66dcc3db" id="r_a0da717903993a93238249b0f66dcc3db"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a0da717903993a93238249b0f66dcc3db">configureTouchScreen</a> (in me, in s)</td></tr>
-<tr class="separator:a0da717903993a93238249b0f66dcc3db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71c0983bbcb08cfb751232081084e45" id="r_ab71c0983bbcb08cfb751232081084e45"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ab71c0983bbcb08cfb751232081084e45">configureTouchScreen</a> (in me, in s)</td></tr>
+<tr class="separator:ab71c0983bbcb08cfb751232081084e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a647e30909d6c89490002c0e8ac4a472b" id="r_a647e30909d6c89490002c0e8ac4a472b"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a647e30909d6c89490002c0e8ac4a472b">configureEyetracker</a> (in me, in s)</td></tr>
 <tr class="separator:a647e30909d6c89490002c0e8ac4a472b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
@@ -211,15 +211,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a01e82ac778e9c8bc8b2472bd849a9732 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core" id="r_a5a9f759bbb480b804cc3eca324945a4b"><td class="memItemLeft" align="right" valign="top">function get&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a5a9f759bbb480b804cc3eca324945a4b">fullName</a> (in me)</td></tr>
 <tr class="separator:a5a9f759bbb480b804cc3eca324945a4b inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core" id="r_a521a2549e5f7c6ac03b31558540cbafe"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a521a2549e5f7c6ac03b31558540cbafe">getALF</a> (in me, in subject, in sessionPrefix, in lab, in create)</td></tr>
-<tr class="separator:a521a2549e5f7c6ac03b31558540cbafe inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core" id="r_a9e089236a86d59f25135f6dfffa3991f"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a9e089236a86d59f25135f6dfffa3991f">getALF</a> (in me, in subject, in lab, in create)</td></tr>
+<tr class="memdesc:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the ALF path  <br /></td></tr>
+<tr class="separator:a9e089236a86d59f25135f6dfffa3991f inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core" id="r_af3d48dae6d0c49cbdff5fcb41aee6a68"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af3d48dae6d0c49cbdff5fcb41aee6a68">makeReport</a> (in me, in rpt)</td></tr>
+<tr class="memdesc:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a detailed report for the opticka object.  <br /></td></tr>
+<tr class="separator:af3d48dae6d0c49cbdff5fcb41aee6a68 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core" id="r_ab7b80b71593278646425b4a212d62634"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#ab7b80b71593278646425b4a212d62634">findAttributes</a> (in me, in attrName, in attrValue)</td></tr>
 <tr class="separator:ab7b80b71593278646425b4a212d62634 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core" id="r_aa41fe6ebd09d4c58ae5dc496683f3f65"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aa41fe6ebd09d4c58ae5dc496683f3f65">findAttributesandType</a> (in me, in attrName, in attrValue, in type)</td></tr>
 <tr class="memdesc:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">find properties of object with specific attributes, for example all properties whose GetAcccess attribute is public and type is logical.  <br /></td></tr>
 <tr class="separator:aa41fe6ebd09d4c58ae5dc496683f3f65 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core" id="r_a3138d91ed7233e89f9a6a9a3983cc0fa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a3138d91ed7233e89f9a6a9a3983cc0fa">findPropertyDefault</a> (in me, in propName)</td></tr>
-<tr class="separator:a3138d91ed7233e89f9a6a9a3983cc0fa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core" id="r_afde4f926a400e1a4e3432a2de7b9dafa"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#afde4f926a400e1a4e3432a2de7b9dafa">findPropertyDefault</a> (in me, in propName)</td></tr>
+<tr class="memdesc:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the declared default value for a class property.  <br /></td></tr>
+<tr class="separator:afde4f926a400e1a4e3432a2de7b9dafa inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core" id="r_aee04cdaafcaa4e034cb616154b8eebec"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#aee04cdaafcaa4e034cb616154b8eebec">clone</a> (in me)</td></tr>
 <tr class="memdesc:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use this syntax to make a deep copy of the object, i.e. OBJ_OUT has the same field values, but will not behave as a handle-copy of me anymore.  <br /></td></tr>
 <tr class="separator:aee04cdaafcaa4e034cb616154b8eebec inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -231,11 +236,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core" id="r_a66542a3ceb15109df805509be4edeee2"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a66542a3ceb15109df805509be4edeee2">setProp</a> (in me, in property, in value)</td></tr>
 <tr class="memdesc:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">method to fast change a particular value. This is useful for use in anonymous functions, like in the state machine.  <br /></td></tr>
 <tr class="separator:a66542a3ceb15109df805509be4edeee2 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core" id="r_a84eb445bf35cf3657371a5f11b0487ea"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a84eb445bf35cf3657371a5f11b0487ea">initialiseGlobals</a> (in me, in doReset, in doOpen)</td></tr>
-<tr class="separator:a84eb445bf35cf3657371a5f11b0487ea inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core" id="r_a4904dd912a926e5fd27eceeb63ed2fb7"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4904dd912a926e5fd27eceeb63ed2fb7">initialiseSaveFile</a> (in me)</td></tr>
-<tr class="memdesc:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise Save prefix.  <br /></td></tr>
-<tr class="separator:a4904dd912a926e5fd27eceeb63ed2fb7 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core" id="r_a18784556a7f8559dd1f2b7e91ab53ef6"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a18784556a7f8559dd1f2b7e91ab53ef6">initialiseSaveFile</a> (in me, in varargin)</td></tr>
+<tr class="memdesc:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">just get date fragment for backwards compatibility  <br /></td></tr>
+<tr class="separator:a18784556a7f8559dd1f2b7e91ab53ef6 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core" id="r_a1e85b40b4fa3e081382da601f6475d05"><td class="memItemLeft" align="right" valign="top">function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a1e85b40b4fa3e081382da601f6475d05">checkPaths</a> (in me)</td></tr>
 <tr class="memdesc:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">checks the paths are valid  <br /></td></tr>
 <tr class="separator:a1e85b40b4fa3e081382da601f6475d05 inherit pub_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,11 +254,13 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a29da259a92b171d1e90f3c36b5571a7a" id="r_a29da259a92b171d1e90f3c36b5571a7a"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a29da259a92b171d1e90f3c36b5571a7a">rebuild</a> ()</td></tr>
 <tr class="separator:a29da259a92b171d1e90f3c36b5571a7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_classopticka_core"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_classopticka_core')"><img src="closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="classopticka_core.html">optickaCore</a></td></tr>
+<tr class="memitem:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core" id="r_a278fcf94c60a10e1938b5712a34a0a4b"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a278fcf94c60a10e1938b5712a34a0a4b">initialiseGlobals</a> (in doReset, in doOpen)</td></tr>
+<tr class="separator:a278fcf94c60a10e1938b5712a34a0a4b inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core" id="r_a4da9ae0cfd621acae8b76f5e1704e00c"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4da9ae0cfd621acae8b76f5e1704e00c">makeArgs</a> (in args)</td></tr>
 <tr class="memdesc:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts cell args to structure array.  <br /></td></tr>
 <tr class="separator:a4da9ae0cfd621acae8b76f5e1704e00c inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core" id="r_acde8df0104b96e6558eecae094f49754"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#acde8df0104b96e6558eecae094f49754">addDefaults</a> (in args, in defs)</td></tr>
-<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">add default options to arg input  <br /></td></tr>
+<tr class="memdesc:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">regularises and adds default options to arg input  <br /></td></tr>
 <tr class="separator:acde8df0104b96e6558eecae094f49754 inherit pub_static_methods_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core" id="r_a4e58c362b03faaa9c7ec9627e4e0c25f"><td class="memItemLeft" align="right" valign="top">static function&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a4e58c362b03faaa9c7ec9627e4e0c25f">hasKey</a> (in in, in key)</td></tr>
 <tr class="memdesc:a4e58c362b03faaa9c7ec9627e4e0c25f inherit pub_static_methods_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if a struct / object has a propery / field  <br /></td></tr>
@@ -286,12 +291,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac3d7f3128f2e6961b432846da9fc5b36" id="r_ac3d7f3128f2e6961b432846da9fc5b36"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac3d7f3128f2e6961b432846da9fc5b36">strobe</a></td></tr>
 <tr class="separator:ac3d7f3128f2e6961b432846da9fc5b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0565b39269e9c9fde0cb602443f871f9" id="r_a0565b39269e9c9fde0cb602443f871f9"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a0565b39269e9c9fde0cb602443f871f9">reward</a></td></tr>
-<tr class="memdesc:a0565b39269e9c9fde0cb602443f871f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">what reward device to use  <br /></td></tr>
+<tr class="memdesc:a0565b39269e9c9fde0cb602443f871f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">what reward device to use (if reward.device is not empty)  <br /></td></tr>
 <tr class="separator:a0565b39269e9c9fde0cb602443f871f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e0f868205b5d8883ed5ce8b5f7d737b" id="r_a6e0f868205b5d8883ed5ce8b5f7d737b"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a6e0f868205b5d8883ed5ce8b5f7d737b">eyetracker</a></td></tr>
-<tr class="memdesc:a6e0f868205b5d8883ed5ce8b5f7d737b"><td class="mdescLeft">&#160;</td><td class="mdescRight">which eyetracker to use  <br /></td></tr>
+<tr class="memdesc:a6e0f868205b5d8883ed5ce8b5f7d737b"><td class="mdescLeft">&#160;</td><td class="mdescRight">which eyetracker to use (if eyetracker.device is not empty)  <br /></td></tr>
 <tr class="separator:a6e0f868205b5d8883ed5ce8b5f7d737b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1e9a278eeaa3ffa02efbf5e969d5c27" id="r_ac1e9a278eeaa3ffa02efbf5e969d5c27"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac1e9a278eeaa3ffa02efbf5e969d5c27">touch</a></td></tr>
+<tr class="memdesc:ac1e9a278eeaa3ffa02efbf5e969d5c27"><td class="mdescLeft">&#160;</td><td class="mdescRight">whether to initialise a touch screen (if touch.device is not empty)  <br /></td></tr>
 <tr class="separator:ac1e9a278eeaa3ffa02efbf5e969d5c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57a88589ab7388abaf76332c511be8dd" id="r_a57a88589ab7388abaf76332c511be8dd"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a57a88589ab7388abaf76332c511be8dd">control</a></td></tr>
 <tr class="separator:a57a88589ab7388abaf76332c511be8dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,10 +316,10 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a6b9f2484bb9239dbd94c36b593451cec"><td class="mdescLeft">&#160;</td><td class="mdescRight">structure for <a class="el" href="classscreen_manager.html" title="screenManager — manage opening and configuring the PTB screen">screenManager</a> on initialisation and info from opticka  <br /></td></tr>
 <tr class="separator:a6b9f2484bb9239dbd94c36b593451cec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac00a2126d4d24e94ef56b54c25ff181a" id="r_ac00a2126d4d24e94ef56b54c25ff181a"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#ac00a2126d4d24e94ef56b54c25ff181a">uiCommand</a></td></tr>
-<tr class="memdesc:ac00a2126d4d24e94ef56b54c25ff181a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this lets the opticka UI leave commands to <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a>  <br /></td></tr>
+<tr class="memdesc:ac00a2126d4d24e94ef56b54c25ff181a"><td class="mdescLeft">&#160;</td><td class="mdescRight">this lets the opticka UI leave commands to <a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a>  <br /></td></tr>
 <tr class="separator:ac00a2126d4d24e94ef56b54c25ff181a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d66f8d8d3e08c30784f4da712e00a51" id="r_a2d66f8d8d3e08c30784f4da712e00a51"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a2d66f8d8d3e08c30784f4da712e00a51">isRunning</a></td></tr>
-<tr class="memdesc:a2d66f8d8d3e08c30784f4da712e00a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">return if <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> is running (true) or not (false)  <br /></td></tr>
+<tr class="memdesc:a2d66f8d8d3e08c30784f4da712e00a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">return if <a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> is running (true) or not (false)  <br /></td></tr>
 <tr class="separator:a2d66f8d8d3e08c30784f4da712e00a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16b5d425345931abed70d5ebf1dfaad6" id="r_a16b5d425345931abed70d5ebf1dfaad6"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a16b5d425345931abed70d5ebf1dfaad6">benchmark</a></td></tr>
 <tr class="memdesc:a16b5d425345931abed70d5ebf1dfaad6"><td class="mdescLeft">&#160;</td><td class="mdescRight">flip as fast as possible?  <br /></td></tr>
@@ -341,9 +347,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a6f10f4f89d255464634d1187965263a8" id="r_a6f10f4f89d255464634d1187965263a8"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a6f10f4f89d255464634d1187965263a8">diaryMode</a></td></tr>
 <tr class="memdesc:a6f10f4f89d255464634d1187965263a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">turn diary on for runTask, saved to the same folder as the data  <br /></td></tr>
 <tr class="separator:a6f10f4f89d255464634d1187965263a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e98587219cb7c4cdc5e01b7f654a1c8" id="r_a5e98587219cb7c4cdc5e01b7f654a1c8"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a5e98587219cb7c4cdc5e01b7f654a1c8">optickaVersion</a></td></tr>
-<tr class="memdesc:a5e98587219cb7c4cdc5e01b7f654a1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">opticka version, passed on first use by opticka  <br /></td></tr>
-<tr class="separator:a5e98587219cb7c4cdc5e01b7f654a1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41146d50856ade59b9f089a6343cc860" id="r_a41146d50856ade59b9f089a6343cc860"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrun_experiment.html#a41146d50856ade59b9f089a6343cc860">logStateTimers</a></td></tr>
 <tr class="memdesc:a41146d50856ade59b9f089a6343cc860"><td class="mdescLeft">&#160;</td><td class="mdescRight">do we record times for every function run by state machine?  <br /></td></tr>
 <tr class="separator:a41146d50856ade59b9f089a6343cc860"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -385,6 +388,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core" id="r_af9655eed8c87376ad6116864684a7f69"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#af9655eed8c87376ad6116864684a7f69">verbose</a></td></tr>
 <tr class="memdesc:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">verbose logging, subclasses must assign this. This is normally logical true/false  <br /></td></tr>
 <tr class="separator:af9655eed8c87376ad6116864684a7f69 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core" id="r_a7f7e05813940d071866ac15fed79f130"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a7f7e05813940d071866ac15fed79f130">optickaVersion</a></td></tr>
+<tr class="memdesc:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">version number  <br /></td></tr>
+<tr class="separator:a7f7e05813940d071866ac15fed79f130 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core" id="r_a17a7a3b54bf96571566c72b9151648a7"><td class="memItemLeft" align="right" valign="top">Property&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classopticka_core.html#a17a7a3b54bf96571566c72b9151648a7">dateStamp</a></td></tr>
 <tr class="memdesc:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="mdescLeft">&#160;</td><td class="mdescRight">clock() dateStamp set on construction  <br /></td></tr>
 <tr class="separator:a17a7a3b54bf96571566c72b9151648a7 inherit pub_attribs_classopticka_core"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -462,7 +468,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p><a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> CONSTRUCTOR</p>
+<p><a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> CONSTRUCTOR</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">varargin</td><td>can be passed as a structure or name,arg pairs </td></tr>
@@ -546,14 +552,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0da717903993a93238249b0f66dcc3db" name="a0da717903993a93238249b0f66dcc3db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0da717903993a93238249b0f66dcc3db">&#9670;&#160;</a></span>configureTouchScreen()</h2>
+<a id="ab71c0983bbcb08cfb751232081084e45" name="ab71c0983bbcb08cfb751232081084e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab71c0983bbcb08cfb751232081084e45">&#9670;&#160;</a></span>configureTouchScreen()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">function runExperiment::configureTouchScreen </td>
+          <td class="memname">runExperiment::configureTouchScreen </td>
           <td>(</td>
           <td class="paramtype">in&#160;</td>
           <td class="paramname"><em>me</em>, </td>
@@ -571,6 +577,12 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Configures the touch screen. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>screen object </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -823,8 +835,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a075eeb2b8fb43e68fac6e84942a7f1c1" name="a075eeb2b8fb43e68fac6e84942a7f1c1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a075eeb2b8fb43e68fac6e84942a7f1c1">&#9670;&#160;</a></span>logRun()</h2>
+<a id="acaa7045f011ea36f9a9cf054a3a0f232" name="acaa7045f011ea36f9a9cf054a3a0f232"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa7045f011ea36f9a9cf054a3a0f232">&#9670;&#160;</a></span>logRun()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,7 +851,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in&#160;</td>
-          <td class="paramname"><em>tag</em>&#160;</td>
+          <td class="paramname"><em>tag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in&#160;</td>
+          <td class="paramname"><em>HED</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1115,7 +1133,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>runMOC uses built-in loop for experiment control and runs a methods-of-constants (MOC) experiment with the settings passed to it (stimuli,task and screen). This is different to the runTask method as it doesn't use a <a class="el" href="classstate_machine.html" title="run a task via a series of states.">stateMachine</a> for experimental logic, just a minimal deterministic trial+block loop.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000006">Todo:</a></b></dt><dd>currently we can only record eye positions with the eyelink, add other tracker support</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>currently we can only record eye positions with the eyelink, add other tracker support</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">me</td><td>required class object </td></tr>
@@ -1209,10 +1227,12 @@ Additional Inherited Members</h2></td></tr>
 <p>Set strobe value</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>the value to set the I/O system </td></tr>
+    <tr><td class="paramname">value</td><td>the value to set the I/O system</td></tr>
   </table>
   </dd>
 </dl>
+<p>@TODO check method speed for other devices. <br  />
+ </p>
 
 </div>
 </div>
@@ -1677,7 +1697,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>use control commands to start / stop recording device = intan | plexon | none port = tcp port </p>
+<p>use control commands to start / stop recording device = '' | intan | plexon | none port = tcp port </p>
 
 </div>
 </div>
@@ -1741,7 +1761,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>which eyetracker to use </p>
+<p>which eyetracker to use (if eyetracker.device is not empty) </p>
 
 </div>
 </div>
@@ -1757,7 +1777,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>return if <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> is running (true) or not (false) </p>
+<p>return if <a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> is running (true) or not (false) </p>
 
 </div>
 </div>
@@ -1894,22 +1914,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5e98587219cb7c4cdc5e01b7f654a1c8" name="a5e98587219cb7c4cdc5e01b7f654a1c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e98587219cb7c4cdc5e01b7f654a1c8">&#9670;&#160;</a></span>optickaVersion</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Property runExperiment::optickaVersion</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>opticka version, passed on first use by opticka </p>
-
-</div>
-</div>
 <a id="a6a52f87f0502dbe1825c946ca7f5db6f" name="a6a52f87f0502dbe1825c946ca7f5db6f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6a52f87f0502dbe1825c946ca7f5db6f">&#9670;&#160;</a></span>photoDiode</h2>
 
@@ -1953,7 +1957,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>what reward device to use </p>
+<p>what reward device to use (if reward.device is not empty) </p>
 
 </div>
 </div>
@@ -2079,7 +2083,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>what strobe device to use device = '' | display++ | datapixx | labjackt | labjack | nirsmart optional port = not needed for most of the interfaces optional config = plain | plexon style strobe default stim OFF strobe value </p>
+<p>what strobe device to use device = '' | display++ | datapixx | labjackt | labjack | nirsmart optional port = not needed for most of the interfaces optional config = plain | plexon style strobe default stim OFF strobe value (if strobe.device is not empty) </p>
 
 </div>
 </div>
@@ -2143,6 +2147,8 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>whether to initialise a touch screen (if touch.device is not empty) </p>
+
 </div>
 </div>
 <a id="af418d6d6c2cacc8352306460c8b84b23" name="af418d6d6c2cacc8352306460c8b84b23"></a>
@@ -2173,7 +2179,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>this lets the opticka UI leave commands to <a class="el" href="classrun_experiment.html" title="The main experiment manager.">runExperiment</a> </p>
+<p>this lets the opticka UI leave commands to <a class="el" href="classrun_experiment.html" title="Behavioural &amp; MOC Task experiment runner.">runExperiment</a> </p>
 
 </div>
 </div>
@@ -2227,7 +2233,7 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="run_experiment_8m.html">runExperiment.m</a></li>
+<li>core/<a class="el" href="run_experiment_8m.html">runExperiment.m</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -2235,7 +2241,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classrun_experiment.html">runExperiment</a></li>
-    <li class="footer">Generated on Fri Sep 13 2024 13:55:03 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Thu Jun 18 2026 20:06:16 for Opticka by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>

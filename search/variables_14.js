@@ -1,13 +1,21 @@
 var searchData=
 [
-  ['waitfcn_0',['waitFcn',['../classstate_machine.html#a6c2754eec0ae687471fc2041be1a4bcd',1,'stateMachine']]],
-  ['wavelengths_1',['wavelengths',['../classcalibrate_luminance.html#a354ca5a7b9999d78f7c35b42453df929',1,'calibrateLuminance']]],
-  ['width_2',['width',['../classdotline_stimulus.html#abd5f1e3d6d8ccac9f05a4b13c6b86455',1,'dotlineStimulus::width'],['../classimage_stimulus.html#a5688b35a448984187fa7b30fea062ad4',1,'imageStimulus::width'],['../classlog_gabor_stimulus.html#ae7a63fadd271156295a48a88d6f66d08',1,'logGaborStimulus::width'],['../classmovie_stimulus.html#abda37eb1da7b0b95fd210924b8d1d70b',1,'movieStimulus::width']]],
-  ['widthd_3',['widthD',['../classimage_stimulus.html#a52aace738afa44628d73b612d56fc8cd',1,'imageStimulus']]],
-  ['win_4',['win',['../classeyetracker_core.html#a7de5cc47a4d0673bb7fab99336840a40',1,'eyetrackerCore']]],
-  ['window_5',['window',['../classtouch_manager.html#a8ebb68e3c1dff465e7f5d41bccfd8206',1,'touchManager']]],
-  ['windowed_6',['windowed',['../classscreen_manager.html#a7d67c8697b07a69ed0e0cd6281b7af80',1,'screenManager']]],
-  ['winheader_7',['winHeader',['../classlab_jack_t.html#aa8e810972fa783bee2a5212caa891460',1,'labJackT']]],
-  ['winlibrary_8',['winLibrary',['../classlab_jack_t.html#ac66ba50734a06d20530a8c5fcf58613e',1,'labJackT']]],
-  ['writetimeout_9',['writeTimeOut',['../classdata_connection.html#a00ee436a3e10cde07eb44ab57c3d8866',1,'dataConnection']]]
+  ['udp_0',['udp',['../classi_rec_manager.html#aac90bf415369b15c59b5e4adf82f0a9b',1,'iRecManager']]],
+  ['uicommand_1',['uiCommand',['../classrun_experiment.html#ac00a2126d4d24e94ef56b54c25ff181a',1,'runExperiment']]],
+  ['usealpha_2',['usealpha',['../classdisc_stimulus.html#aec83a901edd3db019eb2dd78ab66827b',1,'discStimulus::useAlpha'],['../classgrating_stimulus.html#acadee823102804383437bb80dbef17e1',1,'gratingStimulus::useAlpha'],['../classtarget_inducer_stimulus.html#aeb545fd4f1eb47fc0fcd635b3760477e',1,'targetInducerStimulus::useAlpha']]],
+  ['usebounds_3',['useBounds',['../classanimation_manager.html#a566e746e6e333191fadb94f439be0776',1,'animationManager']]],
+  ['useccal2_4',['useCCal2',['../classcalibrate_luminance.html#ac691a89c7b33565deb9e4fca3f2259a8',1,'calibrateLuminance']]],
+  ['usediameter_5',['useDiameter',['../classeyelink_analysis.html#a1bd52ec32257d806ad06198444d78e2a',1,'eyelinkAnalysis']]],
+  ['useeven_6',['useEven',['../classdotline_stimulus.html#aa869ed253aaeb64764e7527149d9b458',1,'dotlineStimulus']]],
+  ['useexternallog_7',['useExternalLog',['../classstate_machine.html#abb0793b2917094cf7fc4b39cb06aca9a',1,'stateMachine']]],
+  ['useeyetracker_8',['useEyetracker',['../classrf_mapper.html#a03e0a740576f7cdbe719caa019063a0a',1,'rfMapper']]],
+  ['usei1pro_9',['useI1Pro',['../classcalibrate_luminance.html#a00365995753ef114cc3ae020e626a19a',1,'calibrateLuminance']]],
+  ['useleds_10',['useLEDs',['../classi_rec_manager.html#ac39bb8ed8842415c0eb12aab08eea8b0',1,'iRecManager']]],
+  ['useoperatorscreen_11',['useOperatorScreen',['../classeyetracker_core.html#ae3eb7acadeda70899375f9eba42c0fd7',1,'eyetrackerCore']]],
+  ['user_12',['user',['../classalyx_manager.html#a82bb067705fe59648b48cb3f4ccdb92c',1,'alyxManager']]],
+  ['useretina_13',['useRetina',['../classscreen_manager.html#aae804d413eb1e05788e76122a7df887b',1,'screenManager']]],
+  ['userfunctionsfile_14',['userFunctionsFile',['../classrun_experiment.html#a1ff1ae9cf84f430dea09f890c46409d5',1,'runExperiment']]],
+  ['usespectrocal2_15',['useSpectroCal2',['../classcalibrate_luminance.html#a3d656670a2e69e0f78acba51c6b86b35',1,'calibrateLuminance']]],
+  ['usevulkan_16',['useVulkan',['../classscreen_manager.html#ae27652da9f2f29d8f781d11248b726dc',1,'screenManager']]],
+  ['uuid_17',['uuid',['../classcalibrate_luminance.html#a246d0d645dd2172d04503a41a26aab68',1,'calibrateLuminance::uuid'],['../classopticka_core.html#a045e40ac081d9e2b909fe78e2c00b293',1,'optickaCore::uuid']]]
 ];

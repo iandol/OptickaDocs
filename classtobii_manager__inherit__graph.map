@@ -1,12 +1,12 @@
 <map id="tobiiManager" name="tobiiManager">
-<area shape="rect" id="Node000001" title="Manages the Tobii eyetrackers." alt="" coords="109,1545,251,2031"/>
-<area shape="rect" id="Node000002" href="$classeyetracker_core.html" title=" " alt="" coords="5,972,173,1497"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="137,1511,143,1545,138,1545,132,1511"/>
-<area shape="rect" id="Node000003" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="30,119,205,924"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,938,102,972,97,972,98,938"/>
+<area shape="rect" id="Node000001" title="Manages the Tobii eyetrackers." alt="" coords="109,1605,251,2131"/>
+<area shape="rect" id="Node000002" href="$classeyetracker_core.html" title=" " alt="" coords="5,1012,173,1557"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,1571,142,1605,137,1605,131,1571"/>
+<area shape="rect" id="Node000003" href="$classopticka_core.html" title="optickaCore base class inherited by other opticka classes." alt="" coords="30,119,205,964"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="104,978,102,1012,97,1012,98,978"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="152,5,208,71"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,85,172,119,167,118,172,84"/>
-<area shape="rect" id="Node000005" href="$classeyetracker_smooth.html" title="Smoothes incoming eye sample data." alt="" coords="198,1162,346,1307"/>
-<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="206,82,219,118,249,266,269,418,282,570,289,717,289,977,280,1162,275,1161,283,977,284,717,277,570,264,419,243,267,213,119,201,84"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="260,1321,223,1546,218,1545,255,1320"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="177,85,173,119,167,118,172,84"/>
+<area shape="rect" id="Node000005" href="$classeyetracker_smooth.html" title="Smoothes incoming eye sample data." alt="" coords="198,1212,346,1357"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="206,82,219,118,250,274,271,434,284,593,291,747,292,891,290,1020,280,1212,275,1212,285,1020,287,891,286,748,279,594,266,434,245,274,213,119,201,84"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="261,1371,224,1605,219,1605,256,1371"/>
 </map>
